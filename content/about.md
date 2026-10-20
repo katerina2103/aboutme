@@ -4,4 +4,4 @@ I started in science, moved through analytics and found my way into product mana
 
 <!-- paragraph2 -->
 
-I’ve spent 16 years living across Europe, from Austria and Germany to the Netherlands. Different perspectives and ways of thinking are part of what makes the work interesting.
+I’ve spent 17 years living across Europe, from Austria and Germany to the Netherlands. Different perspectives and ways of thinking are part of what makes the work interesting.
