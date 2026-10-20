@@ -67,7 +67,6 @@ about:
 collaborate:
   button1: I’m hiring
   button2: Let’s collaborate
-  h2_1: What are you trying to change?
 testimonials:
   span1: “
   h2_1: What working together<br>feels like.
@@ -75,7 +74,7 @@ testimonials:
 connect:
   a1: Email Katya ↗
   link1: mailto:shimanovskatya@gmail.com?subject=Something%20worth%20investigating
-  h2_1: Let's talk.
+  h2_1: Let's work together.
 footer:
   span1: Katya Shimanovskaya · Curiosity, with purpose.
   span2: Concept prototype · October 2026
@@ -96,9 +95,7 @@ navigation:
     label: Approach
   - id: about
     label: About
-  - id: collaborate
-    label: Work together
   - id: testimonials
     label: Testimonials
   - id: connect
-    label: Contact
+    label: Work together
