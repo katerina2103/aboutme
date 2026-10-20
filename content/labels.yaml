@@ -1,0 +1,108 @@
+nav:
+  link1: "#"
+  span1: " Shimanovskaya"
+site:
+  span1: Science → Analytics → Product
+  span2: Regulated B2B environments
+  span3: Based in Amsterdam
+hero:
+  div1: Product leadership · Data, analytics & AI
+  a1: Explore my work ↘
+  link1: "#work"
+  a2: Start a conversation ↗
+  link2: "#connect"
+  button1: Download CV ↓
+  span1: CV coming soon
+  span2: Understand
+  span3: Question
+  span4: Try
+  div2: Learn. Adjust. Bring people along. ↺
+  h1_1: Curious about<br>the problem.<br><em>Committed to<br>get things done.</em>
+meet:
+  span1: ▷
+  summary1: Preview your recording
+  h2_1: A short hello.<br>A little more human.
+  h3_1: A minute with Katya
+lab:
+  button1: 01 Vision
+  button2: 02 Strategy
+  button3: 03 Roadmap
+  button4: 04 Prototype
+  button5: ← Previous
+  span1: 1 / 4
+  button6: Next →
+  h2_1: Follow the thinking.<br>Try the outcome.
+work:
+  link1: "#case-platform"
+  span1: "01"
+  span2: Platform strategy
+  span3: Adoption
+  span4: ↗
+  link2: "#case-investment"
+  span5: "02"
+  span6: Product direction
+  span7: Business value
+  span8: ↗
+  link3: "#case-concept"
+  span9: "03"
+  span10: 2023 interview exercise
+  span11: Thinking in practice
+  span12: ↗
+  h2_1: Decisions behind<br>the outcomes.
+  h3_1: Making data onboarding work at scale
+  h3_2: Connecting product evidence to investment
+  h3_3: Finding an opportunity between data platforms
+approach:
+  a1: Explore my 14 principles ↗
+  link1: "#principles"
+  h2_1: Good questions.<br>Useful experiments.<br>Shared progress.
+  h3_1: Understand before prescribing.
+  h3_2: Question with a better alternative.
+  h3_3: Make the next decision useful.
+  h3_4: Bring people into the change.
+about:
+  div2: “I can happily nerd out on anything from finance and taxes to art history,
+    science and data.”
+  span1: Scientific curiosity
+  span2: Systems thinking
+  span3: People & change
+  span4: Art history detours
+  h2_1: A wide lens.<br>A practical streak.
+collaborate:
+  button1: I’m hiring
+  button2: Let’s collaborate
+  h2_1: What are you trying to change?
+testimonials:
+  span1: “
+  h2_1: What working together<br>feels like.
+  h3_1: Perspectives coming soon.
+connect:
+  a1: Email Katya ↗
+  link1: mailto:shimanovskatya@gmail.com?subject=Something%20worth%20investigating
+  h2_1: Something worth<br>investigating together?
+footer:
+  span1: Katya Shimanovskaya · Curiosity, with purpose.
+  span2: Concept prototype · October 2026
+case-dialog:
+  button1: ×
+principles-dialog:
+  button1: ×
+  div1: What guides my work
+  h2_1: 14 principles.<br>Put into practice.
+navigation:
+  - id: meet
+    label: Meet Katya
+  - id: lab
+    label: In practice
+  - id: work
+    label: Experience
+  - id: approach
+    label: Approach
+  - id: about
+    label: About
+  - id: collaborate
+    label: Work together
+  - id: testimonials
+    label: Testimonials
+  - id: connect
+    label: Contact

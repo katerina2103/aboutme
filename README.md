@@ -1,26 +1,44 @@
 # Katya's professional website
 
-Plain HTML, CSS and JavaScript. No framework, third-party runtime scripts, or npm dependencies. Node 22+ is used only for building and checking.
+Eleventy + Nunjucks builds this site into plain static HTML, CSS and JavaScript in `dist/`. No server framework runs on the published site.
 
-## Build
+## Edit content without prompts
 
-Run `npm run build`. The output is in `dist/`. To preview, serve that folder with any static web server.
+Open the `content` folder on GitHub, select a file, click the pencil, edit, and commit to `main`. GitHub Actions builds and publishes automatically.
 
-## GitHub Pages setup
+| File | What to edit |
+| --- | --- |
+| `content/home.md` | Homepage introduction |
+| `content/about.md` | About biography |
+| `content/approach.md` | How I work paragraphs |
+| `content/labels.yaml` | Headings, short labels, buttons and links; navigation also supplies section labels |
+| `content/site.yaml` | Site title, description, email, CV/video/portrait paths |
+| `content/cases/*.md` | Case-study titles, introductions and body text |
+| `content/product-story/*.md` | Vision, strategy, roadmap and prototype writing |
+| `content/audiences.yaml` | Hiring and collaboration tabs |
+| `content/testimonials.yaml` | Approved testimonials |
+| `content/principles.yaml` | The 14 principles |
 
-1. Create or choose a GitHub repository with default branch `main`.
-2. Commit this folder's contents at the repository root, including `.github/workflows/pages.yml`.
-3. In the repository, open Settings → Pages → Build and deployment → Source and choose GitHub Actions.
-4. Push to `main` or run “Build and deploy website” in Actions. The deployment job provides the live URL.
+See `content/README.md` for formatting details. Keep the paragraph markers in section Markdown files. Existing `<br>` in short headings controls line breaks; `*italics*` also works.
 
-Pull requests run the build and checks but do not publish. Main-branch pushes publish automatically. Relative asset paths support both a project repository URL and an account-level website.
+## Media and downloads
 
-## Edit without prompts
+Upload files into `src/assets/`. Add the corresponding path in `content/site.yaml`, for example `cv: ./assets/katya-cv.pdf`, `video: ./assets/introduction.mp4`, or `portrait: ./assets/katya.jpg`. Leave the setting empty to keep the placeholder. Large videos may be better hosted externally; a video URL must point to a playable media file, not a video platform's normal page.
 
-For now, use GitHub's file editor: `src/index.html` contains page text and links, `src/app.js` contains case studies and interactive section content, and `src/styles.css` contains styling. Commit an edit to trigger deployment. Upload images, the CV and other assets to `src/assets/` and use relative paths such as `./assets/cv.pdf`. Assets are copied during the build.
+## Local development
 
-This package does not yet include the visual editor discussed in chat. A static GitHub Pages site cannot privately save changes to GitHub by itself. A visual editor can later export changed files for you to commit, or use a CMS with authenticated repository access. Do not put a repository write token into the public site.
+Use Node 22+ and pnpm 11.25.0:
 
-## Content status
+```sh
+pnpm install --frozen-lockfile
+pnpm run build
+pnpm start
+```
 
-The video, CV, testimonials and vision/strategy/roadmap/prototype sections remain placeholders. The video picker is a local-only preview, not an upload. Company names have been removed; case details remain subject to Katya's review. Publishing this site makes its content and email link accessible to visitors.
+Templates live in `templates/`; styling and browser interactions are in `src/`. Content edits normally require neither. Do not edit `dist/`: it is generated.
+
+## Publishing
+
+The repository uses GitHub Pages with Source set to GitHub Actions. Main-branch pushes publish; pull requests build and check without deploying. The workflow installs pinned dependencies from `pnpm-lock.yaml`, builds the static site, and deploys only `dist/`.
+
+The published site is public. The video, CV, product-work and testimonials placeholders remain until content is supplied. The local video picker previews a file on the visitor's device; it does not upload it.
