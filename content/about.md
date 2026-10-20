@@ -1,7 +1,7 @@
 <!-- paragraph1 -->
 
-I started in science, moved through analytics and found my way into product management. The part I enjoy most has stayed the same: getting underneath messy problems, understanding how the pieces connect, and making something useful to others.
+I started in science, moved through analytics and found my way into product management. I still enjoy figuring out why something is difficult and what would make it work better for the people involved.
 
 <!-- paragraph2 -->
 
-I’ve spent 17 years living across Europe, from Austria and Germany to the Netherlands. Different perspectives and ways of thinking are part of what makes the work interesting.
+I've spent 17 years living in Austria, Germany and the Netherlands. I enjoy working with people who approach a problem differently from me.

@@ -1,3 +1,3 @@
 <!-- paragraph1 -->
 
-I’m Katya. I turn complex problems into products people understand, trust and enjoy using—and bring people along to make the change happen.
+I'm Katya, a product leader working with data, analytics and AI in regulated B2B environments. I investigate the problem, decide what is worth building, and work with teams to deliver it.

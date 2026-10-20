@@ -17,11 +17,12 @@ hero:
   span3: Question
   span4: Try
   div2: Learn. Adjust. Bring people along. ↺
-  h1_1: Curious about<br>the problem.<br><em>Committed to<br>get things done.</em>
+  h1_1: Curious about<br>the problem.<br><em>Committed to<br>getting things
+    done.</em>
 meet:
   span1: ▷
   summary1: Preview your recording
-  h2_1: A short hello.<br>A little more human.
+  h2_1: Meet Katya
   h3_1: A minute with Katya
 lab:
   button1: 01 Vision
@@ -55,19 +56,14 @@ work:
 approach:
   a1: Explore my 14 principles ↗
   link1: "#principles"
-  h2_1: Good questions.<br>Useful experiments.<br>Shared progress.
+  h2_1: How I work
   h3_1: Understand before prescribing.
   h3_2: Question with a better alternative.
   h3_3: Make the next decision useful.
   h3_4: Bring people into the change.
 about:
-  div2: “I can happily nerd out on anything from finance and taxes to art history,
-    science and data.”
-  span1: Scientific curiosity
-  span2: Systems thinking
-  span3: People & change
-  span4: Art history detours
-  h2_1: A wide lens.<br>A practical streak.
+  div2: I can happily nerd out on finance, taxes, art history, science and data.
+  h2_1: Science first.<br>Product management followed.
 collaborate:
   button1: I’m hiring
   button2: Let’s collaborate
@@ -75,11 +71,11 @@ collaborate:
 testimonials:
   span1: “
   h2_1: What working together<br>feels like.
-  h3_1: Perspectives coming soon.
+  h3_1: Testimonials coming soon
 connect:
   a1: Email Katya ↗
   link1: mailto:shimanovskatya@gmail.com?subject=Something%20worth%20investigating
-  h2_1: Something worth<br>investigating together?
+  h2_1: Let's talk.
 footer:
   span1: Katya Shimanovskaya · Curiosity, with purpose.
   span2: Concept prototype · October 2026
