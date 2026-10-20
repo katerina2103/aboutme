@@ -17,8 +17,18 @@ hero:
   span3: Question
   span4: Try
   div2: Learn. Adjust. Bring people along. ↺
-  h1_1: Curious about<br>the problem.<br><em>Committed to<br>getting things
-    done.</em>
+  h1_1: Curious about the problem.<br><em>Committed to getting things done.</em>
+  proof_context: A decision from my work
+  proof_title: Use what already works.
+  proof_question: How could a decisioning platform make better use of existing analytics?
+  proof_choice: Connect, rather than rebuild
+  proof_detail: Make decisioning data available through an API and bring existing
+    BI dashboards into the experience.
+  proof_scope: Start narrow
+  proof_scope_detail: Focus the first version on one BI connection and a specific
+    decisioning use case.
+  proof_note: Redrawn from an interview proposal, 2023. Not a shipped product.
+  proof_action: Explore the proposal
 meet:
   span1: ▷
   summary1: Preview your recording
@@ -85,17 +95,17 @@ principles-dialog:
   div1: What guides my work
   h2_1: 14 principles.<br>Put into practice.
 navigation:
-  - id: meet
-    label: Meet Katya
-  - id: lab
-    label: In practice
   - id: work
     label: Experience
   - id: approach
     label: Approach
   - id: about
     label: About
-  - id: testimonials
-    label: Testimonials
   - id: connect
     label: Work together
+previews:
+  video: Video introduction
+  notebook: Product notebook
+  testimonials: Testimonials
+  status: Coming soon
+  expand: Explore the planned content
