@@ -1,0 +1,65 @@
+# Approach: "How I work" (nav "Approach" jumps here).
+#
+# `principles` is the FULL list. Principles with `show_on_page: true` appear as
+# cards on the page; the "Explore my … principles" link opens an overlay with all of them.
+# Numbers follow the list order. {count} in a text is replaced by the number of principles.
+
+title: How I work
+introduction: My background in science taught me to work with uncertainty. Product work taught me that evidence only helps when people can use it to make a decision.
+
+side_link:
+  label: Explore my {count} principles ↗
+
+# The overlay that opens from the link above
+overlay:
+  small_heading: How I work
+  title: My {count} principles
+  introduction: The working principles behind how I approach problems, decisions and teams.
+
+principles:
+  - title: Understand before prescribing.
+    text: Get close to the actual work. Find its purpose, what already works and what causes friction.
+    show_on_page: true
+  - title: Question with a better alternative.
+    text: Challenge assumptions constructively. Explain the tradeoffs and test whether the opportunity is worth pursuing.
+    show_on_page: true
+  - title: Make the next decision useful.
+    text: Agree who will take part, what you need to learn, and which decision the experiment will inform.
+    show_on_page: true
+  - title: Bring people into the change.
+    text: Share knowledge generously. Invite different perspectives and connect participation to action.
+    show_on_page: true
+    highlight_number: true        # number badge in the accent colour
+
+  # ── Placeholders: replace title + text, then delete the `placeholder: true` line.
+  #    The build warns (but doesn't fail) while placeholders remain.
+  - title: Principle five, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle six, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle seven, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle eight, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle nine, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle ten, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle eleven, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle twelve, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle thirteen, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true
+  - title: Principle fourteen, to be written.
+    text: Placeholder. Replace this in content/06-approach.yaml.
+    placeholder: true

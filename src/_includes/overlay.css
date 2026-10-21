@@ -1,0 +1,86 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Overlay (native <dialog>), used for "Explore my … principles".
+   ───────────────────────────────────────────────────────────────────────── */
+
+.overlay {
+  width: min(960px, calc(100vw - 32px));
+  max-width: none;
+  max-height: min(88vh, 900px);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-xl);
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 40px 80px -30px rgba(19, 37, 74, .55);
+  overflow: hidden;
+}
+.overlay:focus, .overlay:focus-visible { outline: none; }
+.overlay::backdrop {
+  background: rgba(19, 37, 74, .55);
+  backdrop-filter: blur(3px);
+}
+.overlay[open] { display: flex; }
+.overlay__inner { display: flex; flex-direction: column; min-height: 0; width: 100%; }
+
+/* Lock page scroll while an overlay is open */
+html:has(.overlay[open]) { overflow: hidden; }
+
+.overlay__head {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;
+  padding: 36px 40px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.overlay__eyebrow { margin-bottom: 8px; }
+.overlay__title {
+  font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -1px;
+}
+.overlay__title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--blue); }
+
+.overlay__close-form { margin: 0; }
+.overlay__close {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex: none;
+  border: 0; border-radius: 50%; cursor: pointer;
+  background: var(--bg); color: var(--navy);
+  transition: background-color .2s, color .2s, transform .3s var(--ease-spring, ease);
+}
+.overlay__close:hover { background: var(--navy); color: #fff; transform: rotate(90deg); }
+.overlay__close:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+.overlay__body { overflow-y: auto; overscroll-behavior: contain; padding: 24px 40px 40px; }
+.overlay__intro { color: var(--muted); max-width: 60ch; margin-bottom: 26px; }
+
+.overlay__list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr)); gap: 12px;
+}
+.overlay__item {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: var(--bg); border-radius: var(--radius-lg); padding: 20px 22px;
+}
+.overlay__item .principle__badge { flex: none; margin: 0; }
+.overlay__item h3 { margin: 6px 0 4px; font-size: 17px; font-weight: 800; line-height: 1.35; }
+.overlay__item p { font-size: 15px; color: var(--muted); }
+/* Placeholders look unfinished on purpose, so they're easy to spot */
+.overlay__item--placeholder { background: transparent; outline: 2px dashed var(--line); outline-offset: -2px; }
+.overlay__item--placeholder .principle__badge { background: var(--line); color: var(--muted); }
+
+/* Entrance: panel rises in, items follow one by one */
+.overlay[open] { animation: overlay-in .45s var(--ease-out, ease) both; }
+.overlay[open]::backdrop { animation: backdrop-in .35s ease both; }
+.overlay[open] .overlay__item { animation: reveal-up .5s var(--ease-out, ease) backwards; animation-delay: calc(120ms + var(--i, 0) * 35ms); }
+@keyframes overlay-in { from { opacity: 0; transform: translateY(24px) scale(.98); } }
+@keyframes backdrop-in { from { opacity: 0; } }
+
+@media (max-width: 600px) {
+  .overlay { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); border-radius: 22px; }
+  .overlay__head { padding: 24px 20px 16px; }
+  .overlay__body { padding: 20px 20px 28px; }
+  .overlay__item { padding: 16px; }
+}
+
+/* No JavaScript: the link jumps to #principles and the list shows inline */
+html:not(.js) .overlay:target {
+  display: block; position: static; width: auto; max-height: none; margin: 24px 0 0; box-shadow: none;
+}
+html:not(.js) .overlay:target .overlay__close-form { display: none; }

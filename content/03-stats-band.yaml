@@ -1,0 +1,10 @@
+# Stats band: big numbers on the accent colour.
+# Add or remove items freely; the row wraps automatically.
+
+stats:
+  - number: ~90%
+    label: faster data onboarding
+  - number: €1M
+    label: phase-one funding secured
+  - number: 12w→2d
+    label: data-access waiting time

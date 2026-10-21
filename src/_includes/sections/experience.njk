@@ -1,0 +1,17 @@
+{% set exp = site.experience %}
+<section id="work" class="panel">
+  <div class="panel__head" data-reveal>
+    <h2 class="section-title">{{ exp.title | mdInline | safe }}</h2>
+    <p class="panel__aside">{{ exp.introduction | mdInline | safe }}</p>
+  </div>
+  {%- for case in exp.case_studies %}
+  <a class="case" href="{{ case.link or '#work' }}" data-reveal style="--i: {{ loop.index0 }}">
+    <span class="case__number">{{ "0" if loop.index < 10 }}{{ loop.index }}</span>
+    <div class="case__body">
+      <h3 class="case__title">{{ case.title }}</h3>
+      <span class="case__summary">{{ case.summary }}</span>
+    </div>
+    {% if case.sticky_note %}<span class="case__note sticky" style="--tilt: {{ case.sticky_note_rotation or 0 }}deg">{{ case.sticky_note }}</span>{% endif %}
+  </a>
+  {%- endfor %}
+</section>

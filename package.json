@@ -1,7 +1,8 @@
 {
-  "name": "katya-professional-website",
-  "version": "1.0.0",
+  "name": "bright-blocks",
   "private": true,
+  "version": "1.0.0",
+  "description": "Katya Shimanovskaya portfolio — static site built with Eleventy from YAML content.",
   "type": "module",
   "scripts": {
     "build": "eleventy && node scripts/check.mjs",
@@ -16,6 +17,5 @@
     "linkedom": "^0.18.13",
     "markdown-it": "^15.0.3",
     "yaml": "^2.9.1"
-  },
-  "packageManager": "pnpm@11.25.0"
+  }
 }

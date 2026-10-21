@@ -1,0 +1,9 @@
+{% set nav = site.navigation %}
+<nav class="nav container">
+  <a class="nav__brand" href="#">{{ nav.name_first }} <em>{{ nav.name_last }}</em></a>
+  <div class="nav__links">
+    {%- for item in nav.links %}
+    <a href="{{ item.link }}"{% if item.show_as_button %} class="nav__button"{% endif %}>{{ item.label }}</a>
+    {%- endfor %}
+  </div>
+</nav>

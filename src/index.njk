@@ -1,0 +1,17 @@
+---
+layout: base.njk
+permalink: /index.html
+---
+{#
+  Page structure. Each include renders one section; its text comes from the matching file in content/.
+  Reorder or remove lines here to change the page layout.
+#}
+<main class="container stack">
+  {% include "sections/hero.njk" %}
+  {% include "sections/stats-band.njk" %}
+  {% include "sections/experience.njk" %}
+  {% include "sections/video-and-meet.njk" %}
+  {% include "sections/approach.njk" %}
+</main>
+{% include "sections/about.njk" %}
+{% include "sections/contact.njk" %}

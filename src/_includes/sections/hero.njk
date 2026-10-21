@@ -1,0 +1,31 @@
+{% set hero = site.hero %}
+{% set card = hero.dilemma_card %}
+{# data-reveal: fades in on load/scroll. --i: stagger order (each step ≈ 90ms later). #}
+<section class="hero">
+  <div>
+    <p class="eyebrow" data-reveal style="--i: 0">{{ hero.small_heading }}</p>
+    <h1 class="hero__title" data-reveal style="--i: 1">{{ hero.headline | mdInline | safe }}</h1>
+    <div class="hero__intro" data-reveal style="--i: 2">{{ hero.body | md | safe }}</div>
+    <div class="hero__buttons" data-reveal style="--i: 3">
+      <a class="btn btn--solid" href="{{ hero.primary_button.link }}">{{ hero.primary_button.label }}</a>
+      <a class="btn btn--outline" href="{{ hero.secondary_button.link }}">{{ hero.secondary_button.label }}</a>
+    </div>
+  </div>
+  {% if card %}
+  <aside class="dilemma" data-reveal="right" style="--i: 3">
+    {% if card.sticky_note %}<span class="dilemma__note sticky" style="--tilt: 4deg">{{ card.sticky_note }}</span>{% endif %}
+    <p class="dilemma__eyebrow">{{ card.small_heading }}</p>
+    <h2 class="dilemma__title">{{ card.title | mdInline | safe }}</h2>
+    <p class="dilemma__question">{{ card.question | mdInline | safe }}</p>
+    <div class="dilemma__options">
+      {%- for option in card.options %}
+      <div class="dilemma__option" data-reveal style="--i: {{ loop.index0 + 5 }}">
+        <h3>{{ option.title }}</h3>
+        <p>{{ option.text | mdInline | safe }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    {% if card.footnote %}<p class="dilemma__footnote">{{ card.footnote }}</p>{% endif %}
+  </aside>
+  {% endif %}
+</section>

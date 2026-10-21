@@ -1,0 +1,11 @@
+# Two blocks side by side: dark video card (left) and "Meet Katya" (right).
+
+video_card:
+  title: A minute with Katya
+  caption: Video introduction · coming soon
+  video_link: ""                  # paste a YouTube/Vimeo URL to make the card clickable
+
+meet_card:
+  title: Meet Katya
+  text: A personal introduction to what makes me curious, the problems I enjoy working on, and what it’s like to work together.
+  handwritten_note: say hi, I promise it's short ↙

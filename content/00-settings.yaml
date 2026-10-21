@@ -1,0 +1,13 @@
+# Page-wide settings (not a visible section).
+
+browser_tab_title: Katya Shimanovskaya · Product leader
+search_description: Product leader working with data, analytics and AI in regulated B2B environments.
+language: en
+
+# Highlight colour for the stats band, sticky notes, badges and buttons.
+# Tested options: "#f2a93b" amber · "#7dd3c0" mint · "#f28b6b" coral · "#b6c8ff" periwinkle
+accent_color: "#f2a93b"
+
+# Fade/slide sections in as you scroll. Hover effects stay on either way.
+# Visitors with "reduce motion" switched on in their OS never see movement.
+scroll_animations: true

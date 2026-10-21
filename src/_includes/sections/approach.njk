@@ -1,0 +1,23 @@
+{% set ap = site.approach %}
+{% set count = ap.principles | length %}
+<section id="approach" class="panel">
+  <div class="panel__head panel__head--roomy" data-reveal>
+    <div class="approach__intro">
+      <h2 class="section-title">{{ ap.title | mdInline | safe }}</h2>
+      <p class="muted">{{ ap.introduction | mdInline | safe }}</p>
+    </div>
+    {% if ap.side_link and ap.overlay %}
+    <a class="text-link" href="#principles" data-open-dialog="principles" aria-haspopup="dialog">{{ ap.side_link.label | replace("{count}", count | string) }}</a>
+    {% endif %}
+  </div>
+  <div class="principles">
+    {%- for p in ap.principles %}{% if p.show_on_page %}
+    <article class="principle" data-reveal style="--i: {{ loop.index0 }}">
+      <span class="principle__badge{% if p.highlight_number %} principle__badge--accent{% endif %}">{{ loop.index }}</span>
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.text | mdInline | safe }}</p>
+    </article>
+    {%- endif %}{% endfor %}
+  </div>
+  {% if ap.overlay %}{% include "sections/principles-overlay.njk" %}{% endif %}
+</section>

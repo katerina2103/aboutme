@@ -1,0 +1,127 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Motion. Two layers:
+   1. Scroll reveal: only when <html> has .reveal-on (set by a tiny inline
+      script when settings.scroll_animations is true). Uses the `translate`
+      property and fill-mode "backwards", so it never fights the `transform`
+      used by hovers and sticky-note tilts.
+   2. Hover/focus micro-interactions: always on.
+   Everything is switched off under prefers-reduced-motion.
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --stagger: 90ms;
+}
+
+/* ── 1. Scroll reveal ───────────────────────────────────────────────────── */
+.reveal-on [data-reveal]:not(.is-visible) { opacity: 0; }
+.reveal-on [data-reveal].is-visible {
+  animation: reveal-up .8s var(--ease-out) backwards;
+  animation-delay: calc(var(--i, 0) * var(--stagger));
+}
+.reveal-on [data-reveal="right"].is-visible { animation-name: reveal-right; }
+
+@keyframes reveal-up {
+  from { opacity: 0; translate: 0 28px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+@keyframes reveal-right {
+  from { opacity: 0; translate: 40px 0; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* Sticky notes "slap" onto the page once their block is in view */
+.reveal-on .is-visible > .sticky {
+  animation: stick .7s var(--ease-spring) backwards;
+  animation-delay: calc(var(--i, 0) * var(--stagger) + 450ms);
+}
+@keyframes stick {
+  from { opacity: 0; transform: rotate(calc(var(--tilt, 0deg) + 14deg)) scale(1.5); }
+  60%  { opacity: 1; }
+  to   { transform: rotate(var(--tilt, 0deg)) scale(1); }
+}
+
+/* ── 2. Micro-interactions ──────────────────────────────────────────────── */
+
+/* Sticky notes use the --tilt variable everywhere */
+.sticky { transform: rotate(var(--tilt, 0deg)); transition: transform .35s var(--ease-spring), box-shadow .35s; }
+
+/* Nav: underline grows from the left */
+.nav__links a:not(.nav__button) {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat;
+  transition: background-size .3s var(--ease-out), color .2s;
+}
+.nav__links a:not(.nav__button):hover { background-size: 100% 1.5px; }
+
+/* Buttons: lift + shadow */
+.btn, .nav__links .nav__button {
+  transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), background-color .2s, color .2s;
+}
+.btn:hover, .nav__links .nav__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px -14px rgba(19, 37, 74, .7);
+}
+.btn:active, .nav__links .nav__button:active { transform: translateY(0); box-shadow: none; transition-duration: .08s; }
+.btn--outline:hover { background: var(--navy); color: #fff; }
+
+/* Dilemma card: options highlight */
+.dilemma__option { transition: border-color .25s, background-color .25s, transform .3s var(--ease-out); }
+.dilemma__option:hover { border-color: var(--accent); background: rgba(255, 255, 255, .04); transform: translateX(4px); }
+.dilemma:hover .dilemma__note { transform: rotate(calc(var(--tilt) - 3deg)) scale(1.05); }
+
+/* Case rows: title nudges right, number shifts colour, note straightens & lifts */
+.case { transition: background-color .25s; }
+.case__number { transition: color .25s, transform .35s var(--ease-out); }
+.case__body { transition: transform .35s var(--ease-out); }
+.case:hover .case__body { transform: translateX(8px); }
+.case:hover .case__number { color: var(--navy); transform: translateX(4px); }
+.case:hover .case__note {
+  transform: rotate(0deg) scale(1.06);
+  box-shadow: 0 14px 22px -12px rgba(19, 37, 74, .55);
+}
+
+/* Video card: soft pulse ring, play button grows on hover */
+.video__play { position: relative; transition: transform .35s var(--ease-spring); }
+.video__play::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  border: 2px solid var(--accent); opacity: 0;
+  animation: pulse 2.8s var(--ease-out) infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: .7; }
+  70%  { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.video:hover .video__play { transform: scale(1.1); }
+
+/* Meet card: handwritten note bobs on hover */
+.meet__note { transition: transform .4s var(--ease-spring); transform-origin: left center; }
+.meet:hover .meet__note { transform: rotate(-2deg) translateY(-2px); }
+
+/* Principles: lift + badge pop */
+.principle { transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), background-color .3s; }
+.principle:hover { transform: translateY(-4px); background: #fff; box-shadow: 0 18px 30px -20px rgba(19, 37, 74, .45), inset 0 0 0 1px var(--line); }
+.principle__badge { transition: transform .4s var(--ease-spring); }
+.principle:hover .principle__badge { transform: scale(1.12) rotate(-8deg); }
+
+/* Side links: arrow-ish nudge via underline offset */
+.text-link { transition: text-underline-offset .25s var(--ease-out), color .2s; }
+.text-link:hover { text-underline-offset: 8px; }
+
+/* Keyboard focus mirrors hover where it matters */
+.case:focus-visible .case__body { transform: translateX(8px); }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+/* ── Reduced motion: no movement at all ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1 !important; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

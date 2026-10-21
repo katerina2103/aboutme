@@ -1,0 +1,22 @@
+# Experience: numbered case studies (nav "Experience" jumps here).
+# The 01, 02, 03 numbers follow the list order.
+
+title: Decisions behind the outcomes.
+introduction: A few ways I’ve connected evidence, product direction and the realities of getting things done.
+
+case_studies:
+  - title: Making data onboarding work at scale
+    summary: Turning complex data work into repeatable platform capabilities.
+    sticky_note: from 2 to 30+ pipelines
+    sticky_note_rotation: -3      # degrees; small numbers between -4 and 4 look best
+    link: "#work"                 # change to a case-study page when one exists
+  - title: Connecting product evidence to investment
+    summary: Using reporting and outcomes to inform portfolio decisions.
+    sticky_note: numbers → a funding yes
+    sticky_note_rotation: 2
+    link: "#work"
+  - title: Finding an opportunity between data platforms
+    summary: An interview proposal exploring BI integration and commercial value.
+    sticky_note: thinking in practice
+    sticky_note_rotation: -2
+    link: "#work"
