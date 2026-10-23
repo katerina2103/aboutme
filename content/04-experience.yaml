@@ -1,23 +1,23 @@
 # Experience: numbered case studies (nav "Experience" jumps here).
 # The 01, 02, 03 numbers follow the list order.
 
-title: Decisions behind the outcomes.
-introduction: A few ways I’ve connected evidence, product direction and the realities of getting things done.
+title: Journey from a problem to impact.
+introduction: A few ways I’ve connected people, data and technology in a product to get things done.
 
 case_studies:
-  - title: Making data onboarding work at scale
-    summary: Turning complex data work into repeatable platform capabilities.
-    sticky_note: from 2 to 30+ pipelines
+  - title: Scaling data product development through software capabilties
+    summary: Turning complex data management tasks into user-facing platform capabilities.
+    sticky_note: from 2 to 39 pipelines
     sticky_note_rotation: -3      # degrees; small numbers between -4 and 4 look best
-    detail: data_onboarding
-  - title: Connecting product evidence to investment
+    detail: data_products_platform
+  - title: Turning routine data management into governed self-service
     summary: Using reporting and outcomes to inform portfolio decisions.
-    sticky_note: numbers → a funding yes
+    sticky_note: from 0 to 70% tasks by users
     sticky_note_rotation: 2
-    detail: product_investment
-  - title: Finding an opportunity between data platforms
-    summary: An interview proposal exploring BI integration and commercial value.
-    sticky_note: thinking in practice
+    detail: customer_focus
+  - title: Data Analytics as software development to enable scale
+    summary: How to scale analytics platform to 20+ teams starting with a frustrated group of few.
+    sticky_note: to 2,000+ montly users
     sticky_note_rotation: -2
-    detail: platform_concept
+    detail: analytics_platform
 
