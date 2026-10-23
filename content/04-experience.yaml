@@ -5,17 +5,17 @@ title: Journey from a problem to impact.
 introduction: A few ways I’ve connected people, data and technology in a product to get things done.
 
 case_studies:
-  - title: Scaling data product development through software capabilities
+  - title: Define once. Onboard and process faster
     summary: Turning complex data management tasks into user-facing platform capabilities.
     sticky_note: from 2 to 39 pipelines
     sticky_note_rotation: -3      # degrees; small numbers between -4 and 4 look best
     detail: data_products_platform
-  - title: Turning routine data management into governed self-service
-    summary: Giving hospitals control of data submission, validation, and corrections.
+  - title: Give users control over their data
+    summary: Giving users control of data loading, validation, and corrections.
     sticky_note: from 0 to 70% tasks by users
     sticky_note_rotation: 2
     detail: customer_focus
-  - title: Scaling analytics through software development practices
+  - title: Remove barriers to scaling analytics
     summary: Expanding a shared analytics platform to 20+ global teams.
     sticky_note: to 2,000+ monthly users
     sticky_note_rotation: -2
