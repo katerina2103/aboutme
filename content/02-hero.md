@@ -2,7 +2,7 @@
 # Hero: headline on the left, dark "dilemma" card on the right.
 # The text below the closing --- line is the introduction paragraph.
 
-small_heading: Product leader · Data, analytics & AI
+small_heading: Evolving Product Leader · Data, analytics & AI · Software · International
 headline: Curious about the problem. *Committed to getting things done.*
 
 primary_button:
