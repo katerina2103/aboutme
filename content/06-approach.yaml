@@ -19,7 +19,7 @@ principles:
       Get close to the actual work. Find its purpose, what already works and what causes friction.
     show_on_page: true
 
-  - title: Questions is just a tool to understand.
+  - title: Question is just a tool to understand.
     text: >-
       Challenge assumptions constructively. Explain the tradeoffs and test whether
       the opportunity is worth pursuing.
@@ -37,17 +37,17 @@ principles:
       convert participation into action.
     show_on_page: true
 
-  - title: Stay persistent. Adapt the approach.
+  - title: Be resiliant. Adapt.
     text: >-
       When progress stalls, understand what is blocking it and find another way
-      forward. Keep going while the goal still makes sense.
+      forward. When the goal makes sense - keep going.
 
-  - title: Think for yourself. Stay open to being wrong.
+  - title: The goal is not being right or wrong, but reach objectives.
     text: >-
       Listen carefully, then form your own judgment. Explain your reasoning
-      and change your mind when the evidence calls for it.
+      and change your stance when the evidence proves otherwise.
 
-  - title: Look for the problem behind the request.
+  - title: Look for the question behind the question.
     text: >-
       Take requests seriously and ask what prompted them. A requested feature
       is a starting point for understanding what someone needs to achieve.
@@ -78,7 +78,7 @@ principles:
       Turn an opportunity into a focused experiment with people willing
       to commit time to it. Agree what result would justify taking it further.
 
-  - title: Make participation count.
+  - title: Show participation matters.
     text: >-
       Ask whose perspective is missing, especially among people affected
       by the decision. Explain how their input shaped the next step and who will take it.
