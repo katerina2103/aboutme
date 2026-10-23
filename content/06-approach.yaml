@@ -29,14 +29,13 @@ principles:
   - title: Bring people into the change.
     text: Listen carefully, share knowledge humbly. Invite different perspectives and convert participation into action.
     show_on_page: true
-    highlight_number: false        # number badge in the accent colour
-
-    - title: Stay persistent. Adapt the approach.
-    text:  When progress stalls, understand what is blocking it and find another
-      way forward. Keep going while the goal still makes sense.
+  
+  - title: Stay persistent. Adapt the approach.
+    text: When progress stalls, understand what is blocking it and find another way forward. 
+    Keep going while the goal still makes sense.
 
   - title: Think for yourself. Stay open to being wrong.
-    text:  Listen carefully, then form your own judgment. Explain your reasoning
+    text: Listen carefully, then form your own judgment. Explain your reasoning
       and change your mind when the evidence calls for it.
 
   - title: Look for the problem behind the request.
