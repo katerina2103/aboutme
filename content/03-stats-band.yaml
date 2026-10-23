@@ -2,9 +2,9 @@
 # Add or remove items freely; the row wraps automatically.
 
 stats:
-  - number: ~90%
-    label: faster data onboarding
-  - number: €1M
-    label: phase-one funding secured
-  - number: 12w→2d
-    label: data-access waiting time
+  - number: ~70%
+    label: data operations shifting to paying users
+  - number: €2M+
+    label: annual revenue protected
+  - number: ~27
+    label: people under the span of control
