@@ -3,6 +3,6 @@ context: European Healthcare · Data platform
 problem: >-
   Every european country has own healthcare data standards and requirements. Every heathcare provider stores data following national and internal standards. How to simplify and fasttrack data onboardng in a growing portfolio?
 solution: >-
-  We standardised steps in the data management process, embedded data-quality into the platform design through machine and human readable intent.
+  We standardised steps in the data management process, embedded data-quality and standards into the platform design through machine and human readable intent.
 impact: >-
   The platform allowed to configure up to 7 data ingestion pipelines in one day. Eventually we scaled to 39 data pipelines efficiently serving more than 200 healthcare providers across Europe.
