@@ -1,0 +1,8 @@
+title: Scaling data product development through software capabilities
+context: LOGEX · Data products platform
+problem: >-
+  Hospital data onboarding took around 3–6 months. Different systems and data definitions made it difficult to reuse work across a growing portfolio.
+solution: >-
+  I led product strategy across four squads and helped turn post-acquisition systems and definitions into reusable platform components. We standardised onboarding and embedded data-quality checks into the platform.
+impact: >-
+  The platform supported 39 data pipelines serving more than 200 healthcare providers across four countries. Onboarding time fell to around 1.5 months, while reusable components helped support a growing portfolio with approximately 45% less operating capacity.

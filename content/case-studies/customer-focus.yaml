@@ -1,0 +1,8 @@
+title: Turning routine data management into governed self-service
+context: LOGEX · Hospital self-service
+problem: >-
+  Hospitals submitted data through an email-driven process with little visibility into validation or corrections. Routine data-management work depended on internal teams.
+solution: >-
+  I helped redesign the workflow around guided data submission, transparent status, and corrections users could make within the product. Validation covered more than 400 rules and returned feedback in under 10 minutes for multi-GB datasets.
+impact: >-
+  Around 70% of data operations shifted to hospitals in selected markets. Users could identify and correct data issues themselves, with validation feedback available in around 5–10 minutes.
