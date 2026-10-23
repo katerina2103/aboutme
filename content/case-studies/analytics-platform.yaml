@@ -1,8 +1,8 @@
 title: Scaling analytics through software development practices
-context: Elsevier · Shared analytics platform
+context: Enterprise · Analytics Platform
 problem: >-
-  Analytics needed to support more teams across the organisation, while access to eligible data could take weeks or months.
+  Analysts got the tools, but lacked processes and standards on how to bring insights to users efficiently and reliably. Frustration grew - it would take weeks of figuring out technicalities of vendor implementation. How to deliver insights quickly in a evolving stack?
 solution: >-
-  I helped scale a shared Tableau platform across global teams and reduce the wait for eligible data access.
+  Capture existing state in sufficient detail. Together with analytics front-runners define an experiment, execute it -> evaluate -> implement. Scale in batches through community and documentation.
 impact: >-
-  The platform reached more than 20 global teams and 2,000 monthly users, with over 1,500 dashboards. Eligible data-access waits fell from weeks or months to around one day.
+  The platform reached more than 20 global teams and 2,000 monthly users, with over 1,500 dashboards, while improving platform SLAs.
