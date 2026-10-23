@@ -18,6 +18,7 @@ principles:
     text: >-
       Get close to the actual work. Find its purpose, what already works and what causes friction.
     show_on_page: true
+    highlight_number: true
 
   - title: Question is just a tool to understand.
     text: >-
@@ -30,6 +31,7 @@ principles:
       Agree what hypothesis to test, what decision to derive and who is sufficiently
       to be part of the experiment.
     show_on_page: true
+    highlight_number: true
 
   - title: Bring people into the change.
     text: >-
