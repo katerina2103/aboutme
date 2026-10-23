@@ -32,34 +32,28 @@ principles:
     highlight_number: true        # number badge in the accent colour
 
     - title: Stay persistent. Adapt the approach.
-    text: >
-      When progress stalls, understand what is blocking it and find another
+    text:  When progress stalls, understand what is blocking it and find another
       way forward. Keep going while the goal still makes sense.
 
   - title: Think for yourself. Stay open to being wrong.
-    text: >
-      Listen carefully, then form your own judgment. Explain your reasoning
+    text:  Listen carefully, then form your own judgment. Explain your reasoning
       and change your mind when the evidence calls for it.
 
   - title: Look for the problem behind the request.
-    text: >
-      Take requests seriously and ask what prompted them. A requested feature
+    text:  Take requests seriously and ask what prompted them. A requested feature
       is a starting point for understanding what someone needs to achieve.
 
   - title: Make the value concrete.
-    text: >
-      Be clear about who benefits, what improves for them, and why it matters
+    text:  Be clear about who benefits, what improves for them, and why it matters
       to the business. Find evidence for those claims before asking for a
       bigger commitment.
 
   - title: Build in steps that teach us something.
-    text: >
-      Choose the smallest useful change that can test an assumption in
+    text:  Choose the smallest useful change that can test an assumption in
       practice. Use what happens to decide whether to expand, adjust, or stop.
 
   - title: Decide before certainty arrives.
-    text: >
-      Make the call with the evidence available. Be explicit about what is
+    text:  Make the call with the evidence available. Be explicit about what is
       uncertain, who carries the consequences, and what would make you
       reconsider.
 
@@ -69,18 +63,15 @@ principles:
       needs to change.
 
   - title: Give promising ideas a fair test.
-    text: >
-      Turn an opportunity into a focused experiment with people willing
+    text:  Turn an opportunity into a focused experiment with people willing
       to commit time to it. Agree what result would justify taking it further.
 
   - title: Make participation count.
-    text: >
-      Ask whose perspective is missing, especially among people affected
+    text:  Ask whose perspective is missing, especially among people affected
       by the decision. Explain how their input shaped the next step and
       who will take it.
 
   - title: Be the partner who asks the awkward question.
-    text: >
-      Speak up when the evidence is weak or the proposed solution misses
+    text:  Speak up when the evidence is weak or the proposed solution misses
       the problem. Explain why it matters and help work through a better
       option, even when the plan is your own.
