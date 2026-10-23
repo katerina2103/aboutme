@@ -1,8 +1,8 @@
-title: Scaling analytics through software development practices
+title: Remove barriers to scaling analytics
 context: Enterprise · Analytics Platform
 problem: >-
-  Analysts got the tools, but lacked processes and standards on how to bring insights to users efficiently and reliably. Frustration grew - it would take weeks of figuring out technicalities of vendor implementation. How to deliver insights quickly in a evolving stack?
+  Analysts got the tools, but lacked processes and standards on how to bring insights to users efficiently and reliably. Frustration grew - it would take weeks of figuring out technicalities of vendor implementation. How to deliver insights quickly in a evolving stack? How to ensure technology can handle the demand?
 solution: >-
-  Capture existing state in sufficient detail. Together with analytics front-runners define an experiment, execute it -> evaluate -> implement. Scale in batches through community and documentation.
+  Capture existing state in sufficient detail. Together with analytics front-runners define an experiment, execute it -> evaluate -> implement. Scale in batches through community and documentation. Implemented governance controls programmatically.
 impact: >-
   The platform reached more than 20 global teams and 2,000 monthly users, with over 1,500 dashboards, while improving platform SLAs.
