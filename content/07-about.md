@@ -2,8 +2,8 @@
 # About: full-width light band (nav "About" jumps here).
 # Title and quote go on the left; the text below the closing --- goes on the right.
 
-title: Science first. Product management followed.
-quote: I can happily nerd out on finance, taxes, art history, science and data.
+title: A scientist’s curiosity. A product leader’s drive.
+quote: I can happily nerd out on taxes, art history, science and data.
 ---
 I've built a life and career across four countries, moving from Moscow to Lübeck, then Vienna, and now Amsterdam. Starting again has meant learning new languages, adapting to new cultural norms, and proving my value in unfamiliar industries. 
 
