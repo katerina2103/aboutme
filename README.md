@@ -2,7 +2,7 @@
 
 A single-page static site built with [Eleventy](https://www.11ty.dev/).
 All text lives in `content/`, one file per page section. The HTML lives in small templates, one per page section.
-The build outputs one self-contained `dist/index.html` with CSS inlined and a ~20-line scroll-reveal script.
+The build outputs one self-contained `dist/index.html` with CSS inlined and a ~20-line scroll-reveal script. URL https://katerina2103.github.io/aboutme/
 
 ## Quick start
 
