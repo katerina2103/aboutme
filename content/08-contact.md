@@ -8,4 +8,4 @@ button:
   link: mailto:shimanovskatya@gmail.com
 location_line: Amsterdam, Netherlands · Open to a thoughtful conversation
 ---
-Tell me what you’re working on, what you’re trying to change, and where you’re stuck. We can start there.
+I am curious to hear what you’re puzzling with, what you’re trying to achieve, and where you’d like to be. Let's start there.
