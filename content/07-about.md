@@ -5,9 +5,8 @@
 title: Science first. Product management followed.
 quote: I can happily nerd out on finance, taxes, art history, science and data.
 ---
-I started in science, moved through analytics and found my way into product
-management. I still enjoy figuring out why something is difficult and what
-would make it work better for the people involved.
+I've built a life and career across four countries, moving from Moscow to Lübeck, then Vienna, and now Amsterdam. Starting again has meant learning new languages, adapting to new cultural norms, and proving my value in unfamiliar industries. 
 
-I've spent 17 years living in Austria, Germany and the Netherlands. I enjoy
-working with people who approach a problem differently from me.
+I spent 11 years in the lab digging into the unknown, publishing research and contributing to patented inventions. Wanting to see my work make a tangible difference took me into biotech and pharma, scientific publishing, healthtech, and now finance. Along the way, my responsibilities grew from analysing specific business and data problems to leading products with P&L ownership. 
+
+I still approach problems like a scientist, with curiosity and an open mind. I ask questions, test assumptions quickly, and make decisions with the evidence available, even when it's limited. As a product leader I care most about finding the answer to the question - what will actually move the needle for our customers and product teams? And then execute on it with empathy.
