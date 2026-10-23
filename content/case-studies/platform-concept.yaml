@@ -1,0 +1,9 @@
+title: Finding an opportunity between data platforms
+context: Interview proposal · 2023
+problem: >-
+  How could a decisioning platform make better use of customers’ existing analytics without rebuilding their BI tools?
+solution: >-
+  I proposed making decisioning data available through an API and bringing existing BI dashboards into the experience. The first version would focus on one BI connection and a specific decisioning use case.
+impact: >-
+  The proposal defined a focused starting point for testing the integration and its commercial value. This was an interview concept, not a shipped product; there are no measured customer outcomes.
+

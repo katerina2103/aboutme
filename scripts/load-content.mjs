@@ -56,5 +56,18 @@ export async function loadContentFiles(dir) {
 export async function loadContent(dir) {
   const site = {};
   for (const { key, data } of await loadContentFiles(dir)) site[key] = data;
+  site.case_studies = {};
+  for (const { key, data, file } of await loadContentFiles(path.join(dir, "case-studies"))) {
+    for (const field of ["title", "context", "problem", "solution", "impact"]) {
+      if (typeof data[field] !== "string" || !data[field].trim())
+        throw new Error(`${file}: missing or invalid "${field}"`);
+    }
+    site.case_studies[key] = data;
+  }
+  for (const card of site.experience.case_studies) {
+    if (!site.case_studies[card.detail])
+      throw new Error(`Unknown case-study detail: ${card.detail}`);
+  }
   return site;
 }
+

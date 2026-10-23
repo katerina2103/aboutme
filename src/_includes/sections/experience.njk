@@ -5,7 +5,7 @@
     <p class="panel__aside">{{ exp.introduction | mdInline | safe }}</p>
   </div>
   {%- for case in exp.case_studies %}
-  <a class="case" href="{{ case.link or '#work' }}" data-reveal style="--i: {{ loop.index0 }}">
+  <a class="case" href="#case-{{ case.detail }}" data-open-dialog="case-{{ case.detail }}" aria-haspopup="dialog" aria-controls="case-{{ case.detail }}" data-reveal style="--i: {{ loop.index0 }}">
     <span class="case__number">{{ "0" if loop.index < 10 }}{{ loop.index }}</span>
     <div class="case__body">
       <h3 class="case__title">{{ case.title }}</h3>
@@ -15,3 +15,31 @@
   </a>
   {%- endfor %}
 </section>
+
+{% for card in exp.case_studies %}
+{% set detail = site.case_studies[card.detail] %}
+<dialog id="case-{{ card.detail }}" class="overlay case-overlay" aria-labelledby="case-title-{{ card.detail }}" data-return-hash="#work">
+  <div class="overlay__inner">
+    <header class="overlay__head">
+      <div>
+        <p class="eyebrow overlay__eyebrow">{{ "0" if loop.index < 10 }}{{ loop.index }} · {{ detail.context }}</p>
+        <h2 id="case-title-{{ card.detail }}" class="overlay__title">{{ detail.title }}</h2>
+      </div>
+      <form method="dialog" class="overlay__close-form">
+        <button class="overlay__close" aria-label="Close case study" autofocus>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </form>
+    </header>
+    <div class="overlay__body case-detail">
+      {% for label in ["problem", "solution", "impact"] %}
+      <section class="case-detail__section{% if label == 'impact' %} case-detail__section--impact{% endif %}">
+        <h3>{{ label | capitalize }}</h3>
+        <div>{{ detail[label] | md | safe }}</div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+</dialog>
+{% endfor %}
+

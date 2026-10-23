@@ -1,0 +1,9 @@
+title: Making data onboarding work at scale
+context: LOGEX · Hospital data platforms
+problem: >-
+  Hospital data onboarding took around 3–6 months. Different systems and definitions made each new connection a substantial piece of work.
+solution: >-
+  I helped turn post-acquisition systems and data definitions into reusable platform components, with standardised onboarding and data-quality checks.
+impact: >-
+  Onboarding time fell to around 1.5 months. The platform supported a growing portfolio with approximately 45% less operating capacity.
+

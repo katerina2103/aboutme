@@ -1,8 +1,10 @@
 // Opens <dialog> overlays from links with data-open-dialog="<id>".
 // The link's href (#id) also works as a shareable URL: visiting /#principles opens it.
 (() => {
+  const origins = new WeakMap();
   const open = (dialog) => {
     if (!dialog || dialog.open || typeof dialog.showModal !== "function") return false;
+    origins.set(dialog, document.activeElement);
     dialog.showModal();
     history.replaceState(null, "", `#${dialog.id}`);
     return true;
@@ -20,7 +22,9 @@
     });
     // Remove the #id from the URL again when it closes.
     dialog.addEventListener("close", () => {
-      if (location.hash === `#${dialog.id}`) history.replaceState(null, "", location.pathname + location.search);
+      if (location.hash === `#${dialog.id}`) history.replaceState(null, "", location.pathname + location.search + (dialog.dataset.returnHash || ""));
+      const origin = origins.get(dialog);
+      if (origin?.isConnected) origin.focus({ preventScroll: true });
     });
   }
 
@@ -28,3 +32,4 @@
   const fromUrl = id ? document.getElementById(id) : null;
   if (fromUrl && fromUrl.matches("dialog.overlay")) open(fromUrl);
 })();
+

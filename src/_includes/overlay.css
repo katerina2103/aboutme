@@ -84,3 +84,21 @@ html:not(.js) .overlay:target {
   display: block; position: static; width: auto; max-height: none; margin: 24px 0 0; box-shadow: none;
 }
 html:not(.js) .overlay:target .overlay__close-form { display: none; }
+
+/* Case studies reuse the site's native dialog and type system. */
+.case-overlay { width: min(860px, calc(100vw - 32px)); }
+.case-detail { display: grid; gap: 24px; }
+.case-detail__section { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.case-detail__section h3 { font-size: 18px; font-weight: 800; }
+.case-detail__section p { color: var(--muted); max-width: 62ch; }
+.case-detail__section p + p { margin-top: 12px; }
+.case-detail__section--impact { background: var(--bg); border: 0; border-radius: var(--radius-lg); padding: 24px; }
+.case-detail__section--impact h3 { color: var(--blue); }
+@media (max-width: 600px) {
+  .case-detail__section { grid-template-columns: 1fr; gap: 8px; }
+  .case-detail__section--impact { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .overlay[open], .overlay[open]::backdrop, .overlay[open] .overlay__item { animation: none; }
+}
+

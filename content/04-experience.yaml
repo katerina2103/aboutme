@@ -9,14 +9,15 @@ case_studies:
     summary: Turning complex data work into repeatable platform capabilities.
     sticky_note: from 2 to 30+ pipelines
     sticky_note_rotation: -3      # degrees; small numbers between -4 and 4 look best
-    link: "#work"                 # change to a case-study page when one exists
+    detail: data_onboarding
   - title: Connecting product evidence to investment
     summary: Using reporting and outcomes to inform portfolio decisions.
     sticky_note: numbers → a funding yes
     sticky_note_rotation: 2
-    link: "#work"
+    detail: product_investment
   - title: Finding an opportunity between data platforms
     summary: An interview proposal exploring BI integration and commercial value.
     sticky_note: thinking in practice
     sticky_note_rotation: -2
-    link: "#work"
+    detail: platform_concept
+
