@@ -24,6 +24,4 @@ dilemma_card:
       text: Focus the first version on one BI connection and a specific decisioning use case.
   footnote: Redrawn from an interview proposal, 2023. Not a shipped product.
 ---
-I'm Katya, a product leader working with data, analytics and AI in regulated
-B2B environments. I investigate the problem, decide what is worth building,
-and work with teams to deliver it.
+Hey there, welcome to Katya's page. Who am I? I make sense of messy problems, ask what we’re really trying to solve, and help teams build data-intensive products thousands of people enjoy using.
