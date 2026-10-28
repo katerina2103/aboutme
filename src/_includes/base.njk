@@ -18,6 +18,7 @@
 {% include "styles.css" %}
 {% include "motion.css" %}
 {% include "overlay.css" %}
+{% include "decision-lab.css" %}
 </style>
 </head>
 <body>
@@ -25,8 +26,10 @@
 {{ content | safe }}
 {% include "sections/footer.njk" %}
 <script>{% include "dialogs.js" %}</script>
+<script>{% include "decision-lab.js" %}</script>
 {% if site.settings.scroll_animations %}
 <script>{% include "reveal.js" %}</script>
 {% endif %}
 </body>
 </html>
+
