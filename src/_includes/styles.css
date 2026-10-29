@@ -248,3 +248,29 @@ p { margin: 0; }
   .panel { padding: 30px 22px; }
   .lab-section { gap: 20px; }
 }
+
+/* Personal hero and video introduction */
+.hero { grid-template-columns: minmax(0, 1.4fr) minmax(250px, .7fr); max-width: none; gap: 42px; }
+.hero__portrait { align-self: stretch; min-width: 0; border-radius: var(--radius-xl); overflow: hidden; min-height: 370px; }
+.hero__portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero__portrait-fallback { height: 100%; min-height: 370px; background: var(--tint); display: flex; flex-direction: column; justify-content: space-between; padding: 28px; box-sizing: border-box; }
+.hero__portrait-initial { font-family: var(--font-serif); font-size: clamp(100px, 13vw, 180px); line-height: 1; color: var(--blue); align-self: center; margin: auto; }
+.hero__portrait-caption { font-family: var(--font-hand); color: var(--navy); font-size: 26px; align-self: flex-end; }
+.intro-video { display: grid; grid-template-columns: minmax(160px, .35fr) minmax(0, 1fr); border-radius: var(--radius-xl); overflow: hidden; background: var(--tint); min-height: 230px; }
+.intro-video__visual { display: flex; align-items: center; justify-content: center; background: var(--navy); color: var(--accent); }
+.intro-video__monogram { font: italic 110px var(--font-serif); }
+.intro-video__content { padding: 34px 42px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; }
+.intro-video__content .eyebrow { margin: 0; }
+.intro-video__title { font-family: var(--font-serif); font-weight: 400; font-size: clamp(28px, 3vw, 40px); }
+.intro-video__caption { color: var(--muted); max-width: 50ch; }
+.intro-video__link { display: inline-block; margin-top: 6px; background: var(--navy); color: white; border-radius: 40px; padding: 12px 20px; font-size: 14px; font-weight: 700; text-decoration: none; }
+.intro-video__link:hover { color: white; background: var(--blue); }
+.intro-video__status { font-size: 13px; color: var(--muted); font-weight: 700; }
+@media (max-width: 780px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero__portrait { max-width: 420px; width: 100%; min-height: 300px; }
+  .intro-video { grid-template-columns: 1fr; }
+  .intro-video__visual { min-height: 115px; }
+  .intro-video__monogram { font-size: 75px; }
+  .intro-video__content { padding: 28px; }
+}
