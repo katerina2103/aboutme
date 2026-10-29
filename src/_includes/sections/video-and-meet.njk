@@ -1,14 +1,16 @@
 {% set video = site.video_and_meet.video_card %}
-{% set meet = site.video_and_meet.meet_card %}
-<div class="duo">
-  {% if video.video_link %}<a class="video video--link" href="{{ video.video_link }}" data-reveal style="--i: 0">{% else %}<section class="video" data-reveal style="--i: 0">{% endif %}
-    <span class="video__play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#13254a" stroke-width="2.2" stroke-linejoin="round"><path d="M8 5l11 7-11 7z"></path></svg></span>
-    <h3 class="video__title">{{ video.title }}</h3>
-    <p class="video__caption">{{ video.caption }}</p>
-  {% if video.video_link %}</a>{% else %}</section>{% endif %}
-  <section class="meet" data-reveal style="--i: 1">
-    <h2 class="meet__title">{{ meet.title }}</h2>
-    <p class="meet__text">{{ meet.text | mdInline | safe }}</p>
-    {% if meet.handwritten_note %}<p class="meet__note">{{ meet.handwritten_note }}</p>{% endif %}
-  </section>
-</div>
+<section class="intro-video" aria-labelledby="intro-video-title" data-reveal>
+  <div class="intro-video__visual" aria-hidden="true">
+    <span class="intro-video__monogram">K.</span>
+  </div>
+  <div class="intro-video__content">
+    <p class="eyebrow">Beyond the CV</p>
+    <h2 id="intro-video-title" class="intro-video__title">{{ video.title }}</h2>
+    <p class="intro-video__caption">{{ video.caption }}</p>
+    {% if video.video_link %}
+    <a class="intro-video__link" href="{{ video.video_link }}" target="_blank" rel="noopener noreferrer">Watch my introduction ↗</a>
+    {% else %}
+    <p class="intro-video__status">{{ video.status }}</p>
+    {% endif %}
+  </div>
+</section>
