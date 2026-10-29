@@ -4,16 +4,17 @@
     <h2 class="section-title">{{ exp.title | mdInline | safe }}</h2>
     <p class="panel__aside">{{ exp.introduction | mdInline | safe }}</p>
   </div>
-  {%- for case in exp.case_studies %}
-  <a class="case" href="#case-{{ case.detail }}" data-open-dialog="case-{{ case.detail }}" aria-haspopup="dialog" aria-controls="case-{{ case.detail }}" data-reveal style="--i: {{ loop.index0 }}">
-    <span class="case__number">{{ "0" if loop.index < 10 }}{{ loop.index }}</span>
-    <div class="case__body">
-      <h3 class="case__title">{{ case.title }}</h3>
-      <span class="case__summary">{{ case.summary }}</span>
-    </div>
-    {% if case.sticky_note %}<span class="case__note sticky" style="--tilt: {{ case.sticky_note_rotation or 0 }}deg">{{ case.sticky_note }}</span>{% endif %}
-  </a>
-  {%- endfor %}
+  <div class="impact-grid">
+    {%- for case in exp.case_studies %}
+    <a class="impact-card" href="#case-{{ case.detail }}" data-open-dialog="case-{{ case.detail }}" aria-haspopup="dialog" aria-controls="case-{{ case.detail }}" data-reveal style="--i: {{ loop.index0 }}">
+      <span class="impact-card__metric">{{ case.metric }}</span>
+      <span class="impact-card__metric-label">{{ case.metric_label }}</span>
+      <h3 class="impact-card__title">{{ case.title }}</h3>
+      <span class="impact-card__summary">{{ case.summary }}</span>
+      <span class="impact-card__action">Explore the story ↗</span>
+    </a>
+    {%- endfor %}
+  </div>
 </section>
 
 {% for card in exp.case_studies %}
