@@ -2,6 +2,8 @@
 # Hero: headline on the left, dark "dilemma" card on the right.
 # The text below the closing --- line is the introduction paragraph.
 
+portrait_image: ""
+# Add the path to a real photo here when ready.
 small_heading: Product Leader · Data, Analytics & AI · Science to Software
 headline: I turn complex data and AI challenges into *products people love to use.*
 
