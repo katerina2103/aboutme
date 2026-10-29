@@ -217,3 +217,34 @@ p { margin: 0; }
   .colleague-note { width: 100%; margin: 0; padding: 24px; --tilt: 0deg !important; }
 }
 @media print { .colleague-note { transform: none; box-shadow: none; } }
+
+
+/* Impact-first homepage: scannable cards and a clearly optional Decision Lab. */
+.hero { grid-template-columns: minmax(0, 1fr); max-width: 960px; padding-top: 64px; padding-bottom: 52px; }
+.hero__title { max-width: 20ch; font-size: clamp(42px, 5.2vw, 68px); }
+.hero__intro { max-width: 65ch; }
+.impact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.impact-card { display: flex; flex-direction: column; gap: 12px; padding: 30px 24px; border: 1px solid var(--line); border-radius: var(--radius-lg); text-decoration: none; background: var(--bg); transition: background .2s, transform .2s, border-color .2s; }
+.impact-card:hover { background: #e8eef9; border-color: var(--blue); transform: translateY(-3px); }
+.impact-card:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.impact-card__metric { font-weight: 800; font-size: clamp(43px, 4.5vw, 62px); line-height: 1; letter-spacing: -2px; color: var(--blue); }
+.impact-card__metric-label { min-height: 2.4em; font-size: 14px; font-weight: 700; }
+.impact-card__title { font-family: var(--font-serif); font-weight: 400; font-size: 24px; line-height: 1.25; }
+.impact-card__summary { color: var(--muted); font-size: 14px; flex: 1; }
+.impact-card__action { margin-top: 8px; font-size: 14px; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+.lab-section { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1fr); gap: 32px; align-items: start; padding: 40px 24px 32px; }
+.lab-section__intro { padding-top: 32px; }
+.lab-section__intro .section-title { margin-bottom: 20px; }
+.lab-section__intro .muted { max-width: 44ch; }
+@media (max-width: 900px) {
+  .impact-grid { grid-template-columns: 1fr; }
+  .impact-card { padding: 24px; }
+  .impact-card__metric-label { min-height: 0; }
+  .lab-section { grid-template-columns: minmax(0, 1fr); padding: 30px 0; }
+  .lab-section__intro { padding: 0 18px; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 32px 4px 36px; }
+  .panel { padding: 30px 22px; }
+  .lab-section { gap: 20px; }
+}
