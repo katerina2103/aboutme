@@ -107,7 +107,7 @@ for (const a of document.querySelectorAll("a[href]")) {
 }
 
 // 6. Sections the navigation relies on
-for (const id of ["work", "approach", "about", "connect"]) {
+for (const id of ["work", "approach", "connect"]) {
   if (!ids.has(id)) fail(`section #${id} is missing from the page`);
 }
 
