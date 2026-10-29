@@ -2,11 +2,11 @@
 # Hero: headline on the left, dark "dilemma" card on the right.
 # The text below the closing --- line is the introduction paragraph.
 
-small_heading: Evolving Product Leader · Data, analytics & AI · Software · International
-headline: Curious about the problem. *Committed to getting things done.*
+small_heading: Product Leader · Data, Analytics & AI · Science to Software
+headline: I turn complex data and AI challenges into *products people love to use.*
 
 primary_button:
-  label: Explore my work ↘
+  label: View my impact ↘
   link: "#work"
 secondary_button:
   label: Connect on LinkedIn ↗
@@ -25,5 +25,5 @@ dilemma_card:
       text: Focus the first version on one BI connection and a specific decisioning use case.
   footnote: Redrawn from an interview proposal, 2023. Not a shipped product.
 ---
-Hey there, welcome to Katya's page. Who am I? I make sense of messy problems, ask what we’re really trying to solve, and help teams build data-intensive products thousands of people enjoy using.
+I’m Katya, a product leader with a scientific background and experience across healthcare, life sciences and enterprise analytics. I turn ambiguity into products that deliver measurable value.
 
