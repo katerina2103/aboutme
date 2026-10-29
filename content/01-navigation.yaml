@@ -4,12 +4,10 @@ name_first: Katya
 name_last: Shimanovskaya          # shown in italic serif
 
 links:
-  - label: Experience
+  - label: My impact
     link: "#work"
-  - label: Approach
+  - label: How I think
     link: "#approach"
-  - label: About
-    link: "#about"
-  - label: Work together
+  - label: Let's connect
     link: "#connect"
     show_as_button: true
