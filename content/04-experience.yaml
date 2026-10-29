@@ -1,21 +1,27 @@
 # Experience: numbered case studies (nav "Experience" jumps here).
 # The 01, 02, 03 numbers follow the list order.
 
-title: Journey from problem to impact.
-introduction: A few ways I’ve connected people, data and technology in a product to get things done.
+title: My impact, in three stories.
+introduction: The outcomes first. Select a story to see the problem, what I did, and the impact.
 
 case_studies:
-  - title: Define once. Onboard and process faster
+  - metric: 39
+    metric_label: data pipelines · scaled from 2
+    title: Define once. Onboard and process faster
     summary: Turning complex data management tasks into user-facing platform capabilities.
     sticky_note: from 2 to 39 pipelines
     sticky_note_rotation: -3      # degrees; small numbers between -4 and 4 look best
     detail: data_products_platform
-  - title: Give users control over their data
+  - metric: 70%
+    metric_label: tasks handled by users · from zero
+    title: Give users control over their data
     summary: Giving users control of data loading, validation, and corrections.
     sticky_note: from 0 to 70% tasks by users
     sticky_note_rotation: 2
     detail: customer_focus
-  - title: Remove barriers to scaling analytics
+  - metric: 2,000+
+    metric_label: monthly analytics users
+    title: Remove barriers to scaling analytics
     summary: Expanding a shared analytics platform to 20+ global teams.
     sticky_note: to 2,000+ monthly users
     sticky_note_rotation: -2
