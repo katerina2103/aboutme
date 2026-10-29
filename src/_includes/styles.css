@@ -235,7 +235,7 @@ p { margin: 0; }
 .lab-section { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1fr); gap: 32px; align-items: start; padding: 40px 24px 32px; }
 .lab-section__intro { padding-top: 32px; }
 .lab-section__intro .section-title { margin-bottom: 20px; }
-.lab-section__intro .muted { max-width: 44ch; }
+.lab-section__intro .muted { max-width: 44ch; margin-bottom: 24px; }
 @media (max-width: 900px) {
   .impact-grid { grid-template-columns: 1fr; }
   .impact-card { padding: 24px; }
