@@ -7,11 +7,12 @@
   <div class="impact-grid">
     {%- for case in exp.case_studies %}
     <a class="impact-card" href="#case-{{ case.detail }}" data-open-dialog="case-{{ case.detail }}" aria-haspopup="dialog" aria-controls="case-{{ case.detail }}" data-reveal style="--i: {{ loop.index0 }}">
+      <span class="impact-card__sticker sticky" style="--tilt: {{ case.sticky_note_rotation }}deg">{{ case.sticky_note }}</span>
       <span class="impact-card__metric">{{ case.metric }}</span>
       <span class="impact-card__metric-label">{{ case.metric_label }}</span>
       <h3 class="impact-card__title">{{ case.title }}</h3>
       <span class="impact-card__summary">{{ case.summary }}</span>
-      <span class="impact-card__action">Explore the story ↗</span>
+      <span class="impact-card__action">{{ case.action_label }} →</span>
     </a>
     {%- endfor %}
   </div>
@@ -39,8 +40,29 @@
         <div>{{ detail[label] | md | safe }}</div>
       </section>
       {% endfor %}
+      <div class="case-principles-link">
+        <a class="text-link" href="#principles-{{ card.detail }}" data-open-dialog="principles-{{ card.detail }}" aria-haspopup="dialog" aria-controls="principles-{{ card.detail }}">Katya’s principles behind this story →</a>
+      </div>
     </div>
   </div>
 </dialog>
 {% endfor %}
 
+
+{% for card in exp.case_studies %}
+<dialog id="principles-{{ card.detail }}" class="overlay" aria-labelledby="principles-title-{{ card.detail }}" data-return-hash="#case-{{ card.detail }}">
+  <div class="overlay__inner">
+    <header class="overlay__head">
+      <div><p class="eyebrow">How I operate</p><h2 id="principles-title-{{ card.detail }}" class="overlay__title">The principles behind this story</h2></div>
+      <form method="dialog" class="overlay__close-form"><button class="overlay__close" aria-label="Close principles and return to story" autofocus><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form>
+    </header>
+    <div class="overlay__body">
+      <p class="overlay__intro">{{ card.title }}</p>
+      {% for index in card.principle_indices %}
+      {% set principle = site.approach.principles[index] %}
+      <section class="case-linked-principle"><h3>{{ principle.title }}</h3><p>{{ principle.text }}</p></section>
+      {% endfor %}
+    </div>
+  </div>
+</dialog>
+{% endfor %}

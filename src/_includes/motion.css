@@ -125,3 +125,9 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* Animate paper notes independently of the page's text reveals. */
+.sticky.sticky--arrived { animation: stick .7s var(--ease-spring) backwards; }
+.impact-card:hover .impact-card__sticker,
+.impact-card:focus-visible .impact-card__sticker,
+.colleague-note:hover { transform: rotate(0deg) scale(1.04); box-shadow: 0 12px 18px -10px #1d294866; }

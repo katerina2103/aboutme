@@ -1,2 +1,7 @@
 node_modules/
 dist/
+
+# Local feedback data and reports
+feedback.sqlite3*
+feedback-results.md
+scenario-bars-backup.njk

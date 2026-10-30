@@ -9,21 +9,27 @@ case_studies:
     metric_label: data pipelines · scaled from 2
     title: Define once. Onboard faster. Scale across Europe
     summary: Turning complex data management tasks into user-facing platform capabilities.
-    sticky_note: from 2 to 39 pipelines
+    sticky_note: Built to scale
     sticky_note_rotation: -3      # degrees; small numbers between -4 and 4 look best
+    action_label: Read the platform story
+    principle_indices: [10, 8, 7]
     detail: data_products_platform
   - metric: 70%
     metric_label: tasks handled by users · from zero
     title: Give users control over their data
     summary: Giving users control of data loading, validation, and corrections.
-    sticky_note: from 0 to 70% tasks by users
+    sticky_note: Put users in control
     sticky_note_rotation: 2
+    action_label: Read the self-service story
+    principle_indices: [0, 3, 6]
     detail: customer_focus
   - metric: 2,000+
     metric_label: monthly analytics users
     title: Remove barriers to scale analytics
     summary: Expanding a shared analytics platform to 20+ global analytics teams.
-    sticky_note: to 2,000+ monthly users
+    sticky_note: Turn frustration into impact
     sticky_note_rotation: -2
+    action_label: Read the analytics story
+    principle_indices: [7, 12, 4]
     detail: analytics_platform
 

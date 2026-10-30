@@ -102,3 +102,9 @@ html:not(.js) .overlay:target .overlay__close-form { display: none; }
   .overlay[open], .overlay[open]::backdrop, .overlay[open] .overlay__item { animation: none; }
 }
 
+
+.case-principles-link { padding-top: 24px; margin-top: 8px; border-top: 1px solid var(--line); }
+.case-principles-link a { color: var(--blue); font-size: 15px; }
+.case-linked-principle { padding: 22px; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; margin-top: 16px; }
+.case-linked-principle h3 { font-size: 21px; margin-bottom: 10px; }
+.case-linked-principle p { color: var(--muted); line-height: 1.7; }

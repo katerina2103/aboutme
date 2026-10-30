@@ -26,32 +26,7 @@
   lab.classList.add("lab-ready");
   controls.hidden = false;
   show(0);
-  // Size from the opening slide at the current width, never from the active slide.
-  // A hidden measuring copy keeps resizing independent of navigation or disclosures.
-  if (typeof window === 'object') {
-    const viewport = lab.querySelector('.lab-slides');
-    function sizeFromOpeningSlide() {
-      const copy = slides[0].cloneNode(true);
-      copy.hidden = false;
-      copy.removeAttribute('aria-label');
-      copy.setAttribute('aria-hidden', 'true');
-      copy.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;inset:0 auto auto 0;width:100%;';
-      viewport.append(copy);
-      const baseline = window.matchMedia('(max-width: 480px)').matches ? 490 : 420;
-      const height = Math.max(baseline, Math.ceil(copy.getBoundingClientRect().height));
-      copy.remove();
-      lab.style.setProperty('--lab-slide-height', height + 'px');
-    }
-    sizeFromOpeningSlide();
-    if (document.fonts) document.fonts.ready.then(sizeFromOpeningSlide);
-    if (typeof ResizeObserver === 'function') {
-      let lastWidth = lab.getBoundingClientRect().width;
-      new ResizeObserver(() => {
-        const width = lab.getBoundingClientRect().width;
-        if (width !== lastWidth) { lastWidth = width; sizeFromOpeningSlide(); }
-      }).observe(lab);
-    } else window.addEventListener('resize', sizeFromOpeningSlide);
-  }
+
 })();
 
 (() => {
@@ -99,7 +74,7 @@
      button.classList.remove('lab-my-choice');
      button.querySelector('.lab-choice-badge')?.remove();
    });
-   lab.querySelector('.lab-assessment').textContent = 'Choose an answer to see my assessment.';
+   lab.querySelector('.lab-assessment').textContent = ''; 
    lab.querySelector('.lab-choice-details').replaceChildren();
  }
  answers.forEach((button, index) => {
@@ -116,8 +91,17 @@
      target.focus();
    });
  });
- const select=lab.querySelector('#lab-scenario');
- const scenarios={low:['~3,000 hours/year','40% adoption · 5h search · 15% reduction · 0.5h review: 0.25h net per active scientist/week.'],base:['~17,000 hours/year','60% adoption · 6h search · 25% reduction · 0.5h review: 1h net per active scientist/week.'],high:['~45,000 hours/year','80% adoption · 7h search · 35% reduction · 0.4h review: about 2h net per active scientist/week.']};
- function update(){const [hours,explanation]=scenarios[select.value];lab.querySelector('#lab-model').innerHTML='<p class="lab-metric">'+hours+'</p><p>'+explanation+'</p><p>Potential capacity across 600 scientists × 46 weeks. Rounded scenarios, not forecasts.</p>';}
- select.addEventListener('change',update);update();
+})();
+
+(() => {
+ const lab = document.querySelector('.decision-lab');
+ const choices = [...lab.querySelectorAll('[data-compare]')];
+ function compare() {
+  const selected = new Set(choices.filter(input => input.checked).map(input => input.dataset.compare));
+  lab.querySelectorAll('[data-option]').forEach(cell => { cell.hidden = !selected.has(cell.dataset.option); });
+  lab.querySelector('.compare-status').textContent = selected.size ? `Comparing ${selected.size} option${selected.size === 1 ? '' : 's'}` : 'Select at least one option to compare.';
+  lab.querySelector('.business-table--transpose').style.minWidth = selected.size > 2 ? (140 + selected.size * 205) + 'px' : '100%';
+ }
+ choices.forEach(input => input.addEventListener('change', compare));
+ compare();
 })();

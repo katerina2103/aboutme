@@ -1,10 +1,10 @@
 {% set video = site.video_and_meet.video_card %}
-<section class="intro-video" aria-labelledby="intro-video-title" data-reveal>
+<section id="meet-katya" class="intro-video" aria-labelledby="intro-video-title" data-reveal>
   <div class="intro-video__visual" aria-hidden="true">
     <span class="intro-video__monogram">K.</span>
   </div>
   <div class="intro-video__content">
-    <p class="eyebrow">Beyond the CV</p>
+    <span class="section-sticker sticky" style="--tilt: -3deg">Beyond the CV</span>
     <h2 id="intro-video-title" class="intro-video__title">{{ video.title }}</h2>
     <p class="intro-video__caption">{{ video.caption }}</p>
     {% if video.video_link %}
@@ -14,3 +14,5 @@
     {% endif %}
   </div>
 </section>
+
+
