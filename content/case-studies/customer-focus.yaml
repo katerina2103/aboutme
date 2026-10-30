@@ -4,12 +4,10 @@ problem: |
   Our platform was at MVP stage, approaching a wider customer launch. Before rolling it out to everyone, we needed to understand how users experienced it in practice and how we could make this technical process simpler.
 solution: |
   While leading four squads, I introduced a series of small pilot before the wider rollout. Product Owners worked alongside Customer Services to guide users, then held open interviews after a short period of use.
-
   This approach was applied across nearly 20 customers using varoius data pipelines. For efficiency, AI tools helped analyse and annotate the interviews, insights from which were then turned into rapid AI-assisted prototypes. Testing those prototypes with users helped to improve the journey before committing to further development.
 impact: |
   The feedback informed a simpler user journey and helped reduce the codebase to around 65% of its original size. Next to that, pilot users welcomed early product preview and genuine interview process and were able to recognize some of their feedback.
-
-  Beyond the improvements themselves, I introduced a repeatable discovery practice: support users in context, listen to their experience, test changes quickly and bring that learning into launch decisions.
+  Beyond the improvements themselves, I introduced a repeatable customer-centric product discovery practice: put yourself in customers' shoes, listen carefully, iterate quickly and substantiate launch decisions.
 principles:
   - understand-before-change
   - bring-people-into-change
