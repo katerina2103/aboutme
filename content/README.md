@@ -36,3 +36,7 @@ Feedback votes stay in each visitor's browser, with no aggregate counter. A thum
 ## Check and publish
 
 Run `pnpm run build` after editing. It validates content, references, navigation and carousel interactions. Pushing to `main` triggers the existing GitHub Pages deployment. Generated `dist/` files are not edited or committed.
+
+## Feedback input restrictions
+
+The website accepts comments as plain text, up to 2,000 characters. Browser validation rejects URLs, email addresses, HTML, Markdown links/images, embedded-data schemes, hidden control characters and pasted/dropped files before either automatic delivery or the email fallback. The email payload contains fixed fields and no attachment field. These are browser-side restrictions, not a server security boundary. The public FormSubmit endpoint does not enforce a custom schema for this site; a controlled backend is needed to enforce the same policy against direct requests. The visitor can also edit a fallback email in their own mail app.

@@ -20,6 +20,11 @@ messages:
   comment_required: Please add a comment before sending.
   sending: Sending your feedback…
   email_fallback: Open email to send this feedback instead
+  input_rules: Plain text only, up to 2,000 characters. No links, email addresses, images or attachments.
+  comment_too_long: Please keep your comment under 2,000 characters.
+  comment_plain_text: Please use plain text without HTML or image markup.
+  comment_no_links: Please remove links and email addresses before sending.
+  comment_no_files: Images and attachments are not accepted. Please type or paste plain text.
 delivery:
   endpoint: https://formsubmit.co/ajax/shimanovskatya@gmail.com
   subject: Website feedback form — Not quite yet
