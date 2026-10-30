@@ -11,3 +11,7 @@ links:
   - label: Let's connect
     link: "#connect"
     show_as_button: true
+
+theme_toggle:
+  dark_label: Dark mode
+  light_label: Light mode

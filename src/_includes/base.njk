@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&amp;family=Caveat:wght@500;700&amp;display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");try { if (localStorage.getItem("katya-theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch { }</script>
 {% if site.settings.scroll_animations %}
 {# Marks the page as "animate on scroll" before first paint. Without JS nothing is hidden. #}
 <script>if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reveal-on");</script>
@@ -19,6 +19,7 @@
 {% include "motion.css" %}
 {% include "overlay.css" %}
 {% include "decision-lab.css" %}
+{% include "theme.css" %}
 </style>
 </head>
 <body>
@@ -26,6 +27,7 @@
 {{ content | safe }}
 {% include "sections/feedback.njk" %}
 {% include "sections/footer.njk" %}
+<script>{% include "theme.js" %}</script>
 <script>{% include "dialogs.js" %}</script>
 <script type="application/json" id="lab-content">{{ site.decision_lab | jsonForScript | safe }}</script>
 <script>{% include "decision-lab.js" %}</script>

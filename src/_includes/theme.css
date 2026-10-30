@@ -1,0 +1,37 @@
+/* Theme is explicit, remembered per browser; the approved light version is the default. */
+:root { color-scheme: light; }
+.theme-toggle { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font: 700 13px var(--font-sans); color: var(--navy); background: transparent; border: 1px solid var(--line); border-radius: 30px; padding: 10px 14px; min-height: 42px; }
+.theme-toggle[hidden], .theme-toggle__sun { display: none; }
+.theme-toggle:hover { background: var(--tint); border-color: var(--blue); }
+[data-theme="dark"] { color-scheme: dark; --navy: #edf1fb; --blue: #a5baff; --muted: #b6c3da; --bg: #111827; --tint: #26344e; --line: #40516b; --on-dark: #edf1fb; --on-dark-soft: #d3dded; --on-dark-muted: #b6c3da; --dark-border: #40516b; --surface: #1b263a; --warm-surface: #352f23; --ink: #1d2948; }
+[data-theme="dark"] .theme-toggle__sun { display: block; }
+[data-theme="dark"] .theme-toggle__moon { display: none; }
+[data-theme="dark"] :is(.panel, .overlay, .intro-video, .site-feedback, .decision-lab) { background: var(--surface); border-color: var(--line); }
+[data-theme="dark"] .decision-lab { box-shadow: 7px 8px 0 #080f1c; }
+[data-theme="dark"] :is(.impact-card, .intro-video__visual, .site-feedback, .feedback-votes button) { border-color: var(--line); }
+[data-theme="dark"] .impact-card:hover { background: var(--tint); border-color: var(--blue); }
+[data-theme="dark"] :is(.hero__buttons .social-btn, .roadmap-years > div, .plan-pnl) { background: var(--surface); }
+[data-theme="dark"] :is(.hero__buttons .social-btn:hover, .btn--outline:hover) { background: var(--tint); color: var(--navy); }
+[data-theme="dark"] :is(.btn--solid, .nav__links .nav__button, .intro-video__link, .feedback-followup button) { background: #a5baff; color: #111b30; }
+[data-theme="dark"] :is(.btn--solid:hover, .nav__links .nav__button:hover, .intro-video__link:hover) { background: #c5d2ff; color: #111b30; }
+[data-theme="dark"] :is(.section-sticker, .impact-card__sticker, .decision-lab .dilemma__note, .colleague-note) { color: #1d2948; box-shadow: 2px 5px 0 #050a1380; }
+[data-theme="dark"] .colleague-note figcaption { color: #384767; }
+[data-theme="dark"] :is(.case-brief, .business-verdict, .funding-card, .value-callout, .insight--assumption, .scenario-chart--reuse) { background: var(--warm-surface); border-color: #80704b; }
+[data-theme="dark"] .business-verdict, [data-theme="dark"] .case-brief { border-left-color: #ffd36d; }
+[data-theme="dark"] .case-brief__label, [data-theme="dark"] .case-brief__ask { color: #edf1fb; }
+[data-theme="dark"] :is(.business-table thead th, .plan-pnl thead) { background: #304262; color: #edf1fb; }
+[data-theme="dark"] .business-table tbody th { background: #22314a; }
+[data-theme="dark"] .business-table tr:nth-child(even) td { background: #202d43; }
+[data-theme="dark"] .overlay::backdrop { background: #030712bd; }
+[data-theme="dark"] .overlay__close:hover { background: var(--tint); color: var(--navy); }
+[data-theme="dark"] :is(.lab-choice-badge, .funding-dot) { color: #111b30; }
+[data-theme="dark"] .funding-outcomes > div:nth-child(2) { background: #352f23; border-color: #d6ae53; }
+[data-theme="dark"] .funding-outcomes > div:nth-child(3) { background: #3b2834; border-color: #ce8f9e; }
+[data-theme="dark"] .feedback-followup textarea { background: var(--bg); color: var(--navy); }
+[data-theme="dark"] .graph-grid { stroke: #52627c; }
+[data-theme="dark"] .graph-dot { fill: #a5baff; stroke: var(--surface); }
+[data-theme="dark"] .graph-line, [data-theme="dark"] .graph-range { stroke: #a5baff; }
+[data-theme="dark"] .reuse-scale { background: #43516a; }
+[data-theme="dark"] .reuse-band { background: #a5baff; }
+@media (max-width: 600px) { .nav__links { gap: 10px 16px; } .theme-toggle { padding: 9px 12px; } }
+@media print { .theme-toggle { display: none; } }
