@@ -1,8 +1,8 @@
-title: Remove barriers to scaling analytics
+title: Remove barriers to scale analytics
 context: Enterprise · Analytics Platform
 problem: >-
-  Analysts got the tools, but lacked processes and standards on how to bring insights to users efficiently and reliably. Frustration grew - it would take weeks of figuring out technicalities of vendor implementation. How to deliver insights quickly in a evolving stack? How to ensure technology can handle the demand?
+  Analysts got the tools, but lacked guidelines and guardrails on how to use them to create business insights efficiently and reliably. Frustration grew - it would take weeks of figuring out technicalities of vendor implementation. How to deliver insights quickly in a evolving stack without exploding the costs? How to ensure technology can handle the demand?
 solution: >-
-  Capture existing state in sufficient detail. Together with analytics front-runners define an experiment, execute it -> evaluate -> implement. Scale in batches through community and documentation. Implemented governance controls programmatically.
+  My role was to spot this problem, even though it did not belong to me. I captured existing state in sufficient detail, gathered analytics front-runners to brainstorm the solution together and define an experiment to prove value. Execute -> Evaluate -> Implement. Scale adoption in batches through regular community calls, doctor sessions and written guidelines. Together with the squad implemented governance controls programmatically to monitor and evolve.
 impact: >-
-  The platform reached more than 20 global teams and 2,000 monthly users, with over 1,500 dashboards, while improving platform SLAs.
+  Happier and supported analysts. The platform reached more than 20 global teams and 2,000 monthly users, with over 1,500 dashboards, while improving platform SLAs.
