@@ -27,7 +27,7 @@ export async function loadContentFiles(dir) {
   const entries = [];
 
   for (const file of names) {
-    const rel = `content/${file}`;
+    const rel = path.join(dir, file);
     const raw = await readFile(path.join(dir, file), "utf8");
     let data;
     try {
@@ -64,10 +64,19 @@ export async function loadContent(dir) {
     }
     site.case_studies[key] = data;
   }
+  site.principles = {};
+  for (const { data, file } of await loadContentFiles(path.join(dir, "principles"))) {
+    if (!data.id || !data.title || !data.text) throw new Error(`${file}: principle needs id, title and text`);
+    if (site.principles[data.id]) throw new Error(`Duplicate principle ID: ${data.id}`);
+    site.principles[data.id] = data;
+  }
+  site.lab_slides = {};
+  for (const { key, data } of await loadContentFiles(path.join(dir, "decision-lab"))) site.lab_slides[key] = data;
   for (const card of site.experience.case_studies) {
-    if (!site.case_studies[card.detail])
-      throw new Error(`Unknown case-study detail: ${card.detail}`);
+    const detail = site.case_studies[card.detail];
+    if (!detail) throw new Error(`Unknown case-study detail: ${card.detail}`);
+    if (!Array.isArray(detail.principles) || detail.principles.length < 3) throw new Error(`${card.detail}: link at least three principles`);
+    for (const id of detail.principles) if (!site.principles[id]) throw new Error(`${card.detail}: unknown principle ${id}`);
   }
   return site;
 }
-

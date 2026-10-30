@@ -1,0 +1,37 @@
+copy:
+  evidence: "Evidence "
+  label: "&"
+  assumptions: " assumptions"
+  size_the_problem: Size the problem.
+  test_the_assumptions: Test the assumptions.
+  external_evidence_2025: External evidence · 2025
+  value_57: 57%
+  cited_data_silos_as_a_barrier_to: " cited data silos as a barrier to using lab data."
+  start_with_access_to_evidence_and_fragmented: Start with access to evidence and fragmented knowledge.
+  source_and_limits: Source and limits
+  pistoia_alliance_september_2025: Pistoia Alliance · September 2025 ↗
+  survey_of_200_experts_across_life_sciences: . Survey of 200+ experts across life sciences and
+    related sectors. Not a representative sample of 2,000-person biotechs; it does not establish
+    this company’s baseline.
+  external_evidence_2024: External evidence · 2024
+  value_43: 43%
+  of_large_biopharma_it_respondents_supported_20: " of large-biopharma IT respondents supported 20+ scientific applications."
+  integration_and_source_coverage_belong_in_the: Integration and source coverage belong in the business case.
+  source_and_limits_2: Source and limits
+  benchling_november_2024: Benchling · November 2024 ↗
+  survey_of_300_r: . Survey of 300 R
+  label_2: "&"
+  d_it_respondents_in_the_us_and: D/IT respondents in the US and Europe; “large” meant 1,000+
+    employees. Vendor-sponsored, self-reported evidence. The percentage applies to the
+    large-biopharma IT subgroup.
+  planning_assumption_validate_in_discovery: Planning assumption · validate in discovery
+  value_5_7_hours_week: 5–7 hours/week
+  searching_and_collecting_information_per_scientist: " searching and collecting information per scientist."
+  use_6_hours_as_a_working_scenario: Use 6 hours as a working scenario—not a measured average.
+  how_i_would_validate_it: How I would validate it
+  measure_search_and_collection_separately_from_waiting: Measure search and collection separately from
+    waiting, synthesis and correction. Use a two-week baseline across relevant workflows. The cited
+    research supports the fragmentation problem; it does not establish this weekly search-time
+    assumption.
+  source_link_1: https://pistoiaalliance.org/news/survey-ai-adoption-life-sciences-labs-skills-gap/
+  source_link_2: https://www.benchling.com/blog/2024-state-of-tech-report

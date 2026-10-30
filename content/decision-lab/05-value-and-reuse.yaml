@@ -1,0 +1,90 @@
+copy:
+  value: "Value "
+  label: "&"
+  reuse: " reuse"
+  time_back_today: Time back today.
+  a_head_start_tomorrow: A head start tomorrow?
+  illustrative_scenarios_assumptions_to_test: Illustrative scenarios · assumptions to test
+  working_scenario_annual_capacity: Working scenario · annual capacity
+  value_17_000_hours: ~17,000 hours
+  value_600_scientists_46_weeks_60_adoption_1: 600 scientists × 46 weeks × 60% adoption × 1 net hour/week
+  how_sensitive_is_that_value: How sensitive is that value?
+  annual_hours_of_capacity_discrete_planning_scenarios: Annual hours of capacity · discrete planning scenarios
+  annual_capacity_scenario_range: Annual capacity scenario range
+  cautious_2_760_hours_working_16_560: Cautious 2,760 hours, working 16,560 hours, upside 45,264
+    hours. These are distinct planning assumptions, not a probability interval or time trend.
+  value_3k: ~3k
+  value_17k: ~17k
+  value_45k: ~45k
+  cautious: Cautious
+  working: Working
+  upside: Upside
+  value_0: "0"
+  value_20k: 20k
+  value_40k: 40k
+  hours_year_zero_based_scale: Hours/year · zero-based scale
+  adoption_40_60_80_net_time_per: "Adoption: 40 / 60 / 80%. Net time per active scientist: 0.25 / 1 /
+    2.05h per week. Scenarios, not probabilities."
+  capacity_does_not_automatically_become_financial_return: Capacity does not automatically become financial return
+  time_freed: Time freed
+  measured_net_of_review_effort: Measured net of review effort
+  label_2: →
+  redeploy_it: Redeploy it
+  choose_valuable_scientific_work: Choose valuable scientific work
+  label_3: →
+  prove_value: Prove value
+  track_outcomes_and_ongoing_cost: Track outcomes and ongoing cost
+  value_1_2m_gross_capacity_value_at_an: ~€1.2m gross capacity value at an assumed €70/hour in the
+    working scenario. This is opportunity cost before ongoing costs, not cash savings or ROI. No
+    payback claim without full costs and realized benefits.
+  does_reuse_accelerate_the_next_product_line: Does reuse accelerate the next product line?
+  value_100_scientists_separate_delivery_hypotheses: 100 scientists · separate delivery hypotheses
+  evidence_workflow: Evidence workflow
+  value_2_6_weeks_earlier: 2–6 weeks earlier?
+  from_scratch: "From scratch "
+  value_16w: 16w
+  label_4: →
+  with_reuse: "With reuse "
+  value_10_14w: 10–14w
+  evidence_workflow_16_weeks_from_scratch_versus: "Evidence workflow: 16 weeks from scratch, versus 10
+    to 14 weeks with reuse, on a zero to 16 week scale."
+  value_0_2: "0"
+  value_16_weeks: 16 weeks
+  research_milestone: Research milestone
+  value_0_2_weeks_earlier: 0–2 weeks earlier
+  baseline: "Baseline "
+  value_24w: 24w
+  label_5: →
+  critical_path: "Critical path* "
+  value_22_23w: 22–23w
+  research_milestone_24_weeks_baseline_22_to: "Research milestone: 24 weeks baseline; 22 to 23 weeks
+    if preparation is on the critical path, otherwise no gain, on a zero to 24 week scale."
+  value_0_3: "0"
+  value_24_weeks: 24 weeks
+  blue_ranges_assumed_outcomes_with_reuse_navy: Blue ranges = assumed outcomes with reuse; navy
+    markers = baseline. Each row has its own scale. *No milestone gain if wet-lab work or approvals
+    determine delivery.
+  what_earns_the_next_investment: What earns the next investment?
+  validate_sustained_adoption_and_net_time_saved: "Validate sustained adoption and net time saved.
+    Test reuse with a second team. Do not add milestone gains to annual capacity: the same benefit
+    may be counted twice."
+  assumptions_calculation_and_limits: Assumptions, calculation and limits
+  annual_capacity_600_scientists_46_weeks_adoption: "Annual capacity = 600 scientists × 46 weeks ×
+    adoption × (weekly search hours × reduction − added weekly review hours). Cautious: 40%, 5h,
+    15%, 0.5h = 2,760h. Working: 60%, 6h, 25%, 0.5h = 16,560h. Upside: 80%, 7h, 35%, 0.4h = 45,264h.
+    Scenario points use unrounded values on a zero-based scale; labels are rounded."
+  the_5_7h_baseline_and_15_35: The 5–7h baseline and 15–35% reduction are assumptions, not study
+    averages or pilot results. At an assumed €70/hour, gross capacity value is about €0.2m / €1.2m /
+    €3.2m before ongoing costs. This is opportunity cost, not payroll savings, revenue or financial
+    return. Budget is only released through an explicit redeployment or spending decision.
+  reuse_assumes_connectors_access_rules_evidence_templates: Reuse assumes connectors, access rules,
+    evidence templates and evaluation sets transfer to a new product line of 100 scientists. A
+    16-week evidence-workflow baseline could become 10–14 weeks. New data formats, scientific
+    entities or permissions could eliminate the gain.
+  a_24_week_research_milestone_could_shorten: A 24-week research milestone could shorten by 1–2 weeks
+    if four weeks of evidence preparation sit on the critical path and fall by 25–50%. If wet-lab
+    work or approvals dominate, milestone gain is zero. Each reuse row has its own zero-based weeks
+    scale. Blue ranges show assumed outcomes, not forecasts.
+  validate_adoption_search_time_and_review_cost: "Validate adoption, search time and review cost in
+    the pilot. Test transfer to a second team. Do not add milestone gains to annual capacity: the
+    same benefit may be counted twice."

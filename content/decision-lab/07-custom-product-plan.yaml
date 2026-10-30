@@ -1,0 +1,111 @@
+copy:
+  custom_solution_conditional_plan: Custom solution · conditional plan
+  from_pilot_evidence: From pilot evidence
+  to_a_product_worth_owning: to a product worth owning.
+  illustrative_internal_product_model_no_pilot_results: Illustrative internal-product model · no pilot results assumed
+  only_proceed_if_the_experiment_earns_it: Only proceed if the experiment earns it
+  meet_the_pilot_s_value_quality_and: Meet the pilot’s value, quality and access gates—and demonstrate
+    a repeatable scientific need that vendors cannot meet economically. A successful AI pilot alone
+    does not justify a custom build.
+  product_vision: Product vision
+  trustworthy_scientific_evidence_ready_for_the_next: Trustworthy scientific evidence, ready for the next research decision.
+  help_scientists_create_source_linked_candidate_review: Help scientists create source-linked candidate-review briefs across approved knowledge sources.
+  users_value_and_product_boundaries: Users, value and product boundaries
+  serve_scientists_and_research_decision_owners_connect: Serve scientists and research decision
+    owners. Connect evidence to its source, preserve permissions and make uncertainty visible.
+    Measure net preparation time, brief quality and repeat use. Start with one candidate-review
+    workflow; autonomous scientific decisions and foundation-model training are outside scope.
+  strategy: Strategy
+  own_the_scientific_workflow_reuse_the_technology: Own the scientific workflow. Reuse the technology.
+  build_only_the_differentiated_layer_use_existing: Build only the differentiated layer; use existing models and retrieval components.
+  choices_dependencies_and_success_measures: Choices, dependencies and success measures
+  own_evidence_templates_workflow_evaluations_and_integrations: Own evidence templates, workflow,
+    evaluations and integrations where the pilot proves vendor gaps. Use existing models and
+    reusable retrieval tools. Prioritize permission-aware access, traceability and supportability
+    over feature breadth. Commit scientific owners, senior engineering and data owners before
+    delivery.
+  continue_only_while_net_preparation_time_improves: Continue only while net preparation time improves
+    by at least 20% versus improved search without material quality loss, material claims remain
+    verifiable and adversarial tests show no unauthorized disclosure. Review ongoing quality,
+    adoption, incidents and full ownership cost quarterly. Stop or change approach if benefits fail
+    to persist.
+  value_3_year_roadmap: 3-year roadmap
+  prove_transfer_scale_selectively: Prove → transfer → scale selectively
+  year_1: Year 1
+  prove: Prove
+  one_workflow: One workflow
+  value_2_approved_sources: 2 approved sources
+  value_30_adoption: 30% adoption*
+  year_2: Year 2
+  transfer: Transfer
+  second_team_test: Second-team test
+  reusable_connectors: Reusable connectors
+  value_50_adoption: 50% adoption*
+  year_3: Year 3
+  scale: Scale
+  approved_workflows: Approved workflows
+  reliable_operations: Reliable operations
+  value_60_adoption: 60% adoption*
+  release_gates_and_sequencing: Release gates and sequencing
+  year_1_establish_the_permission_model_source: "Year 1: establish the permission model, source-linked
+    briefs and evaluation suite; release in stages after the pilot. Year 2: test transfer to a
+    second team before extending source coverage. Measure reuse effort and time to first trustworthy
+    brief. Year 3: expand only to workflows that demonstrate repeatable value; strengthen
+    monitoring, support and cost controls."
+  illustrative_average_annual_adoption_across_600_eligible: "*Illustrative average annual adoption
+    across 600 eligible scientists, not commitments or end-of-year targets. Adoption requires phased
+    rollout beyond the original 30 pilot participants. Each year’s funding is conditional on
+    evidence; no automatic three-year approval."
+  short_p: Short P
+  label: "&"
+  l: L
+  budget_the_cost_prove_the_benefit_separately: Budget the cost. Prove the benefit separately.
+  internal_cost_centre_000s_illustrative_annual_expense: Internal cost centre · €000s · illustrative annual expense model
+  three_year_internal_product_profit_and_loss: Three-year internal product profit and loss
+  value_000s: €000s
+  y1: Y1
+  y2: Y2
+  y3: Y3
+  revenue: Revenue
+  value_0: "0"
+  value_0_2: "0"
+  value_0_3: "0"
+  team: Team
+  value_960: (960)
+  value_960_2: (960)
+  value_960_3: (960)
+  infrastructure_api: Infrastructure / API
+  value_100: (100)
+  value_140: (140)
+  value_180: (180)
+  operating_contribution: Operating contribution
+  value_1_060: (1,060)
+  value_1_100: (1,100)
+  value_1_140: (1,140)
+  capacity_value_outside_p: Capacity value · outside P
+  label_2: "&"
+  l_2: L
+  y1_0_58m_y2_0_97m_y3: Y1 ~€0.58m → Y2 ~€0.97m → Y3 ~€1.16m
+  value_3_year_cost_3_30m_gross_capacity: "3-year cost: €3.30m · gross capacity value: ~€2.70m"
+  model_assumptions_and_investment_conclusion: Model assumptions and investment conclusion
+  team_8_fte_120k_loaded_annual_cost: "Team: 8 FTE × €120k loaded annual cost = €960k/year, within the
+    earlier custom-build staffing and cost range. Infrastructure/API: €100k / €140k / €180k as usage
+    expands. Assume all development costs are expensed; no capitalization, depreciation, financing
+    or tax model. No external sales or internal chargebacks. This is an incremental internal
+    cost-centre view, not a company-wide P"
+  label_3: "&"
+  l_3: L.
+  the_80_150k_pilot_is_assumed_included: The €80–150k pilot is assumed included in Year 1’s team/tool
+    envelope, not added again. Confirm the same scope before approval. Major data remediation, VAT
+    and whole-platform replacement remain excluded. Allocated staff expense is not necessarily
+    incremental cash spending.
+  capacity_calculation_600_scientists_46_weeks_average: "Capacity calculation: 600 scientists × 46
+    weeks × average adoption of 30% / 50% / 60% × 1 net hour saved per active scientist/week ×
+    assumed €70/hour. This yields 8,280 / 13,800 / 16,560 annual hours. The 1-hour net benefit is a
+    hypothesis to validate after review effort, not an experimental result. Capacity is not revenue,
+    payroll savings or realized cash benefit."
+  on_these_assumptions_gross_three_year_capacity: "On these assumptions, gross three-year capacity
+    value is about €2.70m against €3.30m of expense: capacity value alone does not justify custom
+    ownership. Require evidenced additional scientific value, better economics or a lower-cost route
+    before committing. Do not count research milestone gains twice. No cash payback or ROI is
+    established by this model."

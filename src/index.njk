@@ -9,23 +9,23 @@ permalink: /index.html
 <main class="container stack">
   {% include "sections/hero.njk" %}
   {% include "sections/experience.njk" %}
-  {% include "sections/video-and-meet.njk" %}
+  {% include "sections/video.njk" %}
   <section id="approach" class="lab-section" aria-labelledby="lab-section-title">
-    <div class="lab-section__intro" data-reveal>
-      <p class="eyebrow">Go beyond the results</p>
-      <h2 id="lab-section-title" class="section-title">Curious how I think?</h2>
+    <div class="lab-section__intro" data-reveal="">
+      <p class="eyebrow">{{ site.decision_lab.copy.go_beyond_the_results }}</p>
+      <h2 id="lab-section-title" class="section-title">{{ site.decision_lab.copy.curious_how_i_think }}</h2>
       <div class="company-brief">
-        <p class="company-brief__label">Meet our fictional biotech company</p>
-        <p>2,000 employees. 600 scientists. Lab records, reports and knowledge scattered across departments.</p>
+        <p class="company-brief__label">{{ site.decision_lab.copy.meet_our_fictional_biotech_company }}</p>
+        <p>{{ site.decision_lab.copy.value_2_000_employees_600_scientists_lab_records }}</p>
         <div class="case-brief">
-          <p class="case-brief__label">The CEO’s brief</p>
-          <blockquote>“Build an AI assistant for our scientists. We have enough data scientists, little software engineering expertise, and I want us to be an AI frontrunner.”</blockquote>
-          <p class="case-brief__ask">“How much investment do you need?”</p>
+          <p class="case-brief__label">{{ site.decision_lab.copy.the_ceo_s_brief }}</p>
+          <blockquote>{{ site.decision_lab.copy.build_an_ai_assistant_for_our_scientists }}</blockquote>
+          <p class="case-brief__ask">{{ site.decision_lab.copy.how_much_investment_do_you_need }}</p>
         </div>
-        <p>There is no agreed budget. I take the ambition seriously—and start by asking which research decision we need to accelerate.</p>
-        <p class="company-brief__question">Where would you start?</p>
+        <p>{{ site.decision_lab.copy.there_is_no_agreed_budget_i_take }}</p>
+        <p class="company-brief__question">{{ site.decision_lab.copy.where_would_you_start }}</p>
       </div>
-      <p class="lab-fiction-note">A fictional case to illustrate my reasoning. The company, budgets and outcomes are hypothetical.</p>
+      <p class="lab-fiction-note">{{ site.decision_lab.copy.a_fictional_case_to_illustrate_my_reasoning }}</p>
     </div>
     {% include "sections/decision-lab.njk" %}
   </section>

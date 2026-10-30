@@ -1,0 +1,4 @@
+id: build-in-learning-steps
+title: Build in steps that teach us something.
+text: Choose the smallest useful change that can test an assumption in practice. Use what happens to
+  decide whether to expand, adjust, or stop.

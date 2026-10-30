@@ -1,41 +1,38 @@
-# Editing the content
+# Editing website v2
 
-One file per page section, numbered top to bottom as they appear on the page.
+All published section text lives here. Change text in the relevant file, keeping field names intact. YAML values can span multiple indented lines. Markdown files use fields between the opening `---` lines and paragraphs below the closing `---`.
 
-| File | Section on the page |
-|---|---|
-| `00-settings.yaml` | Tab title, search description, accent colour, animations on/off |
-| `01-navigation.yaml` | Name in the top-left and the menu links |
-| `02-hero.md` | Headline, buttons, dark "dilemma" card; the text under `---` is the intro |
-| `03-stats-band.yaml` | Big numbers on the accent band |
-| `04-experience.yaml` | "Decisions behind the outcomes" and the case studies |
-| `05-video-and-meet.yaml` | Video card and "Meet Katya" card |
-| `06-approach.yaml` | "How I work": all principles (cards + the "Explore" overlay) |
-| `07-about.md` | About band; the text under `---` is the right-hand column |
-| `08-contact.md` | "Let's work together" band; the text under `---` is the paragraph |
-| `09-footer.yaml` | Footer lines |
+| Location | What it controls |
+| --- | --- |
+| `00-settings.yaml` | Browser title, search description, accent and section animation setting |
+| `01-navigation.yaml` | Brand name and navigation links |
+| `02-hero.md` | Opening headline, introduction, portrait path and the three social links |
+| `04-experience.yaml` | Impact tiles, metrics, stickers and links to case detail files |
+| `05-video.yaml` | Personal introduction, sticker, recording link and preparation message |
+| `06-decision-lab.yaml` | Company context, CEO brief, carousel controls and answer feedback |
+| `decision-lab/` | Seven slide files, in carousel order |
+| `08-contact.md` | Contact invitation, email, location and testimonial |
+| `09-feedback.yaml` | Feedback question, buttons and submission messages |
+| `10-footer.yaml` | Footer text and version |
+| `case-studies/` | Three published impact stories and their principle references |
+| `principles/` | All 14 working principles, one per file |
 
-## Two kinds of file
+## Editing the Decision Lab
 
-- **`.yaml`** for sections that are mostly fields and lists.
-- **`.md`** for sections with running text. The top block between the two `---` lines
-  holds the fields (written like YAML). Everything below it is the main text: write
-  normally, with a blank line between paragraphs. `- bullet` lists work there too.
+Each slide has a matching YAML file under `decision-lab/`. Its `copy:` fields contain the text displayed on that slide, including table cells, graph labels and expandable details. Descriptive field names identify the current wording; change values, not field names. The matching layout is in `src/_includes/slides/`; you do not need to edit it for wording changes.
 
-## Formatting inside any text
+Chart labels, chart coordinates, financial calculations and model assumptions must agree. Changing a label does not recalculate a chart. Ask for a model/layout update when changing numbers or adding comparison options; ordinary wording edits need only YAML.
 
-- `*words*` turns into the italic serif highlight used in headings
-- `**words**` turns into bold
-- `[label](https://…)` turns into a link
+## Linking principles to stories
 
-Raw HTML isn't allowed; it shows up as plain text.
+Edit a principle's title and explanation in `principles/`. Each has a stable `id`. Case files reference those IDs in their `principles:` list, in display order. Keep at least three distinct references per case. Do not rename an ID without updating its case references. Principles are stored once, so editing one updates every linked story.
 
-## Good to know
+## Recording and feedback
 
-- List items (lines starting with `-`) can be added, removed or reordered. Numbers like 01/02
-  and the 1/2/3 badges follow the list order.
-- The number in a file name only keeps the folder in page order. Moving a section on
-  the page is done in `src/index.njk`.
-- Put quotes around values that start with `#`, `*`, `@` or `[`, e.g. `link: "#work"`.
-  Otherwise YAML reads them as comments or special syntax.
-- After editing, run `npm run build`. The check will name the file and field if something's off.
+Set `video_card.video_link` in `05-video.yaml` when the recording is ready; the watch button then replaces the preparation message.
+
+GitHub Pages uses the feedback email link. Votes and optional comments work only through the local preview service until a hosted backend is configured. Local feedback databases and reports are never published.
+
+## Check and publish
+
+Run `pnpm run build` after editing. It validates content, references, navigation and carousel interactions. Pushing to `main` triggers the existing GitHub Pages deployment. Generated `dist/` files are not edited or committed.

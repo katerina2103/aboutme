@@ -16,6 +16,8 @@ export default function (eleventyConfig) {
   // Inline Markdown → no wrapping <p>. Use for headings and single lines.
   eleventyConfig.addFilter("mdInline", (value = "") => md.renderInline(String(value ?? "")));
 
+  eleventyConfig.addFilter("jsonForScript", value => JSON.stringify(value).replaceAll("<", "\\u003c"));
+
   return {
     dir: {
       input: "src",

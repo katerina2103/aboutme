@@ -1,6 +1,5 @@
-# Case-study popups
+# Published impact stories
 
-Edit one YAML file per popup. Each file requires title, context, problem, solution, and impact.
-Use `>-` and indent paragraph text by two spaces. Keep factual outcomes distinct from proposed outcomes.
-The `detail` field in `content/04-experience.yaml` references the filename, with dashes changed to underscores.
-The build validates these references and required fields.
+Each YAML file contains a story's title, context, problem, solution, impact and working-principle IDs. The three homepage tiles are configured in `../04-experience.yaml`; their `detail` fields match these filenames with dashes replaced by underscores.
+
+`principles:` contains at least three unique IDs from `../principles/`. Edit the shared principle wording in that folder; do not duplicate it here.

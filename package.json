@@ -2,12 +2,12 @@
   "name": "bright-blocks",
   "private": true,
   "version": "1.0.0",
-  "description": "Katya Shimanovskaya portfolio — static site built with Eleventy from YAML content.",
+  "description": "Katya Shimanovskaya portfolio \u2014 static site built with Eleventy from YAML content.",
   "type": "module",
   "scripts": {
-    "build": "eleventy && node scripts/check.mjs",
+    "build": "eleventy && node scripts/check.mjs && node scripts/check-decision-lab.mjs",
     "start": "eleventy --serve",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs && node scripts/check-decision-lab.mjs"
   },
   "engines": {
     "node": ">=22"

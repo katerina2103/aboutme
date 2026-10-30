@@ -1,9 +1,9 @@
 <section class="site-feedback" aria-labelledby="feedback-title">
-<span class="section-sticker sticky" style="--tilt: 3deg">Your perspective</span>
-<h2 id="feedback-title">I treat this website as a product. Has it given you a sense of who I am and the value I could bring?</h2>
-<div class="feedback-votes" role="group" aria-label="Has this website given you a sense of who I am and my value?">
-<button type="button" data-vote="up">👍 <span>Yes, clearly</span></button><button type="button" data-vote="down">👎 <span>Not quite yet</span></button>
+<span class="section-sticker sticky" style="--tilt: 3deg">{{ site.feedback.copy.your_perspective }}</span>
+<h2 id="feedback-title">{{ site.feedback.copy.i_treat_this_website_as_a_product }}</h2>
+<div class="feedback-votes" role="group" aria-label="{{ site.feedback.copy.has_this_website_given_you_a_sense }}">
+<button type="button" data-vote="up">{{ site.feedback.copy.label }}<span>{{ site.feedback.copy.yes_clearly }}</span></button><button type="button" data-vote="down">{{ site.feedback.copy.label_2 }}<span>{{ site.feedback.copy.not_quite_yet }}</span></button>
 </div>
 <p class="feedback-status" role="status" aria-live="polite"></p>
-<form class="feedback-followup" hidden><label for="feedback-comment">What would you like to understand better? <span>(Optional)</span></label><textarea id="feedback-comment" rows="3" maxlength="2000"></textarea><button type="submit">Send comment</button></form>
+<form class="feedback-followup" hidden><label for="feedback-comment">{{ site.feedback.copy.what_would_you_like_to_understand_better }}<span>{{ site.feedback.copy.optional }}</span></label><textarea id="feedback-comment" rows="3" maxlength="2000"></textarea><button type="submit">{{ site.feedback.copy.send_comment }}</button></form>
 </section>

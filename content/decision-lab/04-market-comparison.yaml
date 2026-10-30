@@ -1,0 +1,88 @@
+copy:
+  market_scan: Market scan
+  buy_adapt_or_build: Buy, adapt or build?
+  compare_equivalent_scope_source_coverage_permissions_useful: "Compare equivalent scope: source coverage, permissions, useful answers and ongoing ownership."
+  choose_options_to_compare: Choose options to compare
+  microsoft_365_copilot: " Microsoft 365 Copilot"
+  glean: " Glean"
+  benchling_ai: " Benchling AI"
+  haystack_hosted_model: " Haystack + hosted model"
+  custom_application: " Custom application"
+  comparing_2_options: Comparing 2 options
+  selected_business_case_options: Selected business case options
+  compare_routes_to_a_scientific_evidence_assistant: Compare routes to a scientific evidence assistant
+  decision_criteria: Decision criteria
+  microsoft_365_copilot_2: Microsoft 365 Copilot ↗
+  buy_existing_m365_estate: Buy · existing M365 estate
+  glean_2: Glean ↗
+  buy_cross_system_retrieval: Buy · cross-system retrieval
+  benchling_ai_2: Benchling AI ↗
+  buy_records_already_in_benchling: Buy · records already in Benchling
+  haystack_hosted_model_2: Haystack + hosted model ↗
+  adapt_open_source_hybrid: Adapt · open-source hybrid
+  custom_application_2: Custom application
+  build_differentiated_scientific_workflow: Build · differentiated scientific workflow
+  illustrative_first_year_cost: Illustrative first-year cost
+  value_270_584k: €270–584k
+  us_216k_year_licenses_for_600_seats: + US$216k/year licenses for 600 seats at US$30/user/month; qualifying M365 licenses extra.
+  value_270_584k_2: €270–584k
+  vendor_quote_no_verified_public_list_price: + vendor quote; no verified public list price in the prior research.
+  value_270_604k: €270–604k
+  platform_ai_usage_quote_and_any_migration: + platform / AI / usage quote and any migration.
+  value_520k_1_13m: €520k–1.13m
+  staff_480k_1_01m_infrastructure_api_40: Staff €480k–1.01m + infrastructure / API €40–120k.
+  value_920k_1_88m: €920k–1.88m
+  staff_840k_1_68m_infrastructure_api_80: Staff €840k–1.68m + infrastructure / API €80–200k.
+  internal_team: Internal team
+  value_2_3_fte: 2–3 FTE
+  services_usage: + services / usage
+  value_2_3_fte_2: 2–3 FTE
+  services: + services
+  value_2_3_fte_3: 2–3 FTE
+  integration: + integration
+  value_4_6_fte: 4–6 FTE
+  backend_platform_data_integration_retrieval_evaluation_product: Backend / platform, data integration, retrieval / evaluation, product; fractional security / UX.
+  value_7_10_fte: 7–10 FTE
+  hybrid_capabilities_plus_frontend_qa_and_reliability: Hybrid capabilities plus frontend, QA and reliability.
+  value: "Value "
+  label: "&"
+  trade_off: " trade-off"
+  existing_office_ecosystem: Existing office ecosystem.
+  lab_source_integration_and_permissions_need_proof: Lab-source integration and permissions need proof.
+  broad_permissions_aware_retrieval: Broad, permissions-aware retrieval.
+  scientific_parsing_and_source_freshness_need_proof: Scientific parsing and source freshness need proof.
+  lab_native_workflows: Lab-native workflows.
+  external_source_coverage_and_migration_may_dominate: External-source coverage and migration may dominate.
+  more_control_over_retrieval_and_evaluation: More control over retrieval and evaluation.
+  we_own_connectors_access_enforcement_and_operations: We own connectors, access enforcement and operations.
+  most_workflow_control: Most workflow control.
+  highest_engineering_burden_slowest_fit_to_current: Highest engineering burden; slowest fit to current capabilities.
+  decision_gate: Decision gate
+  demonstrate_eln_lims_coverage_and_access_controls: Demonstrate ELN/LIMS coverage and access controls on our tasks.
+  connect_our_lab_systems_and_verify_answers: Connect our lab systems and verify answers against the same evidence set.
+  prove_useful_coverage_within_and_beyond_benchling: Prove useful coverage within and beyond Benchling; price migration.
+  show_a_vendor_gap_worth_owning_and: Show a vendor gap worth owning and secure senior engineering capacity.
+  prove_a_repeatable_need_beyond_vendor_capabilities: Prove a repeatable need beyond vendor capabilities and fund long-term ownership.
+  select_more_options_above_scroll_across_when: Select more options above; scroll across when needed.
+    Costs include different exclusions—check the cost basis below.
+  my_business_case_starting_point: My business-case starting point
+  test_an_existing_estate_vendor_against_improved: Test an existing-estate vendor against improved
+    search first. Choose a hybrid or custom build only when a demonstrated gap justifies the
+    ownership cost.
+  cost_basis_exclusions_and_source_dates: Cost basis, exclusions and source dates
+  illustrative_planning_ranges_not_supplier_quotes_or: "Illustrative planning ranges, not supplier
+    quotes or market averages. Loaded staff cost: €120–168k per FTE-year, including allocated
+    internal time. Vendor-route totals include internal staff and the services / integration
+    allowances in the original case. Year-two staffing may remain similar."
+  figures_exclude_vat_major_data_remediation_and: Figures exclude VAT, major data remediation and
+    whole-platform replacement. Buy options exclude unquoted vendor fees and any listed extras;
+    totals are therefore incomplete. USD and EUR are intentionally separate, with no currency
+    conversion assumed. Training a foundation model is excluded.
+  product_documentation_and_pricing_were_checked_in: Product documentation and pricing were checked in
+    the prior case research on 28 October 2026; they have not been revalidated for this layout
+    change. Vendor capabilities are claims to test. Obtain comparable quotes and validate
+    integrations before a funding decision.
+  source_link_1: https://www.microsoft.com/en-us/copilot/pricing/enterprise
+  source_link_2: https://docs.glean.com/connectors/about
+  source_link_3: https://www.benchling.com/ai
+  source_link_4: https://docs.haystack.deepset.ai/

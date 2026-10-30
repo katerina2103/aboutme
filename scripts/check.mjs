@@ -6,7 +6,7 @@
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { parseHTML } from "linkedom";
-import { loadContentFiles } from "./load-content.mjs";
+import { loadContentFiles, loadContent } from "./load-content.mjs";
 
 const root = new URL("../", import.meta.url);
 const htmlPath = fileURLToPath(new URL("dist/index.html", root));
@@ -18,6 +18,7 @@ const fail = (msg) => errors.push(msg);
 let html, entries;
 try {
   entries = await loadContentFiles(contentDir);
+  await loadContent(contentDir);
 } catch (err) {
   console.error(`✗ ${err.message}`);
   process.exit(1);
@@ -37,15 +38,11 @@ const isEmpty = (v) => v == null || String(v).trim() === "";
 const rules = {
   settings: { required: ["browser_tab_title", "accent_color"] },
   navigation: { required: ["name_first"], lists: { links: ["label", "link"] } },
-  hero: {
-    required: ["headline", "body", "primary_button.label", "primary_button.link"],
-    lists: { "dilemma_card.options": ["title", "text"] },
-  },
-  stats_band: { lists: { stats: ["number", "label"] } },
-  experience: { required: ["title"], lists: { case_studies: ["title", "summary"] } },
-  video_and_meet: { required: ["video_card.title", "meet_card.title"] },
-  approach: { required: ["title"], lists: { principles: ["title", "text"] } },
-  about: { required: ["title", "body"] },
+  hero: { required: ["headline", "body"], lists: { social_links: ["label", "link", "icon"] } },
+  experience: { required: ["title"], lists: { case_studies: ["title", "summary", "detail"] } },
+  video: { required: ["video_card.title", "video_card.caption"] },
+  decision_lab: { required: ["sticker", "copy", "answers"] },
+  feedback: { required: ["copy", "messages"] },
   contact: { required: ["title", "button.label", "button.link"] },
   footer: {},
 };
@@ -69,13 +66,7 @@ for (const [key, rule] of Object.entries(rules)) {
   }
 }
 
-// 1b. Warnings (don't fail the build): unfinished placeholder principles
 const warnings = [];
-const principles = byKey.approach?.data?.principles ?? [];
-const placeholders = principles.filter((p) => p?.placeholder).length;
-if (placeholders) warnings.push(`${byKey.approach.file}: ${placeholders} principle(s) are still placeholders (placeholder: true)`);
-if (Array.isArray(principles) && principles.length && !principles.some((p) => p?.show_on_page))
-  warnings.push(`${byKey.approach.file}: no principle has show_on_page: true, so the "How I work" section shows no cards`);
 
 // 2. Accent colour must be a hex colour
 const accent = byKey.settings?.data?.accent_color;
@@ -85,7 +76,9 @@ if (accent && !/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(String(accent))) {
 
 // 3. No template leftovers or JS-ish junk in the output
 const { document } = parseHTML(html);
-const text = document.body.textContent;
+const visibleBody = document.body.cloneNode(true);
+visibleBody.querySelectorAll("script").forEach(el => el.remove());
+const text = visibleBody.textContent;
 for (const bad of ["{{", "}}", "{%", "%}", "undefined", "[object Object]", "NaN"]) {
   if (text.includes(bad)) fail(`output contains "${bad}" (a field is probably misspelt or the wrong type)`);
 }

@@ -1,0 +1,20 @@
+copy:
+  your_perspective: Your perspective
+  i_treat_this_website_as_a_product: I treat this website as a product. Has it given you a sense of
+    who I am and the value I could bring?
+  has_this_website_given_you_a_sense: Has this website given you a sense of who I am and my value?
+  label: "👍 "
+  yes_clearly: Yes, clearly
+  label_2: "👎 "
+  not_quite_yet: Not quite yet
+  what_would_you_like_to_understand_better: "What would you like to understand better? "
+  optional: (Optional)
+  send_comment: Send comment
+messages:
+  thanks: Thank you—that helps me improve this site.
+  saving: Saving your feedback…
+  vote_error: Your feedback could not be saved. Please try again.
+  comment_thanks: Thank you—your comment has been saved.
+  comment_error: Your comment could not be saved. Please try again.
+  email_label: Share your feedback by email →
+  email_link: mailto:shimanovskatya@gmail.com?subject=Feedback%20on%20your%20website

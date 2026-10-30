@@ -1,0 +1,50 @@
+copy:
+  my_recommendation: My recommendation
+  fund_learning: Fund learning.
+  earn_the_next_commitment: Earn the next commitment.
+  proposed_initial_commitment: Proposed initial commitment
+  value_80_150k: €80–150k
+  value_8_week_pilot_30_scientists_2_approved: 8-week pilot · 30 scientists · 2 approved sources
+  value_4_5_fte_equivalent_senior_engineering_required: 4–5 FTE-equivalent · senior engineering required
+  staged_investment_decision: Staged investment decision
+  value_1: "1"
+  secure_the_foundations: Secure the foundations
+  approved_access_a_senior_integration_engineer_and: Approved access, a senior integration engineer and committed scientists.
+  value_2: "2"
+  test_against_a_real_alternative: Test against a real alternative
+  compare_an_existing_estate_vendor_with_improved: Compare an existing-estate vendor with improved search on the same scientific tasks.
+  value_3: "3"
+  decide_at_week_eight: Decide at week eight
+  use_measured_value_quality_and_ownership_costs: Use measured value, quality and ownership costs to decide the next commitment.
+  proposed_funding_gates: Proposed funding gates
+  evidence_required_for_more_investment: Evidence required for more investment
+  value_20: ≥20%
+  net_preparation_time_reduction_vs_improved_search: Net preparation-time reduction vs improved search
+  quality: Quality
+  no_material_quality_loss_verifiable_support_for: No material quality loss; verifiable support for material claims
+  access: Access
+  no_unauthorized_disclosure_in_adversarial_tests: No unauthorized disclosure in adversarial tests
+  pass: Pass →
+  scope_the_next_investment: Scope the next investment
+  unclear: Unclear ↻
+  run_a_narrower_test: Run a narrower test
+  fail: Fail ■
+  stop_if_review_effort_erases_gains: Stop if review effort erases gains
+  proposed_gates_not_reported_results_report_task: Proposed gates, not reported results. Report
+    task/user spread and uncertainty. No rollout commitment before the evidence review.
+  pilot_cost_breakdown_and_team_requirements: Pilot cost breakdown and team requirements
+  proposed_team_4_5_fte_equivalent_across: "Proposed team: 4–5 FTE-equivalent across a product/domain
+    lead, senior integration engineer, data engineer, data scientist/evaluation lead and fractional
+    security, UX and scientist time."
+  planning_calculation_4_5_fte_equivalent_2: "Planning calculation: 4–5 FTE-equivalent × 2 months ×
+    €10–14k per FTE-month, plus €0–10k tools, rounded to €80–150k. Secure senior engineering
+    capacity before starting; data science capacity does not replace software engineering."
+  this_is_a_pilot_estimate_not_a: This is a pilot estimate, not a supplier quote or rollout budget.
+    The next investment depends on the week-eight evidence review.
+  accountability_and_ownership: Accountability and ownership
+  scientists_own_usefulness_and_review_data_owners: Scientists own usefulness and review. Data owners
+    own access and metadata. Engineering owns supportability. Finance challenges capacity
+    assumptions. The CEO sponsors the next decision, not a preferred answer.
+  choose_a_hybrid_only_where_a_demonstrated: Choose a hybrid only where a demonstrated gap justifies
+    ownership. Agree the next scope and its budget after the pilot; the initial €80–150k is not a
+    full-rollout cost.
