@@ -7,7 +7,7 @@ case_studies:
     summary: Accomodating variiety, while safeguarding scalability in regulatory context.
     sticky_note: Built to scale
     sticky_note_rotation: -3
-    action_label: Read the platform story
+    action_label: Read the data platform story
     detail: data_products_platform
   - metric: 4
     metric_label: squads · continuous product discovery
@@ -15,7 +15,7 @@ case_studies:
     summary: Introducing hospital pilots, user interviews and rapid prototyping to help teams simplify the platform before scaling.
     sticky_note: Learn before scaling
     sticky_note_rotation: 2
-    action_label: Read the discovery leadership story
+    action_label: Read the leadership story
     detail: customer_focus
   - metric: 2,000+
     metric_label: monthly analytics users
