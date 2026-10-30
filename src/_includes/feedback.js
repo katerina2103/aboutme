@@ -4,6 +4,7 @@
  const status = root.querySelector('.feedback-status');
  const form = root.querySelector('form');
  const buttons = [...root.querySelectorAll('[data-vote]')];
+ const fallback = root.querySelector('.feedback-email-fallback');
  const key = 'katya-portfolio-feedback-v2';
  let saved = null;
  try { saved = JSON.parse(localStorage.getItem(key)); } catch { }
@@ -15,7 +16,7 @@
  if (saved) { display(); status.textContent = content.messages.thanks; }
  buttons.forEach(button => button.addEventListener('click', () => {
   saved = { vote: button.dataset.vote, date: new Date().toISOString(), sent: false };
-  remember(); display(); status.textContent = content.messages.thanks;
+  remember(); display(); fallback.hidden = true; status.textContent = content.messages.thanks;
  }));
  form.addEventListener('submit', async event => {
   event.preventDefault();
@@ -47,7 +48,12 @@
    remember(); display();
    form.querySelector('textarea').value = '';
    status.textContent = content.messages.comment_thanks;
-  } catch { status.textContent = content.messages.comment_error; }
+  } catch {
+   status.textContent = content.messages.comment_error;
+   const body = 'Source: Website feedback form (not the contact form)\nWebsite: ' + content.delivery.website + '\nRating: Not quite yet\n\nComment:\n' + comment;
+   fallback.href = 'mailto:' + content.delivery.email + '?subject=' + encodeURIComponent(content.delivery.subject) + '&body=' + encodeURIComponent(body);
+   fallback.hidden = false;
+  }
   finally { submit.disabled = false; buttons.forEach(button => { button.disabled = false; }); }
  });
 })();

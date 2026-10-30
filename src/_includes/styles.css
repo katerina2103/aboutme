@@ -295,3 +295,6 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px soli
 .feedback-storage-note { font-size: 12px; line-height: 1.5; color: var(--muted); margin-top: 12px; }
 
 .feedback-trap { display: none; }
+
+.feedback-email-fallback { display: inline-block; margin: 16px 0 0 16px; font-size: 13px; }
+.feedback-email-fallback[hidden] { display: none; }

@@ -15,7 +15,7 @@ document.querySelector('[data-vote="up"]').click();assert.equal(calls.length,0);
 document.querySelector('[data-vote="down"]').click();assert.equal(calls.length,0);assert.equal(form.hidden,false);
 form.querySelector('textarea').value='';form.dispatchEvent(new window.Event('submit',{cancelable:true}));await new Promise(r=>setTimeout(r,0));assert.equal(calls.length,0);
 form.querySelector('textarea').value='The role you want is unclear.';
-succeeds=false;form.dispatchEvent(new window.Event('submit',{cancelable:true}));await new Promise(r=>setTimeout(r,0));assert.equal(form.hidden,false);assert.equal(form.querySelector('textarea').value,'The role you want is unclear.');assert.equal(form.querySelector('button').disabled,false);
+succeeds=false;form.dispatchEvent(new window.Event('submit',{cancelable:true}));await new Promise(r=>setTimeout(r,0));assert.equal(form.hidden,false);assert.equal(form.querySelector('textarea').value,'The role you want is unclear.');assert.equal(form.querySelector('button').disabled,false);assert.equal(document.querySelector('.feedback-email-fallback').hidden,false);assert.match(decodeURIComponent(document.querySelector('.feedback-email-fallback').href),/not the contact form/);
 succeeds=true;form.dispatchEvent(new window.Event('submit',{cancelable:true}));await new Promise(r=>setTimeout(r,0));
 assert.equal(form.hidden,true);assert.equal(JSON.parse([...values.values()][0]).sent,true);
 assert.equal(calls.at(-1).url,'https://formsubmit.co/ajax/shimanovskatya@gmail.com');

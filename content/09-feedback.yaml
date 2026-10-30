@@ -13,13 +13,15 @@ copy:
 messages:
   thanks: Thank you for your feedback.
   comment_thanks: Thank you—your feedback has been submitted.
-  comment_error: Your feedback could not be sent. Please try again, or email shimanovskatya@gmail.com
-    with the subject "Website feedback form".
+  comment_error: Automatic delivery is unavailable. Your comment is still here. You can send it using
+    the email link below.
   browser_note: Your vote stays in this browser. If you add a comment, it will be emailed to Katya
     through FormSubmit.
   comment_required: Please add a comment before sending.
   sending: Sending your feedback…
+  email_fallback: Open email to send this feedback instead
 delivery:
   endpoint: https://formsubmit.co/ajax/shimanovskatya@gmail.com
   subject: Website feedback form — Not quite yet
   website: https://katerina2103.github.io/aboutme/
+  email: shimanovskatya@gmail.com
