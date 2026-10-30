@@ -9,13 +9,13 @@ case_studies:
     sticky_note_rotation: -3
     action_label: Read the platform story
     detail: data_products_platform
-  - metric: 70%
-    metric_label: tasks handled by users · from zero
-    title: Give users control over their data
-    summary: Helping users load, validate and correct data without waiting for internal teams.
-    sticky_note: Put users in control
+  - metric: 4
+    metric_label: squads · continuous product discovery
+    title: Build learning into every launch
+    summary: Introducing hospital pilots, user interviews and rapid prototyping to help teams simplify the platform before scaling.
+    sticky_note: Learn before scaling
     sticky_note_rotation: 2
-    action_label: Read the self-service story
+    action_label: Read the discovery leadership story
     detail: customer_focus
   - metric: 2,000+
     metric_label: monthly analytics users

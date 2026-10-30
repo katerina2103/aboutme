@@ -1,16 +1,15 @@
-title: Give users control over their data
-context: Regulated industries · Data platform
-problem: Data providers submitted information through a portal with little visibility into what
-  happened next. Routine data-management tasks depended on internal teams. Before adding more
-  features, we needed to understand which tasks users could handle themselves and what guidance
-  would make that practical.
-solution: I helped redesign submission and data management around the work users needed to do. We
-  used several rounds of discovery and testing to improve guided loading, validation and correction.
-  The aim was to give people useful control over their data, with feedback they could act on inside
-  the product.
-impact: In selected markets, around 70% of data operations shifted to users. They could identify and
-  correct issues themselves, with short validation cycles instead of relying on internal teams for
-  each step.
+title: Build learning into every launch
+context: Discovery leadership · Healthcare data platform · 4 squads
+problem: |
+  Our platform was at MVP stage, approaching a wider customer launch. Before rolling it out to everyone, we needed to understand how hospital users experienced it in practice and where the journey needed to be simpler.
+solution: |
+  While leading four squads, I introduced a smaller pilot before the wider rollout. Platform team members worked alongside Customer Services to support users, then held open interviews after a short period of use.
+
+  We applied this approach across nearly 20 hospitals and three data pipelines. We used AI to help analyse and annotate the interviews, then turned the findings into rapid AI-assisted prototypes. Testing those prototypes with users helped us decide what to simplify before committing to further development.
+impact: |
+  The feedback informed a simpler user journey and helped reduce the codebase to around 65% of its original size.
+
+  Beyond the improvements themselves, I introduced a repeatable discovery practice: support users in context, listen to their experience, test changes quickly and bring that learning into launch decisions.
 principles:
   - understand-before-change
   - bring-people-into-change
