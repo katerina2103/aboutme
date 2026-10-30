@@ -5,7 +5,7 @@
 portrait_image: "assets/images/katya-portrait.png"
 # Add the path to a real photo here when ready.
 small_heading: Product Leader · Data, Analytics & AI · Science to Software
-headline: I turn messy problems and business challenges into *products people love to use.*
+headline: I turn messy problems *products people love to use.*
 
 primary_button:
   label: View my impact ↘
