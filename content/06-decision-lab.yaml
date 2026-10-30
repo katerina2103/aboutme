@@ -7,15 +7,14 @@ next_label: Next →
 restart_label: Start again ↺
 copy:
   curious_how_i_think: Work through a product decision with me
-  meet_our_fictional_biotech_company: Meet our fictional biotech company
-  value_2_000_employees_600_scientists_lab_records: 2,000 employees. 600 scientists. Lab records, reports and knowledge scattered across departments.
+  meet_our_fictional_biotech_company: Meet our fictional biotech company (based on statistical averages)
+  value_2_000_employees_600_scientists_lab_records: 2,000 employees. 600 scientists. Lab records, reports and knowledge scattered across teams, systems. Fast-growing, regulated and ambitious.
   the_ceo_s_brief: The CEO’s brief
   build_an_ai_assistant_for_our_scientists: “Build an AI assistant for our scientists. We have enough
-    data scientists, little software engineering expertise, and I want us to be an AI frontrunner.”
-  how_much_investment_do_you_need: “How much investment do you need?”
-  there_is_no_agreed_budget_i_take: There is no agreed budget. I take the ambition seriously, then ask
-    which research decision we need to improve. That gives us something useful to investigate before
-    choosing what to build.
+    data scientists, although little software engineering expertise, and I want us to be an AI frontrunner.”
+  how_much_investment_do_you_need: “When can you make this happen and what do you need?”
+  there_is_no_agreed_budget_i_take: There is no agreed budget. I take this question seriously, then ask
+    which processes do we need to improve and what the benefits are. In this way, we first can build confidence in the direction before a substantial investment is made.
   where_would_you_start: Where would you start?
   a_fictional_case_to_illustrate_my_reasoning: A fictional case to illustrate my reasoning. The company, budgets and outcomes are hypothetical.
 answers:
