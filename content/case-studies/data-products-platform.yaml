@@ -1,8 +1,8 @@
 title: Define once. Onboard and process faster
-context: European Healthcare · Data platform
+context: Regulated B2B · Data platform
 problem: >-
-  Every european country has own healthcare data standards and requirements. Every heathcare provider stores data following national and internal standards. How to simplify and fasttrack data onboardng in a growing portfolio?
+  Regulatory requirements apply to data at a country level. Next to regulatory requirements, every organization creating data develops their own standards as well are provider stores data following national and internal standards. How to simplify and fasttrack data collection in a growing portfolio?
 solution: >-
-  We standardised steps in the data management process, embedded data-quality and standards into the platform design through machine and human readable intent.
+  I have led the initiative to standardize and modernize data management processes that would accomodate for variation of data requirements without compromising scalability. I embedded data-quality and standards into the platform design through machine and human readable intent. My platform leadership principle remained 'eat your own dogfood' - focus on data, its content and keep the infrastructure in order and evolving.
 impact: >-
-  The platform allowed to configure up to 7 data ingestion pipelines in one day. Eventually we scaled to 39 data pipelines efficiently serving more than 200 healthcare providers across Europe.
+  The platform allowed to configure up to 7 data ingestion pipelines in one day, when data requirements are prepared upfront. Eventually the platform scaled to 39 data pipelines efficiently serving more than 200 healthcare providers across Europe.
