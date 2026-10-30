@@ -1,0 +1,29 @@
+/* Review alternative: a footer utility rather than another headline section. */
+.site-feedback.site-feedback--quiet {
+  box-sizing: border-box;
+  width: calc(100% - 48px);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 0 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.feedback-quiet-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.feedback-quiet-copy { max-width: 68ch; }
+.site-feedback--quiet h2 { max-width: none; font-size: 14px; font-weight: 500; line-height: 1.65; letter-spacing: 0; color: var(--muted); }
+.site-feedback--quiet .feedback-votes { flex-shrink: 0; margin-top: 0; gap: 8px; }
+.site-feedback--quiet .feedback-votes button { padding: 9px 12px; min-height: 40px; font-size: 12px; font-weight: 500; background: transparent; border: 1px solid transparent; box-shadow: none; color: var(--muted); }
+.site-feedback--quiet .feedback-votes button:hover,
+.site-feedback--quiet .feedback-votes button[aria-pressed="true"] { color: var(--navy); background: var(--tint); border-color: var(--line); box-shadow: none; }
+.site-feedback--quiet .feedback-status { margin-top: 8px; font-size: 12px; }
+[data-theme="dark"] .site-feedback.site-feedback--quiet { background: transparent; border: 0; }
+[data-theme="dark"] .site-feedback--quiet .feedback-votes button { border-color: transparent; }
+[data-theme="dark"] .site-feedback--quiet .feedback-votes button:hover,
+[data-theme="dark"] .site-feedback--quiet .feedback-votes button[aria-pressed="true"] { border-color: var(--line); }
+@media (max-width: 780px) {
+ .feedback-quiet-row { align-items: flex-start; flex-direction: column; gap: 8px; }
+ .site-feedback--quiet .feedback-votes { margin-left: -12px; }
+ .site-feedback.site-feedback--quiet { padding-top: 24px; }
+}

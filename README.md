@@ -18,4 +18,4 @@ Node 22 or newer is required. Build output goes to `dist/` and is ignored by Git
 
 ## Feedback
 
-Votes stay in each visitor's browser with no shared counter. Thumbs-down comments are emailed through FormSubmit and identified as website feedback, separate from the contact button. The recipient must activate FormSubmit once using its confirmation email. Configure delivery in `content/09-feedback.yaml`. Browser interaction checks mock email delivery; real delivery must be verified after activation. Earlier local SQLite scripts remain available for local experiments but current controls do not call them.
+The footer offers thumbs-up and thumbs-down votes. Each visitor's browser remembers their choice. There is no comment form, email delivery, attachment handling, backend, or shared counter. The separate contact button opens an email to Katya.

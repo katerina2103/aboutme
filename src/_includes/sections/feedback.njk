@@ -1,11 +1,9 @@
-<section class="site-feedback" aria-labelledby="feedback-title">
-<span class="section-sticker sticky" style="--tilt: 3deg">{{ site.feedback.copy.your_perspective }}</span>
-<h2 id="feedback-title">{{ site.feedback.copy.i_treat_this_website_as_a_product }}</h2>
+<section class="site-feedback site-feedback--quiet" aria-labelledby="feedback-title">
+<div class="feedback-quiet-row"><div class="feedback-quiet-copy">
+<h2 id="feedback-title">{{ site.feedback.copy.i_treat_this_website_as_a_product }}</h2></div>
 <div class="feedback-votes" role="group" aria-label="{{ site.feedback.copy.has_this_website_given_you_a_sense }}">
 <button type="button" data-vote="up">{{ site.feedback.copy.label }}<span>{{ site.feedback.copy.yes_clearly }}</span></button><button type="button" data-vote="down">{{ site.feedback.copy.label_2 }}<span>{{ site.feedback.copy.not_quite_yet }}</span></button>
-</div>
-<p class="feedback-storage-note">{{ site.feedback.messages.browser_note }}</p>
+</div></div>
 <p class="feedback-status" role="status" aria-live="polite"></p>
-<form class="feedback-followup" hidden><label for="feedback-comment">{{ site.feedback.copy.what_would_you_like_to_understand_better }}<span>{{ site.feedback.copy.optional }}</span></label><input class="feedback-trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-<p id="feedback-rules" class="feedback-storage-note">{{ site.feedback.messages.input_rules }}</p><textarea id="feedback-comment" rows="3" maxlength="2000" aria-describedby="feedback-rules" required></textarea><button type="submit">{{ site.feedback.copy.send_comment }}</button><a class="text-link feedback-email-fallback" hidden>{{ site.feedback.messages.email_fallback }}</a></form>
+
 </section>

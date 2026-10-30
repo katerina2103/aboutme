@@ -1,5 +1,4 @@
 copy:
-  your_perspective: Your perspective
   i_treat_this_website_as_a_product: I treat this website as a product. Has it given you a sense of
     who I am and the value I could bring?
   has_this_website_given_you_a_sense: Has this website given you a sense of who I am and my value?
@@ -7,26 +6,5 @@ copy:
   yes_clearly: Yes, clearly
   label_2: "👎 "
   not_quite_yet: Not quite yet
-  what_would_you_like_to_understand_better: "What would you like to understand better? "
-  optional: (Optional)
-  send_comment: Send feedback
 messages:
   thanks: Thank you—your perspective matters.
-  comment_thanks: Thank you—your feedback has been submitted.
-  comment_error: Automatic delivery is unavailable. Your comment is still here. You can send it using
-    the email link below.
-  browser_note: Your vote stays in this browser. If you add a comment, it will be emailed to Katya
-    through FormSubmit.
-  comment_required: Please add a comment before sending.
-  sending: Sending your feedback…
-  email_fallback: Open email to send this feedback instead
-  input_rules: Plain text only, up to 2,000 characters. No links, email addresses, images or attachments.
-  comment_too_long: Please keep your comment under 2,000 characters.
-  comment_plain_text: Please use plain text without HTML or image markup.
-  comment_no_links: Please remove links and email addresses before sending.
-  comment_no_files: Images and attachments are not accepted. Please type or paste plain text.
-delivery:
-  endpoint: https://formsubmit.co/ajax/shimanovskatya@gmail.com
-  subject: Website feedback form — Not quite yet
-  website: https://katerina2103.github.io/aboutme/
-  email: shimanovskatya@gmail.com

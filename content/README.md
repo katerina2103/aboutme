@@ -12,7 +12,7 @@ All published section text lives here. Change text in the relevant file, keeping
 | `06-decision-lab.yaml` | Company context, CEO brief, carousel controls and answer feedback |
 | `decision-lab/` | Seven slide files, in carousel order |
 | `08-contact.md` | Contact invitation, email, location and testimonial |
-| `09-feedback.yaml` | Feedback question, buttons and submission messages |
+| `09-feedback.yaml` | Feedback question, voting buttons and acknowledgement |
 | `10-footer.yaml` | Footer text and version |
 | `case-studies/` | Three published impact stories and their principle references |
 | `principles/` | All 14 working principles, one per file |
@@ -31,12 +31,8 @@ Edit a principle's title and explanation in `principles/`. Each has a stable `id
 
 Set `video_card.video_link` in `05-video.yaml` when the recording is ready; the watch button then replaces the preparation message.
 
-Feedback votes stay in each visitor's browser, with no aggregate counter. A thumbs-down comment is submitted through FormSubmit to `shimanovskatya@gmail.com`, with the subject “Website feedback form — Not quite yet”. This is separate from the contact email button. Delivery requires the recipient to complete FormSubmit's one-time email activation. The endpoint, subject and status messages are in `09-feedback.yaml`.
+Feedback is thumbs-up/down only. Each visitor's browser remembers their vote. There is no comment form, email delivery or shared counter. Edit the question, button labels and acknowledgement in `09-feedback.yaml`. The contact email button remains separate.
 
 ## Check and publish
 
 Run `pnpm run build` after editing. It validates content, references, navigation and carousel interactions. Pushing to `main` triggers the existing GitHub Pages deployment. Generated `dist/` files are not edited or committed.
-
-## Feedback input restrictions
-
-The website accepts comments as plain text, up to 2,000 characters. Browser validation rejects URLs, email addresses, HTML, Markdown links/images, embedded-data schemes, hidden control characters and pasted/dropped files before either automatic delivery or the email fallback. The email payload contains fixed fields and no attachment field. These are browser-side restrictions, not a server security boundary. The public FormSubmit endpoint does not enforce a custom schema for this site; a controlled backend is needed to enforce the same policy against direct requests. The visitor can also edit a fallback email in their own mail app.

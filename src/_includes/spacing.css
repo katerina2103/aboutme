@@ -62,8 +62,6 @@
 .feedback-votes { gap: var(--space-2); margin-top: var(--space-3); }
 .feedback-status { margin-top: var(--space-2); }
 .feedback-status:empty { display: none; }
-.feedback-followup { margin-top: var(--space-3); padding-top: var(--space-3); }
-.feedback-followup textarea { margin: var(--space-2) 0; }
 .footer { box-sizing: border-box; max-width: 1288px; padding: var(--space-4) var(--page-gutter); gap: var(--space-2); }
 .overlay__head { padding: var(--space-4) var(--space-4) var(--space-3); gap: var(--space-3); }
 .overlay__body { padding: var(--space-3) var(--space-4) var(--space-4); }
