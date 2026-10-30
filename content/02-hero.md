@@ -13,4 +13,4 @@ social_links:
     icon: substack
     link: https://substack.com/@katyashimanovskaya/notes
 ---
-I’m Katya, a product leader working with data, analytics and AI. My path from the lab to software leadership taught me to question assumptions and put ideas to the test. I bring people into that work: understand what matters to customers, make the value concrete, and help teams turn uncertainty into a useful next step.
+I’m Katya, a polymath who walked the path through science, statistical data analysis and data to product leadership. My path from the lab to data-intensive software taught me to make decisions with incomplete information and put ideas to the test. I bring people into that work: understand what matters to customers, make the value concrete, and help teams turn uncertainty into a useful next step.
