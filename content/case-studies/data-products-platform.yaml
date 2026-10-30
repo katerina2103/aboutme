@@ -1,14 +1,11 @@
 title: Define once. Onboard faster. Scale across Europe
 context: Regulated B2B · Customer-facing data platform
 problem: Collecting regulated data across Europe meant meeting EU and national requirements
-  alongside each data provider’s standards and formats. As the portfolio grew, repeatedly rebuilding
-  ingestion processes would make onboarding harder to scale. The question was how to accommodate
-  genuine differences without treating every provider as a new platform.
-solution: "I led the work to standardize and modernize data management, with variation built into
+  alongside each data controller’s standards and formats. The question was how to accommodate
+  genuine differences in data requirements without starting from scratch, when your portfolio grows exponentially?
+solution: I led the work to standardize and modernize data management, with standards built into
   the design. We expressed data-quality rules and standards in forms both people and software could
-  use. That made requirements something we could configure against, rather than rediscover for each
-  pipeline. My principle was to “eat our own dog food”: apply our standards to the platform itself
-  and keep improving the infrastructure behind it."
+  use. That made data requirements into something we could configure against once. My leadership principle was to “eat our own dog food”: focus on data creation while keep improving the infrastructure behind it.
 impact: With data requirements prepared upfront, teams could configure up to seven ingestion
   pipelines in one day. The platform grew to 39 pipelines, serving more than 200 data providers
   across Europe. Providers also used it as a front-end application to work with their data.
