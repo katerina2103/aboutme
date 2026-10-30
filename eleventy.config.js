@@ -6,6 +6,7 @@ import { loadContent } from "./scripts/load-content.mjs";
 const md = markdownIt({ html: false, linkify: false, typographer: false });
 
 export default function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   // All files in content/ (one per page section) become the `site` variable.
   eleventyConfig.addGlobalData("site", () => loadContent("content"));
   eleventyConfig.addWatchTarget("./content/");
