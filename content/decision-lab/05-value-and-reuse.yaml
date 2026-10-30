@@ -48,7 +48,7 @@ copy:
   with_reuse: "With reuse "
   value_10_14w: 10–14w
   evidence_workflow_16_weeks_from_scratch_versus: "Evidence workflow: 16 weeks from scratch, versus 10
-    to 14 weeks with reuse, on a zero to 16 week scale."
+    to 14 weeks with reuse, on a zero-to-16-week scale."
   value_0_2: "0"
   value_16_weeks: 16 weeks
   research_milestone: Research milestone
@@ -58,8 +58,8 @@ copy:
   label_5: →
   critical_path: "Critical path* "
   value_22_23w: 22–23w
-  research_milestone_24_weeks_baseline_22_to: "Research milestone: 24 weeks baseline; 22 to 23 weeks
-    if preparation is on the critical path, otherwise no gain, on a zero to 24 week scale."
+  research_milestone_24_weeks_baseline_22_to: "Research milestone: 24-week baseline; 22 to 23 weeks
+    if preparation is on the critical path, otherwise no gain, on a zero-to-24-week scale."
   value_0_3: "0"
   value_24_weeks: 24 weeks
   blue_ranges_assumed_outcomes_with_reuse_navy: Blue ranges = assumed outcomes with reuse; navy

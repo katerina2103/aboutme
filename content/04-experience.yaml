@@ -4,7 +4,7 @@ case_studies:
   - metric: 39
     metric_label: data pipelines · scaled from 2
     title: Define once. Onboard faster. Scale across Europe
-    summary: Accomodating variiety, while safeguarding scalability in regulatory context.
+    summary: Accommodating variety, while safeguarding scalability in a regulatory context.
     sticky_note: Built to scale
     sticky_note_rotation: -3
     action_label: Read the data platform story
@@ -20,7 +20,7 @@ case_studies:
   - metric: 2,000+
     metric_label: monthly analytics users
     title: Remove barriers to scale analytics
-    summary: Turning siloed analytics platform into something teams could use with joy.
+    summary: Turning a siloed analytics platform into something teams could use with joy.
     sticky_note: Turn frustration into impact
     sticky_note_rotation: -2
     action_label: Read the analytics story
