@@ -1,11 +1,10 @@
 title: My impact, in three stories.
-introduction: The results, and the work behind them. Open a story to see what needed to change, how
-  I contributed to the solution, and what improved.
+introduction: The results, and the work behind them. Open a story to see details and my underpinning working principles.
 case_studies:
   - metric: 39
     metric_label: data pipelines · scaled from 2
     title: Define once. Onboard faster. Scale across Europe
-    summary: Making different regulatory and provider requirements work within one scalable platform.
+    summary: Accomodating variiety, while safeguarding scalability in regulatory context.
     sticky_note: Built to scale
     sticky_note_rotation: -3
     action_label: Read the platform story
@@ -21,7 +20,7 @@ case_studies:
   - metric: 2,000+
     metric_label: monthly analytics users
     title: Remove barriers to scale analytics
-    summary: Turning a shared analytics platform into something teams could use with confidence.
+    summary: Turning siloed analytics platform into something teams could use with joy.
     sticky_note: Turn frustration into impact
     sticky_note_rotation: -2
     action_label: Read the analytics story
