@@ -36,7 +36,7 @@
     <div class="overlay__body case-detail">
       {% for label in ["problem", "solution", "impact"] %}
       <section class="case-detail__section{% if label == 'impact' %} case-detail__section--impact{% endif %}">
-        <h3>{{ label | capitalize }}</h3>
+        <h3 class="case-detail__heading"><span class="case-detail__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">{% if label == 'problem' %}<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/>{% elif label == 'solution' %}<path d="M9 18h6m-5 3h4M8.5 14.5a6 6 0 1 1 7 0c-1 .8-1.5 1.5-1.5 3.5h-4c0-2-.5-2.7-1.5-3.5Z"/>{% else %}<path d="M4 4v16h16M8 15l4-4 3 2 5-7m-5 0h5v5"/>{% endif %}</svg></span>{{ label | capitalize }}</h3>
         <div>{{ detail[label] | md | safe }}</div>
       </section>
       {% endfor %}
