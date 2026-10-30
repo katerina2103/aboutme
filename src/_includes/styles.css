@@ -292,3 +292,6 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px soli
 .feedback-votes[hidden] { display: none; }
 
 .text-link { font-weight: 700; text-underline-offset: 5px; }
+.feedback-storage-note { font-size: 12px; line-height: 1.5; color: var(--muted); margin-top: 12px; }
+
+.feedback-trap { display: none; }

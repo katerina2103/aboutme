@@ -4,6 +4,8 @@
 <div class="feedback-votes" role="group" aria-label="{{ site.feedback.copy.has_this_website_given_you_a_sense }}">
 <button type="button" data-vote="up">{{ site.feedback.copy.label }}<span>{{ site.feedback.copy.yes_clearly }}</span></button><button type="button" data-vote="down">{{ site.feedback.copy.label_2 }}<span>{{ site.feedback.copy.not_quite_yet }}</span></button>
 </div>
+<p class="feedback-storage-note">{{ site.feedback.messages.browser_note }}</p>
 <p class="feedback-status" role="status" aria-live="polite"></p>
-<form class="feedback-followup" hidden><label for="feedback-comment">{{ site.feedback.copy.what_would_you_like_to_understand_better }}<span>{{ site.feedback.copy.optional }}</span></label><textarea id="feedback-comment" rows="3" maxlength="2000"></textarea><button type="submit">{{ site.feedback.copy.send_comment }}</button></form>
+<form class="feedback-followup" hidden><label for="feedback-comment">{{ site.feedback.copy.what_would_you_like_to_understand_better }}<span>{{ site.feedback.copy.optional }}</span></label><input class="feedback-trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<textarea id="feedback-comment" rows="3" maxlength="2000"></textarea><button type="submit">{{ site.feedback.copy.send_comment }}</button></form>
 </section>

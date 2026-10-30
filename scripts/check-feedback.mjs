@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import vm from 'node:vm';
+import {parseHTML} from 'linkedom';
+const html=await fs.readFile(new URL('../dist/index.html',import.meta.url),'utf8');
+const script=await fs.readFile(new URL('../src/_includes/feedback.js',import.meta.url),'utf8');
+const values=new Map();
+const localStorage={getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value)};
+const calls=[];let succeeds=true;
+const fetch=async(url,options)=>{calls.push({url,body:JSON.parse(options.body)});return {ok:succeeds,json:async()=>({success:succeeds})};};
+function start(){const {document,window}=parseHTML(html);vm.runInNewContext(script,{document,localStorage,Date,fetch});return {document,window};}
+let {document,window}=start();
+const form=document.querySelector('.feedback-followup');
+document.querySelector('[data-vote="up"]').click();assert.equal(calls.length,0);assert.equal(form.hidden,true);
+document.querySelector('[data-vote="down"]').click();assert.equal(calls.length,0);assert.equal(form.hidden,false);
+form.querySelector('textarea').value='';form.dispatchEvent(new window.Event('submit',{cancelable:true}));await new Promise(r=>setTimeout(r,0));assert.equal(calls.length,0);
+form.querySelector('textarea').value='The role you want is unclear.';
+succeeds=false;form.dispatchEvent(new window.Event('submit',{cancelable:true}));await new Promise(r=>setTimeout(r,0));assert.equal(form.hidden,false);assert.equal(form.querySelector('textarea').value,'The role you want is unclear.');assert.equal(form.querySelector('button').disabled,false);
+succeeds=true;form.dispatchEvent(new window.Event('submit',{cancelable:true}));await new Promise(r=>setTimeout(r,0));
+assert.equal(form.hidden,true);assert.equal(JSON.parse([...values.values()][0]).sent,true);
+assert.equal(calls.at(-1).url,'https://formsubmit.co/ajax/shimanovskatya@gmail.com');
+assert.match(calls.at(-1).body._subject,/Website feedback form/);assert.match(calls.at(-1).body.form_source,/not the contact form/);assert.equal(calls.at(-1).body.comment,'The role you want is unclear.');
+({document}=start());assert.equal(document.querySelector('[data-vote="down"]').getAttribute('aria-pressed'),'true');assert.equal(document.querySelector('a[href^="mailto:"]').getAttribute('href'),'mailto:shimanovskatya@gmail.com');
+console.log('Passed: local votes, email routing and form identification, comment validation, error recovery and successful submission.');

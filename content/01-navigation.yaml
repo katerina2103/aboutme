@@ -1,8 +1,5 @@
-# Top navigation bar.
-
 name_first: Katya
-name_last: Shimanovskaya, PhD          # shown in italic serif
-
+name_last: Shimanovskaya, PhD
 links:
   - label: My impact
     link: "#work"
@@ -11,7 +8,6 @@ links:
   - label: Let's connect
     link: "#connect"
     show_as_button: true
-
 theme_toggle:
   dark_label: Dark mode
   light_label: Light mode

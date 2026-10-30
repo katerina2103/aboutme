@@ -31,7 +31,7 @@ Edit a principle's title and explanation in `principles/`. Each has a stable `id
 
 Set `video_card.video_link` in `05-video.yaml` when the recording is ready; the watch button then replaces the preparation message.
 
-GitHub Pages uses the feedback email link. Votes and optional comments work only through the local preview service until a hosted backend is configured. Local feedback databases and reports are never published.
+Feedback votes stay in each visitor's browser, with no aggregate counter. A thumbs-down comment is submitted through FormSubmit to `shimanovskatya@gmail.com`, with the subject “Website feedback form — Not quite yet”. This is separate from the contact email button. Delivery requires the recipient to complete FormSubmit's one-time email activation. The endpoint, subject and status messages are in `09-feedback.yaml`.
 
 ## Check and publish
 
