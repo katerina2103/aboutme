@@ -1,5 +1,5 @@
 ---
-portrait_image: assets/images/katya-portrait.png
+portrait_image: assets/images/Ekaterina48.jpg
 small_heading: Product Leader · Data, Analytics & AI · Science to Software
 headline: I turn messy problems into *products people love to use.*
 social_links:
