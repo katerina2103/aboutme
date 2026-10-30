@@ -7,7 +7,7 @@ introduction: The outcomes first. Select a story to see the problem, what I did,
 case_studies:
   - metric: 39
     metric_label: data pipelines · scaled from 2
-    title: Define once. Onboard and process faster
+    title: Define once. Onboard faster. Scale across Europe
     summary: Turning complex data management tasks into user-facing platform capabilities.
     sticky_note: from 2 to 39 pipelines
     sticky_note_rotation: -3      # degrees; small numbers between -4 and 4 look best
@@ -21,8 +21,8 @@ case_studies:
     detail: customer_focus
   - metric: 2,000+
     metric_label: monthly analytics users
-    title: Remove barriers to scaling analytics
-    summary: Expanding a shared analytics platform to 20+ global teams.
+    title: Remove barriers to scale analytics
+    summary: Expanding a shared analytics platform to 20+ global analytics teams.
     sticky_note: to 2,000+ monthly users
     sticky_note_rotation: -2
     detail: analytics_platform
