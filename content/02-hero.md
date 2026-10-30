@@ -16,5 +16,5 @@ secondary_button:
   icon: linkedin
 
 ---
-I’m Katya, a product leader with a scientific background and experience across healthcare, life sciences and enterprise analytics. I turn ambiguity into products that deliver measurable value.
+I’m Katya, I paved my way from the lab to leading data-intensive software products that serve customers and support business growth, I’ve built my career turning the unknown into tangible value. Shaped by life and work across four countries, I bring scientific curiosity, commercial judgment and cultural sensitivity to uncover what matters to people and lead diverse teams with empathy.
 
