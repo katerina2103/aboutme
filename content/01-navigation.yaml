@@ -1,7 +1,7 @@
 # Top navigation bar.
 
 name_first: Katya
-name_last: Shimanovskaya          # shown in italic serif
+name_last: Shimanovskaya, PhD          # shown in italic serif
 
 links:
   - label: My impact
