@@ -9,13 +9,15 @@ copy:
   staged_investment_decision: Staged investment decision
   value_1: "1"
   secure_the_foundations: Secure the foundations
-  approved_access_a_senior_integration_engineer_and: Approved access, a senior integration engineer and committed scientists.
+  approved_access_a_senior_integration_engineer_and: Secure approved data access, a senior integration
+    engineer and scientists who commit time to the test.
   value_2: "2"
   test_against_a_real_alternative: Test against a real alternative
   compare_an_existing_estate_vendor_with_improved: Compare an existing-estate vendor with improved search on the same scientific tasks.
   value_3: "3"
   decide_at_week_eight: Decide at week eight
-  use_measured_value_quality_and_ownership_costs: Use measured value, quality and ownership costs to decide the next commitment.
+  use_measured_value_quality_and_ownership_costs: Review the measured value, quality and cost with the
+    people accountable for the next step. Decide whether to expand, narrow the test or stop.
   proposed_funding_gates: Proposed funding gates
   evidence_required_for_more_investment: Evidence required for more investment
   value_20: ≥20%
@@ -30,8 +32,9 @@ copy:
   run_a_narrower_test: Run a narrower test
   fail: Fail ■
   stop_if_review_effort_erases_gains: Stop if review effort erases gains
-  proposed_gates_not_reported_results_report_task: Proposed gates, not reported results. Report
-    task/user spread and uncertainty. No rollout commitment before the evidence review.
+  proposed_gates_not_reported_results_report_task: These are proposed criteria, not reported results.
+    Show differences between tasks and users, including uncertainty. Inconclusive evidence calls for
+    a more focused test, not an automatic rollout.
   pilot_cost_breakdown_and_team_requirements: Pilot cost breakdown and team requirements
   proposed_team_4_5_fte_equivalent_across: "Proposed team: 4–5 FTE-equivalent across a product/domain
     lead, senior integration engineer, data engineer, data scientist/evaluation lead and fractional
@@ -43,8 +46,9 @@ copy:
     The next investment depends on the week-eight evidence review.
   accountability_and_ownership: Accountability and ownership
   scientists_own_usefulness_and_review_data_owners: Scientists own usefulness and review. Data owners
-    own access and metadata. Engineering owns supportability. Finance challenges capacity
-    assumptions. The CEO sponsors the next decision, not a preferred answer.
+    own access and metadata. Engineering owns supportability. Finance challenges the capacity
+    assumptions. The CEO backs the decision process. Before starting, agree who will act on the
+    findings and how participants will hear what changed.
   choose_a_hybrid_only_where_a_demonstrated: Choose a hybrid only where a demonstrated gap justifies
     ownership. Agree the next scope and its budget after the pilot; the initial €80–150k is not a
     full-rollout cost.

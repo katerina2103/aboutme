@@ -4,11 +4,11 @@ copy:
   to_a_product_worth_owning: to a product worth owning.
   illustrative_internal_product_model_no_pilot_results: Illustrative internal-product model · no pilot results assumed
   only_proceed_if_the_experiment_earns_it: Only proceed if the experiment earns it
-  meet_the_pilot_s_value_quality_and: Meet the pilot’s value, quality and access gates—and demonstrate
-    a repeatable scientific need that vendors cannot meet economically. A successful AI pilot alone
-    does not justify a custom build.
+  meet_the_pilot_s_value_quality_and: Meet the pilot’s value, quality and access criteria, then
+    demonstrate a recurring scientific need vendors cannot meet economically. A successful pilot
+    tells us the approach has promise. It does not automatically justify a custom product.
   product_vision: Product vision
-  trustworthy_scientific_evidence_ready_for_the_next: Trustworthy scientific evidence, ready for the next research decision.
+  trustworthy_scientific_evidence_ready_for_the_next: Help scientists reach the next research decision with evidence they can trace and check.
   help_scientists_create_source_linked_candidate_review: Help scientists create source-linked candidate-review briefs across approved knowledge sources.
   users_value_and_product_boundaries: Users, value and product boundaries
   serve_scientists_and_research_decision_owners_connect: Serve scientists and research decision
@@ -17,13 +17,14 @@ copy:
     workflow; autonomous scientific decisions and foundation-model training are outside scope.
   strategy: Strategy
   own_the_scientific_workflow_reuse_the_technology: Own the scientific workflow. Reuse the technology.
-  build_only_the_differentiated_layer_use_existing: Build only the differentiated layer; use existing models and retrieval components.
+  build_only_the_differentiated_layer_use_existing: Own the scientific workflow where it creates
+    value. Use existing models and retrieval components for the rest.
   choices_dependencies_and_success_measures: Choices, dependencies and success measures
-  own_evidence_templates_workflow_evaluations_and_integrations: Own evidence templates, workflow,
-    evaluations and integrations where the pilot proves vendor gaps. Use existing models and
-    reusable retrieval tools. Prioritize permission-aware access, traceability and supportability
-    over feature breadth. Commit scientific owners, senior engineering and data owners before
-    delivery.
+  own_evidence_templates_workflow_evaluations_and_integrations: Own the templates, workflow,
+    evaluations and integrations where the pilot demonstrates a meaningful vendor gap. Prioritize
+    permission-aware access, traceability and supportability. Commit scientific owners, engineering
+    and data owners before delivery. Share what the team learns so the next workflow starts with
+    evidence rather than another blank page.
   continue_only_while_net_preparation_time_improves: Continue only while net preparation time improves
     by at least 20% versus improved search without material quality loss, material claims remain
     verifiable and adversarial tests show no unauthorized disclosure. Review ongoing quality,
@@ -48,10 +49,10 @@ copy:
   value_60_adoption: 60% adoption*
   release_gates_and_sequencing: Release gates and sequencing
   year_1_establish_the_permission_model_source: "Year 1: establish the permission model, source-linked
-    briefs and evaluation suite; release in stages after the pilot. Year 2: test transfer to a
-    second team before extending source coverage. Measure reuse effort and time to first trustworthy
-    brief. Year 3: expand only to workflows that demonstrate repeatable value; strengthen
-    monitoring, support and cost controls."
+    briefs and evaluation suite. Release in steps after the pilot. Year 2: test transfer with a
+    second team before expanding source coverage. Measure reuse effort and time to a trustworthy
+    brief. Year 3: expand to workflows with demonstrated value and strengthen support, monitoring
+    and cost controls."
   illustrative_average_annual_adoption_across_600_eligible: "*Illustrative average annual adoption
     across 600 eligible scientists, not commitments or end-of-year targets. Adoption requires phased
     rollout beyond the original 30 pilot participants. Each year’s funding is conditional on
@@ -104,8 +105,8 @@ copy:
     assumed €70/hour. This yields 8,280 / 13,800 / 16,560 annual hours. The 1-hour net benefit is a
     hypothesis to validate after review effort, not an experimental result. Capacity is not revenue,
     payroll savings or realized cash benefit."
-  on_these_assumptions_gross_three_year_capacity: "On these assumptions, gross three-year capacity
-    value is about €2.70m against €3.30m of expense: capacity value alone does not justify custom
-    ownership. Require evidenced additional scientific value, better economics or a lower-cost route
-    before committing. Do not count research milestone gains twice. No cash payback or ROI is
-    established by this model."
+  on_these_assumptions_gross_three_year_capacity: On these assumptions, gross three-year capacity
+    value is about €2.70m against €3.30m of expense. That gap matters. Time savings alone do not
+    justify custom ownership. We need evidence of additional scientific value, better economics or a
+    lower-cost approach before committing. Keep milestone gains separate to avoid double-counting.
+    This model does not establish cash payback or ROI.

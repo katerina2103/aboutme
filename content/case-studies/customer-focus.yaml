@@ -1,12 +1,16 @@
 title: Give users control over their data
-context: European Healthcare · Data Platform
-problem: Hospitals submitted data through a portal with little visibility into what happened next.
-  Routine data-management work depended on swiftness of internal teams.
-solution: I helped redesign the workflow around guided data submission and management, so that users
-  can take actions that matter most within the product itself. Through multiple rounds of user
-  discovery and testing, the platform experience matured and adoption grew.
-impact: Around 70% of data operations shifted to users in selected markets. Users could identify and
-  correct data issues themselves, with quick rounds of validation.
+context: Regulated industries · Data platform
+problem: Data providers submitted information through a portal with little visibility into what
+  happened next. Routine data-management tasks depended on internal teams. Before adding more
+  features, we needed to understand which tasks users could handle themselves and what guidance
+  would make that practical.
+solution: I helped redesign submission and data management around the work users needed to do. We
+  used several rounds of discovery and testing to improve guided loading, validation and correction.
+  The aim was to give people useful control over their data, with feedback they could act on inside
+  the product.
+impact: In selected markets, around 70% of data operations shifted to users. They could identify and
+  correct issues themselves, with short validation cycles instead of relying on internal teams for
+  each step.
 principles:
   - understand-before-change
   - bring-people-into-change

@@ -11,7 +11,7 @@ copy:
   optional: (Optional)
   send_comment: Send feedback
 messages:
-  thanks: Thank you for your feedback.
+  thanks: Thank you—your perspective matters.
   comment_thanks: Thank you—your feedback has been submitted.
   comment_error: Automatic delivery is unavailable. Your comment is still here. You can send it using
     the email link below.

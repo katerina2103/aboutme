@@ -1,16 +1,17 @@
 title: Remove barriers to scale analytics
-context: Enterprise · Analytics Platform
-problem: Analysts got the tools, but lacked guidelines and guardrails on how to use them to create
-  business insights efficiently and reliably. Frustration grew - it would take weeks of figuring out
-  technicalities of vendor implementation. How to deliver insights quickly in an evolving stack
-  without exploding the costs? How to ensure technology can handle the demand?
-solution: My role was to spot this problem, even though it did not belong to me. I captured existing
-  state in sufficient detail, gathered analytics front-runners to brainstorm the solution together
-  and define an experiment to prove value. Execute -> Evaluate -> Implement. Scale adoption in
-  batches through regular community calls, doctor sessions and written guidelines. Together with the
-  squad implemented governance controls programmatically to monitor and evolve.
-impact: Happier and supported analysts. The platform reached more than 20 global teams and 2,000
-  monthly users, with over 1,500 dashboards, while improving platform SLAs.
+context: Enterprise · Analytics platform
+problem: Analysts had the tools, but lacked the guidance and guardrails to use them reliably. Some
+  spent weeks working through the details of the vendor implementation before they could produce
+  insights. We needed to support growing demand and control costs while helping people get on with
+  their work.
+solution: I raised the problem even though it sat outside my remit. I documented the current setup
+  and brought experienced analysts together to work through the friction and define an experiment.
+  We tested, evaluated and then expanded adoption in batches. Community calls, drop-in sessions and
+  written guidance made learning available to more teams. With the squad, I introduced automated
+  governance controls so we could monitor use and keep improving the platform.
+impact: The platform reached more than 20 global teams and 2,000 monthly users, with over 1,500
+  dashboards. Analysts had more support, and platform SLAs improved. The work connected adoption
+  with the guidance and governance needed to sustain it.
 principles:
   - make-value-concrete
   - show-participation-matters

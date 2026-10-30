@@ -8,7 +8,7 @@ copy:
   working_scenario_annual_capacity: Working scenario · annual capacity
   value_17_000_hours: ~17,000 hours
   value_600_scientists_46_weeks_60_adoption_1: 600 scientists × 46 weeks × 60% adoption × 1 net hour/week
-  how_sensitive_is_that_value: How sensitive is that value?
+  how_sensitive_is_that_value: Which assumptions change the decision?
   annual_hours_of_capacity_discrete_planning_scenarios: Annual hours of capacity · discrete planning scenarios
   annual_capacity_scenario_range: Annual capacity scenario range
   cautious_2_760_hours_working_16_560: Cautious 2,760 hours, working 16,560 hours, upside 45,264
@@ -30,13 +30,14 @@ copy:
   measured_net_of_review_effort: Measured net of review effort
   label_2: →
   redeploy_it: Redeploy it
-  choose_valuable_scientific_work: Choose valuable scientific work
+  choose_valuable_scientific_work: Agree which research work gets the time
   label_3: →
   prove_value: Prove value
   track_outcomes_and_ongoing_cost: Track outcomes and ongoing cost
-  value_1_2m_gross_capacity_value_at_an: ~€1.2m gross capacity value at an assumed €70/hour in the
-    working scenario. This is opportunity cost before ongoing costs, not cash savings or ROI. No
-    payback claim without full costs and realized benefits.
+  value_1_2m_gross_capacity_value_at_an: The working scenario values the capacity at about €1.2m,
+    using an assumed €70/hour. That is opportunity cost before ongoing expenses. It becomes a
+    business benefit only if we put the time to useful work. It is not a cash saving or established
+    ROI.
   does_reuse_accelerate_the_next_product_line: Does reuse accelerate the next product line?
   value_100_scientists_separate_delivery_hypotheses: 100 scientists · separate delivery hypotheses
   evidence_workflow: Evidence workflow
@@ -65,9 +66,9 @@ copy:
     markers = baseline. Each row has its own scale. *No milestone gain if wet-lab work or approvals
     determine delivery.
   what_earns_the_next_investment: What earns the next investment?
-  validate_sustained_adoption_and_net_time_saved: "Validate sustained adoption and net time saved.
-    Test reuse with a second team. Do not add milestone gains to annual capacity: the same benefit
-    may be counted twice."
+  validate_sustained_adoption_and_net_time_saved: Validate whether scientists keep using the tool and
+    save time after review. Test transfer with a second team before assuming reuse will help. Keep
+    milestone gains separate from annual capacity to avoid counting the same benefit twice.
   assumptions_calculation_and_limits: Assumptions, calculation and limits
   annual_capacity_600_scientists_46_weeks_adoption: "Annual capacity = 600 scientists × 46 weeks ×
     adoption × (weekly search hours × reduction − added weekly review hours). Cautious: 40%, 5h,

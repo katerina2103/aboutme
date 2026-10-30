@@ -6,18 +6,21 @@ copy:
   fund_a_bounded_test: Fund a bounded test.
   understand_the_workflow: Understand the workflow
   value_12_scientists_3_departments: 12 scientists · 3 departments
-  observe_real_work_and_measure_two_weeks: Observe real work and measure two weeks of friction before choosing the solution.
+  observe_real_work_and_measure_two_weeks: Observe the actual work and measure two weeks of friction.
+    Understand the purpose before proposing a change.
   discovery_method: Discovery method
-  log_search_waiting_synthesis_and_correction_separately: Log search, waiting, synthesis and
-    correction separately. Trace ELN/LIMS, file shares and expert handoffs. Test whether access
-    rights, metadata or missing records cause delays. This is proposed discovery, not completed
-    findings.
+  log_search_waiting_synthesis_and_correction_separately: I would observe 12 scientists across three
+    departments and record search, waiting, synthesis and correction separately. Follow the work
+    through ELN/LIMS, file shares and expert handoffs. Check whether access rights, metadata or
+    missing records cause the delay. This is proposed discovery, not completed findings.
   compare_against_a_useful_alternative: Compare against a useful alternative
   value_8_weeks_30_scientists_2_sources: 8 weeks · 30 scientists · 2 sources
-  one_candidate_review_workflow_compare_ai_with: One candidate-review workflow. Compare AI with improved search and the current workflow.
+  one_candidate_review_workflow_compare_ai_with: One candidate-review workflow. Committed
+    participants. Compare AI with improved search and the current workflow.
   pilot_design_and_evaluation: Pilot design and evaluation
-  use_committed_scientists_and_approved_sources_compare: Use committed scientists and approved
-    sources. Compare source-linked AI, improved non-AI search and the current workflow on matched
-    tasks in randomized order. Include difficult and unanswerable questions; scientists score
-    usefulness blind where practical. Measure net time after review and correction, answer quality
-    and access-control failures.
+  use_committed_scientists_and_approved_sources_compare: Agree the scientific participants, data
+    owners and decision owner before starting. Use two approved sources and matched tasks in
+    randomized order. Include difficult and unanswerable questions. Where practical, scientists
+    judge usefulness without knowing which tool produced the brief. Measure time after review and
+    correction, answer quality and access failures. The result should tell us what deserves funding
+    next.

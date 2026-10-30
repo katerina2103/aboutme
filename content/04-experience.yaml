@@ -1,10 +1,11 @@
 title: My impact, in three stories.
-introduction: The outcomes first. Select a story to see the problem, what I did, and the impact.
+introduction: The results, and the work behind them. Open a story to see what needed to change, how
+  I brought people into it, and what improved.
 case_studies:
   - metric: 39
     metric_label: data pipelines · scaled from 2
     title: Define once. Onboard faster. Scale across Europe
-    summary: Turning complex data management tasks into user-facing platform capabilities.
+    summary: Making different regulatory and provider requirements work within one scalable platform.
     sticky_note: Built to scale
     sticky_note_rotation: -3
     action_label: Read the platform story
@@ -12,7 +13,7 @@ case_studies:
   - metric: 70%
     metric_label: tasks handled by users · from zero
     title: Give users control over their data
-    summary: Giving users control of data loading, validation, and corrections.
+    summary: Helping users load, validate and correct data without waiting for internal teams.
     sticky_note: Put users in control
     sticky_note_rotation: 2
     action_label: Read the self-service story
@@ -20,7 +21,7 @@ case_studies:
   - metric: 2,000+
     metric_label: monthly analytics users
     title: Remove barriers to scale analytics
-    summary: Expanding a shared analytics platform to 20+ global analytics teams.
+    summary: Turning a shared analytics platform into something teams could use with confidence.
     sticky_note: Turn frustration into impact
     sticky_note_rotation: -2
     action_label: Read the analytics story

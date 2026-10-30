@@ -1,7 +1,9 @@
 copy:
   market_scan: Market scan
   buy_adapt_or_build: Buy, adapt or build?
-  compare_equivalent_scope_source_coverage_permissions_useful: "Compare equivalent scope: source coverage, permissions, useful answers and ongoing ownership."
+  compare_equivalent_scope_source_coverage_permissions_useful: Start with what scientists need to do.
+    Compare source coverage, permissions, useful answers and the team needed to keep each option
+    running.
   choose_options_to_compare: Choose options to compare
   microsoft_365_copilot: " Microsoft 365 Copilot"
   glean: " Glean"
@@ -61,14 +63,16 @@ copy:
   demonstrate_eln_lims_coverage_and_access_controls: Demonstrate ELN/LIMS coverage and access controls on our tasks.
   connect_our_lab_systems_and_verify_answers: Connect our lab systems and verify answers against the same evidence set.
   prove_useful_coverage_within_and_beyond_benchling: Prove useful coverage within and beyond Benchling; price migration.
-  show_a_vendor_gap_worth_owning_and: Show a vendor gap worth owning and secure senior engineering capacity.
-  prove_a_repeatable_need_beyond_vendor_capabilities: Prove a repeatable need beyond vendor capabilities and fund long-term ownership.
+  show_a_vendor_gap_worth_owning_and: Demonstrate a vendor gap that matters to scientists and commit
+    the engineering team to maintain the solution.
+  prove_a_repeatable_need_beyond_vendor_capabilities: Demonstrate a recurring scientific need beyond
+    vendor capabilities, with evidence of value and funded long-term ownership.
   select_more_options_above_scroll_across_when: Select more options above; scroll across when needed.
     Costs include different exclusions—check the cost basis below.
   my_business_case_starting_point: My business-case starting point
-  test_an_existing_estate_vendor_against_improved: Test an existing-estate vendor against improved
-    search first. Choose a hybrid or custom build only when a demonstrated gap justifies the
-    ownership cost.
+  test_an_existing_estate_vendor_against_improved: I would test a vendor that fits our existing
+    systems against improved search. A hybrid or custom build needs a specific gap worth owning, not
+    simply a preference for control.
   cost_basis_exclusions_and_source_dates: Cost basis, exclusions and source dates
   illustrative_planning_ranges_not_supplier_quotes_or: "Illustrative planning ranges, not supplier
     quotes or market averages. Loaded staff cost: €120–168k per FTE-year, including allocated

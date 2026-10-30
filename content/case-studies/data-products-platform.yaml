@@ -1,17 +1,17 @@
 title: Define once. Onboard faster. Scale across Europe
 context: Regulated B2B · Customer-facing data platform
-problem: Collecting regulated data across Europe meant navigating EU and national regulations
-  alongside each controller’s internal standards and data formats. As the portfolio grew, we needed
-  to accommodate these differences without repeatedly rebuilding and customizing ingestion
-  processes.
-solution: I led the initiative to standardize and modernize data management processes that would
-  accommodate this variation without compromising scalability. I embedded data-quality and standards
-  into the platform design through machine-readable and human-readable intent. My platform
-  leadership principle remained 'eat your own dogfood' - to focus on data content, while
-  continuously improving the underlying infrastructure.
-impact: With data requirements defined upfront, the platform enabled teams to configure up to seven
-  ingestion pipelines in a single day. It ultimately scaled to 39 pipelines, serving more than 200
-  healthcare providers across Europe, also using the platform as a front-end application.
+problem: Collecting regulated data across Europe meant meeting EU and national requirements
+  alongside each data provider’s standards and formats. As the portfolio grew, repeatedly rebuilding
+  ingestion processes would make onboarding harder to scale. The question was how to accommodate
+  genuine differences without treating every provider as a new platform.
+solution: "I led the work to standardize and modernize data management, with variation built into
+  the design. We expressed data-quality rules and standards in forms both people and software could
+  use. That made requirements something we could configure against, rather than rediscover for each
+  pipeline. My principle was to “eat our own dog food”: apply our standards to the platform itself
+  and keep improving the infrastructure behind it."
+impact: With data requirements prepared upfront, teams could configure up to seven ingestion
+  pipelines in one day. The platform grew to 39 pipelines, serving more than 200 data providers
+  across Europe. Providers also used it as a front-end application to work with their data.
 principles:
   - make-room-for-tomorrow
   - build-in-learning-steps

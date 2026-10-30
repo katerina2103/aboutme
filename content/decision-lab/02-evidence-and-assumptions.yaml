@@ -7,7 +7,8 @@ copy:
   external_evidence_2025: External evidence · 2025
   value_57: 57%
   cited_data_silos_as_a_barrier_to: " cited data silos as a barrier to using lab data."
-  start_with_access_to_evidence_and_fragmented: Start with access to evidence and fragmented knowledge.
+  start_with_access_to_evidence_and_fragmented: That gives me a reason to investigate how scientists
+    find evidence. It does not tell me what is happening in this company.
   source_and_limits: Source and limits
   pistoia_alliance_september_2025: Pistoia Alliance · September 2025 ↗
   survey_of_200_experts_across_life_sciences: . Survey of 200+ experts across life sciences and
@@ -16,7 +17,8 @@ copy:
   external_evidence_2024: External evidence · 2024
   value_43: 43%
   of_large_biopharma_it_respondents_supported_20: " of large-biopharma IT respondents supported 20+ scientific applications."
-  integration_and_source_coverage_belong_in_the: Integration and source coverage belong in the business case.
+  integration_and_source_coverage_belong_in_the: Source coverage and integration effort belong in the
+    investment decision, alongside the assistant itself.
   source_and_limits_2: Source and limits
   benchling_november_2024: Benchling · November 2024 ↗
   survey_of_300_r: . Survey of 300 R
@@ -27,11 +29,11 @@ copy:
   planning_assumption_validate_in_discovery: Planning assumption · validate in discovery
   value_5_7_hours_week: 5–7 hours/week
   searching_and_collecting_information_per_scientist: " searching and collecting information per scientist."
-  use_6_hours_as_a_working_scenario: Use 6 hours as a working scenario—not a measured average.
+  use_6_hours_as_a_working_scenario: I use 6 hours as a working assumption, then measure the baseline before treating it as value.
   how_i_would_validate_it: How I would validate it
-  measure_search_and_collection_separately_from_waiting: Measure search and collection separately from
-    waiting, synthesis and correction. Use a two-week baseline across relevant workflows. The cited
-    research supports the fragmentation problem; it does not establish this weekly search-time
-    assumption.
+  measure_search_and_collection_separately_from_waiting: I would measure search and collection
+    separately from waiting, synthesis and correction across two weeks of relevant work. The studies
+    support investigating fragmented knowledge. They do not establish our scientists’ weekly search
+    time.
   source_link_1: https://pistoiaalliance.org/news/survey-ai-adoption-life-sciences-labs-skills-gap/
   source_link_2: https://www.benchling.com/blog/2024-state-of-tech-report
