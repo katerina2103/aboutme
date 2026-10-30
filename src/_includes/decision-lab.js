@@ -7,11 +7,22 @@
   const next = lab.querySelector(".lab-next");
   const count = lab.querySelector(".lab-count");
   const labels = JSON.parse(document.getElementById("lab-content").textContent);
+  const celebration = lab.querySelector('.lab-celebration__gif');
+  const celebrationToggle = lab.querySelector('.lab-celebration__toggle');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function celebrate(play) {
+    celebration.hidden = !play;
+    if (play) celebration.src = celebration.dataset.src;
+    else celebration.removeAttribute('src');
+    celebrationToggle.textContent = play ? 'Stop animation' : 'Play celebration';
+  }
+  celebrationToggle.addEventListener('click', () => celebrate(celebration.hidden));
   let current = 0;
   function show(index) {
     current = Math.max(0, Math.min(index, slides.length - 1));
     slides.forEach((slide, i) => { slide.hidden = i !== current; });
     lab.querySelector(".lab-slides").scrollTop = 0;
+    celebrate(current === slides.length - 1 && !reducedMotion.matches);
     previous.disabled = current === 0;
     next.textContent = current === slides.length - 1 ? labels.restart_label : labels.next_label;
     count.textContent = (current + 1) + " / " + slides.length + " · " + slides[current].querySelector(".lab-step").textContent;

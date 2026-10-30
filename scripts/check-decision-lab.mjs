@@ -15,15 +15,15 @@ const { document, window } = parseHTML(html);
 const script = await readFile(new URL('../src/_includes/decision-lab.js', import.meta.url), 'utf8');
 // Linkedom does not implement the native checkbox checked property.
 document.querySelectorAll("[data-compare]").forEach(input => { input.checked = input.hasAttribute("checked"); });
-vm.runInNewContext(script, {document});
+vm.runInNewContext(script, {document, window: {matchMedia: () => ({matches: false})}});
 const slides = [...document.querySelectorAll('.lab-slide')];
 const next = document.querySelector('.lab-next');
 const previous = document.querySelector('.lab-prev');
-assert.equal(slides.length, 7);
+assert.equal(slides.length, 8);
 for(let index = 0; index < slides.length; index++) {
  assert.equal(slides.filter(s => !s.hidden).length, 1);
  assert.equal(slides[index].hidden, false);
- assert.ok(document.querySelector('.lab-count').textContent.startsWith(`${index + 1} / 7`));
+ assert.ok(document.querySelector('.lab-count').textContent.startsWith(`${index + 1} / 8`));
  if(index < slides.length - 1) next.click();
 }
 assert.equal(next.textContent, site.decision_lab.restart_label);
@@ -45,4 +45,4 @@ extra.checked = true; extra.dispatchEvent(new window.Event('change'));
 assert.equal(document.querySelectorAll('thead [data-option]:not([hidden])').length,3);
 extra.checked = false; extra.dispatchEvent(new window.Event('change'));
 assert.equal(document.querySelectorAll('thead [data-option]:not([hidden])').length,2);
-console.log('Passed: seven-slide navigation, restart, answer feedback/clearing, comparison selection, and all story/principle references.');
+console.log('Passed: eight-slide navigation, restart, answer feedback/clearing, comparison selection, and all story/principle references.');
