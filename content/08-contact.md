@@ -9,4 +9,4 @@ testimonial:
     and I think you made it a better place
   attribution: A former colleague
 ---
-I’m curious about what you’re trying to achieve and what makes it difficult today. If you’re looking for someone to question assumptions, work through the evidence and bring people into the next step, let’s talk.
+I’m curious about what you’re trying to achieve and what makes it difficult today. Let’s talk.
