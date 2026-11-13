@@ -3,7 +3,7 @@ copy:
   label: "&"
   assumptions: " assumptions"
   size_the_problem: I’d investigate first.
-  test_the_assumptions: Which evidence matters?
+  test_the_assumptions: Which evidence is already available?
 hypothesis:
   label: Our working hypothesis · unproven
   value: 5–7 hours/week
@@ -13,12 +13,12 @@ signals:
   - label: Siloed data
     value: 57%
     description: " cited data silos as a barrier to using lab data."
-  - label: Complex IT landscape
+  - label: Complex IT & data landscape
     value: 43%
     description: " supported 20+ scientific applications."
 takeaway:
-  label: What I’d investigate next
-  text: Understand where researchers lose time and what access they need to relevant scientific applications before choosing a solution.
+  label: What I’d do next
+  text: Understand where researchers lose time and what access they need to relevant scientific applications in our company before choosing a solution. After all as Deming said -  without data you are just another person with an opinion.
 details:
   label: Sources, limits & validation
   introduction: These external signals suggest fragmented knowledge is worth investigating. They do
