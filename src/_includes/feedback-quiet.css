@@ -12,6 +12,7 @@
 }
 .feedback-quiet-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .feedback-quiet-copy { max-width: 68ch; }
+.feedback-quiet-actions { flex-shrink: 0; max-width: 100%; }
 .site-feedback--quiet h2 { max-width: none; font-size: 14px; font-weight: 500; line-height: 1.65; letter-spacing: 0; color: var(--muted); }
 .site-feedback--quiet .feedback-votes { flex-shrink: 0; margin-top: 0; gap: 8px; }
 .site-feedback--quiet .feedback-votes button { padding: 9px 12px; min-height: 40px; font-size: 12px; font-weight: 500; background: transparent; border: 1px solid transparent; box-shadow: none; color: var(--muted); }
