@@ -10,7 +10,7 @@ All published section text lives here. Change text in the relevant file, keeping
 | `04-experience.yaml` | Impact tiles, metrics, stickers and links to case detail files |
 | `05-video.yaml` | Personal introduction, sticker, recording link and preparation message |
 | `06-decision-lab.yaml` | Company context, CEO brief, carousel controls and answer feedback |
-| `decision-lab/` | Seven slide files, in carousel order |
+| `decision-lab/` | Eight slide files, in carousel order |
 | `08-contact.md` | Contact invitation, email, location and testimonial |
 | `09-feedback.yaml` | Feedback question, voting buttons and acknowledgement |
 | `10-footer.yaml` | Footer text and version |
@@ -19,9 +19,13 @@ All published section text lives here. Change text in the relevant file, keeping
 
 ## Editing the Decision Lab
 
-Each slide has a matching YAML file under `decision-lab/`. Its `copy:` fields contain the text displayed on that slide, including table cells, graph labels and expandable details. Descriptive field names identify the current wording; change values, not field names. The matching layout is in `src/_includes/slides/`; you do not need to edit it for wording changes.
+Each slide has a matching YAML file under `decision-lab/`. Its fields contain the text displayed on that slide, including table cells, graph labels and expandable details. Slide 2 groups its content under `hypothesis`, `signals`, and `details`; slide 8 includes its GIF, credit and animation labels. Descriptive field names identify the current wording; change values, not field names. The matching layout is in `src/_includes/slides/`; you do not need to edit it for wording changes.
 
 Chart labels, chart coordinates, financial calculations and model assumptions must agree. Changing a label does not recalculate a chart. Ask for a model/layout update when changing numbers or adding comparison options; ordinary wording edits need only YAML.
+
+Slide 2’s source years are deliberately kept in `details.sources`, not in the visible tile labels. The yellow hypothesis is a planning assumption, not a survey result.
+
+Shared labels live with their section: story tabs and section labels in `04-experience.yaml`, portrait descriptions in `02-hero.md`, and carousel position labels in `06-decision-lab.yaml`. Internal field names are stable identifiers and may retain older wording; edit the values to change what visitors see.
 
 ## Linking principles to stories
 

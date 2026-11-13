@@ -11,7 +11,7 @@
     </div>
     {% if c.testimonial %}
     <div class="colleague-note-wrap" data-reveal style="--i: 1">
-      <figure class="colleague-note sticky" style="--tilt: -1.5deg" aria-label="A note from a former colleague">
+      <figure class="colleague-note sticky" style="--tilt: -1.5deg" aria-label="{{ c.testimonial.accessible_label }}">
         <blockquote><p>“{{ c.testimonial.quote }}”</p></blockquote>
         <figcaption>— {{ c.testimonial.attribution }}</figcaption>
       </figure>

@@ -33,6 +33,7 @@
 <script>{% include "theme.js" %}</script>
 <script>{% include "dialogs.js" %}</script>
 <script type="application/json" id="lab-content">{{ site.decision_lab | jsonForScript | safe }}</script>
+<script type="application/json" id="lab-celebration-content">{{ site.lab_slides.celebration.copy | jsonForScript | safe }}</script>
 <script>{% include "decision-lab.js" %}</script>
 <script>{% include "sticky-motion.js" %}</script>
 <script type="application/json" id="feedback-content">{{ site.feedback | jsonForScript | safe }}</script>

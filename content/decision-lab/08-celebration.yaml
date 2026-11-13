@@ -1,0 +1,13 @@
+copy:
+  step: A little applause
+  title_first_line: A small round of
+  title_second_line: peer-reviewed applause.
+  body: You questioned the brief, weighed the evidence and made room to learn. Thank you for thinking
+    it through with me.
+  play_label: Play celebration
+  stop_label: Stop animation
+  attribution: GIF via Tenor ↗
+gif:
+  url: https://media1.tenor.com/m/B_2twClDXagAAAAd/happy-scientist.gif
+  alt: A delighted researcher in a lab coat clapping enthusiastically
+  source_url: https://tenor.com/view/happy-scientist-clapping-gif-7519234

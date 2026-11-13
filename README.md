@@ -2,7 +2,7 @@
 
 Live website: https://katerina2103.github.io/aboutme/
 
-An Eleventy site with editable YAML/Markdown content, story dialogs, seven Decision Lab slides and shared working principles.
+An Eleventy site with editable YAML/Markdown content, story dialogs, eight Decision Lab slides and shared working principles.
 
 ## Editing
 

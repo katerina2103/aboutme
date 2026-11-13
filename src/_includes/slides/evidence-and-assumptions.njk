@@ -1,27 +1,26 @@
-
-<p class="lab-step">{{ site.lab_slides.evidence_and_assumptions.copy.evidence }}{{ site.lab_slides.evidence_and_assumptions.copy.label }}{{ site.lab_slides.evidence_and_assumptions.copy.assumptions }}</p><h2 class="dilemma__title">{{ site.lab_slides.evidence_and_assumptions.copy.size_the_problem }} {{ site.lab_slides.evidence_and_assumptions.copy.test_the_assumptions }}</h2>
+{% set slide = site.lab_slides.evidence_and_assumptions %}
+<p class="lab-step">{{ slide.copy.evidence }}{{ slide.copy.label }}{{ slide.copy.assumptions }}</p><h2 class="dilemma__title">{{ slide.copy.size_the_problem }} {{ slide.copy.test_the_assumptions }}</h2>
 <p class="lab-handoff"><span class="lab-handoff-choice"></span><span class="lab-handoff-route">{{ site.decision_lab.handoff.route }}</span></p>
 <div class="evidence-compact">
   <section class="insight insight--assumption">
-    <span class="insight-label">Our starting hypothesis · unproven</span>
-    <h3><strong>5–7 hours/week</strong> per researcher searching and collecting information.</h3>
-    <p>Next: measure search time and source access, then compare AI with better search.</p>
+    <span class="insight-label">{{ slide.hypothesis.label }}</span>
+    <h3><strong>{{ slide.hypothesis.value }}</strong>{{ slide.hypothesis.description }}</h3>
+    <p>{{ slide.hypothesis.next_step }}</p>
   </section>
-  <div class="evidence-signals" aria-label="External signals worth investigating">
+  <div class="evidence-signals" aria-label="{{ slide.signals_label }}">
+    {% for signal in slide.signals %}
     <section class="insight">
-      <span class="insight-label">Life-sciences survey</span>
-      <h3><strong>57%</strong> cited data silos as a barrier to using lab data.</h3>
+      <span class="insight-label">{{ signal.label }}</span>
+      <h3><strong>{{ signal.value }}</strong>{{ signal.description }}</h3>
     </section>
-    <section class="insight">
-      <span class="insight-label">Large-biopharma IT</span>
-      <h3><strong>43%</strong> supported 20+ scientific applications.</h3>
-    </section>
+    {% endfor %}
   </div>
   <details class="evidence-details">
-    <summary>Sources, limits &amp; validation</summary>
-    <p>These external signals suggest fragmented knowledge is worth investigating. They do not establish this company’s problem or prove that AI is the right solution.</p>
-    <p><a href="{{ site.lab_slides.evidence_and_assumptions.copy.source_link_1 }}" target="_blank" rel="noopener noreferrer">Pistoia Alliance · September 2025 ↗</a>. Survey of 200+ experts across life sciences and related sectors; not a representative sample of 2,000-person biotechs.</p>
-    <p><a href="{{ site.lab_slides.evidence_and_assumptions.copy.source_link_2 }}" target="_blank" rel="noopener noreferrer">Benchling · November 2024 ↗</a>. Vendor-sponsored survey of 300 R&amp;D/IT respondents in the US and Europe. The 43% figure applies to the large-biopharma IT subgroup (1,000+ employees).</p>
-    <p>The 5–7 hours is a planning assumption, not a survey finding. I would separate search and collection from waiting, synthesis and correction across two weeks of real work.</p>
+    <summary>{{ slide.details.label }}</summary>
+    <p>{{ slide.details.introduction }}</p>
+    {% for source in slide.details.sources %}
+    <p><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.label }}</a>{{ source.limits }}</p>
+    {% endfor %}
+    <p>{{ slide.details.validation }}</p>
   </details>
 </div>
