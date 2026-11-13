@@ -253,3 +253,8 @@
 .decision-lab .evidence-details summary { padding: 8px 0 0; font-size: 13px; }
 .decision-lab .evidence-details p { font-size: 14px; line-height: 1.6; }
 @media (max-width: 380px) { .evidence-signals { grid-template-columns: 1fr; } }
+
+/* The evidence leads into discovery without another callout box. */
+.evidence-takeaway { border-top: 1px solid var(--line); padding-top: 12px; }
+.decision-lab .evidence-takeaway h3 { font-size: 14px; line-height: 1.6; margin: 0 0 4px; }
+.decision-lab .evidence-takeaway p { font-size: 14px; line-height: 1.6; margin: 0; }

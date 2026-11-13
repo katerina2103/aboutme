@@ -5,7 +5,6 @@
   <section class="insight insight--assumption">
     <span class="insight-label">{{ slide.hypothesis.label }}</span>
     <h3><strong>{{ slide.hypothesis.value }}</strong>{{ slide.hypothesis.description }}</h3>
-    <p>{{ slide.hypothesis.next_step }}</p>
   </section>
   <div class="evidence-signals" aria-label="{{ slide.signals_label }}">
     {% for signal in slide.signals %}
@@ -14,6 +13,10 @@
       <h3><strong>{{ signal.value }}</strong>{{ signal.description }}</h3>
     </section>
     {% endfor %}
+  </div>
+  <div class="evidence-takeaway">
+    <h3>{{ slide.takeaway.label }}</h3>
+    <p>{{ slide.takeaway.text }}</p>
   </div>
   <details class="evidence-details">
     <summary>{{ slide.details.label }}</summary>
