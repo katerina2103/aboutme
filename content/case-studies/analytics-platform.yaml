@@ -4,12 +4,12 @@ problem: Analysts had the tools, but lacked the guidance and guardrails to use t
   spent weeks working through the details of the vendor implementation before they could produce
   insights. We needed to support growing demand and control costs while helping people get on with
   their work.
-solution: I raised the problem even though it sat outside my remit. I engaged with users based on logging information, documented the current state
+solution: I raised the problem even though it sat outside my remit. I engaged with over 40 users based on logging information, documented the current state
   and brought experienced analysts together to work through the problem and define an experiment to evaluate the solution.
   We designed and evaluated the solution in our working group first. Improved based on feedback and then expanded adoption of the solution in batches. Community calls, drop-in sessions and
   written guidance made learning available to more teams. With the team, I introduced automated
   governance controls so we could monitor use and keep improving the platform.
-impact: The platform reached more than 20 global teams and 2,000 monthly users, with over 1,500
+impact: The platform reached more than 20 global teams across Europe and USA serving 2,000 monthly users gathering insights from over 1,500
   dashboards. Analysts had platform access within one working day instead of week of searching, felt supported, and platform SLAs improved at least 2x. The work connected adoption
   with the guidance and governance needed to sustain it supporting the enterprise increasingly becoming more data driven.
 principles:
