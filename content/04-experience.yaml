@@ -15,7 +15,7 @@ case_studies:
     summary: Introducing hospital pilots, user interviews and rapid prototyping to help teams simplify the platform before scaling.
     sticky_note: Learn first, build second
     sticky_note_rotation: 2
-    action_label: Read the leadership story
+    action_label: Read the user-centricity story
     detail: customer_focus
   - metric: 2,000+
     metric_label: monthly analytics users
@@ -23,7 +23,7 @@ case_studies:
     summary: Turning a siloed analytics platform into something teams could use with joy.
     sticky_note: Turn frustration into impact
     sticky_note_rotation: -2
-    action_label: Read the analytics story
+    action_label: Read the analytics platform story
     detail: analytics_platform
 principles_link: Katya’s principles behind this story →
 principles_title: The principles behind this story
