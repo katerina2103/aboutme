@@ -48,6 +48,26 @@
   }
   celebrationToggle.addEventListener('click', () => celebrate(celebration.hidden));
   let current = 0;
+  const slideRegion = lab.querySelector('.lab-slides');
+  const studySlide = lab.querySelector('.study-stages')?.closest('.lab-slide');
+  function fitStudySpacing() {
+    if (typeof ResizeObserver === 'undefined' || !studySlide || studySlide.hidden) return;
+    if (studySlide.querySelector('.study-stage__methods')?.open) return;
+    const availableHeight = slideRegion.clientHeight - 2;
+    if (availableHeight <= 0) return;
+    let compact = 0;
+    let spacious = 1;
+    studySlide.style.setProperty('--study-room', '0');
+    // Keep readable minimum spacing if the overview cannot fit on a small screen.
+    if (studySlide.getBoundingClientRect().height > availableHeight) return;
+    for (let pass = 0; pass < 9; pass++) {
+      const candidate = (compact + spacious) / 2;
+      studySlide.style.setProperty('--study-room', String(candidate));
+      if (studySlide.getBoundingClientRect().height <= availableHeight) compact = candidate;
+      else spacious = candidate;
+    }
+    studySlide.style.setProperty('--study-room', String(compact));
+  }
   function show(index) {
     const previousIndex = current;
     current = Math.max(0, Math.min(index, slides.length - 1));
@@ -65,6 +85,12 @@
       segment.classList.toggle("is-past", i < current);
       segment.classList.toggle("is-current", i === current);
     });
+    fitStudySpacing();
+  }
+  if (typeof ResizeObserver !== 'undefined' && studySlide) {
+    new ResizeObserver(fitStudySpacing).observe(slideRegion);
+    document.fonts?.ready.then(fitStudySpacing);
+    studySlide.querySelector('.study-stage__methods')?.addEventListener('toggle', fitStudySpacing);
   }
   previous.addEventListener("click", () => show(current - 1));
   next.addEventListener("click", () => show(current === slides.length - 1 ? 0 : current + 1));
