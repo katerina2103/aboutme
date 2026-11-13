@@ -1,4 +1,7 @@
 ---
+portrait_alt: Portrait of Katya Shimanovskaya
+portrait_initial: K.
+portrait_fallback_caption: Curiosity meets purpose.
 portrait_image: assets/images/katya-map-portrait.jpg
 small_heading: Product Leader · Data, Analytics & AI · Science to Software
 headline: I turn messy problems into *products people love to use.*

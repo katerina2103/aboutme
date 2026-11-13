@@ -61,3 +61,7 @@ handoff:
     buy: Buy a proven assistant
     test: Compare a narrow pilot with better search
 agreement_hint: We’re aligned—this is my starting choice too. Let’s explore how we’d test it. Double-click to clear.
+progress_label: Decision Lab progress
+position_label: "{current} of {total}"
+slide_position_label: "Slide {position}"
+previous_symbol: ←

@@ -13,9 +13,9 @@
   </div>
   <div class="hero__portrait" data-reveal style="--i: 4">
     {% if hero.portrait_image %}
-    <img src="{{ hero.portrait_image }}" alt="Portrait of Katya Shimanovskaya" width="520" height="640" loading="eager">
+    <img src="{{ hero.portrait_image }}" alt="{{ hero.portrait_alt }}" width="520" height="640" loading="eager">
     {% else %}
-    <div class="hero__portrait-fallback"><span class="hero__portrait-initial">K.</span><span class="hero__portrait-caption">Curiosity meets purpose.</span></div>
+    <div class="hero__portrait-fallback"><span class="hero__portrait-initial">{{ hero.portrait_initial }}</span><span class="hero__portrait-caption">{{ hero.portrait_fallback_caption }}</span></div>
     {% endif %}
   </div>
 </section>

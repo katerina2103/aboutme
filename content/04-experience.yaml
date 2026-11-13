@@ -28,3 +28,12 @@ case_studies:
 principles_link: Katya’s principles behind this story →
 principles_title: The principles behind this story
 principles_eyebrow: How I operate
+dialog_labels:
+  close: Close case study
+  views: Impact story views
+  story_tab: The story
+  principles_tab: My working principles
+  sections:
+    problem: Problem
+    solution: Solution
+    impact: Impact

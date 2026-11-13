@@ -1,7 +1,7 @@
 // Loads every section file in content/ into one `site` object.
 //
 //   content/02-hero.md          → site.hero
-//   content/03-stats-band.yaml  → site.stats_band
+//   content/04-experience.yaml  → site.experience
 //
 // The leading number is dropped and dashes become underscores.
 // .yaml files are parsed as-is. .md files: the frontmatter between the `---`

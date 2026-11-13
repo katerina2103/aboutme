@@ -5,6 +5,7 @@ button:
   link: mailto:shimanovskatya@gmail.com
 location_line: Amsterdam, Netherlands · Open to a thoughtful conversation
 testimonial:
+  accessible_label: A note from a former colleague
   quote: Your optimism and energy levels are impressive. You are driving innovation in a restless way
     and I think you made it a better place
   attribution: A former colleague

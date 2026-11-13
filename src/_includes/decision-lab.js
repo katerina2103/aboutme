@@ -18,6 +18,7 @@
   const labels = JSON.parse(document.getElementById("lab-content").textContent);
   const celebration = lab.querySelector('.lab-celebration__gif');
   const celebrationToggle = lab.querySelector('.lab-celebration__toggle');
+  const celebrationLabels = JSON.parse(document.getElementById('lab-celebration-content').textContent);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const confetti = document.createElement('div');
   confetti.className = 'lab-confetti';
@@ -43,7 +44,7 @@
     celebration.hidden = !play;
     if (play) celebration.src = celebration.dataset.src;
     else celebration.removeAttribute('src');
-    celebrationToggle.textContent = play ? 'Stop animation' : 'Play celebration';
+    celebrationToggle.textContent = play ? celebrationLabels.stop_label : celebrationLabels.play_label;
   }
   celebrationToggle.addEventListener('click', () => celebrate(celebration.hidden));
   let current = 0;
@@ -57,9 +58,9 @@
     previous.disabled = current === 0;
     next.textContent = current === slides.length - 1 ? labels.restart_label : labels.next_label;
     next.setAttribute('aria-label', current === slides.length - 1 ? labels.restart_label : labels.next_accessible_label);
-    count.textContent = (current + 1) + " of " + slides.length;
+    count.textContent = labels.position_label.replace('{current}', current + 1).replace('{total}', slides.length);
     progress.setAttribute("aria-valuenow", current + 1);
-    progress.setAttribute("aria-valuetext", "Slide " + count.textContent);
+    progress.setAttribute("aria-valuetext", labels.slide_position_label.replace('{position}', count.textContent));
     segments.forEach((segment, i) => {
       segment.classList.toggle("is-past", i < current);
       segment.classList.toggle("is-current", i === current);
