@@ -2,7 +2,7 @@ copy:
   discovery: "Discovery "
   label: "&"
   experiment: " experiment"
-  find_the_friction: Baseline unproven. "Let's validate"
+  find_the_friction: Baseline unproven. Let's validate
   discovery_method: Discovery method
   log_search_waiting_synthesis_and_correction_separately: I would observe 12 researchers across three
     departments and record search, waiting, synthesis and correction separately. Follow the work
