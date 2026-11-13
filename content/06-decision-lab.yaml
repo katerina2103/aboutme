@@ -3,7 +3,8 @@ carousel_label: "Decision Lab: fictional biotech AI scenario"
 slide_region_label: Decision Lab slide content
 controls_label: Decision Lab slides
 previous_label: Previous slide
-next_label: Next →
+next_label: →
+next_accessible_label: Next slide
 restart_label: Start again ↺
 copy:
   curious_how_i_think: Work through a product decision with me
