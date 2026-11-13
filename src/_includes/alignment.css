@@ -1,0 +1,31 @@
+/* Shared text rails, using each breakpoint's existing panel inset. */
+.hero { padding-inline: var(--panel-inset); }
+.lab-section { padding-inline: var(--panel-inset); }
+.lab-section__intro { padding-inline: 0; }
+.lab-section__intro > .eyebrow:empty,
+.company-brief__question:empty { display: none; }
+.nav { box-sizing: border-box; max-width: 1288px; padding-inline: calc(var(--page-gutter) + var(--panel-inset)); }
+.band__inner { width: calc(100% - 2 * var(--panel-inset)); max-width: 1144px; }
+.site-feedback.site-feedback--quiet { box-sizing: border-box; width: calc(100% - 2 * var(--page-gutter)); max-width: 1240px; padding-inline: var(--panel-inset); }
+.footer { padding-inline: calc(var(--page-gutter) + var(--panel-inset)); }
+
+/* Consistent paragraph and action starts across the three impact cards. */
+@media (min-width: 901px) {
+  .impact-card__title { min-height: 3.75em; }
+}
+
+/* Keep the highlighted impact row on the same text columns as the story. */
+.case-detail__section--impact { margin-inline: -16px; }
+.case-overlay .overlay__head,
+.case-overlay .overlay__body { padding-inline: 32px; }
+.case-tabs { padding-inline: 32px; }
+@media (max-width: 600px) {
+  .case-overlay .overlay__head,
+  .case-overlay .overlay__body,
+  .case-tabs { padding-inline: 24px; }
+  .case-detail__section--impact { margin-inline: -12px; }
+}
+
+/* Keep the Decision Lab panel flat in both themes. */
+.decision-lab,
+[data-theme="dark"] .decision-lab { box-shadow: none; }
