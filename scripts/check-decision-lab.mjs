@@ -23,7 +23,7 @@ assert.equal(slides.length, 8);
 for(let index = 0; index < slides.length; index++) {
  assert.equal(slides.filter(s => !s.hidden).length, 1);
  assert.equal(slides[index].hidden, false);
- assert.ok(document.querySelector('.lab-count').textContent.startsWith(`${index + 1} / 8`));
+ assert.equal(document.querySelector('.lab-count').textContent, `${index + 1} of 8`);
  if(index < slides.length - 1) next.click();
 }
 assert.equal(next.textContent, site.decision_lab.restart_label);
