@@ -2,8 +2,7 @@ copy:
   discovery: "Discovery "
   label: "&"
   experiment: " experiment"
-  find_the_friction: Baseline unproven.
-  fund_a_bounded_test: How do we measure it?
+  find_the_friction: Baseline unproven - how to validate?
   discovery_method: Discovery method
   log_search_waiting_synthesis_and_correction_separately: I would observe 12 researchers across three
     departments and record search, waiting, synthesis and correction separately. Follow the work
@@ -35,7 +34,7 @@ workflow:
     routes:
       - title: Current workflow
         description: Our baseline
-      - title: Better search
+      - title: Improved search
         description: Simpler alternative
       - title: AI assistant
         description: Candidate solution
