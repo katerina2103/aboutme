@@ -12,7 +12,7 @@ case_studies:
   - metric: 4
     metric_label: squads · product line leadership
     title: Build learning into every launch
-    summary: Introducing hospital pilots, user interviews and rapid prototyping to help teams simplify the platform before scaling.
+    summary: Introducing customer pilots, user interviews and rapid prototyping to help teams simplify the experience before scaling.
     sticky_note: Learn first, build second
     sticky_note_rotation: 2
     action_label: Read the user-centricity story
@@ -20,7 +20,7 @@ case_studies:
   - metric: 2,000+
     metric_label: monthly analytics users
     title: Remove barriers to scale analytics
-    summary: Turning a siloed analytics platform into something teams could use with joy.
+    summary: Turning a siloed analytics platform into something teams use with joy.
     sticky_note: Turn frustration into impact
     sticky_note_rotation: -2
     action_label: Read the analytics platform story
