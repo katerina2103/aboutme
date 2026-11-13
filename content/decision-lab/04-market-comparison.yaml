@@ -98,54 +98,66 @@ copy:
     - label: "Scientific application integration"
       cells:
         - option: copilot
-          summary: "Prebuilt / custom connectors"
-          detail: "Demonstrate our ELN, LIMS and analysis access"
+          summary: "Custom synced connectors"
+          detail: "Index external data with source permissions."
+          source_url: https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview
         - option: glean
-          summary: "Native / custom connectors"
-          detail: "Verify coverage of our actual research applications"
+          summary: "Benchling integration (beta)"
+          detail: "Listed as Push API / MCP; supports research notes and experiment status."
+          source_url: https://www.glean.com/connectors/benchling
         - option: benchling
-          summary: "Benchling APIs and apps"
-          detail: "Prove external-system coverage; AI scope separately"
+          summary: "REST API + Benchling Apps"
+          detail: "Connect external systems and lab instruments; read and write data."
+          source_url: https://docs.benchling.com/docs/developer-platform-overview
         - option: haystack
-          summary: "Custom components available"
-          detail: "Our team must deliver and maintain lab connectors"
+          summary: "Model and database integrations"
+          detail: "Custom components support additional sources; we maintain lab connectors."
+          source_url: https://docs.haystack.deepset.ai/docs/integrations
         - option: custom
-          summary: "Designed for our workflows"
-          detail: "Our team builds connectors and permission checks"
+          summary: "Build our own connectors"
+          detail: "Our team owns integrations, permissions and maintenance."
     - label: "Vendor lock-in"
       cells:
         - option: copilot
-          summary: "Microsoft-specific configuration"
-          detail: "Verify export and rebuild effort"
+          summary: "Interaction export via Purview"
+          detail: "Exporting conversations does not migrate the complete workflow."
+          source_url: https://learn.microsoft.com/en-us/purview/ai-m365-copilot
         - option: glean
-          summary: "Vendor-managed index and setup"
-          detail: "Test export and reconstruction outside Glean"
+          summary: "Document retrieval API"
+          detail: "Retrieves permission-visible indexed documents; a full migration needs a separate plan."
+          source_url: https://developers.glean.com/api/platform-api/documents-overview
         - option: benchling
-          summary: "Platform data model and workflows"
-          detail: "Test API exports and what must be rebuilt"
+          summary: "Data export via REST API"
+          detail: "Data access is documented; workflow and schema migration still require planning."
+          source_url: https://docs.benchling.com/docs/developer-platform-overview
         - option: haystack
-          summary: "Components can be replaced"
-          detail: "Model, database and API dependencies remain"
+          summary: "Pipelines saved as YAML"
+          detail: "Configuration can be saved and reloaded; custom components and services remain dependencies."
+          source_url: https://docs.haystack.deepset.ai/docs/serialization
         - option: custom
           summary: "Control our code and interfaces"
-          detail: "Cloud, model and key-person dependencies remain"
+          detail: "Cloud, model and key-person dependencies remain."
     - label: "Data sovereignty"
       cells:
         - option: copilot
-          summary: "Verify tenant + model regions"
-          detail: "Check permitted countries and cross-border access"
+          summary: "Local-region storage commitments"
+          detail: "Eligible tenants and subscriptions; these commitments concern data at rest."
+          source_url: https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-service-copilot-offerings?view=o365-worldwide
         - option: glean
-          summary: "Verify deployment + model regions"
-          detail: "Check permitted countries and cross-border access"
+          summary: "Netherlands GCP hosting option"
+          detail: "europe-west4 is a preferred region; model-service location must be chosen separately."
+          source_url: https://docs.glean.com/get-started/build/gcp/supported-gcp-regions
         - option: benchling
-          summary: "Verify platform + AI regions"
-          detail: "Check permitted countries and cross-border access"
+          summary: "EU Central hosting available"
+          detail: "LLM features use third-party inference providers."
+          source_url: https://help.benchling.com/hc/en-us/articles/39953690790669-Benchling-security-overview
+          detail_source_url: https://help.benchling.com/hc/en-us/articles/20901323667853-Data-protection-and-security-for-AI-at-Benchling
         - option: haystack
-          summary: "Specify permitted regions"
-          detail: "Verify hosted-model processing and remote access"
+          summary: "Choose hosting and model services"
+          detail: "Our architecture must control where each provider processes research data."
         - option: custom
-          summary: "Specify permitted regions"
-          detail: "Check every provider, backup and support location"
+          summary: "Choose infrastructure and providers"
+          detail: "Our team must enforce storage, processing and access requirements."
   verification_checks:
     - label: "Scientific application integration"
       text: "Demonstrate our electronic lab notebook (ELN), lab information management system (LIMS) and scientific analysis workflow. Check source permissions, citations, freshness and whether the task needs read-only access or write-back."
@@ -174,7 +186,7 @@ copy:
   range_not_total: Supplier extras excluded
   visual_guide_heading: How to read this comparison
   visual_guide_cost: "Each cost interval uses the same €0–2m scale. The left edge is the lower estimate and the right edge is the upper estimate. Buy-route ranges omit unquoted supplier fees and listed extras; the bars do not establish a cheapest complete solution."
-  visual_guide_coverage: "Integration capabilities, exit effort and data sovereignty remain assumptions to validate against our own applications, deployment and agreements during the pilot."
+  visual_guide_coverage: "Linked capabilities come from vendor documentation reviewed on 13 November 2026; they describe available features, not completed tests on our systems. Migration and custom-build trade-offs are my assessment. European hosting does not by itself establish control over every model service, support access or data flow."
   visual_costs:
     - option: copilot
       amount: "€270–584k"
@@ -211,3 +223,4 @@ copy:
       upper: 1880
       start_percent: 46
       range_percent: 48
+  detail_source_label: AI data-handling details
