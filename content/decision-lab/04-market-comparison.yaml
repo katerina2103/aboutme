@@ -95,7 +95,8 @@ copy:
   company_assumption_label: Company assumption
   supporting_documentation: Supporting documentation
   additional_criteria:
-    - label: "Scientific application integration"
+    - kind: integrations
+      label: "Scientific application integration"
       cells:
         - option: copilot
           summary: "Prebuilt / custom connectors"
@@ -112,7 +113,8 @@ copy:
         - option: custom
           summary: "Designed for our workflows"
           detail: "Our team builds connectors and permission checks"
-    - label: "Vendor lock-in"
+    - kind: lockin
+      label: "Vendor lock-in"
       cells:
         - option: copilot
           summary: "Microsoft-specific configuration"
@@ -129,7 +131,8 @@ copy:
         - option: custom
           summary: "Control our code and interfaces"
           detail: "Cloud, model and key-person dependencies remain"
-    - label: "Data sovereignty"
+    - kind: sovereignty
+      label: "Data sovereignty"
       cells:
         - option: copilot
           summary: "Verify tenant + model regions"
@@ -168,3 +171,54 @@ copy:
       url: https://docs.benchling.com/docs/developer-platform-overview
     - label: "Haystack integrations"
       url: https://docs.haystack.deepset.ai/docs/integrations
+  cost_scale_label: "Shared cost scale: €0–2m"
+  range_legend: "Bars show planning ranges; listed supplier extras remain excluded."
+  range_accessible_label: Illustrative planning range
+  range_not_total: Supplier extras excluded
+  integration_unknown: Coverage unverified
+  integration_unknown_label: "ELN, LIMS and analysis coverage have not been tested for this case."
+  integration_targets:
+    - ELN
+    - LIMS
+    - Analysis
+  exit_unknown: Exit effort unmeasured
+  sovereignty_unknown: Evidence needed
+  visual_guide_heading: How to read this comparison
+  visual_guide_cost: "Each cost interval uses the same €0–2m scale. The left edge is the lower estimate and the right edge is the upper estimate. Buy-route ranges omit unquoted supplier fees and listed extras; the bars do not establish a cheapest complete solution."
+  visual_guide_coverage: "The three integration markers refer to our target ELN, LIMS and scientific analysis workflow. A question mark means unverified, not unsupported. No integration counts, exit-effort estimates or sovereignty approvals have been measured for this case."
+  visual_costs:
+    - option: copilot
+      amount: "€270–584k"
+      team: "2–3 FTE"
+      lower: 270
+      upper: 584
+      start_percent: 13.5
+      range_percent: 15.7
+    - option: glean
+      amount: "€270–584k"
+      team: "2–3 FTE"
+      lower: 270
+      upper: 584
+      start_percent: 13.5
+      range_percent: 15.7
+    - option: benchling
+      amount: "€270–604k"
+      team: "2–3 FTE"
+      lower: 270
+      upper: 604
+      start_percent: 13.5
+      range_percent: 16.7
+    - option: haystack
+      amount: "€520k–1.13m"
+      team: "4–6 FTE"
+      lower: 520
+      upper: 1130
+      start_percent: 26
+      range_percent: 30.5
+    - option: custom
+      amount: "€920k–1.88m"
+      team: "7–10 FTE"
+      lower: 920
+      upper: 1880
+      start_percent: 46
+      range_percent: 48
