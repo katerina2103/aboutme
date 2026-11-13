@@ -95,8 +95,7 @@ copy:
   company_assumption_label: Company assumption
   supporting_documentation: Supporting documentation
   additional_criteria:
-    - kind: integrations
-      label: "Scientific application integration"
+    - label: "Scientific application integration"
       cells:
         - option: copilot
           summary: "Prebuilt / custom connectors"
@@ -113,8 +112,7 @@ copy:
         - option: custom
           summary: "Designed for our workflows"
           detail: "Our team builds connectors and permission checks"
-    - kind: lockin
-      label: "Vendor lock-in"
+    - label: "Vendor lock-in"
       cells:
         - option: copilot
           summary: "Microsoft-specific configuration"
@@ -131,8 +129,7 @@ copy:
         - option: custom
           summary: "Control our code and interfaces"
           detail: "Cloud, model and key-person dependencies remain"
-    - kind: sovereignty
-      label: "Data sovereignty"
+    - label: "Data sovereignty"
       cells:
         - option: copilot
           summary: "Verify tenant + model regions"
@@ -175,17 +172,9 @@ copy:
   range_legend: "Bars show planning ranges; listed supplier extras remain excluded."
   range_accessible_label: Illustrative planning range
   range_not_total: Supplier extras excluded
-  integration_unknown: Coverage unverified
-  integration_unknown_label: "ELN, LIMS and analysis coverage have not been tested for this case."
-  integration_targets:
-    - ELN
-    - LIMS
-    - Analysis
-  exit_unknown: Exit effort unmeasured
-  sovereignty_unknown: Evidence needed
   visual_guide_heading: How to read this comparison
   visual_guide_cost: "Each cost interval uses the same €0–2m scale. The left edge is the lower estimate and the right edge is the upper estimate. Buy-route ranges omit unquoted supplier fees and listed extras; the bars do not establish a cheapest complete solution."
-  visual_guide_coverage: "The three integration markers refer to our target ELN, LIMS and scientific analysis workflow. A question mark means unverified, not unsupported. No integration counts, exit-effort estimates or sovereignty approvals have been measured for this case."
+  visual_guide_coverage: "Integration capabilities, exit effort and data sovereignty remain assumptions to validate against our own applications, deployment and agreements during the pilot."
   visual_costs:
     - option: copilot
       amount: "€270–584k"

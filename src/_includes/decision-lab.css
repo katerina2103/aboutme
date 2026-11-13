@@ -302,15 +302,11 @@
 .lab-slide:has(.study-stages) .lab-step { margin-bottom: calc(8px + 8px * var(--study-room, 1)); }
 .lab-slide:has(.study-stages) .dilemma__title { margin-bottom: calc(16px + 8px * var(--study-room, 1)); }
 
-/* Visual matrix: shared cost intervals and explicit evidence gaps. */
+/* Visual matrix: compare planning ranges on a shared cost scale. */
 .decision-lab .lab-matrix-legend { font-size: 12px; line-height: 1.5; color: var(--muted); margin: 8px 0 12px; }
 .lab-comparison-matrix th, .lab-comparison-matrix td { padding: 10px 12px; border-right: 0; }
 .lab-comparison-matrix td strong { white-space: normal; }
 .lab-comparison-matrix .lab-cost-value { display: block; font-size: 15px; font-variant-numeric: tabular-nums; }
 .lab-cost-range { position: relative; height: 9px; background: var(--line); border-radius: 3px; margin-top: 8px; }
 .lab-cost-range i { position: absolute; inset-block: 0; left: var(--range-start); width: var(--range-width); background: var(--blue); border-radius: 2px; }
-.lab-comparison-matrix .lab-evidence-state { display: block; width: fit-content; font-size: 12px; line-height: 1.5; margin-bottom: 7px; border-bottom: 2px dotted var(--muted); }
-.lab-integration-coverage { display: flex; gap: 5px; margin-bottom: 9px; }
-.lab-comparison-matrix .lab-integration-coverage span { flex: 1; min-width: 0; margin: 0; text-align: center; font-size: 11px; }
-.lab-integration-coverage b { display: block; font-weight: 700; color: var(--muted); background: var(--line); border-radius: 3px; padding: 2px 0; margin-bottom: 3px; }
-@media (max-width: 480px) { .lab-comparison-matrix th, .lab-comparison-matrix td { padding: 9px 8px; } .lab-integration-coverage { gap: 3px; } }
+@media (max-width: 480px) { .lab-comparison-matrix th, .lab-comparison-matrix td { padding: 9px 8px; } }
