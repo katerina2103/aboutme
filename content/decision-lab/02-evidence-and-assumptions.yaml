@@ -5,7 +5,7 @@ copy:
   size_the_problem: I’d investigate first.
   test_the_assumptions: Which evidence matters?
 hypothesis:
-  label: Our starting hypothesis · unproven
+  label: Our working hypothesis · unproven
   value: 5–7 hours/week
   description: " per researcher searching and collecting information."
 signals_label: External signals worth investigating
@@ -29,5 +29,5 @@ details:
       url: https://www.benchling.com/blog/2024-state-of-tech-report
       limits: . Vendor-sponsored survey of 300 R&D/IT respondents in the US and Europe. The 43% figure
         applies to the large-biopharma IT subgroup (1,000+ employees).
-  validation: The 5–7 hours is a working assumption, not a survey finding. I would separate search
+  validation: The 5–7 hours is a working hypothesis, not a survey finding. I would separate search
     and collection from waiting, synthesis and correction across two weeks of real work.
