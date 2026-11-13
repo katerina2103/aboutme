@@ -16,6 +16,9 @@ signals:
   - label: Complex IT landscape
     value: 43%
     description: " supported 20+ scientific applications."
+takeaway:
+  label: What I’d investigate next
+  text: Understand where researchers lose time and what access they need to relevant scientific applications before choosing a solution.
 details:
   label: Sources, limits & validation
   introduction: These external signals suggest fragmented knowledge is worth investigating. They do
