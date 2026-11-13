@@ -1,9 +1,9 @@
 copy:
   market_scan: Market scan
   buy_adapt_or_build: Problem scoped. Which solutions fit?
-  compare_equivalent_scope_source_coverage_permissions_useful: Start with what researchers need to do.
-    Compare application integrations, permissions, accuracy of answers and the team needed to keep each solution
-    running.
+  compare_equivalent_scope_source_coverage_permissions_useful: For our European biotech, start with what
+    researchers need to do. Compare cost, application integrations, answer accuracy and long-term
+    control over research data.
   choose_options_to_compare: Choose solution options to compare
   microsoft_365_copilot: " Microsoft 365 Copilot"
   glean: " Glean"
@@ -66,10 +66,10 @@ copy:
     the engineering team to maintain the solution.
   prove_a_repeatable_need_beyond_vendor_capabilities: Demonstrate a recurring scientific need beyond
     vendor capabilities, with evidence of value and funded long-term ownership.
-  my_business_case_starting_point: 'My choice: test a vendor first'
-  test_an_existing_estate_vendor_against_improved: Shortlist the vendor that best fits our existing
-    research systems, obtain a full quote, and test it against improved search. Consider a hybrid
-    or custom build only if the pilot reveals an important need the vendor cannot meet.
+  my_business_case_starting_point: 'My choice: test a vendor first, if it passes the essentials'
+  test_an_existing_estate_vendor_against_improved: Shortlist a vendor that connects our research
+    applications, meets our data-control requirements and offers an acceptable exit plan. Obtain
+    a full quote, then test against improved search.
   cost_basis_exclusions_and_source_dates: Cost basis, exclusions and source dates
   illustrative_planning_ranges_not_supplier_quotes_or: "Illustrative planning ranges, not supplier
     quotes or market averages. Loaded staff cost: €120–168k per FTE-year, including allocated
@@ -79,11 +79,92 @@ copy:
     whole-platform replacement. Buy options exclude unquoted vendor fees and any listed extras;
     totals are therefore incomplete. USD and EUR are intentionally separate, with no currency
     conversion assumed. Training a foundation model is excluded.
-  product_documentation_and_pricing_were_checked_in: Product documentation and pricing were checked in
-    the prior case research on 28 October 2026; they have not been revalidated for this layout
-    change. Vendor capabilities are claims to test. Obtain comparable quotes and validate
-    integrations before a funding decision.
+  product_documentation_and_pricing_were_checked_in: Cost and pricing assumptions are retained from
+    the prior case research on 28 October 2026. Integration documentation was reviewed for the added
+    criteria on 13 November 2026. Lock-in notes are architectural trade-offs to validate, not measured
+    vendor scores. Confirm sovereignty requirements against the actual deployment, model services
+    and agreement. No option is marked as already passing.
   source_link_1: https://www.microsoft.com/en-us/copilot/pricing/enterprise
   source_link_2: https://docs.glean.com/connectors/about
   source_link_3: https://www.benchling.com/ai
   source_link_4: https://docs.haystack.deepset.ai/
+  cost_and_team: Illustrative year-one cost / team
+  verification_heading: What would I verify before a pilot?
+  company_assumption: A European biotech company. Permitted countries for data storage, processing
+    and remote access remain to be agreed for this case.
+  company_assumption_label: Company assumption
+  supporting_documentation: Supporting documentation
+  additional_criteria:
+    - label: "Scientific application integration"
+      cells:
+        - option: copilot
+          summary: "Prebuilt / custom connectors"
+          detail: "Demonstrate our ELN, LIMS and analysis access"
+        - option: glean
+          summary: "Native / custom connectors"
+          detail: "Verify coverage of our actual research applications"
+        - option: benchling
+          summary: "Benchling APIs and apps"
+          detail: "Prove external-system coverage; AI scope separately"
+        - option: haystack
+          summary: "Custom components available"
+          detail: "Our team must deliver and maintain lab connectors"
+        - option: custom
+          summary: "Designed for our workflows"
+          detail: "Our team builds connectors and permission checks"
+    - label: "Vendor lock-in"
+      cells:
+        - option: copilot
+          summary: "Microsoft-specific configuration"
+          detail: "Verify export and rebuild effort"
+        - option: glean
+          summary: "Vendor-managed index and setup"
+          detail: "Test export and reconstruction outside Glean"
+        - option: benchling
+          summary: "Platform data model and workflows"
+          detail: "Test API exports and what must be rebuilt"
+        - option: haystack
+          summary: "Components can be replaced"
+          detail: "Model, database and API dependencies remain"
+        - option: custom
+          summary: "Control our code and interfaces"
+          detail: "Cloud, model and key-person dependencies remain"
+    - label: "Data sovereignty"
+      cells:
+        - option: copilot
+          summary: "Verify tenant + model regions"
+          detail: "Check permitted countries and cross-border access"
+        - option: glean
+          summary: "Verify deployment + model regions"
+          detail: "Check permitted countries and cross-border access"
+        - option: benchling
+          summary: "Verify platform + AI regions"
+          detail: "Check permitted countries and cross-border access"
+        - option: haystack
+          summary: "Specify permitted regions"
+          detail: "Verify hosted-model processing and remote access"
+        - option: custom
+          summary: "Specify permitted regions"
+          detail: "Check every provider, backup and support location"
+  verification_checks:
+    - label: "Scientific application integration"
+      text: "Demonstrate our electronic lab notebook (ELN), lab information management system (LIMS) and scientific analysis workflow. Check source permissions, citations, freshness and whether the task needs read-only access or write-back."
+    - label: "Vendor lock-in"
+      text: "Run an export-and-rebuild exercise. Check which records, metadata, permissions, configurations and evaluation sets we can take with us, what must be recreated, and the cost and time to leave."
+    - label: "Data sovereignty"
+      text: "For our European company, agree permitted countries for storage, processing and remote support access. Check content, embeddings, prompts, outputs, logs and backups, along with key control and all model providers. Confirm these requirements in the proposed deployment and agreement."
+    - label: "Decision"
+      text: "A critical integration or data-control failure removes a vendor from the shortlist. Consider hybrid or custom only for a demonstrated gap worth maintaining."
+  supporting_sources:
+    - label: "Microsoft connectors"
+      url: https://learn.microsoft.com/microsoft-365/copilot/connectors/overview
+    - label: "Microsoft residency"
+      url: https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-service-copilot-offerings?view=o365-worldwide
+    - label: "Glean connectors"
+      url: https://docs.glean.com/connectors/about
+    - label: "Glean deployment"
+      url: https://docs.glean.com/get-started/build/about-self-hosted
+    - label: "Benchling integration and export"
+      url: https://docs.benchling.com/docs/developer-platform-overview
+    - label: "Haystack integrations"
+      url: https://docs.haystack.deepset.ai/docs/integrations
