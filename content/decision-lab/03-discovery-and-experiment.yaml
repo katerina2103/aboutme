@@ -4,17 +4,11 @@ copy:
   experiment: " experiment"
   find_the_friction: Baseline unproven.
   fund_a_bounded_test: How do we measure it?
-  understand_the_workflow: Understand the workflow
-  value_12_scientists_3_departments: 12 researchers · 3 departments
-  observe_real_work_and_measure_two_weeks: Observe the actual work and measure two weeks of friction.
-    Understand the purpose before proposing a change.
   discovery_method: Discovery method
   log_search_waiting_synthesis_and_correction_separately: I would observe 12 researchers across three
     departments and record search, waiting, synthesis and correction separately. Follow the work
     through ELN/LIMS, file shares and expert handoffs. Check whether access rights, metadata or
     missing records cause the delay. This is proposed discovery, not completed findings.
-  compare_against_a_useful_alternative: Compare against a useful alternative
-  value_8_weeks_30_scientists_2_sources: 8 weeks · 30 researchers · 2 sources
   one_candidate_review_workflow_compare_ai_with: One candidate-review workflow. Committed
     participants. Compare AI with improved search and the current workflow.
   pilot_design_and_evaluation: Pilot design and evaluation
@@ -24,3 +18,28 @@ copy:
     judge usefulness without knowing which tool produced the brief. Measure time after review and
     correction, answer quality and access failures. The result should tell us what deserves funding
     next.
+workflow:
+  discovery:
+    number: "1"
+    title: Find the bottleneck
+    scope: 2-week discovery · 12 researchers · 3 departments
+    description: Observe real work. Find where time is lost and why.
+    output_label: "Output:"
+    output: a measured baseline and a task worth improving.
+  bridge: The bottleneck defines what the pilot tests.
+  pilot:
+    number: "2"
+    title: Test what helps
+    scope: Then an 8-week pilot · 30 researchers · 2 approved sources
+    comparison_label: Same task, three ways
+    routes:
+      - title: Current workflow
+        description: Our baseline
+      - title: Better search
+        description: Simpler alternative
+      - title: AI assistant
+        description: Candidate solution
+    measures: Compare time after checking and corrections, answer quality, and access failures.
+  decision_label: "Decision:"
+  decision: does AI add enough value over better search to deserve further funding?
+  methods_label: Method & safeguards

@@ -258,3 +258,30 @@
 .evidence-takeaway { border-top: 1px solid var(--line); padding-top: 12px; }
 .decision-lab .evidence-takeaway h3 { font-size: 14px; line-height: 1.6; margin: 0 0 4px; }
 .decision-lab .evidence-takeaway p { font-size: 14px; line-height: 1.6; margin: 0; }
+
+/* Discovery output defines the subsequent pilot's comparison task. */
+.study-stages { display: grid; gap: 0; }
+.study-stage { padding: 14px; }
+.study-stage__heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.study-stage__number { display: grid; place-items: center; flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--blue); color: var(--bg); font-size: 14px; font-weight: 700; }
+.decision-lab .study-stage h3 { font: 700 15px/1.5 var(--font-sans); }
+.decision-lab .study-stage > p { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.decision-lab .study-stage .study-stage__scope { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.decision-lab .study-stage .study-stage__output { font-size: 13px; border-top: 1px solid var(--line); padding-top: 8px; margin-top: 10px; }
+.decision-lab .study-stage__bridge { display: flex; align-items: center; gap: 10px; padding: 10px 14px; font-size: 13px; line-height: 1.5; color: var(--blue); }
+.study-stage__bridge > span:first-child { font-size: 22px; }
+.decision-lab .study-stage .study-stage__comparison-label { font-size: 12px; color: var(--muted); margin: 10px 0 7px; }
+.study-stage__routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.study-stage__route { background: #fff; color: var(--navy); border-radius: 7px; padding: 9px 7px; text-align: center; font-size: 13px; overflow-wrap: anywhere; }
+.study-stage__route strong { display: block; }
+.study-stage__route span { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
+[data-theme="dark"] .study-stage__route { background: var(--surface); }
+.decision-lab .study-stage__decision { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px; font-size: 14px; line-height: 1.5; }
+.decision-lab .study-stage__methods { margin-top: 12px; padding: 0; border: 0; }
+.study-stage__methods summary { font-size: 13px; padding: 5px 0; }
+.study-stage__methods h3 { font-size: 14px; margin-top: 12px; }
+.decision-lab .study-stage__methods p { font-size: 14px; line-height: 1.6; }
+@media (max-width: 440px) {
+  .study-stage__routes { gap: 5px; }
+  .study-stage__route { padding: 8px 4px; font-size: 12px; }
+}

@@ -1,7 +1,31 @@
-
-<p class="lab-step">{{ site.lab_slides.discovery_and_experiment.copy.discovery }}{{ site.lab_slides.discovery_and_experiment.copy.label }}{{ site.lab_slides.discovery_and_experiment.copy.experiment }}</p><h2 class="dilemma__title">{{ site.lab_slides.discovery_and_experiment.copy.find_the_friction }} {{ site.lab_slides.discovery_and_experiment.copy.fund_a_bounded_test }}</h2>
-<div class="insight-stack">
-<section class="insight"><span class="insight-label">{{ site.lab_slides.discovery_and_experiment.copy.understand_the_workflow }}</span><h3><strong>{{ site.lab_slides.discovery_and_experiment.copy.value_12_scientists_3_departments }}</strong></h3><p>{{ site.lab_slides.discovery_and_experiment.copy.observe_real_work_and_measure_two_weeks }}</p><details><summary>{{ site.lab_slides.discovery_and_experiment.copy.discovery_method }}</summary><p>{{ site.lab_slides.discovery_and_experiment.copy.log_search_waiting_synthesis_and_correction_separately }}</p></details></section>
-<section class="insight"><span class="insight-label">{{ site.lab_slides.discovery_and_experiment.copy.compare_against_a_useful_alternative }}</span><h3><strong>{{ site.lab_slides.discovery_and_experiment.copy.value_8_weeks_30_scientists_2_sources }}</strong></h3><p>{{ site.lab_slides.discovery_and_experiment.copy.one_candidate_review_workflow_compare_ai_with }}</p><details><summary>{{ site.lab_slides.discovery_and_experiment.copy.pilot_design_and_evaluation }}</summary><p>{{ site.lab_slides.discovery_and_experiment.copy.use_committed_scientists_and_approved_sources_compare }}</p></details></section>
-
+{% set slide = site.lab_slides.discovery_and_experiment %}
+<p class="lab-step">{{ slide.copy.discovery }}{{ slide.copy.label }}{{ slide.copy.experiment }}</p><h2 class="dilemma__title">{{ slide.copy.find_the_friction }} {{ slide.copy.fund_a_bounded_test }}</h2>
+<div class="study-stages">
+  <section class="insight study-stage">
+    <div class="study-stage__heading"><span class="study-stage__number">{{ slide.workflow.discovery.number }}</span><h3>{{ slide.workflow.discovery.title }}</h3></div>
+    <p class="study-stage__scope">{{ slide.workflow.discovery.scope }}</p>
+    <p>{{ slide.workflow.discovery.description }}</p>
+    <p class="study-stage__output"><strong>{{ slide.workflow.discovery.output_label }}</strong> {{ slide.workflow.discovery.output }}</p>
+  </section>
+  <p class="study-stage__bridge"><span aria-hidden="true">↓</span><span>{{ slide.workflow.bridge }}</span></p>
+  <section class="insight study-stage">
+    <div class="study-stage__heading"><span class="study-stage__number">{{ slide.workflow.pilot.number }}</span><h3>{{ slide.workflow.pilot.title }}</h3></div>
+    <p class="study-stage__scope">{{ slide.workflow.pilot.scope }}</p>
+    <p class="study-stage__comparison-label">{{ slide.workflow.pilot.comparison_label }}</p>
+    <div class="study-stage__routes">
+      {% for route in slide.workflow.pilot.routes %}
+      <div class="study-stage__route"><strong>{{ route.title }}</strong><span>{{ route.description }}</span></div>
+      {% endfor %}
+    </div>
+    <p>{{ slide.workflow.pilot.measures }}</p>
+  </section>
+  <p class="study-stage__decision"><strong>{{ slide.workflow.decision_label }}</strong> {{ slide.workflow.decision }}</p>
+  <details class="study-stage__methods">
+    <summary>{{ slide.workflow.methods_label }}</summary>
+    <h3>{{ slide.copy.discovery_method }}</h3>
+    <p>{{ slide.copy.log_search_waiting_synthesis_and_correction_separately }}</p>
+    <h3>{{ slide.copy.pilot_design_and_evaluation }}</h3>
+    <p>{{ slide.copy.one_candidate_review_workflow_compare_ai_with }}</p>
+    <p>{{ slide.copy.use_committed_scientists_and_approved_sources_compare }}</p>
+  </details>
 </div>
