@@ -181,7 +181,7 @@
 /* Keep answer instructions with the feedback ribbon, leaving the choices uncluttered. */
 .lab-answers { margin-top: 18px; }
 .lab-feedback { padding: 12px 16px; margin-top: 20px; background: var(--bg); border-radius: 0 8px 8px 0; }
-.decision-lab .lab-feedback .lab-answer-hint { font-size: 13px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 50ch; }
+.decision-lab .lab-feedback .lab-answer-hint { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 50ch; }
 .lab-assessment:empty { display: none; }
 .decision-lab .lab-assessment:not(:empty) { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; }
 
@@ -236,3 +236,7 @@
 }
 @media (prefers-reduced-motion: reduce) { .lab-confetti { display: none; } }
 @media print { .lab-confetti { display: none; } }
+
+/* Use one reading size throughout answer feedback, including expanded details. */
+.decision-lab .lab-feedback p,
+.decision-lab .lab-feedback summary { font-size: 14px; line-height: 1.6; }

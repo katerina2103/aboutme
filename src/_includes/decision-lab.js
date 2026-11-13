@@ -83,8 +83,12 @@
  const lab=document.querySelector('.decision-lab');
  const labels = JSON.parse(document.getElementById("lab-content").textContent);
  const feedback = labels.answers;
+ const answerHint = lab.querySelector('.lab-answer-hint');
+ const defaultAnswerHint = answerHint.textContent;
  const handoffChoice = lab.querySelector('.lab-handoff-choice');
+ const handoffRoute = lab.querySelector('.lab-handoff-route');
  function updateHandoff(answer) {
+   handoffRoute.textContent = answer === 'test' ? labels.handoff.agreement_route : labels.handoff.route;
    handoffChoice.textContent = answer
      ? labels.handoff.selected.replace('{choice}', labels.handoff.choices[answer]) + ' '
      : '';
@@ -97,6 +101,7 @@
      if (badge) badge.remove();
    });
    updateHandoff(button.dataset.answer);
+   answerHint.textContent = button.dataset.answer === 'test' ? labels.agreement_hint : defaultAnswerHint;
    const choice = feedback[button.dataset.answer];
    if (button.dataset.answer === 'test') {
      const badge = document.createElement('span');
@@ -112,6 +117,7 @@
  const answers = [...lab.querySelectorAll('[data-answer]')];
  function clearAnswer() {
    updateHandoff();
+   answerHint.textContent = defaultAnswerHint;
    answers.forEach(button => {
      button.setAttribute('aria-checked', 'false');
      button.classList.remove('lab-my-choice');
