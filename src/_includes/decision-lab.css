@@ -35,7 +35,7 @@
 
 .decision-lab details{border-bottom:1px solid var(--dark-border);padding:12px 0}
 .decision-lab summary{cursor:pointer;font-size:14px;font-weight:700;padding:8px 0;color:var(--accent)}
-.decision-lab details p{margin:12px 0}
+.decision-lab details p{margin:12px 0;font-size:14px;line-height:1.6}
 .decision-lab button:focus-visible,.decision-lab summary:focus-visible,.decision-lab select:focus-visible,.decision-lab a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .decision-lab select{display:block;width:100%;margin:8px 0 18px;padding:10px;font:inherit;background:#fff;color:var(--navy);border:1px solid var(--on-dark-muted);border-radius:6px}
 .decision-lab .lab-metric{color:var(--accent);font-size:28px;font-weight:700;margin:12px 0}
@@ -176,7 +176,7 @@
 .decision-lab .insight > p { margin-top: 7px; font-size: 13px; color: var(--muted); }
 .decision-lab .insight details { padding: 6px 0 0; margin-top: 8px; border-bottom: 0; border-top: 1px solid var(--line); }
 .decision-lab .insight summary { font-size: 12px; padding: 7px 0; }
-.decision-lab .insight details p { font-size: 13px; }
+.decision-lab .insight details p { font-size: 14px; line-height: 1.6; }
 
 /* Keep answer instructions with the feedback ribbon, leaving the choices uncluttered. */
 .lab-answers { margin-top: 18px; }
