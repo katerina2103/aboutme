@@ -6,6 +6,15 @@
   const previous = lab.querySelector(".lab-prev");
   const next = lab.querySelector(".lab-next");
   const count = lab.querySelector(".lab-count");
+  const progress = lab.querySelector(".lab-progress");
+  const segments = slides.map(() => {
+    const segment = document.createElement("span");
+    segment.className = "lab-progress-segment";
+    segment.setAttribute("aria-hidden", "true");
+    progress.append(segment);
+    return segment;
+  });
+  progress.setAttribute("aria-valuemax", slides.length);
   const labels = JSON.parse(document.getElementById("lab-content").textContent);
   const celebration = lab.querySelector('.lab-celebration__gif');
   const celebrationToggle = lab.querySelector('.lab-celebration__toggle');
@@ -25,7 +34,13 @@
     celebrate(current === slides.length - 1 && !reducedMotion.matches);
     previous.disabled = current === 0;
     next.textContent = current === slides.length - 1 ? labels.restart_label : labels.next_label;
-    count.textContent = (current + 1) + " / " + slides.length + " · " + slides[current].querySelector(".lab-step").textContent;
+    count.textContent = (current + 1) + " of " + slides.length;
+    progress.setAttribute("aria-valuenow", current + 1);
+    progress.setAttribute("aria-valuetext", "Slide " + count.textContent);
+    segments.forEach((segment, i) => {
+      segment.classList.toggle("is-past", i < current);
+      segment.classList.toggle("is-current", i === current);
+    });
   }
   previous.addEventListener("click", () => show(current - 1));
   next.addEventListener("click", () => show(current === slides.length - 1 ? 0 : current + 1));
@@ -45,6 +60,12 @@
  const lab=document.querySelector('.decision-lab');
  const labels = JSON.parse(document.getElementById("lab-content").textContent);
  const feedback = labels.answers;
+ const handoffChoice = lab.querySelector('.lab-handoff-choice');
+ function updateHandoff(answer) {
+   handoffChoice.textContent = answer
+     ? labels.handoff.selected.replace('{choice}', labels.handoff.choices[answer]) + ' '
+     : '';
+ }
  lab.querySelectorAll('[data-answer]').forEach(button => button.addEventListener('click', () => {
    lab.querySelectorAll('[data-answer]').forEach(other => {
      other.setAttribute('aria-checked', String(other === button));
@@ -52,6 +73,7 @@
      const badge = other.querySelector('.lab-choice-badge');
      if (badge) badge.remove();
    });
+   updateHandoff(button.dataset.answer);
    const choice = feedback[button.dataset.answer];
    if (button.dataset.answer === 'test') {
      const badge = document.createElement('span');
@@ -66,6 +88,7 @@
  }));
  const answers = [...lab.querySelectorAll('[data-answer]')];
  function clearAnswer() {
+   updateHandoff();
    answers.forEach(button => {
      button.setAttribute('aria-checked', 'false');
      button.classList.remove('lab-my-choice');

@@ -51,3 +51,10 @@ challenge_label: Challenge my reasoning
 reconsider_label: What would change my mind
 compare_status: Comparing {count} options
 compare_empty: Select at least one option to compare.
+handoff:
+  route: The case continues with Katya’s proposed test-first route.
+  selected: You chose “{choice}”.
+  choices:
+    build: Build our own assistant
+    buy: Buy a proven assistant
+    test: Compare a narrow pilot with better search
