@@ -7,7 +7,7 @@ copy:
   illustrative_scenarios_assumptions_to_test: Illustrative scenarios · assumptions to test
   working_scenario_annual_capacity: Working scenario · annual capacity
   value_17_000_hours: ~17,000 hours
-  value_600_scientists_46_weeks_60_adoption_1: 600 scientists × 46 weeks × 60% adoption × 1 net hour/week
+  value_600_scientists_46_weeks_60_adoption_1: 600 researchers × 46 weeks × 60% adoption × 1 net hour/week
   how_sensitive_is_that_value: Which assumptions change the decision?
   annual_hours_of_capacity_discrete_planning_scenarios: Annual hours of capacity · discrete planning scenarios
   annual_capacity_scenario_range: Annual capacity scenario range
@@ -23,7 +23,7 @@ copy:
   value_20k: 20k
   value_40k: 40k
   hours_year_zero_based_scale: Hours/year · zero-based scale
-  adoption_40_60_80_net_time_per: "Adoption: 40 / 60 / 80%. Net time per active scientist: 0.25 / 1 /
+  adoption_40_60_80_net_time_per: "Adoption: 40 / 60 / 80%. Net time per active researcher: 0.25 / 1 /
     2.05h per week. Scenarios, not probabilities."
   capacity_does_not_automatically_become_financial_return: Capacity does not automatically become financial return
   time_freed: Time freed
@@ -39,7 +39,7 @@ copy:
     business benefit only if we put the time to useful work. It is not a cash saving or established
     ROI.
   does_reuse_accelerate_the_next_product_line: Does reuse accelerate the next product line?
-  value_100_scientists_separate_delivery_hypotheses: 100 scientists · separate delivery hypotheses
+  value_100_scientists_separate_delivery_hypotheses: 100 researchers · separate delivery hypotheses
   evidence_workflow: Evidence workflow
   value_2_6_weeks_earlier: 2–6 weeks earlier?
   from_scratch: "From scratch "
@@ -66,11 +66,11 @@ copy:
     markers = baseline. Each row has its own scale. *No milestone gain if wet-lab work or approvals
     determine delivery.
   what_earns_the_next_investment: What earns the next investment?
-  validate_sustained_adoption_and_net_time_saved: Validate whether scientists keep using the tool and
+  validate_sustained_adoption_and_net_time_saved: Validate whether researchers keep using the tool and
     save time after review. Test transfer with a second team before assuming reuse will help. Keep
     milestone gains separate from annual capacity to avoid counting the same benefit twice.
   assumptions_calculation_and_limits: Assumptions, calculation and limits
-  annual_capacity_600_scientists_46_weeks_adoption: "Annual capacity = 600 scientists × 46 weeks ×
+  annual_capacity_600_scientists_46_weeks_adoption: "Annual capacity = 600 researchers × 46 weeks ×
     adoption × (weekly search hours × reduction − added weekly review hours). Cautious: 40%, 5h,
     15%, 0.5h = 2,760h. Working: 60%, 6h, 25%, 0.5h = 16,560h. Upside: 80%, 7h, 35%, 0.4h = 45,264h.
     Scenario points use unrounded values on a zero-based scale; labels are rounded."
@@ -79,7 +79,7 @@ copy:
     €3.2m before ongoing costs. This is opportunity cost, not payroll savings, revenue or financial
     return. Budget is only released through an explicit redeployment or spending decision.
   reuse_assumes_connectors_access_rules_evidence_templates: Reuse assumes connectors, access rules,
-    evidence templates and evaluation sets transfer to a new product line of 100 scientists. A
+    evidence templates and evaluation sets transfer to a new product line of 100 researchers. A
     16-week evidence-workflow baseline could become 10–14 weeks. New data formats, scientific
     entities or permissions could eliminate the gain.
   a_24_week_research_milestone_could_shorten: A 24-week research milestone could shorten by 1–2 weeks

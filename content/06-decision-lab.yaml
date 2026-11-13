@@ -9,9 +9,9 @@ restart_label: Start again ↺
 copy:
   curious_how_i_think: Work through a product decision with me
   meet_our_fictional_biotech_company: Meet our fictional statistically average biotech company
-  value_2_000_employees_600_scientists_lab_records: 2,000 employees. 600 scientists. Lab records, reports and knowledge scattered across teams and systems. Fast-growing, regulated and ambitious.
+  value_2_000_employees_600_scientists_lab_records: 2,000 employees. 600 researchers. Lab records, reports and knowledge scattered across teams and systems. Fast-growing, regulated and ambitious.
   the_ceo_s_brief: The CEO’s brief
-  build_an_ai_assistant_for_our_scientists: “Build an AI assistant for our scientists. We have enough
+  build_an_ai_assistant_for_our_scientists: “Build an AI assistant for our researchers. We have enough
     data scientists, although we have little software engineering expertise, and I want us to be an AI frontrunner. We might expand considerably next year”
   how_much_investment_do_you_need: “When can you make this happen?”
   there_is_no_agreed_budget_i_take: That is a sizeable ask without agreed budget. I take this seriously and want to find out
@@ -33,7 +33,7 @@ answers:
       data sources, permissions and scientific tasks, then compare full costs. Product alone will not
       resolve inaccessible knowledge.
     challenge: Am I asking for more experimentation when a product already does the job? A short
-      evaluation on our own tasks may be enough. Scientists should not wait while we rebuild
+      evaluation on our own tasks may be enough. Researchers should not wait while we rebuild
       something that a vendor can provide.
     change: I would move to a limited vendor rollout if the same task tests show accurate answers, correct
       access controls and source coverage, at a lower total cost than the alternatives. The oragnization
@@ -45,7 +45,7 @@ answers:
     challenge: Am I testing whether AI helps, or just funding another round of discovery? Better search
       needs a fair comparison. Agree who will act on the evidence and when, before the pilot starts.
     change: I would stop the AI route if improved search performs just as well, review effort erases the
-      gain, or scientists will not t use it. I would choose a vendor or custom build when the task
+      gain, or researchers will not t use it. I would choose a vendor or custom build when the task
       evidence and total ownership costs support it.
 choice_label: Katya’s choice
 challenge_label: Challenge my reasoning
