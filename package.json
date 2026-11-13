@@ -5,9 +5,9 @@
   "description": "Katya Shimanovskaya portfolio \u2014 static site built with Eleventy from YAML content.",
   "type": "module",
   "scripts": {
-    "build": "eleventy && node scripts/check.mjs && node scripts/check-decision-lab.mjs && node scripts/check-feedback.mjs",
+    "build": "eleventy && node scripts/check.mjs && node scripts/check-decision-lab.mjs && node scripts/check-feedback.mjs && node scripts/check-case-tabs.mjs",
     "start": "eleventy --serve",
-    "check": "node scripts/check.mjs && node scripts/check-decision-lab.mjs && node scripts/check-feedback.mjs"
+    "check": "node scripts/check.mjs && node scripts/check-decision-lab.mjs && node scripts/check-feedback.mjs && node scripts/check-case-tabs.mjs"
   },
   "engines": {
     "node": ">=22"
