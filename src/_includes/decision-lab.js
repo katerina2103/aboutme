@@ -19,7 +19,27 @@
   const celebration = lab.querySelector('.lab-celebration__gif');
   const celebrationToggle = lab.querySelector('.lab-celebration__toggle');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const confetti = document.createElement('div');
+  confetti.className = 'lab-confetti';
+  confetti.setAttribute('aria-hidden', 'true');
+  slides[slides.length - 1].append(confetti);
+  function burstConfetti() {
+    if (reducedMotion.matches) return;
+    for (let i = 0; i < 42; i++) {
+      const piece = document.createElement('span');
+      piece.className = 'lab-confetti__piece';
+      piece.style.setProperty('--x', (Math.random() * 100) + '%');
+      piece.style.setProperty('--drift', (Math.random() * 140 - 70) + 'px');
+      piece.style.setProperty('--delay', (Math.random() * 0.35) + 's');
+      piece.style.setProperty('--duration', (2.2 + Math.random() * 0.8) + 's');
+      piece.style.setProperty('--spin', (Math.random() * 900 - 450) + 'deg');
+      piece.style.setProperty('--confetti-color', ['#ffd36d', '#3658b5', '#ef8b83', '#7ebda8'][i % 4]);
+      piece.addEventListener('animationend', () => piece.remove(), {once: true});
+      confetti.append(piece);
+    }
+  }
   function celebrate(play) {
+    if (!play) confetti.replaceChildren();
     celebration.hidden = !play;
     if (play) celebration.src = celebration.dataset.src;
     else celebration.removeAttribute('src');
@@ -28,12 +48,15 @@
   celebrationToggle.addEventListener('click', () => celebrate(celebration.hidden));
   let current = 0;
   function show(index) {
+    const previousIndex = current;
     current = Math.max(0, Math.min(index, slides.length - 1));
     slides.forEach((slide, i) => { slide.hidden = i !== current; });
     lab.querySelector(".lab-slides").scrollTop = 0;
     celebrate(current === slides.length - 1 && !reducedMotion.matches);
+    if (current === slides.length - 1 && previousIndex !== current) burstConfetti();
     previous.disabled = current === 0;
     next.textContent = current === slides.length - 1 ? labels.restart_label : labels.next_label;
+    next.setAttribute('aria-label', current === slides.length - 1 ? labels.restart_label : labels.next_accessible_label);
     count.textContent = (current + 1) + " of " + slides.length;
     progress.setAttribute("aria-valuenow", current + 1);
     progress.setAttribute("aria-valuetext", "Slide " + count.textContent);

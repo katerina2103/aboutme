@@ -224,3 +224,15 @@
   .decision-lab .lab-progress-status { flex-basis: 100%; }
   .decision-lab .lab-prev { margin-left: auto; }
 }
+
+/* A single decorative burst, confined to the final slide. */
+.lab-celebration { position: relative; }
+.lab-confetti { position: absolute; inset: 0; height: 100%; min-height: 360px; overflow: hidden; pointer-events: none; z-index: 2; }
+.lab-confetti__piece { position: absolute; top: -14px; left: var(--x); width: 7px; height: 11px; background: var(--confetti-color); animation: lab-confetti-fall var(--duration) var(--delay) ease-out both; }
+@keyframes lab-confetti-fall {
+  0% { transform: translate3d(0, -12px, 0) rotate(0); opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translate3d(var(--drift), 420px, 0) rotate(var(--spin)); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .lab-confetti { display: none; } }
+@media print { .lab-confetti { display: none; } }
