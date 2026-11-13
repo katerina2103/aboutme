@@ -8,10 +8,10 @@ copy:
     demonstrate a recurring scientific need vendors cannot meet economically. A successful pilot
     tells us the approach has promise. It does not automatically justify a custom product.
   product_vision: Product vision
-  trustworthy_scientific_evidence_ready_for_the_next: Help scientists reach the next research decision with evidence they can trace and check.
-  help_scientists_create_source_linked_candidate_review: Help scientists create source-linked candidate-review briefs across approved knowledge sources.
+  trustworthy_scientific_evidence_ready_for_the_next: Help researchers reach the next research decision with evidence they can trace and check.
+  help_scientists_create_source_linked_candidate_review: Help researchers create source-linked candidate-review briefs across approved knowledge sources.
   users_value_and_product_boundaries: Users, value and product boundaries
-  serve_scientists_and_research_decision_owners_connect: Serve scientists and research decision
+  serve_scientists_and_research_decision_owners_connect: Serve researchers and research decision
     owners. Connect evidence to its source, preserve permissions and make uncertainty visible.
     Measure net preparation time, brief quality and repeat use. Start with one candidate-review
     workflow; autonomous scientific decisions and foundation-model training are outside scope.
@@ -54,7 +54,7 @@ copy:
     brief. Year 3: expand to workflows with demonstrated value and strengthen support, monitoring
     and cost controls."
   illustrative_average_annual_adoption_across_600_eligible: "*Illustrative average annual adoption
-    across 600 eligible scientists, not commitments or end-of-year targets. Adoption requires phased
+    across 600 eligible researchers, not commitments or end-of-year targets. Adoption requires phased
     rollout beyond the original 30 pilot participants. Each year’s funding is conditional on
     evidence; no automatic three-year approval."
   short_p: Short P
@@ -100,8 +100,8 @@ copy:
     envelope, not added again. Confirm the same scope before approval. Major data remediation, VAT
     and whole-platform replacement remain excluded. Allocated staff expense is not necessarily
     incremental cash spending.
-  capacity_calculation_600_scientists_46_weeks_average: "Capacity calculation: 600 scientists × 46
-    weeks × average adoption of 30% / 50% / 60% × 1 net hour saved per active scientist/week ×
+  capacity_calculation_600_scientists_46_weeks_average: "Capacity calculation: 600 researchers × 46
+    weeks × average adoption of 30% / 50% / 60% × 1 net hour saved per active researcher/week ×
     assumed €70/hour. This yields 8,280 / 13,800 / 16,560 annual hours. The 1-hour net benefit is a
     hypothesis to validate after review effort, not an experimental result. Capacity is not revenue,
     payroll savings or realized cash benefit."
