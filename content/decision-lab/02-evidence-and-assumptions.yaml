@@ -2,8 +2,8 @@ copy:
   evidence: "Evidence "
   label: "&"
   assumptions: " assumptions"
-  size_the_problem: Size the problem.
-  test_the_assumptions: Test the assumptions.
+  size_the_problem: I’d investigate first.
+  test_the_assumptions: Which evidence matters?
   external_evidence_2025: External evidence · 2025
   value_57: 57%
   cited_data_silos_as_a_barrier_to: " cited data silos as a barrier to using lab data."

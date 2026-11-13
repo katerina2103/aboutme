@@ -2,8 +2,8 @@ copy:
   value: "Value "
   label: "&"
   reuse: " reuse"
-  time_back_today: Time back today.
-  a_head_start_tomorrow: A head start tomorrow?
+  time_back_today: A route to test.
+  a_head_start_tomorrow: What value could it create?
   illustrative_scenarios_assumptions_to_test: Illustrative scenarios · assumptions to test
   working_scenario_annual_capacity: Working scenario · annual capacity
   value_17_000_hours: ~17,000 hours

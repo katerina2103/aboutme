@@ -209,3 +209,18 @@
 .lab-celebration__toggle { font: inherit; font-size: 13px; color: var(--blue); background: transparent; border: 1px solid var(--line); border-radius: 24px; padding: 8px 14px; min-height: 44px; cursor: pointer; }
 .lab-celebration__figure figcaption { font-size: 11px; margin-top: 4px; }
 .lab-celebration__figure a { color: var(--muted); }
+
+.decision-lab .lab-handoff { font-size: 13px; line-height: 1.5; color: var(--muted); margin: 0 0 14px; }
+
+/* Compact journey progress: visual position and exact slide count. */
+.decision-lab .lab-progress-status { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 150px; }
+.decision-lab .lab-progress { display: flex; align-items: center; gap: 6px; flex: 1; min-width: 90px; min-height: 8px; }
+.decision-lab .lab-progress-segment { flex: 1; height: 4px; border-radius: 3px; background: var(--dark-border); }
+.decision-lab .lab-progress-segment.is-past { background: var(--accent); opacity: .45; }
+.decision-lab .lab-progress-segment.is-current { background: var(--accent); height: 6px; }
+.decision-lab .lab-count { margin: 0; white-space: nowrap; font-size: 12px; font-variant-numeric: tabular-nums; }
+@media (max-width: 420px) {
+  .decision-lab .lab-controls { flex-wrap: wrap; }
+  .decision-lab .lab-progress-status { flex-basis: 100%; }
+  .decision-lab .lab-prev { margin-left: auto; }
+}

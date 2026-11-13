@@ -2,8 +2,8 @@ copy:
   discovery: "Discovery "
   label: "&"
   experiment: " experiment"
-  find_the_friction: Find the friction.
-  fund_a_bounded_test: Fund a bounded test.
+  find_the_friction: Baseline unproven.
+  fund_a_bounded_test: How do we measure it?
   understand_the_workflow: Understand the workflow
   value_12_scientists_3_departments: 12 scientists · 3 departments
   observe_real_work_and_measure_two_weeks: Observe the actual work and measure two weeks of friction.
