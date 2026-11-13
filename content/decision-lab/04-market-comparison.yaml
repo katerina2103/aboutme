@@ -1,10 +1,10 @@
 copy:
   market_scan: Market scan
-  buy_adapt_or_build: A test is scoped. Which route fits?
+  buy_adapt_or_build: Problem scoped. Which solutions fit?
   compare_equivalent_scope_source_coverage_permissions_useful: Start with what researchers need to do.
-    Compare source coverage, permissions, useful answers and the team needed to keep each option
+    Compare application integrations, permissions, accuracy of answers and the team needed to keep each solution
     running.
-  choose_options_to_compare: Choose options to compare
+  choose_options_to_compare: Choose solution options to compare
   microsoft_365_copilot: " Microsoft 365 Copilot"
   glean: " Glean"
   benchling_ai: " Benchling AI"
