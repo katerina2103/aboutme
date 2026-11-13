@@ -86,7 +86,9 @@
  const answerHint = lab.querySelector('.lab-answer-hint');
  const defaultAnswerHint = answerHint.textContent;
  const handoffChoice = lab.querySelector('.lab-handoff-choice');
+ const handoffRoute = lab.querySelector('.lab-handoff-route');
  function updateHandoff(answer) {
+   handoffRoute.textContent = answer === 'test' ? labels.handoff.agreement_route : labels.handoff.route;
    handoffChoice.textContent = answer
      ? labels.handoff.selected.replace('{choice}', labels.handoff.choices[answer]) + ' '
      : '';
