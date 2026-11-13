@@ -29,8 +29,7 @@ workflow:
   pilot:
     number: "2"
     title: Test what helps
-    scope: Then an 8-week pilot · 30 researchers · 2 approved sources
-    comparison_label: Same task, three ways
+    scope: Then an 8-week pilot · 30 researchers · 2 applications · Same task, three solutions
     routes:
       - title: Current workflow
         description: Our baseline
