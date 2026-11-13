@@ -10,7 +10,6 @@ copy:
   benchling_ai: " Benchling AI"
   haystack_hosted_model: " Haystack + hosted model"
   custom_application: " Custom application"
-  comparing_2_options: Comparing 2 options
   selected_business_case_options: Selected business case options
   compare_routes_to_a_scientific_evidence_assistant: Compare routes to a scientific evidence assistant
   decision_criteria: Decision criteria
