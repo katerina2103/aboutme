@@ -240,3 +240,17 @@
 /* Use one reading size throughout answer feedback, including expanded details. */
 .decision-lab .lab-feedback p,
 .decision-lab .lab-feedback summary { font-size: 14px; line-height: 1.6; }
+
+/* Compact evidence slide: hypothesis, signals, then the decision it informs. */
+.evidence-compact { display: grid; gap: 12px; }
+.evidence-compact .insight { padding: 12px 14px; }
+.evidence-compact .insight-label { margin-bottom: 4px; }
+.evidence-compact .insight h3 { font-size: 14px; line-height: 1.5; }
+.evidence-compact .insight h3 strong { font-size: 21px; }
+.decision-lab .evidence-compact .insight > p { font-size: 13px; margin-top: 4px; line-height: 1.5; }
+.evidence-signals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.decision-lab .evidence-next { font-size: 14px; line-height: 1.5; margin: 0; }
+.decision-lab .evidence-details { padding: 0; border-bottom: 0; border-top: 1px solid var(--line); }
+.decision-lab .evidence-details summary { padding: 8px 0 0; font-size: 13px; }
+.decision-lab .evidence-details p { font-size: 14px; line-height: 1.6; }
+@media (max-width: 380px) { .evidence-signals { grid-template-columns: 1fr; } }
