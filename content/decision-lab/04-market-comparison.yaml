@@ -66,10 +66,10 @@ copy:
     the engineering team to maintain the solution.
   prove_a_repeatable_need_beyond_vendor_capabilities: Demonstrate a recurring scientific need beyond
     vendor capabilities, with evidence of value and funded long-term ownership.
-  my_business_case_starting_point: My business-case starting point
-  test_an_existing_estate_vendor_against_improved: I would test a vendor that fits our existing
-    systems against improved search. A hybrid or custom build needs a specific gap worth owning, not
-    simply a preference for control.
+  my_business_case_starting_point: 'My choice: test a vendor first'
+  test_an_existing_estate_vendor_against_improved: Shortlist the vendor that best fits our existing
+    research systems, obtain a full quote, and test it against improved search. Consider a hybrid
+    or custom build only if the pilot reveals an important need the vendor cannot meet.
   cost_basis_exclusions_and_source_dates: Cost basis, exclusions and source dates
   illustrative_planning_ranges_not_supplier_quotes_or: "Illustrative planning ranges, not supplier
     quotes or market averages. Loaded staff cost: €120–168k per FTE-year, including allocated

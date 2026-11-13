@@ -2,9 +2,9 @@ copy:
   value: "Value "
   label: "&"
   reuse: " reuse"
-  time_back_today: A route to test.
-  a_head_start_tomorrow: What value could it create?
-  illustrative_scenarios_assumptions_to_test: Illustrative scenarios · assumptions to test
+  time_back_today: Test a vendor first.
+  a_head_start_tomorrow: What value must it prove?
+  illustrative_scenarios_assumptions_to_test: Illustrative scenarios · validate against improved search in the pilot
   working_scenario_annual_capacity: Working scenario · annual capacity
   value_17_000_hours: ~17,000 hours
   value_600_scientists_46_weeks_60_adoption_1: 600 researchers × 46 weeks × 60% adoption × 1 net hour/week
@@ -66,9 +66,10 @@ copy:
     markers = baseline. Each row has its own scale. *No milestone gain if wet-lab work or approvals
     determine delivery.
   what_earns_the_next_investment: What earns the next investment?
-  validate_sustained_adoption_and_net_time_saved: Validate whether researchers keep using the tool and
-    save time after review. Test transfer with a second team before assuming reuse will help. Keep
-    milestone gains separate from annual capacity to avoid counting the same benefit twice.
+  validate_sustained_adoption_and_net_time_saved: Fund a pilot to test whether the shortlisted vendor
+    saves researchers time after review compared with improved search, and whether they keep using
+    it. Use measured value and a full supplier quote to decide the next investment. Validate reuse
+    separately with a second team; do not count milestone gains again as annual capacity.
   assumptions_calculation_and_limits: Assumptions, calculation and limits
   annual_capacity_600_scientists_46_weeks_adoption: "Annual capacity = 600 researchers × 46 weeks ×
     adoption × (weekly search hours × reduction − added weekly review hours). Cautious: 40%, 5h,
