@@ -7,7 +7,7 @@ copy:
     normal work. I want to see where the time goes and which problems come up
     repeatedly.
   budget_heading: What I would base my next step on
-  scale_intro: Let's assume the 5–7 hours per scientist per week holds across our 600
+  scale_intro: When 5–7 hours per scientist per week holds across our 600
     researchers, that’s 3,000–4,200 hours a week spent finding and getting access to information. Even freeing up a
     fraction could give scientists more time for innovation, leave alone employee happiness. If the same pattern keeps showing up across departments, I’d ask
     for enough funding for a pilot to see how much time we can actually give back.
@@ -16,7 +16,7 @@ copy:
     getting access. Note any other blockers.
 evidence:
   hypothesis:
-    value: 5–7 hours/week
+    value: Let's assume 5–7 hours/week
   details:
     introduction: These external signals suggest fragmented knowledge is worth
       investigating. They do not establish the company’s problem or prove that
