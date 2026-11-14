@@ -237,14 +237,6 @@
   if (sibling.classList.contains('business-scroll-hint')) break;
   sibling = following;
  }
- const toolbar = document.createElement('div');
- toolbar.className = 'comparison-toolbar';
- const expand = document.createElement('button');
- expand.type = 'button'; expand.className = 'comparison-expand';
- expand.setAttribute('aria-label', 'Expand comparison');
- expand.setAttribute('aria-expanded', 'false');
- expand.innerHTML = '<span class="comparison-expand-icon" aria-hidden="true"></span>';
- toolbar.append(expand); workspace.prepend(toolbar);
  const detail = document.createElement('section');
  detail.className = 'comparison-cell-detail'; detail.id = 'comparison-cell-detail';
  detail.setAttribute('aria-live', 'polite'); detail.hidden = true;
@@ -297,21 +289,6 @@
   body.append(row);
  });
  table.append(body); original.replaceWith(table);
- const dialog = document.createElement('dialog'); dialog.className = 'comparison-dialog';
- dialog.setAttribute('aria-label', table.querySelector('caption').textContent);
- document.body.append(dialog);
- const anchor = document.createElement('span'); workspace.before(anchor);
- function restoreComparison() {
-  anchor.after(workspace); expand.setAttribute('aria-expanded', 'false');
-  expand.setAttribute('aria-label', 'Expand comparison'); expand.focus();
- }
- dialog.addEventListener('close', restoreComparison);
- expand.addEventListener('click', () => {
-  if (dialog.open) { dialog.close(); return; }
-  dialog.append(workspace); dialog.showModal();
-  expand.setAttribute('aria-expanded', 'true');
-  expand.setAttribute('aria-label', 'Return to slide'); expand.focus();
- });
  function compare() {
   const selected = new Set(choices.filter(input => input.checked).map(input => input.dataset.compare));
   table.querySelectorAll('[data-option]').forEach(row => { row.hidden = !selected.has(row.dataset.option); });

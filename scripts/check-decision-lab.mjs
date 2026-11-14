@@ -61,7 +61,8 @@ for (const row of document.querySelectorAll('.comparison-table tbody tr')) {
   assert.equal(button.getAttribute('aria-expanded'), 'true');
  }
 }
-const dialog = document.querySelector('.comparison-dialog');
+assert.equal(document.querySelector('.comparison-dialog'), null);
+assert.equal(document.querySelector('.comparison-expand'), null);
 assert.ok(![...document.querySelectorAll('summary')].some(s=>s.textContent.includes('Cost basis, exclusions and source dates')));
 assert.ok(![...document.querySelectorAll('summary')].some(s=>s.textContent.includes('How to read this comparison')));
 document.querySelector('.comparison-table [data-option="haystack"] [data-criterion="0"]').click();
@@ -80,14 +81,6 @@ assert.ok(contextText.includes('European hosting does not by itself'));
 assert.ok(!contextText.includes('Figures exclude VAT'));
 document.querySelector('.comparison-table [data-option="benchling"] [data-criterion="2"]').click();
 assert.ok(document.querySelector('.comparison-cell-context').textContent.includes('13 November 2026'));
-dialog.showModal = () => { dialog.open = true; };
-dialog.close = () => { dialog.open = false; dialog.dispatchEvent(new window.Event('close')); };
-const expand = document.querySelector('.comparison-expand');
-expand.click(); assert.equal(dialog.contains(document.querySelector('.comparison-workspace')), true);
-extra.checked = true; extra.dispatchEvent(new window.Event('change'));
-assert.equal(dialog.querySelectorAll('tbody tr:not([hidden])').length, 3);
-expand.click(); assert.equal(dialog.contains(document.querySelector('.comparison-workspace')), false);
-assert.equal(expand.getAttribute('aria-expanded'), 'false');
 const strategy = document.querySelector('.strategy-lab');
 assert.ok(strategy, 'Strategic trade-offs step should exist');
 assert.equal(document.querySelector('[data-strategy-score="glean"]').textContent, '3.20 / 5');

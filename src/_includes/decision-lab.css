@@ -344,10 +344,6 @@
 
 /* Compact route rows; original cell content remains available on selection. */
 .comparison-workspace{color:var(--navy);font:14px/1.5 var(--font-sans, sans-serif);min-width:0}
-.comparison-toolbar{display:flex;justify-content:flex-end;margin-bottom:6px}
-.comparison-expand{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:8px;background:var(--surface,#fffdf7);color:var(--navy);cursor:pointer}
-.comparison-expand-icon{width:18px;height:18px;display:block;background:linear-gradient(currentColor,currentColor) left top/7px 2px no-repeat,linear-gradient(currentColor,currentColor) left top/2px 7px no-repeat,linear-gradient(currentColor,currentColor) right bottom/7px 2px no-repeat,linear-gradient(currentColor,currentColor) right bottom/2px 7px no-repeat}
-.comparison-expand[aria-expanded=true] .comparison-expand-icon{transform:rotate(180deg);background:linear-gradient(currentColor,currentColor) 6px top/2px 8px no-repeat,linear-gradient(currentColor,currentColor) left 6px/8px 2px no-repeat,linear-gradient(currentColor,currentColor) right 10px/8px 2px no-repeat,linear-gradient(currentColor,currentColor) 10px bottom/2px 8px no-repeat}
 .comparison-workspace .comparison-table{min-width:850px;width:100%;table-layout:fixed;font-size:13px;line-height:1.45}
 .comparison-workspace .comparison-table th,.comparison-workspace .comparison-table td{padding:9px 8px;vertical-align:middle}
 .comparison-workspace .comparison-table th:first-child{width:160px;position:sticky;left:0;z-index:1}
@@ -361,12 +357,8 @@
 .comparison-cell-content>span{display:block;margin-top:8px}
 .comparison-cell-content a{color:var(--blue)}
 .comparison-cell-detail[hidden],.comparison-workspace [hidden]{display:none}
-.comparison-dialog{box-sizing:border-box;width:calc(100% - 40px);max-width:1400px;max-height:calc(100dvh - 40px);padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--surface,#fffdf7);color:var(--navy);overflow:auto}
-.comparison-dialog::backdrop{background:#15243a99}
-.comparison-dialog .comparison-table caption{display:table-caption}
-.comparison-expand:focus-visible,.comparison-cell:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-@media(max-width:600px){.comparison-dialog{width:calc(100% - 16px);max-height:calc(100dvh - 16px);padding:12px}.comparison-workspace .compare-picker{padding:8px}.comparison-workspace .compare-picker label{min-height:44px}}
-@media print{.comparison-dialog{display:none}.comparison-expand{display:none}}
+.comparison-cell:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media(max-width:600px){.comparison-workspace .compare-picker{padding:8px}.comparison-workspace .compare-picker label{min-height:44px}}
 .comparison-cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;max-height:68px}
 .comparison-cell-context{border-top:1px solid var(--line);margin-top:12px;padding-top:4px;font-size:13px;line-height:1.6}
 .comparison-cell-context p{margin:10px 0}
@@ -404,3 +396,17 @@
  .lab-section .decision-lab .lab-answers button{font-size:15px}
 }
 @media print{.lab-section .lab-ready .lab-slides{height:auto;overflow:visible}}
+
+/* Typography roles follow the opening decision and evidence slides. */
+.lab-section .decision-lab{--lab-body:16px;--lab-detail:14px;--lab-note:13px;--lab-label:12px;font-family:var(--font-sans)}
+.lab-section .decision-lab .lab-slide>p:not(.lab-step):not(.lab-handoff):not(.lab-matrix-legend):not(.scenario-note):not(.scenario-caption):not(.business-scroll-hint){font-size:var(--lab-body);line-height:1.65}
+.lab-section .decision-lab :is(.lab-answers button,.lab-feedback){font-size:var(--lab-body);line-height:1.6}
+.lab-section .decision-lab :is(.insight h3,.study-stage h3,.ceo-decision h3,.comparison-cell-detail h3,.gate-scorecard h3,.evidence-takeaway h3){font-size:16px;line-height:1.5;font-weight:700}
+.lab-section .decision-lab :is(.insight>p,.study-stage>p,.study-stage__decision,.study-stage__output,.study-stage__bridge,.business-verdict p,.funding-card p,.funding-path p,.ceo-decision p,.ceo-view blockquote,.strategy-insight p,.value-callout p,.lab-choice-details p,.lab-assessment,.evidence-takeaway p,.comparison-cell-content,.comparison-cell-context,.comparison-cell-context p){font-size:var(--lab-detail);line-height:1.6}
+.lab-section .decision-lab details p,.lab-section .decision-lab details summary{font-size:var(--lab-detail);line-height:1.6}
+.lab-section .decision-lab :is(.lab-handoff,.scenario-note,.scenario-caption,.lab-matrix-legend,.business-scroll-hint,.study-stage__scope){font-size:var(--lab-note);line-height:1.55}
+.lab-section .decision-lab :is(.insight-label,.funding-card>span,.value-callout>span,.funding-outcomes span,.funding-outcomes strong,.value-bridge span,.roadmap-years span,.capacity-note span,.lab-celebration__figure figcaption){font-size:var(--lab-label);line-height:1.5}
+.lab-section .decision-lab :is(.study-stage__route,.strategy-score__head,.strategy-presets label,.compare-picker label,.compare-picker legend,.strategy-presets legend,.ceo-view-buttons button,.lab-celebration__toggle,.plan-pnl,.strategy-table,.gate-scorecard>div,.comparison-table,.comparison-cell){font-size:var(--lab-detail);line-height:1.5}
+.lab-section .decision-lab .comparison-table thead th{font-size:var(--lab-label);line-height:1.5}
+.lab-section .decision-lab :is(.roadmap-years strong,.value-bridge strong,.capacity-note strong,.funding-path strong){font-size:var(--lab-detail);line-height:1.5}
+.lab-section .decision-lab .comparison-cell{max-height:72px}
