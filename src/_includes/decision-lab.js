@@ -11,7 +11,7 @@
   const stepTopics = [
     'Your decision', 'Evidence and discovery',
     'Compare solutions', 'Strategic trade-offs', 'Plan the pilot',
-    'Investment decision', 'What we could build', 'Wrap-up',
+    'Pilot outcomes', 'Vision and strategy', 'Wrap-up',
   ];
   const segments = slides.map((_, index) => {
     const tile = document.createElement('button');
@@ -69,7 +69,7 @@
   const headings = slides.map(slide => slide.querySelector('.dilemma__title'));
   const nextLabels = [
     'Scope the problem', 'Compare options', 'Weigh trade-offs',
-    'Plan the pilot', 'Review pilot outcomes', 'Plan what to build',
+    'Plan the pilot', 'Review pilot outcomes', 'See vision and strategy',
     'Wrap up the case',
   ];
   function show(index, moveFocus = true) {
