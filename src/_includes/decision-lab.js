@@ -182,3 +182,38 @@
  choices.forEach(input => input.addEventListener('change', compare));
  compare();
 })();
+
+
+/* Strategic comparison: hypothetical ratings and strategy-dependent weights. */
+(() => {
+ const lab=document.querySelector('.strategy-lab'); if(!lab) return;
+ const ratings=[[4,3,2],[3,4,4],[3,2,1],[3,3,3],[2,4,3]];
+ const configurations={
+  acquisition:{weights:[30,25,20,15,10],insight:'Glean narrowly leads. A 0.05-point difference from hybrid does not justify a supplier commitment. Validate scientific access and acquisition integration before deciding.'},
+  scientific:{weights:[15,40,15,15,15],insight:'Hybrid leads when scientific differentiation matters most. That does not yet prove custom ownership will pay off: validate the specific workflow gap and full maintenance cost.'},
+  cost:{weights:[25,15,35,15,10],insight:'Glean leads provisionally under stronger cost discipline. Vendor fees remain incomplete; obtain a full quote and test total cost before approving a rollout.'}
+ };
+ const keys=['glean','hybrid','custom'];
+ function update(){
+  const selected=lab.querySelector('input[name="strategy-priority"]:checked')?.value || 'acquisition';
+  const config=configurations[selected];
+  const totals=keys.map((_,column)=>ratings.reduce((sum,row,index)=>sum+row[column]*config.weights[index]/100,0));
+  keys.forEach((key,i)=>{
+   lab.querySelector('[data-strategy-score="'+key+'"]').textContent=totals[i].toFixed(2)+' / 5';
+   lab.querySelector('[data-strategy-bar="'+key+'"]').style.width=(totals[i]/5*100)+'%';
+   lab.querySelector('[data-strategy-option="'+key+'"]').classList.toggle('strategy-score--leader',totals[i]===Math.max(...totals));
+  });
+  config.weights.forEach((weight,i)=>lab.querySelector('[data-strategy-weight="'+i+'"]').textContent=weight+'%');
+  lab.querySelector('[data-strategy-insight]').textContent=config.insight;
+ }
+ lab.querySelectorAll('input[name="strategy-priority"]').forEach(input=>input.addEventListener('change',update));
+ update();
+})();
+(() => {
+ const section=document.querySelector('.ceo-decision'); if(!section) return;
+ section.querySelectorAll('[data-ceo-view]').forEach(button=>button.addEventListener('click',()=>{
+  const selection=button.dataset.ceoView;
+  section.querySelectorAll('[data-ceo-view]').forEach(b=>{b.classList.toggle('is-selected',b===button);b.setAttribute('aria-pressed',String(b===button));});
+  section.querySelectorAll('[data-ceo-panel]').forEach(panel=>{panel.hidden=panel.dataset.ceoPanel!==selection;});
+ }));
+})();

@@ -310,3 +310,38 @@
 .lab-cost-range { position: relative; height: 9px; background: var(--line); border-radius: 3px; margin-top: 8px; }
 .lab-cost-range i { position: absolute; inset-block: 0; left: var(--range-start); width: var(--range-width); background: var(--blue); border-radius: 2px; }
 @media (max-width: 480px) { .lab-comparison-matrix th, .lab-comparison-matrix td { padding: 9px 8px; } }
+
+
+/* Interactive investment strategy and CEO challenge, aligned with existing lab surfaces. */
+.strategy-lab{display:grid;gap:15px;margin:16px 0}
+.strategy-presets{margin:0;padding:14px;border:1px solid var(--line);border-radius:12px;display:grid;gap:10px}
+.strategy-presets legend{font-size:13px;font-weight:800;padding:0 5px}
+.strategy-presets label{font-size:13px;display:flex;align-items:center;gap:9px;cursor:pointer;min-height:28px}
+.strategy-presets input{accent-color:var(--blue);width:17px;height:17px}
+.strategy-scores{display:grid;gap:12px}
+.strategy-score__head{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px;margin-bottom:5px}
+.strategy-score__head span{font-variant-numeric:tabular-nums;font-weight:800}
+.strategy-score__track{height:13px;border-radius:8px;background:var(--tint);overflow:hidden}
+.strategy-score__bar{height:100%;background:#8299c4;border-radius:8px;transition:width .2s ease}
+.strategy-score--leader .strategy-score__bar{background:var(--blue)}
+.strategy-insight{padding:14px;border-radius:9px;background:var(--note);border-left:3px solid #efb943}
+.strategy-insight strong{font-size:14px}
+.decision-lab .strategy-insight p{font-size:13px;line-height:1.55;margin-top:5px}
+.strategy-table-scroll{overflow-x:auto}
+.strategy-table{border-collapse:collapse;width:100%;font-size:12px;text-align:left}
+.strategy-table th,.strategy-table td{padding:9px 7px;border-bottom:1px solid var(--line)}
+.strategy-table th{font-weight:700}
+.strategy-table th span{font-weight:400;color:var(--muted)}
+.strategy-table td{text-align:center}
+.ceo-decision{margin:18px 0;padding:16px;border-radius:12px;border:1px solid var(--line);background:var(--tint)}
+.ceo-decision h3{font-size:17px;margin-bottom:8px}
+.decision-lab .ceo-decision p{font-size:13px;line-height:1.6;margin:8px 0}
+.ceo-view-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.ceo-view-buttons button{background:#fff;border:1px solid var(--line);color:var(--navy);font:700 12px var(--font-sans);border-radius:24px;padding:9px 12px;cursor:pointer}
+.ceo-view-buttons button.is-selected{background:var(--blue);border-color:var(--blue);color:white}
+.ceo-view[hidden]{display:none}
+.decision-lab .ceo-view blockquote{font-size:14px;margin:10px 0;border-left:3px solid var(--blue);padding-left:12px}
+[data-theme="dark"] .strategy-insight{background:var(--warm-surface)}
+[data-theme="dark"] .ceo-view-buttons button{background:var(--surface);color:var(--navy)}
+[data-theme="dark"] .ceo-view-buttons button.is-selected{background:var(--blue);color:white}
+@media(prefers-reduced-motion:reduce){.strategy-score__bar{transition:none}}
