@@ -1,5 +1,5 @@
 label: Strategic trade-offs
-title: What option aligned with our strategic objectives best?
+title: What option aligns with our strategic objectives best?
 intro: "Three options, scored on criteria assumptions. Change the strategic priority to see how the ranking shifts."
 comparison_label: "Strategic investment comparison"
 priority_heading: "Choose strategic direction to rank by"
@@ -9,7 +9,7 @@ challenge_heading: "What would change my call?"
 calculation_heading: "See criteria, weights and calculation"
 criterion_heading: "Decision criterion"
 acquisition_summary: "Glean narrowly leads. A 0.05-point difference from hybrid does not justify a supplier commitment. Validate scientific access and acquisition integration before deciding."
-acquisition_label: "Ease of onboarding new acquisition"
+acquisition_label: "Ease of onboarding a new acquisition"
 scientific_summary: "Hybrid leads when scientific differentiation matters most. That does not yet prove custom ownership will pay off: validate the specific workflow gap and full maintenance cost."
 scientific_label: "Business process fit"
 cost_summary: "Glean leads provisionally under stronger cost discipline. Vendor fees remain incomplete; obtain a full quote and test total cost before approving a rollout."
@@ -26,7 +26,7 @@ custom_reason: "Tailored workflows score well, but the largest team and longest 
 recommendation: "I chose Glean because it best fits the immediate goal: getting acquired teams to usable evidence quickly. I kept hybrid in reserve for its flexibility and dropped own build to protect time and investment for work that differentiates our biotech business."
 challenge: "If Glean can’t connect critical lab sources and return useful, correctly permissioned evidence quickly, or the full quote undermines the business case, I’d reassess hybrid against those same requirements before funding rollout."
 build_table_label: "Build"
-criterion_1: "Ease of onboarding new acquisition"
+criterion_1: "Ease of onboarding a new acquisition"
 criterion_2: "Business process fit"
 criterion_3: "3-year economics"
 criterion_4: "Data governance"
