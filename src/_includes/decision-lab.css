@@ -32,9 +32,10 @@
 .lab-answers button:hover,.lab-answers button[aria-checked="true"]{border-color:var(--accent);background:var(--tint)}
 .lab-feedback{margin-top:16px;padding:14px;border-left:3px solid var(--accent);font-size:17px;line-height:1.65}
 
-.decision-lab details{border-bottom:1px solid var(--dark-border);padding:12px 0}
-.decision-lab summary{cursor:pointer;font-size:14px;font-weight:700;padding:8px 0;color:var(--accent)}
-.decision-lab details p{margin:12px 0;font-size:14px;line-height:1.6}
+.decision-lab details,.decision-lab .comparison-cell-detail{border-bottom:1px solid var(--dark-border);padding:12px 0}
+.decision-lab summary{cursor:pointer}
+.decision-lab summary,.decision-lab .comparison-cell-detail h3{font-size:14px;font-weight:700;padding:8px 0;color:var(--accent)}
+.decision-lab details p,.decision-lab .comparison-cell-content p{margin:12px 0;font-size:14px;line-height:1.6}
 .decision-lab button:focus-visible,.decision-lab summary:focus-visible,.decision-lab select:focus-visible,.decision-lab a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .decision-lab select{display:block;width:100%;margin:8px 0 18px;padding:10px;font:inherit;background:#fff;color:var(--navy);border:1px solid var(--on-dark-muted);border-radius:6px}
 .decision-lab .lab-metric{color:var(--accent);font-size:28px;font-weight:700;margin:12px 0}
@@ -351,9 +352,8 @@
 .comparison-workspace .comparison-table td{min-width:0}
 .comparison-cell{display:block;width:100%;min-height:44px;border:0;border-radius:5px;padding:5px 2px;background:transparent;text-align:left;font:inherit;color:var(--blue);cursor:pointer;overflow-wrap:break-word;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
 .comparison-cell[aria-expanded=true]{outline:2px solid var(--blue);outline-offset:2px;background:var(--tint)}
-.comparison-cell-detail{margin:0;padding:12px 0;border-bottom:1px solid var(--dark-border)}
-.comparison-cell-detail h3{margin:0;padding:8px 0;color:var(--accent)}
-.comparison-cell-content>span{display:block;margin-top:8px}
+.comparison-cell-detail,.comparison-cell-detail h3{margin:0}
+.comparison-cell-content>span{display:block;margin-top:12px}
 .comparison-cell-content a{color:var(--blue)}
 .comparison-cell-detail[hidden],.comparison-workspace [hidden]{display:none}
 .comparison-cell:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
@@ -399,7 +399,7 @@
 .lab-section .decision-lab :is(.lab-answers button,.lab-feedback){font-size:var(--lab-body);line-height:1.6}
 .lab-section .decision-lab :is(.insight h3,.study-stage h3,.ceo-decision h3,.gate-scorecard h3,.evidence-takeaway h3){font-size:16px;line-height:1.5;font-weight:700}
 .lab-section .decision-lab :is(.insight>p,.study-stage>p,.study-stage__decision,.study-stage__output,.study-stage__bridge,.business-verdict p,.funding-card p,.funding-path p,.ceo-decision p,.ceo-view blockquote,.strategy-insight p,.value-callout p,.lab-choice-details p,.lab-assessment,.evidence-takeaway p,.comparison-cell-content,.comparison-cell-context,.comparison-cell-context p){font-size:var(--lab-detail);line-height:1.6}
-.lab-section .decision-lab details p,.lab-section .decision-lab details summary,.lab-section .decision-lab .comparison-cell-detail h3{font-size:var(--lab-detail);line-height:1.6}
+.lab-section .decision-lab details p,.lab-section .decision-lab details summary,.lab-section .decision-lab .comparison-cell-detail h3,.lab-section .decision-lab .comparison-cell-content p{font-size:var(--lab-detail);line-height:1.6}
 .lab-section .decision-lab :is(.lab-handoff,.scenario-note,.scenario-caption,.lab-matrix-legend,.business-scroll-hint,.study-stage__scope){font-size:var(--lab-note);line-height:1.55}
 .lab-section .decision-lab :is(.insight-label,.funding-card>span,.value-callout>span,.funding-outcomes span,.funding-outcomes strong,.value-bridge span,.roadmap-years span,.capacity-note span,.lab-celebration__figure figcaption){font-size:var(--lab-label);line-height:1.5}
 .lab-section .decision-lab :is(.study-stage__route,.strategy-score__head,.strategy-presets label,.compare-picker label,.compare-picker legend,.strategy-presets legend,.ceo-view-buttons button,.lab-celebration__toggle,.plan-pnl,.strategy-table,.gate-scorecard>div,.comparison-table,.comparison-cell){font-size:var(--lab-detail);line-height:1.5}
