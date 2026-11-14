@@ -353,13 +353,14 @@
  const lab=document.querySelector('.strategy-lab'); if(!lab) return;
  const ratings=[[4,3,2],[3,4,4],[3,2,1],[3,3,3],[2,4,3]];
  const configurations={
-  acquisition:{weights:[30,25,20,15,10],insight:'Glean narrowly leads. A 0.05-point difference from hybrid does not justify a supplier commitment. Validate scientific access and acquisition integration before deciding.'},
-  scientific:{weights:[15,40,15,15,15],insight:'Hybrid leads when scientific differentiation matters most. That does not yet prove custom ownership will pay off: validate the specific workflow gap and full maintenance cost.'},
-  cost:{weights:[25,15,35,15,10],insight:'Glean leads provisionally under stronger cost discipline. Vendor fees remain incomplete; obtain a full quote and test total cost before approving a rollout.'}
+  acquisition:{weights:[30,25,20,15,10]},
+  scientific:{weights:[15,40,15,15,15]},
+  cost:{weights:[25,15,35,15,10]}
  };
  const keys=['glean','hybrid','custom'];
  function update(){
-  const selected=lab.querySelector('[data-priority][aria-pressed="true"]')?.dataset.priority || 'acquisition';
+  const activePriority = lab.querySelector('[data-priority][aria-pressed="true"]');
+  const selected = activePriority?.dataset.priority || 'acquisition';
   const config=configurations[selected];
   const totals=keys.map((_,column)=>ratings.reduce((sum,row,index)=>sum+row[column]*config.weights[index]/100,0));
   keys.forEach((key,i)=>{
@@ -368,7 +369,7 @@
    lab.querySelector('[data-strategy-option="'+key+'"]').classList.toggle('strategy-score--leader',totals[i]===Math.max(...totals));
   });
   config.weights.forEach((weight,i)=>lab.querySelector('[data-strategy-weight="'+i+'"]').textContent=weight+'%');
-  lab.querySelector('[data-strategy-insight]').textContent=config.insight;
+  lab.querySelector('[data-strategy-insight]').textContent = activePriority?.dataset.priorityInsight || '';
  }
  const priorities = lab.querySelectorAll('[data-priority]');
  priorities.forEach(button => button.addEventListener('click', () => {
