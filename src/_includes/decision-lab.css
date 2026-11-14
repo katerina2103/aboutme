@@ -460,8 +460,9 @@
   padding: .3rem .55rem;
   border: 1px solid var(--dark-border);
   border-radius: 6px;
-  background: var(--navy);
-  color: white;
+  /* Keep this pair together in both themes. */
+  background: #1d2948;
+  color: #fff;
   font-size: .75rem;
   line-height: 1.4;
 }
