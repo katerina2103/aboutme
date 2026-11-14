@@ -39,5 +39,5 @@ workflow:
         description: Candidate solution
     measures: Compare time after checking and corrections, answer quality, and access failures.
   decision_label: "Decision:"
-  decision: does AI add enough value over better search to deserve further funding?
+  decision: does AI add enough value over improved search to deserve further funding?
   methods_label: Method & safeguards
