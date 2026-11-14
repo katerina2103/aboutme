@@ -1,19 +1,14 @@
 <p class="lab-step">{{ site.lab_slides.strategic_tradeoffs.label }}</p>
 <h2 class="dilemma__title">{{ site.lab_slides.strategic_tradeoffs.title }}</h2>
-<p class="business-intro">{{ site.lab_slides.strategic_tradeoffs.intro }}</p>
-<section class="strategy-lab" aria-label="Interactive weighted strategy comparison">
-<fieldset class="strategy-presets"><legend>What should our company prioritize?</legend>
-<label><input type="radio" name="strategy-priority" value="acquisition" checked> Integrate acquisitions faster</label>
-<label><input type="radio" name="strategy-priority" value="scientific"> Differentiate scientific workflows</label>
-<label><input type="radio" name="strategy-priority" value="cost"> Control long-term costs</label>
-</fieldset>
-<div class="strategy-scores" aria-live="polite">
-<div class="strategy-score" data-strategy-option="glean"><div class="strategy-score__head"><strong>Glean · buy</strong><span data-strategy-score="glean">3.20 / 5</span></div><div class="strategy-score__track"><div class="strategy-score__bar" data-strategy-bar="glean" style="width:64%"></div></div></div>
-<div class="strategy-score" data-strategy-option="hybrid"><div class="strategy-score__head"><strong>Hybrid · adapt</strong><span data-strategy-score="hybrid">3.15 / 5</span></div><div class="strategy-score__track"><div class="strategy-score__bar" data-strategy-bar="hybrid" style="width:63%"></div></div></div>
-<div class="strategy-score" data-strategy-option="custom"><div class="strategy-score__head"><strong>Own build</strong><span data-strategy-score="custom">2.55 / 5</span></div><div class="strategy-score__track"><div class="strategy-score__bar" data-strategy-bar="custom" style="width:51%"></div></div></div>
+<p class="business-intro">Three routes, scored on case assumptions. Change the priority to see how the ranking shifts.</p>
+<section class="strategy-lab" aria-label="Strategic investment comparison"><div class="model-panel">
+<strong id="priority-heading">Rank options by</strong>
+<div class="ceo-view-buttons strategy-priority-buttons" role="group" aria-labelledby="priority-heading">
+<button type="button" data-priority="acquisition" class="is-selected" aria-pressed="true">Acquisition speed</button>
+<button type="button" data-priority="scientific" aria-pressed="false">Scientific fit</button>
+<button type="button" data-priority="cost" aria-pressed="false">Long-term cost</button>
 </div>
-<div class="strategy-insight"><strong>My interpretation</strong><p data-strategy-insight>Glean narrowly leads; the 0.05-point gap over hybrid is not a basis for a binding supplier decision. Validate both routes through a focused test.</p></div>
-<details class="lab-more"><summary>See criteria, weights and calculation</summary>
+</div><div class="strategy-summary"><span class="strategy-summary__icon" aria-hidden="true">💡</span><div><strong>What the scores show</strong><p data-strategy-insight role="status"></p></div></div><div class="strategy-scores"><div class="strategy-score" data-strategy-option="glean"><div class="strategy-score__head"><strong>Glean</strong><span data-strategy-score="glean">3.20 / 5</span></div><span class="route-status">Pilot first</span><p>Existing connectors could get us to a pilot fastest. Lab-system fit still needs proof, vendor fees are unquoted, and switching later may be costly.</p><div class="strategy-score__track"><div class="strategy-score__bar" data-strategy-bar="glean" style="width:64%"></div></div></div><div class="strategy-score" data-strategy-option="hybrid"><div class="strategy-score__head"><strong>Hybrid</strong><span data-strategy-score="hybrid">3.15 / 5</span></div><span class="route-status">Keep in reserve</span><p>Owning retrieval and evaluation gives us the most flexibility. Building and operating connectors raises cost and slows onboarding.</p><div class="strategy-score__track"><div class="strategy-score__bar" data-strategy-bar="hybrid" style="width:63%"></div></div></div><div class="strategy-score" data-strategy-option="custom"><div class="strategy-score__head"><strong>Own build</strong><span data-strategy-score="custom">2.55 / 5</span></div><span class="route-status">Drop from shortlist</span><p>Tailored workflows score well, but the largest team and longest lead time would divert investment from our biotech value proposition.</p><div class="strategy-score__track"><div class="strategy-score__bar" data-strategy-bar="custom" style="width:51%"></div></div></div></div><div class="lab-recommendation decision-call"><strong>My call: pilot Glean first</strong><p>I chose Glean because it best fits the immediate goal: getting acquired teams to usable evidence quickly. I kept hybrid in reserve for its flexibility and dropped own build to protect time and investment for work that differentiates our biotech business.</p><p><strong>What would change my call?</strong> If Glean can’t connect critical lab sources and return useful, correctly permissioned evidence quickly, or the full quote undermines the business case, I’d reassess hybrid against those same requirements before funding rollout.</p></div><details class="lab-more"><summary>See criteria, weights and calculation</summary>
 <div class="strategy-table-scroll"><table class="strategy-table"><thead><tr><th>Decision criterion</th><th>Glean</th><th>Hybrid</th><th>Build</th></tr></thead><tbody>
 <tr><th>Acquisition integration <span data-strategy-weight="0">30%</span></th><td>4</td><td>3</td><td>2</td></tr>
 <tr><th>Scientific fit <span data-strategy-weight="1">25%</span></th><td>3</td><td>4</td><td>4</td></tr>

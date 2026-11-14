@@ -359,7 +359,7 @@
  };
  const keys=['glean','hybrid','custom'];
  function update(){
-  const selected=lab.querySelector('input[name="strategy-priority"]:checked')?.value || 'acquisition';
+  const selected=lab.querySelector('[data-priority][aria-pressed="true"]')?.dataset.priority || 'acquisition';
   const config=configurations[selected];
   const totals=keys.map((_,column)=>ratings.reduce((sum,row,index)=>sum+row[column]*config.weights[index]/100,0));
   keys.forEach((key,i)=>{
@@ -370,7 +370,14 @@
   config.weights.forEach((weight,i)=>lab.querySelector('[data-strategy-weight="'+i+'"]').textContent=weight+'%');
   lab.querySelector('[data-strategy-insight]').textContent=config.insight;
  }
- lab.querySelectorAll('input[name="strategy-priority"]').forEach(input=>input.addEventListener('change',update));
+ const priorities = lab.querySelectorAll('[data-priority]');
+ priorities.forEach(button => button.addEventListener('click', () => {
+  priorities.forEach(option => {
+   option.classList.toggle('is-selected', option === button);
+   option.setAttribute('aria-pressed', String(option === button));
+  });
+  update();
+ }));
  update();
 })();
 (() => {

@@ -95,10 +95,9 @@ assert.ok(document.querySelector('.comparison-cell-content').textContent.include
 const strategy = document.querySelector('.strategy-lab');
 assert.ok(strategy, 'Strategic trade-offs step should exist');
 assert.equal(document.querySelector('[data-strategy-score="glean"]').textContent, '3.20 / 5');
-const scientific = strategy.querySelector('[value="scientific"]');
-strategy.querySelector('[value="acquisition"]').removeAttribute('checked');
-scientific.setAttribute('checked', '');
-scientific.dispatchEvent(new window.Event('change'));
+const scientific = strategy.querySelector('[data-priority="scientific"]');
+scientific.click();
+assert.equal(scientific.getAttribute('aria-pressed'), 'true');
 assert.equal(document.querySelector('[data-strategy-score="hybrid"]').textContent, '3.40 / 5');
 const challenge = document.querySelector('[data-ceo-view="challenge"]');
 challenge.click();
