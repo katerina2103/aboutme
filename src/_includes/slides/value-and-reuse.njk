@@ -1,11 +1,9 @@
 {% set pilot = site.lab_slides.value_and_reuse.pilot %}
 <p class="lab-step">{{ pilot.step | escape }}</p>
 <h2 class="dilemma__title">{{ pilot.title | escape }}</h2>
-<p class="pilot-note">{{ pilot.fictional_note | escape }}</p>
+<p class="business-intro pilot-note">{{ pilot.fictional_note | escape }}</p>
 <div class="pilot-board" data-view5="workflow">
-
-<section class="pilot-block pilot-evidence">
-<h3>{{ pilot.results_heading | escape }}</h3>
+<section class="pilot-block pilot-evidence" aria-label="{{ pilot.results_heading | escape }}">
 <div class="pilot-metrics">
 <article class="pilot-metric pilot-speed">
 <h4 class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ pilot.speed_label | escape }}</span></h4>

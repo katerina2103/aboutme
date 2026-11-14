@@ -518,8 +518,8 @@
 .strategy-lab .strategy-score__track{max-width:160px}
 }
 
-.lab-section .decision-lab .pilot-note{font-size:var(--lab-detail,14px);line-height:1.5;margin:8px 0 0}
-.pilot-board{display:grid;gap:16px;margin:16px 0;color:var(--navy)}
+.lab-section .decision-lab .pilot-note{font-size:var(--lab-detail,14px);line-height:1.5;margin:0 0 16px}
+.pilot-board{display:grid;gap:16px;margin:0 0 16px;color:var(--navy)}
 .lab-section .decision-lab .pilot-board h3{font-size:16px;margin:0 0 8px}
 .pilot-board h4{font-size:14px;line-height:1.55;margin:0 0 6px}
 .lab-section .decision-lab .pilot-board :is(p,li,dt,dd){font-size:var(--lab-detail,14px);line-height:1.55}
