@@ -9,7 +9,7 @@ copy:
   glean: " Glean"
   benchling_ai: " Benchling AI"
   haystack_hosted_model: " Haystack + hosted model"
-  custom_application: " Custom application"
+  own_build_solution: " Own build solution"
   selected_business_case_options: Selected business case options
   compare_routes_to_a_scientific_evidence_assistant: Compare routes to a scientific evidence assistant
   decision_criteria: Decision criteria
@@ -21,7 +21,7 @@ copy:
   buy_records_already_in_benchling: Buy · records already in Benchling
   haystack_hosted_model_2: Haystack + hosted model ↗
   adapt_open_source_hybrid: Adapt · open-source hybrid
-  custom_application_2: Custom application
+  own_build_solution_2: Own build solution
   build_differentiated_scientific_workflow: Build · differentiated scientific workflow
   illustrative_first_year_cost: Illustrative first-year cost
   value_270_584k: €270–584k
