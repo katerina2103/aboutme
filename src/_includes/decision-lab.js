@@ -177,53 +177,71 @@
  const optionHeaders = [...original.querySelectorAll('thead [data-option]')];
  const criteriaRows = [...original.querySelectorAll('tbody tr')];
  const context = JSON.parse(document.getElementById('comparison-context').textContent);
- const provenance = context.product_documentation_and_pricing_were_checked_in.match(/[^.]+(?:\.|$)/g).map(s => s.trim());
- const teamNotes = {
-  copilot: context.services_usage, glean: context.services, benchling: context.integration,
-  haystack: context.backend_platform_data_integration_retrieval_evaluation_product,
-  custom: context.hybrid_capabilities_plus_frontend_qa_and_reliability
- };
- function addContext(panel, source, option, index) {
-  const notes = document.createElement('div'); notes.className = 'comparison-cell-context';
-  const seen = new Set();
-  function paragraph(text) {
-   if (!text || seen.has(text) || source.textContent.includes(text)) return;
-   seen.add(text); const p = document.createElement('p'); p.textContent = text; notes.append(p);
-  }
+ function addParagraph(parent, label, text) {
+  const p = document.createElement('p');
+  if (label) { const strong = document.createElement('strong'); strong.textContent = label + ': '; p.append(strong); }
+  p.append(document.createTextNode(text)); parent.append(p);
+ }
+ function fillDetail(content, source, option, index) {
   if (index === 0) {
-   paragraph(context.visual_guide_cost.match(/[^.]+(?:\.|$)/g).slice(0, 2).join('').trim());
-   paragraph(teamNotes[option]);
-   paragraph(context.company_assumption);
-   paragraph(context.illustrative_planning_ranges_not_supplier_quotes_or);
-   paragraph(context.figures_exclude_vat_major_data_remediation_and);
-   paragraph(provenance[0]);
+   const cost = context.visual_costs.find(item => item.option === option);
+   addParagraph(content, 'Planning estimate', cost.amount + ' for year one · ' + cost.team + '.');
+   ['.lab-cost-range', '.lab-cost-axis'].forEach(selector => content.append(source.querySelector(selector).cloneNode(true)));
+   const breakdown = {
+    copilot: ['Included', 'Internal staff and service / usage allowances.'],
+    glean: ['Included', 'Internal staff and service allowances.'],
+    benchling: ['Included', 'Internal staff and integration allowances.'],
+    haystack: ['Included', 'Staff: €480k–1.01m. Infrastructure and APIs: €40–120k.'],
+    custom: ['Included', 'Staff: €840k–1.68m. Infrastructure and APIs: €80–200k.']
+   }[option];
+   addParagraph(content, ...breakdown);
+   const extras = {
+    copilot: 'Add US$216k a year for 600 seats at US$30 per user per month, plus qualifying M365 licences. Other unquoted supplier fees are excluded. This is not a complete total; USD and EUR have not been converted.',
+    glean: 'Obtain a supplier quote. No verified public list price was available in the case research; unquoted supplier fees are excluded from this estimate.',
+    benchling: 'Obtain a quote for the platform, AI, usage and any migration. These costs are excluded from this estimate.'
+   }[option];
+   if (extras) addParagraph(content, 'Still to price', extras);
+   if (option === 'haystack' || option === 'custom') addParagraph(content, 'Team responsibilities', option === 'haystack' ? context.backend_platform_data_integration_retrieval_evaluation_product : 'The Haystack route’s capabilities, plus frontend development, QA and reliability.');
+   const basis = document.createElement('details'); basis.className = 'comparison-estimate-basis';
+   const summary = document.createElement('summary'); summary.textContent = 'Estimate assumptions and exclusions'; basis.append(summary);
+   addParagraph(basis, '', 'Illustrative case assumptions, not supplier quotes or market averages. Loaded staff cost: €120–168k per FTE-year, including allocated internal time. Year-two staffing may remain similar.');
+   addParagraph(basis, 'Excluded', 'VAT, major data remediation, whole-platform replacement and foundation-model training.');
+   addParagraph(basis, 'Cost basis', 'Case research dated 28 October 2026. The bar marks the lower and upper planning estimates.');
+   content.append(basis);
+  } else {
+   const main = source.cloneNode(true); main.querySelectorAll('span').forEach(node => node.remove());
+   addParagraph(content, index === 1 ? 'Value' : index === 5 ? 'Before committing' : 'Available capability', main.textContent.trim());
+   const secondary = source.querySelector('span');
+   if (secondary) {
+    const copy = secondary.cloneNode(true); copy.querySelectorAll('a').forEach(node => node.remove());
+    addParagraph(content, index === 1 ? 'Trade-off' : 'What this means', copy.textContent.trim());
+   }
+   const checks = {
+    1: 'Test this trade-off on our researchers’ tasks before choosing a solution.',
+    2: 'Verify source coverage, permissions and answer quality on our lab systems. Documentation review: 13 November 2026.',
+    3: 'Test an exit plan for our data, configuration and workflows. These are architectural assessments, not measured vendor scores.',
+    4: 'Agree permitted countries for storage, processing and remote access. Check the deployment, model providers and contract; European hosting alone is insufficient. No option has passed this check yet.'
+   };
+   if (checks[index]) addParagraph(content, 'Validate', checks[index]);
   }
-  else if (index === 3) paragraph(provenance[2]);
-  else if (index === 4) {
-   paragraph(context.company_assumption);
-   provenance.slice(3).forEach(paragraph);
+  const sources = [...source.querySelectorAll('a')].map(a => ({url:a.getAttribute('href'), label:a.textContent.trim()}));
+  if (index === 0 && option === 'copilot') sources.push({url:context.source_link_1, label:'Microsoft Copilot pricing'});
+  if (index === 1 || index === 5) {
+   const header = optionHeaders.find(header => header.dataset.option === option)?.querySelector('a');
+   if (header) sources.push({url:header.getAttribute('href'), label:'Solution documentation'});
   }
-  if (index >= 1 && index <= 4) {
-   const guide = context.visual_guide_coverage.match(/[^.]+(?:\.|$)/g).map(s => s.trim());
-   if (index <= 2) paragraph(guide[0]);
-   if (index === 1 || index === 3) paragraph(guide[1]);
-   if (index === 4) paragraph(guide[2]);
-  }
-  if (index >= 2 && index <= 4) {
-   const prefix = {copilot:'Microsoft',glean:'Glean',benchling:'Benchling',haystack:'Haystack'}[option];
-   const sources = context.supporting_sources.filter(s => prefix && s.label.startsWith(prefix));
-   const urls = new Set([...source.querySelectorAll('a')].map(a=>a.getAttribute('href')));
-   const links = document.createElement('p');
-   sources.forEach(s => {
-    if (urls.has(s.url)) return;
-    urls.add(s.url);
-    if (links.childNodes.length) links.append(document.createTextNode(' · '));
-    const a = document.createElement('a'); a.href=s.url; a.textContent=s.label;
-    a.target='_blank'; a.rel='noopener noreferrer'; links.append(a);
+  if (sources.length) {
+   const references = document.createElement('p'); references.className = 'comparison-detail-sources';
+   const label = document.createElement('strong'); label.textContent = 'References: '; references.append(label);
+   const seen = new Set();
+   sources.forEach(item => {
+    if (seen.has(item.url)) return;
+    if (seen.size) references.append(document.createTextNode(' · '));
+    seen.add(item.url); const link = document.createElement('a'); link.href=item.url;
+    link.textContent=item.label; link.target='_blank'; link.rel='noopener noreferrer'; references.append(link);
    });
-   if (links.childNodes.length) notes.append(links);
+   content.append(references);
   }
-  if (notes.childNodes.length) panel.append(notes);
  }
  const scroll = original.parentElement;
  const workspace = document.createElement('section');
@@ -266,9 +284,16 @@
    summary.querySelectorAll('span, .lab-cost-range, .lab-cost-axis').forEach(node => node.remove());
    button.textContent = summary.textContent.trim();
    if (source.querySelector('.lab-cost-value')) {
+    button.classList.add('comparison-cell--cost');
     const team = document.createElement('span');
     team.textContent = source.querySelector('span').textContent;
     button.append(team);
+    const estimate = context.visual_costs.find(cost => cost.option === option.dataset.option)?.infrastructure_note;
+    if (estimate) {
+     const infrastructure = document.createElement('small');
+     infrastructure.className = 'comparison-infrastructure';
+     infrastructure.textContent = estimate; button.append(infrastructure);
+    }
    }
    button.setAttribute('aria-expanded', 'false');
    button.setAttribute('aria-controls', detail.id);
@@ -279,10 +304,10 @@
     title.textContent = option.childNodes[0].textContent.trim() + ' — ' + criterion.querySelector('th').childNodes[0].textContent.trim();
     const content = document.createElement('div');
     content.className = 'comparison-cell-content';
-    [...source.childNodes].forEach(node => content.append(node.cloneNode(true)));
+    fillDetail(content, source, option.dataset.option, index);
     detail.replaceChildren(title, content);
-    addContext(detail, source, option.dataset.option, index);
     detail.hidden = false;
+    detail.scrollIntoView?.({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest', inline: 'nearest'});
    });
    td.append(button); row.append(td);
   });

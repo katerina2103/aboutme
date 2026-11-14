@@ -413,3 +413,5 @@
 .lab-cost-axis{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;line-height:1.5;margin:4px 0 8px}
 .lab-cost-axis small{font:inherit}
 .comparison-cell-content .lab-cost-range{margin-top:14px}
+.lab-section .decision-lab .comparison-cell--cost{display:block;max-height:none;-webkit-line-clamp:unset}
+.comparison-infrastructure{display:block;margin-top:6px;font-size:var(--lab-label,12px);line-height:1.5;color:var(--muted);font-weight:400}

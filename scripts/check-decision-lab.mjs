@@ -46,7 +46,7 @@ extra.checked = true; extra.dispatchEvent(new window.Event('change'));
 assert.equal(document.querySelectorAll('.comparison-table tbody tr:not([hidden])').length,3);
 extra.checked = false; extra.dispatchEvent(new window.Event('change'));
 assert.equal(document.querySelectorAll('.comparison-table tbody tr:not([hidden])').length,2);
-// Every original cell (including citations and cost bars) is retained in details.
+// Every cell opens readable details and retains its original reference URLs.
 const normalize = value => value.replace(/\s+/g, ' ').trim();
 for (const row of document.querySelectorAll('.comparison-table tbody tr')) {
  const originalHeader = originalComparison.querySelector('thead [data-option="'+row.dataset.option+'"]');
@@ -56,8 +56,9 @@ for (const row of document.querySelectorAll('.comparison-table tbody tr')) {
   button.click();
   const detail = document.querySelector('.comparison-cell-detail');
   assert.equal(detail.hidden, false);
-  assert.equal(normalize(detail.querySelector('.comparison-cell-content').textContent), normalize(source.textContent));
-  assert.deepEqual([...detail.querySelectorAll('.comparison-cell-content a')].map(a=>a.href), [...source.querySelectorAll('a')].map(a=>a.href));
+  assert.ok(detail.querySelector('.comparison-cell-content').textContent.trim());
+  assert.ok(![...detail.querySelectorAll('p')].some(p => /^\s*\+/.test(p.textContent)));
+  for (const link of source.querySelectorAll('a')) assert.ok([...detail.querySelectorAll('a')].some(a => a.href === link.href));
   assert.equal(button.getAttribute('aria-expanded'), 'true');
  }
 }
@@ -66,21 +67,24 @@ assert.equal(document.querySelector('.comparison-expand'), null);
 assert.ok(![...document.querySelectorAll('summary')].some(s=>s.textContent.includes('Cost basis, exclusions and source dates')));
 assert.ok(![...document.querySelectorAll('summary')].some(s=>s.textContent.includes('How to read this comparison')));
 document.querySelector('.comparison-table [data-option="haystack"] [data-criterion="0"]').click();
-let contextText = document.querySelector('.comparison-cell-context').textContent;
+let contextText = document.querySelector('.comparison-cell-content').textContent;
 assert.ok(contextText.includes('€120–168k'));
-assert.ok(contextText.includes('Figures exclude VAT'));
+assert.ok(contextText.includes('VAT'));
 assert.ok(contextText.includes('28 October 2026'));
 assert.ok(contextText.includes('Backend / platform'));
-assert.ok(contextText.includes('The left edge is the lower estimate'));
-assert.ok(!contextText.includes('Microsoft connectors'));
+assert.ok(contextText.includes('€40–120k'));
+assert.ok(document.querySelector('.comparison-cell-content .lab-cost-axis'));
+assert.equal(document.querySelector('.comparison-estimate-basis').hasAttribute('open'), false);
+document.querySelector('.comparison-table [data-option="glean"] [data-criterion="0"]').click();
+assert.ok(document.querySelector('.comparison-cell-content').textContent.includes('unquoted supplier fees are excluded'));
 document.querySelector('.comparison-table [data-option="glean"] [data-criterion="4"]').click();
-contextText = document.querySelector('.comparison-cell-context').textContent;
-assert.ok(contextText.includes('Permitted countries'));
-assert.ok(contextText.includes('No option is marked as already passing'));
-assert.ok(contextText.includes('European hosting does not by itself'));
-assert.ok(!contextText.includes('Figures exclude VAT'));
+contextText = document.querySelector('.comparison-cell-content').textContent;
+assert.ok(contextText.includes('permitted countries'));
+assert.ok(contextText.includes('No option has passed'));
+assert.ok(contextText.includes('European hosting alone'));
+assert.ok(!contextText.includes('VAT'));
 document.querySelector('.comparison-table [data-option="benchling"] [data-criterion="2"]').click();
-assert.ok(document.querySelector('.comparison-cell-context').textContent.includes('13 November 2026'));
+assert.ok(document.querySelector('.comparison-cell-content').textContent.includes('13 November 2026'));
 const strategy = document.querySelector('.strategy-lab');
 assert.ok(strategy, 'Strategic trade-offs step should exist');
 assert.equal(document.querySelector('[data-strategy-score="glean"]').textContent, '3.20 / 5');

@@ -1,9 +1,9 @@
 copy:
   market_scan: Market scan
   buy_adapt_or_build: Problem scoped. Which solutions fit?
-  compare_equivalent_scope_source_coverage_permissions_useful: For our European biotech, start with what
-    researchers need to do. Compare cost, application integrations, answer accuracy and long-term
-    control over research data.
+  compare_equivalent_scope_source_coverage_permissions_useful: Compare solutions for our European biotech by
+    year-one cost and team, value and trade-offs, scientific application integration, vendor lock-in
+    and data sovereignty. Select a cell for details, references and what to validate before committing.
   choose_options_to_compare: Choose solution options to compare
   microsoft_365_copilot: " Microsoft 365 Copilot"
   glean: " Glean"
@@ -210,6 +210,7 @@ copy:
       start_percent: 13.5
       range_percent: 16.7
     - option: haystack
+      infrastructure_note: "Includes infrastructure / API: €40–120k"
       amount: "€520k–1.13m"
       team: "4–6 FTE"
       lower: 520
@@ -217,6 +218,7 @@ copy:
       start_percent: 26
       range_percent: 30.5
     - option: custom
+      infrastructure_note: "Includes infrastructure / API: €80–200k"
       amount: "€920k–1.88m"
       team: "7–10 FTE"
       lower: 920
