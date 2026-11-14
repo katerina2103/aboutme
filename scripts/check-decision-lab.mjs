@@ -63,17 +63,20 @@ for (const row of document.querySelectorAll('.comparison-table tbody tr')) {
 }
 const dialog = document.querySelector('.comparison-dialog');
 assert.ok(![...document.querySelectorAll('summary')].some(s=>s.textContent.includes('Cost basis, exclusions and source dates')));
+assert.ok(![...document.querySelectorAll('summary')].some(s=>s.textContent.includes('How to read this comparison')));
 document.querySelector('.comparison-table [data-option="haystack"] [data-criterion="0"]').click();
 let contextText = document.querySelector('.comparison-cell-context').textContent;
 assert.ok(contextText.includes('€120–168k'));
 assert.ok(contextText.includes('Figures exclude VAT'));
 assert.ok(contextText.includes('28 October 2026'));
 assert.ok(contextText.includes('Backend / platform'));
+assert.ok(contextText.includes('The left edge is the lower estimate'));
 assert.ok(!contextText.includes('Microsoft connectors'));
 document.querySelector('.comparison-table [data-option="glean"] [data-criterion="4"]').click();
 contextText = document.querySelector('.comparison-cell-context').textContent;
 assert.ok(contextText.includes('Permitted countries'));
 assert.ok(contextText.includes('No option is marked as already passing'));
+assert.ok(contextText.includes('European hosting does not by itself'));
 assert.ok(!contextText.includes('Figures exclude VAT'));
 document.querySelector('.comparison-table [data-option="benchling"] [data-criterion="2"]').click();
 assert.ok(document.querySelector('.comparison-cell-context').textContent.includes('13 November 2026'));

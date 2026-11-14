@@ -191,16 +191,23 @@
    seen.add(text); const p = document.createElement('p'); p.textContent = text; notes.append(p);
   }
   if (index === 0) {
+   paragraph(context.visual_guide_cost.match(/[^.]+(?:\.|$)/g).slice(0, 2).join('').trim());
    paragraph(teamNotes[option]);
    paragraph(context.company_assumption);
    paragraph(context.illustrative_planning_ranges_not_supplier_quotes_or);
    paragraph(context.figures_exclude_vat_major_data_remediation_and);
    paragraph(provenance[0]);
-  } else if (index === 2) paragraph(provenance[1]);
+  }
   else if (index === 3) paragraph(provenance[2]);
   else if (index === 4) {
    paragraph(context.company_assumption);
    provenance.slice(3).forEach(paragraph);
+  }
+  if (index >= 1 && index <= 4) {
+   const guide = context.visual_guide_coverage.match(/[^.]+(?:\.|$)/g).map(s => s.trim());
+   if (index <= 2) paragraph(guide[0]);
+   if (index === 1 || index === 3) paragraph(guide[1]);
+   if (index === 4) paragraph(guide[2]);
   }
   if (index >= 2 && index <= 4) {
    const prefix = {copilot:'Microsoft',glean:'Glean',benchling:'Benchling',haystack:'Haystack'}[option];
