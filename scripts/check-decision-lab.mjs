@@ -98,3 +98,11 @@ challenge.click();
 assert.equal(document.querySelector('[data-ceo-panel="challenge"]').hidden, false);
 assert.equal(document.querySelector('[data-ceo-panel="recommendation"]').hidden, true);
 console.log('Passed: nine-slide navigation, restart, answer feedback/clearing, comparison selection, and all story/principle references.');
+
+for (const [option, evidence] of Object.entries(site.lab_slides.market_comparison.copy.connector_evidence)) {
+ const button = document.querySelector('.comparison-table [data-option="'+option+'"] [data-criterion="2"]');
+ assert.ok(button.textContent.includes(evidence.summary)); button.click();
+ const panel = document.querySelector('.comparison-cell-detail');
+ assert.ok(panel.textContent.includes(evidence.detail));
+ for (const source of evidence.sources) assert.ok([...panel.querySelectorAll('a')].some(a=>a.href===source.url));
+}

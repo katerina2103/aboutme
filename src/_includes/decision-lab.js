@@ -224,7 +224,10 @@
    };
    if (checks[index]) addParagraph(content, 'Validate', checks[index]);
   }
+  const connectorEvidence = index === 2 ? context.connector_evidence[option] : null;
+  if (connectorEvidence) addParagraph(content, 'Connector catalog', connectorEvidence.detail);
   const sources = [...source.querySelectorAll('a')].map(a => ({url:a.getAttribute('href'), label:a.textContent.trim()}));
+  if (connectorEvidence) sources.push(...connectorEvidence.sources);
   if (index === 0 && option === 'copilot') sources.push({url:context.source_link_1, label:'Microsoft Copilot pricing'});
   if (index === 1 || index === 5) {
    const header = optionHeaders.find(header => header.dataset.option === option)?.querySelector('a');
@@ -294,6 +297,11 @@
      infrastructure.className = 'comparison-infrastructure';
      infrastructure.textContent = estimate; button.append(infrastructure);
     }
+   }
+   if (index === 2) {
+    button.classList.add('comparison-cell--integration');
+    const count = document.createElement('small'); count.className = 'comparison-infrastructure';
+    count.textContent = context.connector_evidence[option.dataset.option].summary; button.append(count);
    }
    button.setAttribute('aria-expanded', 'false');
    button.setAttribute('aria-controls', detail.id);

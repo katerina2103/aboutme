@@ -415,3 +415,5 @@
 .comparison-cell-content .lab-cost-range{margin-top:14px}
 .lab-section .decision-lab .comparison-cell--cost{display:block;max-height:none;-webkit-line-clamp:unset}
 .comparison-infrastructure{display:block;margin-top:6px;font-size:var(--lab-label,12px);line-height:1.5;color:var(--muted);font-weight:400}
+
+.lab-section .decision-lab .comparison-cell--integration{display:block;max-height:none;-webkit-line-clamp:unset}

@@ -226,3 +226,35 @@ copy:
       start_percent: 46
       range_percent: 48
   detail_source_label: AI data-handling details
+
+  connector_evidence:
+    copilot:
+      summary: "100+ connectors · Microsoft + partners"
+      detail: "Microsoft reports more than 100 Copilot connectors across its own and partner offerings. This is a general enterprise catalog, not a count of scientific-system connectors. Checked 14 November 2026."
+      sources:
+        - label: Microsoft Copilot connector overview
+          url: https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-copilot-connector
+    glean:
+      summary: "275+ connectors · native + MCP"
+      detail: "Glean advertises 275+ connectors across native and MCP-based integrations. Its documentation hub separately lists 107 connectors; the catalogs differ in scope. Neither total establishes lab-system coverage. Checked 14 November 2026."
+      sources:
+        - label: Glean connector catalog and published total
+          url: https://www.glean.com/platform/connectors
+        - label: Glean documentation hub
+          url: https://docs.glean.com/connectors/
+    benchling:
+      summary: "24 publicly listed AI connectors"
+      detail: "Counted 24 entries in Benchling’s public AI connector list, last updated 11 June 2026. This is a snapshot, not the current tenant-directory total, and excludes the separate instrument-connector catalog. Checked 14 November 2026."
+      sources:
+        - label: Benchling available AI connectors
+          url: https://help.benchling.com/hc/en-us/articles/46592884051213-Available-AI-Connectors
+    haystack:
+      summary: "192 ecosystem integrations"
+      detail: "Haystack’s directory lists 192 integrations, including model providers, databases, tools and community components. These are engineering building blocks, not 192 ready-made scientific application connectors. Checked 14 November 2026."
+      sources:
+        - label: Haystack integration directory
+          url: https://haystack.deepset.ai/integrations
+    custom:
+      summary: "Depends on chosen components"
+      detail: "This is a hypothetical own build solution with no predefined connector catalog. Coverage depends on the components selected and integrations the team builds and maintains."
+      sources: []
