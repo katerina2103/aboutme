@@ -506,7 +506,7 @@
 .strategy-lab .strategy-score__track{grid-column:1;height:5px;margin-top:3px}
 .strategy-lab [data-strategy-insight]{margin:0;color:var(--navy);font-size:14px;line-height:1.5}
 .lab-section .decision-lab .strategy-lab .decision-call{margin:0}
-.strategy-summary{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;padding:10px 0;color:var(--navy)}
+.strategy-summary{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;padding:10px 12px;border-left:2px solid var(--blue);color:var(--navy)}
 .strategy-summary__icon{font-size:18px;line-height:1.35}
 .strategy-summary strong{display:block;font-size:14px;margin-bottom:3px}
 .strategy-lab .decision-call > strong{display:block;margin:0 0 6px}
@@ -588,3 +588,5 @@
 .plan7-pnl :is(th,td):not(:first-child){text-align:right;white-space:nowrap}
 .plan7-capacity{margin:8px 0}
 .plan7-pnl tbody tr:last-child{font-weight:750;border-top:2px solid var(--line)}
+
+.strategy-summary__label{display:block;font-size:12px;color:var(--muted);margin-bottom:3px}

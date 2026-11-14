@@ -369,6 +369,7 @@
    lab.querySelector('[data-strategy-option="'+key+'"]').classList.toggle('strategy-score--leader',totals[i]===Math.max(...totals));
   });
   config.weights.forEach((weight,i)=>lab.querySelector('[data-strategy-weight="'+i+'"]').textContent=weight+'%');
+  lab.querySelector('[data-strategy-title]').textContent = activePriority?.dataset.priorityTitle || '';
   lab.querySelector('[data-strategy-insight]').textContent = activePriority?.dataset.priorityInsight || '';
  }
  const priorities = lab.querySelectorAll('[data-priority]');
