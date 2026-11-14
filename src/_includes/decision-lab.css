@@ -545,3 +545,24 @@
 .pilot-team,.pilot-benchmarks{border-top:1px solid var(--line);padding-top:10px}
 .pilot-team ol{margin:8px 0 0;padding-left:20px}
 @media(max-width:540px){.pilot-metrics,.pilot-checks div{grid-template-columns:1fr}}
+
+.strategy-ceo-challenge {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.lab-section .decision-lab .strategy-ceo-challenge h3 {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+.lab-section .decision-lab .strategy-ceo-challenge blockquote {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+.lab-section .decision-lab .strategy-ceo-challenge p {
+  font-size: var(--lab-detail, 14px);
+  line-height: 1.6;
+  margin: 0;
+}
