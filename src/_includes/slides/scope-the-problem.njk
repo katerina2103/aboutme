@@ -1,5 +1,6 @@
-{% set evidence = site.lab_slides.evidence_and_assumptions %}
-{% set study = site.lab_slides.discovery_and_experiment %}
+{% set copy = site.lab_slides.scope_the_problem.copy %}
+{% set evidence = site.lab_slides.scope_the_problem.evidence %}
+{% set study = site.lab_slides.scope_the_problem.study %}
 <p class="lab-step">Evidence &amp; discovery</p>
 <h2 class="dilemma__title">Where are researchers losing time?</h2>
 <p class="lab-handoff"><span class="lab-handoff-choice"></span><span class="lab-handoff-route">{{ site.decision_lab.handoff.route }}</span></p>
@@ -21,17 +22,17 @@
 <h3>Test what helps</h3>
 <p>{{ test }}</p>
 {% elif scopeLayout == 'plan' %}
-<p>The budget for next financial year closes in a few weeks. My call is to get a rough baseline now so I can decide what to ask for.</p>
-<h3>A quick check with five scientists</h3>
-<p>I’d ask five scientists across three departments to track how long it takes to find and get access to the information they need during their normal work. I want to see where the time goes and which problems come up repeatedly.</p>
+<p>{{ copy.deadline }}</p>
+<h3>{{ copy.quick_check }}</h3>
+<p>{{ copy.tracking }}</p>
 <div class="scope-callout">
-  <h3>Why I’d start here</h3>
+  <h3>{{ copy.why_here }}</h3>
   <p>{{ timeSignal | safe }}</p>
   <p>{{ siloSignal | safe }}</p>
 </div>
-<h3>What I’d take into the budget discussion</h3>
-<p>If the 5–7 hours per scientist per week holds across our 600 researchers, that’s <strong>3,000–4,200 hours a week</strong> spent finding and getting access to information. Even freeing up a fraction could give scientists more time for experiments and analysis.</p>
-<p>If the same bottleneck keeps showing up across departments, I’d ask for enough funding to test a fix on that workflow and see how much time we can actually give back.</p>
+<h3>{{ copy.budget_heading }}</h3>
+<p>{{ copy.scale_intro }} <strong>{{ copy.scale_value }}</strong> {{ copy.scale_outro }}</p>
+<p>{{ copy.funding_call }}</p>
 {% else %}
 <p>{{ timeSignal | safe }} The surveys give me a reason to look at how knowledge is spread across systems. {{ siloSignal | safe }}</p>
 <h3>What I’d look for inside the company</h3>
@@ -49,7 +50,7 @@
 <details class="scope-details">
   <summary>Study methods</summary>
   {% if scopeLayout == 'plan' %}
-  <p>For each search, jot down what you needed, how long it took to find it, and any extra time spent getting access. If you couldn’t get access, note what blocked you.</p>
+  <p>{{ copy.method }}</p>
   {% else %}
   <p>{{ study.copy.log_search_waiting_synthesis_and_correction_separately }}</p>
   <p>{{ study.workflow.discovery.scope }}</p>
