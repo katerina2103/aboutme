@@ -517,3 +517,31 @@
 .strategy-lab .strategy-score p{grid-column:1;grid-row:auto}
 .strategy-lab .strategy-score__track{max-width:160px}
 }
+
+.lab-section .decision-lab .pilot-note{font-size:var(--lab-detail,14px);line-height:1.5;margin:8px 0 0}
+.pilot-board{display:grid;gap:16px;margin:16px 0;color:var(--navy)}
+.lab-section .decision-lab .pilot-board h3{font-size:16px;margin:0 0 8px}
+.pilot-board h4{font-size:14px;line-height:1.55;margin:0 0 6px}
+.lab-section .decision-lab .pilot-board :is(p,li,dt,dd){font-size:var(--lab-detail,14px);line-height:1.55}
+.pilot-metrics{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:10px}
+.pilot-metric{border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.pilot-metric p{margin:4px 0 0}
+.pilot-times{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0}
+.pilot-times div{display:grid;gap:2px}
+.pilot-times div span,.pilot-status{font-size:12px;font-weight:700}
+.pilot-times strong,.pilot-number{font-size:20px;line-height:1.25;font-variant-numeric:tabular-nums}
+.pilot-number{display:block}
+.pilot-miss{border-left:3px solid var(--navy)}
+.pilot-status{display:inline-block;border:1px solid currentColor;border-radius:20px;padding:1px 7px;margin-bottom:7px}
+.pilot-checks{margin:8px 0 0}
+.pilot-checks div{display:grid;grid-template-columns:minmax(115px,1fr) 2fr;gap:4px 12px;padding:6px 0;border-bottom:1px solid var(--line)}
+.pilot-metric-label{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:.45em}
+.pilot-check{display:grid;box-sizing:border-box;align-self:start;margin-top:.22em;place-items:center;width:1.15em;height:1.15em;border:1px solid var(--line);border-radius:50%;font-size:.86em;line-height:1;color:var(--navy)}
+.pilot-check--miss::before,.pilot-check--miss::after{content:"";grid-area:1 / 1;width:.62em;height:1.5px;border-radius:1px;background:currentColor;transform:rotate(45deg)}
+.pilot-check--miss::after{transform:rotate(-45deg)}
+.pilot-checks dt{font-weight:700}.pilot-checks dd{margin:0}
+.lab-section .decision-lab .pilot-board .pilot-call{margin:0}
+.pilot-board .pilot-call p{margin:0}.pilot-board .pilot-call p+p{margin-top:8px}
+.pilot-team,.pilot-benchmarks{border-top:1px solid var(--line);padding-top:10px}
+.pilot-team ol{margin:8px 0 0;padding-left:20px}
+@media(max-width:540px){.pilot-metrics,.pilot-checks div{grid-template-columns:1fr}}
