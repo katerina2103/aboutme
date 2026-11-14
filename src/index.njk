@@ -14,14 +14,15 @@ permalink: /index.html
     <div class="lab-section__intro" data-reveal="">
       <h2 id="lab-section-title" class="section-title">{{ site.decision_lab.copy.curious_how_i_think }}</h2>
       <div class="company-brief">
-        <p class="lab-fiction-note">{{ site.decision_lab.copy.meet_our_fictional_biotech_company }}. {{ site.decision_lab.copy.a_fictional_case_to_illustrate_my_reasoning }}</p>
-        <p>{{ site.decision_lab.copy.value_2_000_employees_600_scientists_lab_records }}</p>
+        <div class="brief-company">
+          <p class="lab-fiction-note">{{ site.decision_lab.copy.meet_our_fictional_biotech_company }}. {{ site.decision_lab.copy.a_fictional_case_to_illustrate_my_reasoning }}</p>
+          <p>{{ site.decision_lab.copy.value_2_000_employees_600_scientists_lab_records }}</p>
+        </div>
         <div class="case-brief">
           <p class="case-brief__label">{{ site.decision_lab.copy.the_ceo_s_brief }}</p>
           <blockquote>{{ site.decision_lab.copy.build_an_ai_assistant_for_our_scientists }}</blockquote>
           <p class="case-brief__ask">{{ site.decision_lab.copy.how_much_investment_do_you_need }}</p>
         </div>
-        <p>{{ site.decision_lab.copy.there_is_no_agreed_budget_i_take }}</p>
       </div>
     </div>
     {% include "sections/decision-lab.njk" %}
