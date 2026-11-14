@@ -8,14 +8,14 @@
 <p>{{ copy.deadline }}</p>
 <h3>{{ copy.quick_check }}</h3>
 <p>{{ copy.tracking }}</p>
-<div class="scope-callout">
-  <h3>{{ copy.why_here }}</h3>
-  <p>{{ timeSignal | safe }}</p>
-  <p>{{ siloSignal | safe }}</p>
-</div>
+<h3>{{ copy.why_here }}</h3>
+<p>{{ timeSignal | safe }}</p>
+<p>{{ siloSignal | safe }}</p>
+<div class="lab-recommendation">
 <h3>{{ copy.budget_heading }}</h3>
 <p>{{ copy.scale_intro }} <strong>{{ copy.scale_value }}</strong> {{ copy.scale_outro }}</p>
 <p>{{ copy.funding_call }}</p>
+</div>
 <details class="scope-details">
   <summary>References and evidence limits</summary>
   <p>{{ evidence.details.introduction }}</p>

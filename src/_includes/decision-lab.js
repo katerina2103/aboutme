@@ -135,18 +135,18 @@
  lab.querySelectorAll('[data-answer]').forEach(button => button.addEventListener('click', () => {
    lab.querySelectorAll('[data-answer]').forEach(other => {
      other.setAttribute('aria-checked', String(other === button));
-     other.classList.toggle('lab-my-choice', other === button && button.dataset.answer === 'test');
+     other.classList.toggle('lab-my-choice', other.dataset.answer === 'test');
      const badge = other.querySelector('.lab-choice-badge');
      if (badge) badge.remove();
    });
    updateHandoff(button.dataset.answer);
    answerHint.textContent = button.dataset.answer === 'test' ? labels.agreement_hint : defaultAnswerHint;
    const choice = feedback[button.dataset.answer];
-   if (button.dataset.answer === 'test') {
+   {
      const badge = document.createElement('span');
      badge.className = 'lab-choice-badge';
      badge.textContent = labels.choice_label;
-     button.append(badge);
+     lab.querySelector('[data-answer="test"]').append(badge);
    }
    lab.querySelector('.lab-assessment').textContent = choice.assessment;
    lab.querySelector('.lab-choice-details').innerHTML =

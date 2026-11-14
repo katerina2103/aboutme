@@ -34,3 +34,20 @@
 [data-theme="dark"] .reuse-band { background: #a5baff; }
 @media (max-width: 600px) { .nav__links { gap: 10px 16px; } .theme-toggle { padding: 9px 12px; } }
 @media print { .theme-toggle { display: none; } }
+
+/* Recommendations share the CEO brief palette in both themes. */
+.lab-section { --decision-surface: #fff4d9; --decision-border: #efb943; }
+[data-theme="dark"] .lab-section { --decision-surface: var(--warm-surface); --decision-border: #ffd36d; }
+.lab-section .case-brief,
+.lab-section .decision-lab :is(.lab-recommendation, .business-verdict, .strategy-insight) {
+  background: var(--decision-surface);
+  color: var(--navy);
+  border-left: 3px solid var(--decision-border);
+  border-radius: 0 10px 10px 0;
+}
+.lab-section .decision-lab .lab-recommendation { padding: 14px 16px; margin: 16px 0; }
+.lab-section .decision-lab .lab-recommendation h3 { margin-top: 0; }
+.lab-section .decision-lab .lab-recommendation p { font-size: var(--lab-detail); line-height: 1.6; }
+.lab-section .decision-lab .lab-answers button.lab-my-choice { background: var(--decision-surface); border-color: var(--decision-border); }
+.lab-section .decision-lab .lab-choice-badge { background: var(--decision-border); color: #1d2948; }
+.lab-section .decision-lab .lab-my-choice[aria-checked="true"] .lab-radio { border-color: var(--decision-border); background: radial-gradient(circle, var(--decision-border) 0 4px, transparent 5px); }
