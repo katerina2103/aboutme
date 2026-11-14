@@ -9,7 +9,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   // All files in content/ (one per page section) become the `site` variable.
   eleventyConfig.addGlobalData("site", () => loadContent("content"));
-  eleventyConfig.addGlobalData("scopeLayout", process.env.DECISION_LAB_LAYOUT || "plan");
   eleventyConfig.addWatchTarget("./content/");
 
   // Block Markdown → <p>…</p> paragraphs and lists. Use for `body` text.

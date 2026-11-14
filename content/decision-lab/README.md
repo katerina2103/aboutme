@@ -11,6 +11,6 @@ The numbered YAML files follow the live slide order.
 7. Custom product plan
 8. Celebration
 
-Edit the text in these files. Slide 2's `copy` contains the live research plan, and `evidence` contains the references and assumptions. The `study` fields support the alternate preview layouts. The live site uses the plan layout by default.
+Edit the text in these files. Slide 2's `copy` contains the live research plan, and `evidence` contains the references and assumptions.
 
 Company context, answer feedback and shared controls live in `../06-decision-lab.yaml`. Slide layouts, table labels and interactive calculation logic also live in `src/_includes/slides/` and `src/_includes/decision-lab.js`. Run `npm run build` after editing.

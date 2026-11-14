@@ -1,27 +1,10 @@
 {% set copy = site.lab_slides.scope_the_problem.copy %}
 {% set evidence = site.lab_slides.scope_the_problem.evidence %}
-{% set study = site.lab_slides.scope_the_problem.study %}
 <p class="lab-step">Evidence &amp; discovery</p>
 <h2 class="dilemma__title">Where are researchers losing time?</h2>
 <p class="lab-handoff"><span class="lab-handoff-choice"></span><span class="lab-handoff-route">{{ site.decision_lab.handoff.route }}</span></p>
 {% set timeSignal %}<strong>{{ evidence.hypothesis.value }}</strong> per researcher searching for and collecting information is my working estimate. I’d measure it here.{% endset %}
 {% set siloSignal %}<a href="{{ evidence.details.sources[0].url }}" target="_blank" rel="noopener noreferrer"><strong>57%</strong></a> cited data silos as a barrier to using lab data. In a separate survey, <a href="{{ evidence.details.sources[1].url }}" target="_blank" rel="noopener noreferrer"><strong>43%</strong></a> of large-biopharma IT respondents supported 20 or more scientific applications.{% endset %}
-{% set find %}{{ study.workflow.discovery.description }} That gives me a measured baseline and a task worth improving.{% endset %}
-{% set test %}I’d compare improved search with a focused AI pilot on the same workflow. I’d measure how long the task takes, including checks and corrections, and compare answer quality and access failures. I’d only fund more AI work if it improves on search enough to justify the extra investment.{% endset %}
-{% if scopeLayout == 'paired' %}
-<div class="scope-pair">
-  <h3>Time spent searching</h3>
-  <p>{{ timeSignal | safe }}</p>
-  <p><strong>What I’d check.</strong> Observe real tasks and log time spent searching, waiting, synthesizing and correcting separately.</p>
-</div>
-<div class="scope-pair">
-  <h3>Silos across scientific systems</h3>
-  <p>{{ siloSignal | safe }}</p>
-  <p><strong>What I’d check.</strong> Trace which systems, handoffs and permissions get in the way.</p>
-</div>
-<h3>Test what helps</h3>
-<p>{{ test }}</p>
-{% elif scopeLayout == 'plan' %}
 <p>{{ copy.deadline }}</p>
 <h3>{{ copy.quick_check }}</h3>
 <p>{{ copy.tracking }}</p>
@@ -33,12 +16,6 @@
 <h3>{{ copy.budget_heading }}</h3>
 <p>{{ copy.scale_intro }} <strong>{{ copy.scale_value }}</strong> {{ copy.scale_outro }}</p>
 <p>{{ copy.funding_call }}</p>
-{% else %}
-<p>{{ timeSignal | safe }} The surveys give me a reason to look at how knowledge is spread across systems. {{ siloSignal | safe }}</p>
-<h3>What I’d look for inside the company</h3>
-<p>{{ find }}</p>
-<p>{{ test }}</p>
-{% endif %}
 <details class="scope-details">
   <summary>References and evidence limits</summary>
   <p>{{ evidence.details.introduction }}</p>
@@ -49,13 +26,5 @@
 </details>
 <details class="scope-details">
   <summary>Study methods</summary>
-  {% if scopeLayout == 'plan' %}
   <p>{{ copy.method }}</p>
-  {% else %}
-  <p>{{ study.copy.log_search_waiting_synthesis_and_correction_separately }}</p>
-  <p>{{ study.workflow.discovery.scope }}</p>
-  <p>{{ study.workflow.pilot.scope }}</p>
-  <p>{{ study.copy.one_candidate_review_workflow_compare_ai_with }}</p>
-  <p>{{ study.copy.use_committed_scientists_and_approved_sources_compare }}</p>
-  {% endif %}
-</details>
+  </details>
