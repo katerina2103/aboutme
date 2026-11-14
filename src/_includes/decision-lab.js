@@ -176,6 +176,48 @@
  const original = lab.querySelector('.business-table--transpose');
  const optionHeaders = [...original.querySelectorAll('thead [data-option]')];
  const criteriaRows = [...original.querySelectorAll('tbody tr')];
+ const context = JSON.parse(document.getElementById('comparison-context').textContent);
+ const provenance = context.product_documentation_and_pricing_were_checked_in.match(/[^.]+(?:\.|$)/g).map(s => s.trim());
+ const teamNotes = {
+  copilot: context.services_usage, glean: context.services, benchling: context.integration,
+  haystack: context.backend_platform_data_integration_retrieval_evaluation_product,
+  custom: context.hybrid_capabilities_plus_frontend_qa_and_reliability
+ };
+ function addContext(panel, source, option, index) {
+  const notes = document.createElement('div'); notes.className = 'comparison-cell-context';
+  const seen = new Set();
+  function paragraph(text) {
+   if (!text || seen.has(text) || source.textContent.includes(text)) return;
+   seen.add(text); const p = document.createElement('p'); p.textContent = text; notes.append(p);
+  }
+  if (index === 0) {
+   paragraph(teamNotes[option]);
+   paragraph(context.company_assumption);
+   paragraph(context.illustrative_planning_ranges_not_supplier_quotes_or);
+   paragraph(context.figures_exclude_vat_major_data_remediation_and);
+   paragraph(provenance[0]);
+  } else if (index === 2) paragraph(provenance[1]);
+  else if (index === 3) paragraph(provenance[2]);
+  else if (index === 4) {
+   paragraph(context.company_assumption);
+   provenance.slice(3).forEach(paragraph);
+  }
+  if (index >= 2 && index <= 4) {
+   const prefix = {copilot:'Microsoft',glean:'Glean',benchling:'Benchling',haystack:'Haystack'}[option];
+   const sources = context.supporting_sources.filter(s => prefix && s.label.startsWith(prefix));
+   const urls = new Set([...source.querySelectorAll('a')].map(a=>a.getAttribute('href')));
+   const links = document.createElement('p');
+   sources.forEach(s => {
+    if (urls.has(s.url)) return;
+    urls.add(s.url);
+    if (links.childNodes.length) links.append(document.createTextNode(' · '));
+    const a = document.createElement('a'); a.href=s.url; a.textContent=s.label;
+    a.target='_blank'; a.rel='noopener noreferrer'; links.append(a);
+   });
+   if (links.childNodes.length) notes.append(links);
+  }
+  if (notes.childNodes.length) panel.append(notes);
+ }
  const scroll = original.parentElement;
  const workspace = document.createElement('section');
  workspace.className = 'comparison-workspace';
@@ -239,7 +281,9 @@
     const content = document.createElement('div');
     content.className = 'comparison-cell-content';
     [...source.childNodes].forEach(node => content.append(node.cloneNode(true)));
-    detail.replaceChildren(title, content); detail.hidden = false;
+    detail.replaceChildren(title, content);
+    addContext(detail, source, option.dataset.option, index);
+    detail.hidden = false;
    });
    td.append(button); row.append(td);
   });

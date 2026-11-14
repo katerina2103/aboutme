@@ -372,3 +372,6 @@
 @media(max-width:600px){.comparison-dialog{width:calc(100% - 16px);max-height:calc(100dvh - 16px);padding:12px}.comparison-workspace .compare-picker{padding:8px}.comparison-workspace .compare-picker label{min-height:44px}}
 @media print{.comparison-dialog{display:none}.comparison-expand{display:none}}
 .comparison-cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;max-height:68px}
+.comparison-cell-context{border-top:1px solid var(--line);margin-top:12px;padding-top:4px;font-size:13px;line-height:1.6}
+.comparison-cell-context p{margin:10px 0}
+.comparison-cell-context a{color:var(--blue)}
