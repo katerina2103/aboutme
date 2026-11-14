@@ -177,7 +177,7 @@ p { margin: 0; }
 .impact-card__title { font-family: var(--font-serif); font-weight: 400; font-size: 24px; line-height: 1.25; }
 .impact-card__summary { color: var(--muted); font-size: 16px; flex: 1; }
 .impact-card__action { margin-top: 8px; font-size: 14px; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
-.lab-section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; padding: 40px 24px 32px; }
+.lab-section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; padding: 40px 0 32px; }
 .lab-section__intro { padding-top: 0; min-width: 0; }
 .lab-section__intro .section-title { font-size: clamp(28px, 3.1vw, 40px); line-height: 1.15; margin-bottom: 18px; }
 .lab-section__intro .muted { max-width: 44ch; margin-bottom: 24px; }
