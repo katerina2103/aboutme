@@ -476,7 +476,13 @@
   max-width: 100%;
 }
 .lab-direction .lab-prev { flex: none; }
-.lab-direction .lab-next { text-align: start; }
+.lab-direction .lab-next { text-align: start; inline-size: 16rem; min-block-size: 44px; }
+@media (max-width: 650px) {
+  .decision-lab .lab-controls { flex-wrap: wrap; }
+  .decision-lab .lab-progress-status { flex: 1 0 100%; }
+  .decision-lab .lab-direction { inline-size: 100%; }
+  .lab-direction .lab-next { flex: 1; min-inline-size: 0; min-block-size: 64px; }
+}
 .lab-slide > .lab-jump { display: block; margin: .65rem 0 0; }
 .lab-slide > .lab-jump[hidden] { display: none; }
 
