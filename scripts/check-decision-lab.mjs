@@ -99,10 +99,11 @@ const scientific = strategy.querySelector('[data-priority="scientific"]');
 scientific.click();
 assert.equal(scientific.getAttribute('aria-pressed'), 'true');
 assert.equal(document.querySelector('[data-strategy-score="hybrid"]').textContent, '3.40 / 5');
-const challenge = document.querySelector('[data-ceo-view="challenge"]');
-challenge.click();
-assert.equal(document.querySelector('[data-ceo-panel="challenge"]').hidden, false);
-assert.equal(document.querySelector('[data-ceo-panel="recommendation"]').hidden, true);
+const pilotPlan = document.querySelector('[aria-label="5 of 8"]');
+const pilotOutcomes = document.querySelector('[aria-label="6 of 8"]');
+assert.match(pilotPlan.textContent, /€120k–€178k/);
+assert.equal(pilotOutcomes.querySelectorAll('[aria-label="Target met"]').length, 4);
+assert.ok(pilotOutcomes.querySelector('.pilot-check--miss'));
 console.log('Passed: eight-slide navigation, restart, answer feedback/clearing, comparison selection, and all story/principle references.');
 
 for (const [option, evidence] of Object.entries(site.lab_slides.market_comparison.copy.connector_evidence)) {

@@ -1,44 +1,30 @@
-{% set pilot = site.lab_slides.value_and_reuse.pilot %}
-<p class="lab-step">{{ pilot.step | escape }}</p>
-<h2 class="dilemma__title">{{ pilot.title | escape }}</h2>
-<p class="business-intro pilot-note">{{ pilot.fictional_note | escape }}</p>
-<div class="pilot-board" data-view5="workflow">
-<section class="pilot-block pilot-evidence" aria-label="{{ pilot.results_heading | escape }}">
-<div class="pilot-metrics">
-<article class="pilot-metric pilot-speed">
-<h4 class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ pilot.speed_label | escape }}</span></h4>
-<div class="pilot-times"><div><span>{{ pilot.baseline_label | escape }}</span><strong>{{ pilot.baseline_time | escape }}</strong></div><span aria-hidden="true">→</span><div><span>{{ pilot.glean_label | escape }}</span><strong>{{ pilot.glean_time | escape }}</strong></div></div>
-<p><strong>{{ pilot.speed_result | escape }}</strong> {{ pilot.speed_method | escape }}</p>
-<p>{{ pilot.speed_target | escape }}<a href="https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2023/11/Microsoft_Work_Trend_Index_Special_Report_2023_Full_Report.pdf">{{ pilot.speed_source | escape }}</a>{{ pilot.speed_target_end | escape }}</p>
-</article>
-<article class="pilot-metric pilot-miss">
-<h4 class="pilot-metric-label"><span class="pilot-check pilot-check--miss" aria-hidden="true"></span><span>{{ pilot.coverage_label | escape }}</span></h4>
-<span class="pilot-status">{{ pilot.missed_label | escape }}</span>
-<strong class="pilot-number">{{ pilot.coverage_result | escape }}</strong>
-<p>{{ pilot.coverage_target | escape }}</p>
-</article>
-</div>
-<dl class="pilot-checks">
-<div><dt class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ pilot.accuracy_label | escape }}</span></dt><dd><strong>{{ pilot.accuracy_result | escape }}</strong> {{ pilot.accuracy_target | escape }}</dd></div>
-<div><dt class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ pilot.permissions_label | escape }}</span></dt><dd><strong>{{ pilot.permissions_result | escape }}</strong> {{ pilot.permissions_target | escape }}</dd></div>
-<div><dt class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ pilot.usage_label | escape }}</span></dt><dd><strong>{{ pilot.usage_result | escape }}</strong> {{ pilot.usage_target | escape }}</dd></div>
-</dl>
-</section>
-<section class="pilot-block pilot-call lab-recommendation">
-<h3>{{ pilot.recommendation_heading | escape }}</h3>
-<p>{{ pilot.recommendation | escape }}</p>
-<p><strong>{{ pilot.scale_heading | escape }}</strong> {{ pilot.scale_assumptions | escape }} <strong>{{ pilot.scale_estimate | escape }}</strong>{{ pilot.scale_validation | escape }}</p>
+{% set slide = site.lab_slides.value_and_reuse.sequence %}
+<p class="lab-step">{{ slide.step | escape }}</p>
+<h2 class="dilemma__title">{{ slide.title | escape }}</h2>
+<p class="business-intro">{{ slide.intro | escape }}</p>
+<div class="pilot-board">
+<section class="lab-recommendation pilot-call">
+<h3>{{ slide.ceo_ask | escape }}</h3>
+<p><strong>{{ slide.investment_label | escape }}</strong> {{ slide.investment_basis | escape }}</p>
+<p><strong>{{ slide.capacity_label | escape }}</strong> {{ slide.capacity_impact | escape }}</p>
+<p><strong>{{ slide.tradeoff_label | escape }}</strong> {{ slide.tradeoff | escape }}</p>
 </section>
 <section class="pilot-block pilot-team">
-<h3>{{ pilot.team_heading | escape }}</h3>
-<p>{{ pilot.team_intro | escape }} <strong>{{ pilot.team_roles | escape }}</strong>{{ pilot.team_commitment | escape }}</p>
-<ol><li><strong>{{ pilot.setup_weeks | escape }}</strong> {{ pilot.setup_work | escape }}</li><li><strong>{{ pilot.test_weeks | escape }}</strong> {{ pilot.test_work | escape }}</li><li><strong>{{ pilot.review_weeks | escape }}</strong> {{ pilot.review_work | escape }}</li></ol>
+<h3>{{ slide.who_i_d_ask_to_run | escape }}</h3>
+<p>{{ slide.team_intro | escape }} <strong>{{ slide.team_roles | escape }}</strong>{{ slide.i_d_ask_their_managers_to | escape }}</p>
+<ol><li><strong>{{ slide.setup_weeks | escape }}</strong> {{ slide.setup_work | escape }}</li><li><strong>{{ slide.test_weeks | escape }}</strong> {{ slide.test_work | escape }}</li><li><strong>{{ slide.review_weeks | escape }}</strong> {{ slide.review_work | escape }}</li></ol>
 </section>
-
-<details class="lab-more">
-<summary>{{ pilot.benchmarks_heading | escape }}</summary>
-<p><strong>{{ pilot.microsoft_result | escape }}</strong> {{ pilot.microsoft_context | escape }} <a href="https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2023/11/Microsoft_Work_Trend_Index_Special_Report_2023_Full_Report.pdf">{{ pilot.microsoft_source | escape }}</a>{{ pilot.microsoft_application | escape }}</p>
-<p><strong>{{ pilot.setup_estimate | escape }}</strong> {{ pilot.setup_context | escape }} <a href="https://docs.glean.com/get-started/welcome">{{ pilot.setup_source | escape }}</a>{{ pilot.connector_context | escape }} <strong>{{ pilot.connector_status | escape }}</strong> <a href="https://www.glean.com/connectors/benchling">{{ pilot.connector_source | escape }}</a>{{ pilot.connector_end | escape }}</p>
-</details>
-
-</div>
+<section class="pilot-block">
+<h3>{{ slide.what_glean_needs_to_prove | escape }}</h3>
+<dl class="pilot-checks">
+<div><dt>{{ slide.speed_label | escape }}</dt><dd><strong>{{ slide.25_less_time | escape }}</strong> {{ slide.on_30_matched_tasks_including_citation | escape }} <a href="https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2023/11/Microsoft_Work_Trend_Index_Special_Report_2023_Full_Report.pdf">{{ slide.speed_source | escape }}</a></dd></div>
+<div><dt>{{ slide.accuracy_label | escape }}</dt><dd><strong>{{ slide.at_least_27_of_30 | escape }}</strong>{{ slide.with_no_drop_versus_current_search | escape }}</dd></div>
+<div><dt>{{ slide.permissions_label | escape }}</dt><dd><strong>{{ slide.permissions_result | escape }}</strong></dd></div>
+<div><dt>{{ slide.coverage_label | escape }}</dt><dd><strong>{{ slide.3_of_3_covered | escape }}</strong></dd></div>
+<div><dt>{{ slide.usage_label | escape }}</dt><dd><strong>{{ slide.at_least_60 | escape }}</strong> {{ slide.active_in_both_final_weeks | escape }}</dd></div>
+</dl>
+</section>
+<details class="lab-more"><summary>{{ slide.benchmarks_heading | escape }}</summary>
+<p><strong>{{ slide.microsoft_result | escape }}</strong> {{ slide.microsoft_context | escape }} <a href="https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2023/11/Microsoft_Work_Trend_Index_Special_Report_2023_Full_Report.pdf">{{ slide.microsoft_source | escape }}</a>{{ slide.microsoft_application | escape }}</p>
+<p><strong>{{ slide.setup_estimate | escape }}</strong> {{ slide.setup_context | escape }} <a href="https://docs.glean.com/get-started/welcome">{{ slide.setup_source | escape }}</a>{{ slide.connector_context | escape }} <strong>{{ slide.connector_status | escape }}</strong> <a href="https://www.glean.com/connectors/benchling">{{ slide.connector_source | escape }}</a>{{ slide.connector_end | escape }}</p>
+</details></div>

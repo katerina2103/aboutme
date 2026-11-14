@@ -1,25 +1,31 @@
-
-<p class="lab-step">{{ site.lab_slides.funding_recommendation.copy.my_recommendation }}</p><h2 class="dilemma__title">{{ site.lab_slides.funding_recommendation.copy.fund_learning }} {{ site.lab_slides.funding_recommendation.copy.earn_the_next_commitment }}</h2>
-<div class="funding-card"><span>{{ site.lab_slides.funding_recommendation.copy.proposed_initial_commitment }}</span><strong>{{ site.lab_slides.funding_recommendation.copy.value_80_150k }}</strong><p>{{ site.lab_slides.funding_recommendation.copy.value_8_week_pilot_30_scientists_2_approved }}</p><p>{{ site.lab_slides.funding_recommendation.copy.value_4_5_fte_equivalent_senior_engineering_required }}</p></div>
-
-<section class="ceo-decision" aria-label="Investment committee recommendation">
-<h3>My investment decision</h3>
-<p><strong>Vendor-first, with hybrid as a challenger.</strong> Glean provisionally scores 3.20/5 versus hybrid 3.15/5 and custom build 2.55/5. The difference is too small for a vendor commitment; the scores are assumptions to validate.</p>
-<div class="ceo-view-buttons" role="group" aria-label="Explore the CEO decision">
-<button type="button" class="is-selected" data-ceo-view="recommendation" aria-pressed="true">My recommendation</button>
-<button type="button" data-ceo-view="challenge" aria-pressed="false">CEO challenges me</button>
+{% set slide = site.lab_slides.funding_recommendation.sequence %}
+<p class="lab-step">{{ slide.step | escape }}</p>
+<h2 class="dilemma__title">{{ slide.title | escape }}</h2>
+<p class="business-intro">{{ slide.intro | escape }}</p>
+<div class="pilot-board">
+<section class="pilot-block pilot-evidence">
+<h3>{{ slide.simulated_results | escape }}</h3>
+<div class="pilot-metrics">
+<article class="pilot-metric pilot-speed">
+<h4 class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ slide.time_to_a_verified_answer | escape }}</span></h4>
+<div class="pilot-times"><div><span>{{ slide.current_search | escape }}</span><strong>{{ slide.20_min | escape }}</strong></div><span aria-hidden="true">→</span><div><span>{{ slide.with_glean | escape }}</span><strong>{{ slide.14_min | escape }}</strong></div></div>
+<p><strong>{{ slide.30_less_time | escape }}</strong> {{ slide.across_30_matched_tasks_including_citation | escape }}</p>
+<p>{{ slide.target_25_less_time | escape }}<a href="https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2023/11/Microsoft_Work_Trend_Index_Special_Report_2023_Full_Report.pdf">{{ slide.microsoft_benchmark | escape }}</a>{{ slide.punctuation | escape }}</p>
+</article>
+<article class="pilot-metric pilot-miss">
+<h4 class="pilot-metric-label"><span class="pilot-check pilot-check--miss" aria-hidden="true"></span><span>{{ slide.critical_lab_workflows | escape }}</span></h4>
+<span class="pilot-status">{{ slide.missed_target | escape }}</span>
+<strong class="pilot-number">{{ slide.2_of_3_covered | escape }}</strong>
+<p>{{ slide.target_3_of_3_glean_left | escape }}</p>
+</article>
 </div>
-<div class="ceo-view" data-ceo-panel="recommendation"><p>Fund a focused evaluation of the vendor route against improved search, with a small hybrid feasibility spike only if integration or scientific workflow gaps justify it. Do not approve a custom product yet.</p></div>
-<div class="ceo-view" data-ceo-panel="challenge" hidden><blockquote>“Why shouldn't we build something we own? Our science is unique.”</blockquote><p>I would own the scientific capability that makes us different, not automatically the entire software stack. Our illustrative custom model carries €3.30m three-year expense versus €2.70m gross capacity value—not cash savings. Building merits investment only if research evidence reveals a recurring differentiated workflow that vendors cannot serve economically.</p></div>
-<p class="scenario-note">The €80–150k estimate is for the existing eight-week pilot scope. Evaluating two full implementations would require a revised estimate and approval.</p>
-</section>
-<ol class="funding-path" aria-label="{{ site.lab_slides.funding_recommendation.copy.staged_investment_decision }}">
-<li><span class="funding-dot">{{ site.lab_slides.funding_recommendation.copy.value_1 }}</span><div><strong>{{ site.lab_slides.funding_recommendation.copy.secure_the_foundations }}</strong><p>{{ site.lab_slides.funding_recommendation.copy.approved_access_a_senior_integration_engineer_and }}</p></div></li>
-<li><span class="funding-dot">{{ site.lab_slides.funding_recommendation.copy.value_2 }}</span><div><strong>{{ site.lab_slides.funding_recommendation.copy.test_against_a_real_alternative }}</strong><p>{{ site.lab_slides.funding_recommendation.copy.compare_an_existing_estate_vendor_with_improved }}</p></div></li>
-<li><span class="funding-dot">{{ site.lab_slides.funding_recommendation.copy.value_3 }}</span><div><strong>{{ site.lab_slides.funding_recommendation.copy.decide_at_week_eight }}</strong><p>{{ site.lab_slides.funding_recommendation.copy.use_measured_value_quality_and_ownership_costs }}</p></div></li>
-</ol>
-<section class="gate-scorecard" aria-label="{{ site.lab_slides.funding_recommendation.copy.proposed_funding_gates }}"><h3>{{ site.lab_slides.funding_recommendation.copy.evidence_required_for_more_investment }}</h3><div><strong>{{ site.lab_slides.funding_recommendation.copy.value_20 }}</strong><span>{{ site.lab_slides.funding_recommendation.copy.net_preparation_time_reduction_vs_improved_search }}</span></div><div><strong>{{ site.lab_slides.funding_recommendation.copy.quality }}</strong><span>{{ site.lab_slides.funding_recommendation.copy.no_material_quality_loss_verifiable_support_for }}</span></div><div><strong>{{ site.lab_slides.funding_recommendation.copy.access }}</strong><span>{{ site.lab_slides.funding_recommendation.copy.no_unauthorized_disclosure_in_adversarial_tests }}</span></div></section>
-<div class="funding-outcomes"><div><strong>{{ site.lab_slides.funding_recommendation.copy.pass }}</strong><span>{{ site.lab_slides.funding_recommendation.copy.scope_the_next_investment }}</span></div><div><strong>{{ site.lab_slides.funding_recommendation.copy.unclear }}</strong><span>{{ site.lab_slides.funding_recommendation.copy.run_a_narrower_test }}</span></div><div><strong>{{ site.lab_slides.funding_recommendation.copy.fail }}</strong><span>{{ site.lab_slides.funding_recommendation.copy.stop_if_review_effort_erases_gains }}</span></div></div>
-<p class="scenario-note">{{ site.lab_slides.funding_recommendation.copy.proposed_gates_not_reported_results_report_task }}</p>
-<details class="lab-more"><summary>{{ site.lab_slides.funding_recommendation.copy.pilot_cost_breakdown_and_team_requirements }}</summary><p>{{ site.lab_slides.funding_recommendation.copy.proposed_team_4_5_fte_equivalent_across }}</p><p>{{ site.lab_slides.funding_recommendation.copy.planning_calculation_4_5_fte_equivalent_2 }}</p><p>{{ site.lab_slides.funding_recommendation.copy.this_is_a_pilot_estimate_not_a }}</p></details>
-<details class="lab-more"><summary>{{ site.lab_slides.funding_recommendation.copy.accountability_and_ownership }}</summary><p>{{ site.lab_slides.funding_recommendation.copy.scientists_own_usefulness_and_review_data_owners }}</p><p>{{ site.lab_slides.funding_recommendation.copy.choose_a_hybrid_only_where_a_demonstrated }}</p></details>
+<dl class="pilot-checks">
+<div><dt class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ slide.correct_cited_answers | escape }}</span></dt><dd><strong>{{ slide.28_of_30 | escape }}</strong> {{ slide.with_both_search_methods_target_at | escape }}</dd></div>
+<div><dt class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ slide.access_to_restricted_records | escape }}</span></dt><dd><strong>{{ slide.0_disclosures_in_20_checks | escape }}</strong> {{ slide.target_0_disclosures_in_20_checks | escape }}</dd></div>
+<div><dt class="pilot-metric-label"><span class="pilot-check" role="img" aria-label="Target met" title="Target met">✓</span><span>{{ slide.repeat_usage | escape }}</span></dt><dd><strong>{{ slide.62_5_15_of_24 | escape }}</strong> {{ slide.active_in_both_final_weeks_target | escape }}</dd></div>
+</dl>
+</section><section class="pilot-block pilot-call lab-recommendation">
+<h3>{{ slide.my_call_expand_glean_to_the | escape }}</h3>
+<p>{{ slide.six_minutes_less_per_task_is | escape }}</p>
+<p><strong>{{ slide.what_could_this_mean_for_600 | escape }}</strong> {{ slide.if_60_use_glean_regularly_and | escape }} <strong>{{ slide.16_560_hours_over_46_weeks | escape }}</strong>{{ slide.before_using_that_figure_to_justify | escape }}</p>
+</section></div>

@@ -10,7 +10,7 @@
   const progress = lab.querySelector(".lab-progress");
   const stepTopics = [
     'Your decision', 'Evidence and discovery',
-    'Compare solutions', 'Strategic trade-offs', 'Review pilot outcomes',
+    'Compare solutions', 'Strategic trade-offs', 'Plan the pilot',
     'Investment decision', 'What we could build', 'Wrap-up',
   ];
   const segments = slides.map((_, index) => {
@@ -69,7 +69,7 @@
   const headings = slides.map(slide => slide.querySelector('.dilemma__title'));
   const nextLabels = [
     'Scope the problem', 'Compare options', 'Weigh trade-offs',
-    'Review pilot outcomes', 'Decide what to fund', 'Plan what to build',
+    'Plan the pilot', 'Review pilot outcomes', 'Plan what to build',
     'Wrap up the case',
   ];
   function show(index, moveFocus = true) {
