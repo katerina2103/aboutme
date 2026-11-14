@@ -65,3 +65,4 @@ progress_label: Decision Lab progress
 position_label: "{current} of {total}"
 slide_position_label: "Slide {position}"
 previous_symbol: ←
+independence_notice: "Independent fictional case study. The pilot and its results are simulated. Budgets and vendor costs are illustrative estimates. Public sources are cited where used. Neither Glean nor Microsoft is affiliated with, sponsors, or endorses this case study. Microsoft and Copilot are trademarks of the Microsoft group of companies. Other trademarks belong to their respective owners."

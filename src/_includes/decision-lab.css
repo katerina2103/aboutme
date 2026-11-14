@@ -614,3 +614,5 @@
 .plan7-pnl :is(th,td):not(:first-child){text-align:right;white-space:nowrap}
 .plan7-capacity{margin:8px 0}
 .plan7-pnl tbody tr:last-child{font-weight:750;border-top:2px solid var(--line)}
+
+.lab-section .decision-lab .lab-independence-notice{margin:14px 0 0;font-size:13px;line-height:1.5;color:var(--navy)}
