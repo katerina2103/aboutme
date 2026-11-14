@@ -19,3 +19,7 @@ Node 22 or newer is required. Build output goes to `dist/` and is ignored by Git
 ## Feedback
 
 The footer offers thumbs-up and thumbs-down votes. Each visitor's browser remembers their choice. There is no comment form, email delivery, attachment handling, backend, or shared counter. The separate contact button opens an email to Katya.
+
+### Decision Lab layout checks
+
+Run `npm run build` for every Decision Lab change. The build checks the shared panel inset and guards against narrow widths and forced breaks on slide titles and narrative paragraphs. In the rendered preview, review every slide at desktop and narrow mobile widths. Confirm the narrative follows the same text rails as the section intro, wraps naturally, and stays clear of the controls. Tables, charts and card grids can use their own internal layout.

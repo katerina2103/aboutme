@@ -19,8 +19,7 @@ permalink: /index.html
         </div>
         <div class="case-brief">
           <p class="case-brief__label">{{ site.decision_lab.copy.the_ceo_s_brief }}</p>
-          <blockquote>{{ site.decision_lab.copy.build_an_ai_assistant_for_our_scientists }}</blockquote>
-          <p class="case-brief__ask">{{ site.decision_lab.copy.how_much_investment_do_you_need }}</p>
+          <blockquote>{{ site.decision_lab.copy.build_an_ai_assistant_for_our_scientists | replace('”', '.') }} <strong>{{ site.decision_lab.copy.how_much_investment_do_you_need | replace('“', '') }}</strong></blockquote>
         </div>
       </div>
     </div>

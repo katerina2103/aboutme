@@ -2,8 +2,8 @@
 .hero { padding-inline: var(--panel-inset); }
 .lab-section { padding-inline: 0; }
 .lab-section__intro { padding-inline: var(--panel-inset); }
-/* Share both outer panel edges; keep the scenario text on the inner rail. */
-.decision-lab { margin-inline: 0; }
+/* Account for the lab’s 2px border when aligning its text with the site. */
+.lab-section .decision-lab { margin-inline: 0; padding-inline: calc(var(--panel-inset) - 2px); }
 .lab-section__intro > .eyebrow:empty,
 .company-brief__question:empty { display: none; }
 .nav { box-sizing: border-box; max-width: 1288px; padding-inline: calc(var(--page-gutter) + var(--panel-inset)); }

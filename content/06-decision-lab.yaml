@@ -47,14 +47,14 @@ answers:
     change: I would stop the AI route if improved search performs just as well, review effort erases the
       gain, or researchers will not t use it. I would choose a vendor or custom build when the task
       evidence and total ownership costs support it.
-choice_label: Katya’s choice
+choice_label: My starting choice
 challenge_label: Challenge my reasoning
 reconsider_label: What would change my mind
 compare_status: Comparing {count} options
 compare_empty: Select at least one option to compare.
 handoff:
   agreement_route: We’re aligned—this is my starting choice too. Let’s explore how we’d test it.
-  route: The case continues with Katya’s proposed test-first route.
+  route: Let’s see how I’d test the options before committing.
   selected: You chose “{choice}”.
   choices:
     build: Build our own assistant

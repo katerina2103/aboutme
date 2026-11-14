@@ -189,7 +189,7 @@
 /* Keep answer instructions with the feedback ribbon, leaving the choices uncluttered. */
 .lab-answers { margin-top: 18px; }
 .lab-feedback { padding: 12px 16px; margin-top: 20px; background: var(--bg); border-radius: 0 8px 8px 0; }
-.decision-lab .lab-feedback .lab-answer-hint { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 50ch; }
+.decision-lab .lab-feedback .lab-answer-hint { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0;  }
 .lab-assessment:empty { display: none; }
 .decision-lab .lab-assessment:not(:empty) { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; }
 
@@ -210,7 +210,7 @@
 
 .lab-celebration { text-align: center; }
 .lab-celebration .dilemma__title { font-size: clamp(26px, 2.7vw, 34px); margin-bottom: 12px; }
-.lab-celebration__copy { max-width: 48ch; margin: 0 auto 14px; font-size: 15px; line-height: 1.6; }
+.lab-celebration__copy {  margin: 0 auto 14px; font-size: 15px; line-height: 1.6; }
 .lab-celebration__figure { margin: 0; }
 .lab-celebration__gif { display: block; width: min(100%, 240px); height: 180px; object-fit: contain; margin: 0 auto 10px; border-radius: 12px; }
 .lab-celebration__gif[hidden] { display: none; }
@@ -365,10 +365,8 @@
 .comparison-cell-context a{color:var(--blue)}
 
 /* Shared typography and readable proportions across all nine wide slides. */
-.lab-section .lab-slide{max-width:1100px;margin-inline:auto}
-.lab-section .decision-lab .dilemma__title{font-size:clamp(26px,2.7vw,34px);line-height:1.2;margin:0 0 18px;max-width:36ch}
+.lab-section .decision-lab .dilemma__title{font-size:clamp(26px,2.7vw,34px);line-height:1.2;margin:0 0 18px}
 .lab-section .decision-lab .lab-step{font-size:13px;line-height:1.5;margin:0 0 10px}
-.lab-section .decision-lab .lab-slide>p:not(.lab-step){max-width:80ch}
 .lab-section .decision-lab .lab-slide>p:not(.lab-step):not(.lab-handoff):not(.lab-matrix-legend):not(.scenario-note){font-size:16px;line-height:1.65}
 .lab-section .decision-lab .lab-answers button{font-size:16px;padding:16px 18px}
 .lab-section .decision-lab .lab-feedback{font-size:16px}
@@ -417,3 +415,79 @@
 .comparison-infrastructure{display:block;margin-top:6px;font-size:var(--lab-label,12px);line-height:1.5;color:var(--muted);font-weight:400}
 
 .lab-section .decision-lab .comparison-cell--integration{display:block;max-height:none;-webkit-line-clamp:unset}
+
+.lab-jump {
+  margin: 0 0 .85rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .875rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  cursor: pointer;
+}
+.lab-slide .dilemma__title { scroll-margin-top: 5rem; }
+.lab-controls .lab-step-tile {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  background: transparent;
+}
+.lab-controls .lab-step-tile::before {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 3px;
+  background: var(--dark-border);
+}
+.lab-controls .lab-step-tile.is-past::before { background: var(--accent); opacity: .45; }
+.lab-controls .lab-step-tile[aria-current="step"]::before,
+.lab-controls .lab-step-tile:hover::before { height: 6px; background: var(--accent); }
+.lab-step-tip {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  bottom: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 9rem;
+  padding: .3rem .55rem;
+  border: 1px solid var(--dark-border);
+  border-radius: 6px;
+  background: var(--navy);
+  color: white;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+.lab-step-tile:nth-child(-n+3) .lab-step-tip { left: 0; transform: none; }
+.lab-step-tile:nth-last-child(-n+3) .lab-step-tip { left: auto; right: 0; transform: none; }
+.lab-step-tile:not(.tip-dismissed):is(:hover, :focus-visible) .lab-step-tip { display: block; }
+/* Keep sequential navigation paired and align it to the end of the footer. */
+.lab-direction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-inline-start: auto;
+  max-width: 100%;
+}
+.lab-direction .lab-prev { flex: none; }
+.lab-direction .lab-next { text-align: start; }
+.lab-slide > .lab-jump { display: block; margin: .65rem 0 0; }
+.lab-slide > .lab-jump[hidden] { display: none; }
+
+.lab-slide[data-lab-stage="evidence"] h3 {
+  margin: 1rem 0 .35rem;
+  font-size: 1rem;
+}
+.scope-pair + .scope-pair { border-top: 1px solid var(--dark-border); }
+.scope-callout {
+  padding: .25rem 1rem;
+  border-inline-start: 2px solid var(--accent);
+  background: var(--warm-surface, #fff4d9);
+}

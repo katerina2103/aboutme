@@ -1,20 +1,38 @@
 (() => {
   const lab = document.querySelector(".decision-lab");
   if (!lab) return;
+  const section = lab.closest(".lab-section");
   const slides = [...lab.querySelectorAll(".lab-slide")];
   const controls = lab.querySelector(".lab-controls");
   const previous = lab.querySelector(".lab-prev");
   const next = lab.querySelector(".lab-next");
   const count = lab.querySelector(".lab-count");
   const progress = lab.querySelector(".lab-progress");
-  const segments = slides.map(() => {
-    const segment = document.createElement("span");
-    segment.className = "lab-progress-segment";
-    segment.setAttribute("aria-hidden", "true");
-    progress.append(segment);
-    return segment;
+  const stepTopics = [
+    'Your decision', 'Evidence and discovery',
+    'Compare solutions', 'Strategic trade-offs', 'Design the pilot',
+    'Investment decision', 'What we could build', 'Wrap-up',
+  ];
+  const segments = slides.map((_, index) => {
+    const tile = document.createElement('button');
+    tile.type = 'button';
+    tile.className = 'lab-step-tile';
+    tile.textContent = index + 1;
+    tile.setAttribute('aria-label', `Step ${index + 1}: ${stepTopics[index]}`);
+    const tip = document.createElement('span');
+    tip.className = 'lab-step-tip';
+    tip.setAttribute('aria-hidden', 'true');
+    tip.textContent = stepTopics[index];
+    tile.append(tip);
+    tile.addEventListener('click', () => show(index));
+    tile.addEventListener('keydown', event => {
+      if (event.key === 'Escape') tile.classList.add('tip-dismissed');
+    });
+    tile.addEventListener('blur', () => tile.classList.remove('tip-dismissed'));
+    tile.addEventListener('pointerleave', () => tile.classList.remove('tip-dismissed'));
+    progress.append(tile);
+    return tile;
   });
-  progress.setAttribute("aria-valuemax", slides.length);
   const labels = JSON.parse(document.getElementById("lab-content").textContent);
   const celebration = lab.querySelector('.lab-celebration__gif');
   const celebrationToggle = lab.querySelector('.lab-celebration__toggle');
@@ -48,27 +66,13 @@
   }
   celebrationToggle.addEventListener('click', () => celebrate(celebration.hidden));
   let current = 0;
-  const slideRegion = lab.querySelector('.lab-slides');
-  const studySlide = lab.querySelector('.study-stages')?.closest('.lab-slide');
-  function fitStudySpacing() {
-    if (typeof ResizeObserver === 'undefined' || !studySlide || studySlide.hidden) return;
-    if (studySlide.querySelector('.study-stage__methods')?.open) return;
-    const availableHeight = slideRegion.clientHeight - 2;
-    if (availableHeight <= 0) return;
-    let compact = 0;
-    let spacious = 1;
-    studySlide.style.setProperty('--study-room', '0');
-    // Keep readable minimum spacing if the overview cannot fit on a small screen.
-    if (studySlide.getBoundingClientRect().height > availableHeight) return;
-    for (let pass = 0; pass < 9; pass++) {
-      const candidate = (compact + spacious) / 2;
-      studySlide.style.setProperty('--study-room', String(candidate));
-      if (studySlide.getBoundingClientRect().height <= availableHeight) compact = candidate;
-      else spacious = candidate;
-    }
-    studySlide.style.setProperty('--study-room', String(compact));
-  }
-  function show(index) {
+  const headings = slides.map(slide => slide.querySelector('.dilemma__title'));
+  const nextLabels = [
+    'Scope the problem', 'Compare solutions',
+    'Weigh strategic trade-offs', 'Design the pilot', 'See the investment decision',
+    'Explore what to build', 'Finish the lab',
+  ];
+  function show(index, moveFocus = true) {
     const previousIndex = current;
     current = Math.max(0, Math.min(index, slides.length - 1));
     slides.forEach((slide, i) => { slide.hidden = i !== current; });
@@ -76,25 +80,33 @@
     celebrate(current === slides.length - 1 && !reducedMotion.matches);
     if (current === slides.length - 1 && previousIndex !== current) burstConfetti();
     previous.disabled = current === 0;
-    next.textContent = current === slides.length - 1 ? labels.restart_label : labels.next_label;
-    next.setAttribute('aria-label', current === slides.length - 1 ? labels.restart_label : labels.next_accessible_label);
+    next.textContent = current === slides.length - 1 ? labels.restart_label : `Next: ${nextLabels[current]} →`;
+    next.removeAttribute('aria-label');
+    previous.setAttribute('aria-label', labels.previous_label);
     count.textContent = labels.position_label.replace('{current}', current + 1).replace('{total}', slides.length);
-    progress.setAttribute("aria-valuenow", current + 1);
-    progress.setAttribute("aria-valuetext", labels.slide_position_label.replace('{position}', count.textContent));
-    segments.forEach((segment, i) => {
-      segment.classList.toggle("is-past", i < current);
-      segment.classList.toggle("is-current", i === current);
+    segments.forEach((tile, i) => {
+      tile.classList.toggle('is-past', i < current);
+      if (i === current) tile.setAttribute('aria-current', 'step');
+      else tile.removeAttribute('aria-current');
     });
-    fitStudySpacing();
+    const heading = headings[current];
+    heading.setAttribute('tabindex', '-1');
+    heading.setAttribute('aria-describedby', count.id);
+    if (moveFocus) {
+      heading.focus?.({preventScroll: true});
+      heading.scrollIntoView?.({block: 'start', behavior: 'instant'});
+    }
   }
-  if (typeof ResizeObserver !== 'undefined' && studySlide) {
-    new ResizeObserver(fitStudySpacing).observe(slideRegion);
-    document.fonts?.ready.then(fitStudySpacing);
-    studySlide.querySelector('.study-stage__methods')?.addEventListener('toggle', fitStudySpacing);
-  }
+  count.id = 'lab-step-count';
+  section.querySelectorAll('[data-lab-target]').forEach(button => {
+    const index = slides.findIndex(slide => slide.dataset.labStage === button.dataset.labTarget);
+    button.addEventListener('click', () => show(index));
+  });
+  section.querySelector('.lab-jump').hidden = false;
   previous.addEventListener("click", () => show(current - 1));
   next.addEventListener("click", () => show(current === slides.length - 1 ? 0 : current + 1));
   controls.addEventListener("keydown", (event) => {
+    if (event.target.closest(".lab-step-tile")) return;
     if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
     event.preventDefault();
     show(current + (event.key === "ArrowRight" ? 1 : -1));
@@ -102,7 +114,7 @@
   });
   lab.classList.add("lab-ready");
   controls.hidden = false;
-  show(0);
+  show(0, false);
 
 })();
 

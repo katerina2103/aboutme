@@ -1,5 +1,5 @@
 {% set slide = site.lab_slides.celebration %}
 <p class="lab-step">{{ slide.copy.step }}</p>
-<h2 class="dilemma__title">{{ slide.copy.title_first_line }}<br>{{ slide.copy.title_second_line }}</h2>
+<h2 class="dilemma__title">{{ slide.copy.title_first_line }} {{ slide.copy.title_second_line }}</h2>
 <p class="lab-celebration__copy">{{ slide.copy.body }}</p>
 <figure class="lab-celebration__figure"><img class="lab-celebration__gif" data-src="{{ slide.gif.url }}" width="320" height="240" alt="{{ slide.gif.alt }}" hidden><button type="button" class="lab-celebration__toggle">{{ slide.copy.play_label }}</button><figcaption><a href="{{ slide.gif.source_url }}" target="_blank" rel="noopener noreferrer">{{ slide.copy.attribution }}</a></figcaption></figure>

@@ -230,13 +230,8 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px soli
 
 /* Small paper notes bring personality back to the results. */
 .impact-card__sticker { position: absolute; right: 12px; top: -15px; max-width: calc(100% - 48px); padding: 7px 13px; background: #ffd36d; color: var(--navy); font: 700 23px/1.2 var(--font-hand); transform: rotate(var(--tilt, -3deg)); box-shadow: 2px 5px 0 #1d294814; }
-.company-brief { width: 100%; max-width: none; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 24px; align-items: start; }
-.company-brief > .case-brief { grid-column: 2; grid-row: auto; margin: 0; padding: 16px 20px; border-left-width: 3px; border-radius: 0 10px 10px 0; }
-.company-brief > p { grid-column: 1; }
-@media (max-width: 700px) {
-  .company-brief { display: block; }
-  .company-brief > .case-brief { margin: 20px 0; }
-}
+.company-brief { width: 100%; }
+.company-brief > .case-brief { margin: 0; padding: 16px 20px; border-left-width: 3px; border-radius: 0 10px 10px 0; }
 .company-brief p + p { margin-top: 16px; }
 .company-brief__label { font-size: 14px; font-weight: 800; color: var(--blue); }
 .company-brief__question { font: italic 28px/1.35 var(--font-serif); color: var(--blue); }
@@ -299,9 +294,8 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px soli
 #work .panel__aside { width: 100%; max-width: none; font-size: 17px; }
 
 /* Compact editorial scenario: context beside the original CEO request. */
-.company-brief .brief-company p{font-size:15px;line-height:1.6;margin:0 0 12px}
+.company-brief .brief-company p{max-width:none;font-size:15px;line-height:1.6;margin:0 0 12px}
 .company-brief .brief-company .lab-fiction-note{font-size:12px;line-height:1.5;max-width:none;color:var(--muted)}
 .company-brief .case-brief blockquote{font:400 17px/1.55 var(--font-serif)}
 .company-brief .case-brief .case-brief__label{font-size:12px;margin:0 0 8px}
 .company-brief .case-brief .case-brief__ask{font-size:15px;margin:10px 0 0}
-@media(max-width:700px){.company-brief > .case-brief{margin-top:16px}}

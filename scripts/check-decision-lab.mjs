@@ -20,15 +20,22 @@ vm.runInNewContext(script, {document, window: {matchMedia: () => ({matches: fals
 const slides = [...document.querySelectorAll('.lab-slide')];
 const next = document.querySelector('.lab-next');
 const previous = document.querySelector('.lab-prev');
-assert.equal(slides.length, 9);
+assert.equal(slides.length, 8);
 for(let index = 0; index < slides.length; index++) {
  assert.equal(slides.filter(s => !s.hidden).length, 1);
  assert.equal(slides[index].hidden, false);
- assert.equal(document.querySelector('.lab-count').textContent, `${index + 1} of 9`);
+ assert.equal(document.querySelector('.lab-count').textContent, `${index + 1} of 8`);
  if(index < slides.length - 1) next.click();
 }
 assert.equal(next.textContent, site.decision_lab.restart_label);
 next.click(); assert.equal(slides[0].hidden, false); assert.equal(previous.disabled, true);
+assert.equal(document.querySelectorAll('.lab-step-tile').length, 8);
+document.querySelector('.lab-jump').click();
+assert.equal(slides.findIndex(slide => !slide.hidden), 5);
+document.querySelectorAll('.lab-step-tile')[1].click();
+assert.equal(slides[1].hidden, false);
+assert.match(slides[1].textContent, /5–7 hours/);
+document.querySelector('.lab-step-tile').click();
 const responses = new Set();
 for (const answer of document.querySelectorAll('[data-answer]')) {
  answer.click(); responses.add(document.querySelector('.lab-assessment').textContent);
@@ -97,7 +104,7 @@ const challenge = document.querySelector('[data-ceo-view="challenge"]');
 challenge.click();
 assert.equal(document.querySelector('[data-ceo-panel="challenge"]').hidden, false);
 assert.equal(document.querySelector('[data-ceo-panel="recommendation"]').hidden, true);
-console.log('Passed: nine-slide navigation, restart, answer feedback/clearing, comparison selection, and all story/principle references.');
+console.log('Passed: eight-slide navigation, restart, answer feedback/clearing, comparison selection, and all story/principle references.');
 
 for (const [option, evidence] of Object.entries(site.lab_slides.market_comparison.copy.connector_evidence)) {
  const button = document.querySelector('.comparison-table [data-option="'+option+'"] [data-criterion="2"]');
@@ -105,4 +112,18 @@ for (const [option, evidence] of Object.entries(site.lab_slides.market_compariso
  const panel = document.querySelector('.comparison-cell-detail');
  assert.ok(panel.textContent.includes(evidence.detail));
  for (const source of evidence.sources) assert.ok([...panel.querySelectorAll('a')].some(a=>a.href===source.url));
+}
+
+// Narrative headings and prose share the panel rail and wrap naturally.
+const css = document.querySelector('style').textContent;
+assert.match(css, /\.lab-section \.decision-lab\s*\{[^}]*padding-inline:\s*calc\(var\(--panel-inset\) - 2px\)/);
+for (const match of css.matchAll(/([^{}]+)\{([^{}]+)\}/g)) {
+ const [, selector, declarations] = match;
+ if (!/\.lab-slide(?:\s*(?:>|\{)|\s*$)|\.dilemma__title|\.lab-celebration__copy|\.lab-answer-hint/.test(selector)) continue;
+ assert.doesNotMatch(declarations, /(?:^|;)\s*(?:max-)?(?:width|inline-size)\s*:\s*(?!none\b|auto\b|100%)/, selector.trim());
+}
+for (const slide of slides) {
+ for (const element of slide.querySelectorAll('.dilemma__title, :scope > p')) {
+  assert.equal(element.querySelector('br'), null, 'Slide titles and narrative paragraphs should wrap naturally');
+ }
 }
