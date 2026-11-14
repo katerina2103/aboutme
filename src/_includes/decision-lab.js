@@ -94,7 +94,6 @@
     heading.setAttribute('aria-describedby', count.id);
     if (moveFocus) {
       heading.focus?.({preventScroll: true});
-      heading.scrollIntoView?.({block: 'start', behavior: 'instant'});
     }
   }
   count.id = 'lab-step-count';

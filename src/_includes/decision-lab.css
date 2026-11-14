@@ -4,7 +4,7 @@
 .lab-slide + .lab-slide { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--dark-border); }
 .lab-ready .lab-slide { margin: 0; padding: 0; border: 0; }
 .lab-slide[hidden], .lab-controls[hidden] { display: none; }
-.lab-ready .lab-slides { height: 360px; overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; overscroll-behavior-y: contain; position: relative; padding-right: 8px; }
+.lab-ready .lab-slides { height: clamp(260px, 65svh, 540px); overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; overscroll-behavior-y: contain; position: relative; padding-right: 8px; }
 .lab-takeaway { font-size: 13px; color: var(--on-dark-muted); line-height: 1.65; margin: 18px 0 0; }
 .lab-followup { margin: 18px 0 0; }
 .lab-controls { display: flex; align-items: center; gap: 16px; border-top: 1px solid var(--dark-border); padding-top: 18px; margin-top: 24px; }
@@ -16,7 +16,6 @@
 @media (max-width: 480px) {
   .decision-lab { padding: 28px 24px; }
   .decision-lab .dilemma__title { font-size: 30px; }
-  .lab-ready .lab-slides { height: 400px; }
 }
 @media print {
   .lab-slide[hidden] { display: block; margin-top: 24px; }
@@ -93,7 +92,7 @@
 
 /* One stable slide area for the full-width lab, independent of the brief. */
 .lab-section .decision-lab { align-self: start; display: flex; flex-direction: column; min-height: 0; width: 100%; box-sizing: border-box; }
-.lab-section .lab-ready .lab-slides { flex: none; height: 540px; min-height: 0; }
+.lab-section .lab-ready .lab-slides { flex: none; min-height: 0; }
 .lab-section .lab-controls { flex-shrink: 0; }
 
 .decision-lab .business-intro { font-size: 15px; margin-bottom: 16px; }
@@ -389,7 +388,6 @@
  .lab-section .lab-slide>.insight-stack>.insight:nth-child(n+3){grid-column:1/-1}
 }
 @media(max-width:700px){
- .lab-section .lab-ready .lab-slides{height:500px}
  .lab-section .decision-lab{padding:36px 20px 24px}
  .lab-section .decision-lab .lab-answers button{font-size:15px}
 }
