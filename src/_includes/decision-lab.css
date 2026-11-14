@@ -566,3 +566,25 @@
   line-height: 1.6;
   margin: 0;
 }
+
+.plan7-direction{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.plan7-direction .insight{margin:0}
+.lab-section .decision-lab .plan7-direction h3{display:flex;align-items:center;gap:8px;min-height:26px;margin:0 0 6px;font-size:16px}
+.plan7-direction p{margin:0}
+.plan7-mark{width:26px;height:26px;display:inline-grid;place-content:center;gap:2px;flex:none;border:1px solid currentColor;border-radius:7px;color:var(--blue)}
+.plan7-mark i{display:block;width:12px;height:2px;background:currentColor;border-radius:2px;transform:skewX(-28deg)}
+.plan7-mark i:first-child{translate:2px 0}.plan7-mark i:last-child{translate:-2px 0}
+@media(max-width:560px){.plan7-direction{grid-template-columns:1fr}}
+.plan7-stack{display:grid;gap:16px;margin:16px 0}
+.plan7-stack h3{font-size:16px;margin:0 0 6px}
+.plan7-stack :is(p,li){font-size:var(--lab-detail,14px);line-height:1.55}
+.plan7-roadmap{margin:10px 0}
+.plan7-roadmap p{margin:0}
+.plan7-metric-mark{font-size:14px;font-weight:750}
+@media(max-width:560px){.plan7-roadmap{grid-template-columns:1fr}}
+.plan7-pnl{width:100%;min-width:390px;font-variant-numeric:tabular-nums}
+.plan7-pnl :is(th,td){padding:9px 8px;vertical-align:middle}
+.plan7-pnl tbody th{background:var(--tint)}
+.plan7-pnl :is(th,td):not(:first-child){text-align:right;white-space:nowrap}
+.plan7-capacity{margin:8px 0}
+.plan7-pnl tbody tr:last-child{font-weight:750;border-top:2px solid var(--line)}
