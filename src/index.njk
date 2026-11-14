@@ -9,7 +9,9 @@ permalink: /index.html
 <main class="container stack">
   {% include "sections/hero.njk" %}
   {% include "sections/experience.njk" %}
-  {% include "sections/video.njk" %}
+  {% if site.video.video_card.video_link %}
+    {% include "sections/video.njk" %}
+  {% endif %}
   <section id="approach" class="lab-section" aria-labelledby="lab-section-title">
     <div class="lab-section__intro" data-reveal="">
       <h2 id="lab-section-title" class="section-title">{{ site.decision_lab.copy.curious_how_i_think }}</h2>

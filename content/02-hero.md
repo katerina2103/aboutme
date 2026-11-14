@@ -13,6 +13,7 @@ social_links:
     icon: medium
     link: https://medium.com/@katerina2103/activity
   - label: Substack
+    hidden: true
     icon: substack
     link: https://substack.com/@katyashimanovskaya/notes
 ---
