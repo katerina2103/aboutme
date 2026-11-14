@@ -68,9 +68,9 @@
   let current = 0;
   const headings = slides.map(slide => slide.querySelector('.dilemma__title'));
   const nextLabels = [
-    'Scope the problem', 'Compare solutions',
-    'Weigh strategic trade-offs', 'Design the pilot', 'See the investment decision',
-    'Explore what to build', 'Finish the lab',
+    'Scope the problem', 'Compare options', 'Weigh trade-offs',
+    'Design the pilot', 'Decide what to fund', 'Plan what to build',
+    'Wrap up the case',
   ];
   function show(index, moveFocus = true) {
     const previousIndex = current;
