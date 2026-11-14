@@ -180,12 +180,12 @@ copy:
       url: https://docs.benchling.com/docs/developer-platform-overview
     - label: "Haystack integrations"
       url: https://docs.haystack.deepset.ai/docs/integrations
-  cost_scale_label: "Shared cost scale: €0–2m"
-  range_legend: "Bars show planning ranges; listed supplier extras remain excluded."
+  cost_axis_min: "€0"
+  cost_axis_max: "€2m"
   range_accessible_label: Illustrative planning range
   range_not_total: Supplier extras excluded
   visual_guide_heading: How to read this comparison
-  visual_guide_cost: "Each cost interval uses the same €0–2m scale. The left edge is the lower estimate and the right edge is the upper estimate. Buy-route ranges omit unquoted supplier fees and listed extras; the bars do not establish a cheapest complete solution."
+  visual_guide_cost: "The left edge is the lower estimate and the right edge is the upper estimate. Buy-route ranges omit unquoted supplier fees and listed extras; the bars do not establish a cheapest complete solution."
   visual_guide_coverage: "Linked capabilities come from vendor documentation reviewed on 13 November 2026; they describe available features, not completed tests on our systems. Migration and custom-build trade-offs are my assessment. European hosting does not by itself establish control over every model service, support access or data flow."
   visual_costs:
     - option: copilot

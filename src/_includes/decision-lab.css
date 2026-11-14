@@ -410,3 +410,6 @@
 .lab-section .decision-lab .comparison-table thead th{font-size:var(--lab-label);line-height:1.5}
 .lab-section .decision-lab :is(.roadmap-years strong,.value-bridge strong,.capacity-note strong,.funding-path strong){font-size:var(--lab-detail);line-height:1.5}
 .lab-section .decision-lab .comparison-cell{max-height:72px}
+.lab-cost-axis{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;line-height:1.5;margin:4px 0 8px}
+.lab-cost-axis small{font:inherit}
+.comparison-cell-content .lab-cost-range{margin-top:14px}

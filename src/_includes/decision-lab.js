@@ -263,7 +263,7 @@
    button.type = 'button'; button.className = 'comparison-cell';
    button.dataset.criterion = String(index);
    const summary = source.cloneNode(true);
-   summary.querySelectorAll('span, .lab-cost-range').forEach(node => node.remove());
+   summary.querySelectorAll('span, .lab-cost-range, .lab-cost-axis').forEach(node => node.remove());
    button.textContent = summary.textContent.trim();
    if (source.querySelector('.lab-cost-value')) {
     const team = document.createElement('span');
