@@ -42,7 +42,7 @@ answers:
     assessment: I would compare a focused AI pilot with improved search. Agree the participants, the
       hypothesis and the evidence needed, then review funding after 8-10 weeks. We need a test that
       can change the plan.
-    challenge: Am I testing whether AI helps, or just funding another round of discovery? Better search
+    challenge: Am I testing whether AI helps, or just funding another round of discovery? Improved search
       needs a fair comparison. Agree who will act on the evidence and when, before the pilot starts.
     change: I would stop the AI route if improved search performs just as well, review effort erases the
       gain, or researchers will not t use it. I would choose a vendor or custom build when the task
@@ -59,7 +59,7 @@ handoff:
   choices:
     build: Build our own assistant
     buy: Buy a proven assistant
-    test: Compare a narrow pilot with better search
+    test: Compare a narrow pilot with improved search
 agreement_hint: We’re aligned—this is my starting choice too. Let’s explore how we’d test it. Double-click to clear.
 progress_label: Decision Lab progress
 position_label: "{current} of {total}"
