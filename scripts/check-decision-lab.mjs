@@ -13,6 +13,7 @@ for (const story of Object.values(site.case_studies)) {
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 const { document, window } = parseHTML(html);
 const script = await readFile(new URL('../src/_includes/decision-lab.js', import.meta.url), 'utf8');
+const originalComparison = document.querySelector('.business-table--transpose').cloneNode(true);
 // Linkedom does not implement the native checkbox checked property.
 document.querySelectorAll("[data-compare]").forEach(input => { input.checked = input.hasAttribute("checked"); });
 vm.runInNewContext(script, {document, window: {matchMedia: () => ({matches: false})}});
@@ -42,9 +43,33 @@ const selected = [...document.querySelectorAll('[data-compare]')].filter(e=>e.ch
 assert.deepEqual(selected.map(e=>e.dataset.compare), ['glean','custom']);
 const extra = document.querySelector('[data-compare="benchling"]');
 extra.checked = true; extra.dispatchEvent(new window.Event('change'));
-assert.equal(document.querySelectorAll('thead [data-option]:not([hidden])').length,3);
+assert.equal(document.querySelectorAll('.comparison-table tbody tr:not([hidden])').length,3);
 extra.checked = false; extra.dispatchEvent(new window.Event('change'));
-assert.equal(document.querySelectorAll('thead [data-option]:not([hidden])').length,2);
+assert.equal(document.querySelectorAll('.comparison-table tbody tr:not([hidden])').length,2);
+// Every original cell (including citations and cost bars) is retained in details.
+const normalize = value => value.replace(/\s+/g, ' ').trim();
+for (const row of document.querySelectorAll('.comparison-table tbody tr')) {
+ const originalHeader = originalComparison.querySelector('thead [data-option="'+row.dataset.option+'"]');
+ assert.equal(normalize(row.querySelector('th').textContent), normalize(originalHeader.textContent));
+ for (const button of row.querySelectorAll('.comparison-cell')) {
+  const source = originalComparison.querySelectorAll('tbody tr')[Number(button.dataset.criterion)].querySelector('[data-option="'+row.dataset.option+'"]');
+  button.click();
+  const detail = document.querySelector('.comparison-cell-detail');
+  assert.equal(detail.hidden, false);
+  assert.equal(normalize(detail.querySelector('.comparison-cell-content').textContent), normalize(source.textContent));
+  assert.deepEqual([...detail.querySelectorAll('a')].map(a=>a.href), [...source.querySelectorAll('a')].map(a=>a.href));
+  assert.equal(button.getAttribute('aria-expanded'), 'true');
+ }
+}
+const dialog = document.querySelector('.comparison-dialog');
+dialog.showModal = () => { dialog.open = true; };
+dialog.close = () => { dialog.open = false; dialog.dispatchEvent(new window.Event('close')); };
+const expand = document.querySelector('.comparison-expand');
+expand.click(); assert.equal(dialog.contains(document.querySelector('.comparison-workspace')), true);
+extra.checked = true; extra.dispatchEvent(new window.Event('change'));
+assert.equal(dialog.querySelectorAll('tbody tr:not([hidden])').length, 3);
+expand.click(); assert.equal(dialog.contains(document.querySelector('.comparison-workspace')), false);
+assert.equal(expand.getAttribute('aria-expanded'), 'false');
 const strategy = document.querySelector('.strategy-lab');
 assert.ok(strategy, 'Strategic trade-offs step should exist');
 assert.equal(document.querySelector('[data-strategy-score="glean"]').textContent, '3.20 / 5');

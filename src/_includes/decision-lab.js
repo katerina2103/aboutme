@@ -173,11 +173,102 @@
  const lab = document.querySelector('.decision-lab');
  const labels = JSON.parse(document.getElementById("lab-content").textContent);
  const choices = [...lab.querySelectorAll('[data-compare]')];
+ const original = lab.querySelector('.business-table--transpose');
+ const optionHeaders = [...original.querySelectorAll('thead [data-option]')];
+ const criteriaRows = [...original.querySelectorAll('tbody tr')];
+ const scroll = original.parentElement;
+ const workspace = document.createElement('section');
+ workspace.className = 'comparison-workspace';
+ const picker = lab.querySelector('.compare-picker');
+ picker.before(workspace);
+ let sibling = picker;
+ while (sibling) {
+  const following = sibling.nextElementSibling;
+  workspace.append(sibling);
+  if (sibling.classList.contains('business-scroll-hint')) break;
+  sibling = following;
+ }
+ const toolbar = document.createElement('div');
+ toolbar.className = 'comparison-toolbar';
+ const expand = document.createElement('button');
+ expand.type = 'button'; expand.className = 'comparison-expand';
+ expand.setAttribute('aria-label', 'Expand comparison');
+ expand.setAttribute('aria-expanded', 'false');
+ expand.innerHTML = '<span class="comparison-expand-icon" aria-hidden="true"></span>';
+ toolbar.append(expand); workspace.prepend(toolbar);
+ const detail = document.createElement('section');
+ detail.className = 'comparison-cell-detail'; detail.id = 'comparison-cell-detail';
+ detail.setAttribute('aria-live', 'polite'); detail.hidden = true;
+ scroll.after(detail);
+ const table = document.createElement('table');
+ table.className = 'business-table comparison-table';
+ table.append(original.querySelector('caption').cloneNode(true));
+ const head = document.createElement('thead'), heading = document.createElement('tr');
+ heading.append(original.querySelector('thead th').cloneNode(true));
+ criteriaRows.forEach(row => {
+  const th = row.querySelector('th').cloneNode(true);
+  th.setAttribute('scope', 'col'); heading.append(th);
+ });
+ head.append(heading); table.append(head);
+ const body = document.createElement('tbody');
+ let activeCell;
+ optionHeaders.forEach(option => {
+  const row = document.createElement('tr'); row.dataset.option = option.dataset.option;
+  const name = option.cloneNode(true); name.removeAttribute('data-option');
+  name.removeAttribute('hidden'); name.setAttribute('scope', 'row'); row.append(name);
+  criteriaRows.forEach((criterion, index) => {
+   const source = criterion.querySelector('[data-option="' + option.dataset.option + '"]');
+   const td = document.createElement('td'), button = document.createElement('button');
+   button.type = 'button'; button.className = 'comparison-cell';
+   button.dataset.criterion = String(index);
+   const summary = source.cloneNode(true);
+   summary.querySelectorAll('span, .lab-cost-range').forEach(node => node.remove());
+   button.textContent = summary.textContent.trim();
+   if (source.querySelector('.lab-cost-value')) {
+    const team = document.createElement('span');
+    team.textContent = source.querySelector('span').textContent;
+    button.append(team);
+   }
+   button.setAttribute('aria-expanded', 'false');
+   button.setAttribute('aria-controls', detail.id);
+   button.addEventListener('click', () => {
+    if (activeCell) activeCell.setAttribute('aria-expanded', 'false');
+    activeCell = button; button.setAttribute('aria-expanded', 'true');
+    const title = document.createElement('h3');
+    title.textContent = option.childNodes[0].textContent.trim() + ' — ' + criterion.querySelector('th').childNodes[0].textContent.trim();
+    const content = document.createElement('div');
+    content.className = 'comparison-cell-content';
+    [...source.childNodes].forEach(node => content.append(node.cloneNode(true)));
+    detail.replaceChildren(title, content); detail.hidden = false;
+   });
+   td.append(button); row.append(td);
+  });
+  body.append(row);
+ });
+ table.append(body); original.replaceWith(table);
+ const dialog = document.createElement('dialog'); dialog.className = 'comparison-dialog';
+ dialog.setAttribute('aria-label', table.querySelector('caption').textContent);
+ document.body.append(dialog);
+ const anchor = document.createElement('span'); workspace.before(anchor);
+ function restoreComparison() {
+  anchor.after(workspace); expand.setAttribute('aria-expanded', 'false');
+  expand.setAttribute('aria-label', 'Expand comparison'); expand.focus();
+ }
+ dialog.addEventListener('close', restoreComparison);
+ expand.addEventListener('click', () => {
+  if (dialog.open) { dialog.close(); return; }
+  dialog.append(workspace); dialog.showModal();
+  expand.setAttribute('aria-expanded', 'true');
+  expand.setAttribute('aria-label', 'Return to slide'); expand.focus();
+ });
  function compare() {
   const selected = new Set(choices.filter(input => input.checked).map(input => input.dataset.compare));
-  lab.querySelectorAll('[data-option]').forEach(cell => { cell.hidden = !selected.has(cell.dataset.option); });
-  lab.querySelector('.compare-status').textContent = selected.size ? labels.compare_status.replace('{count}', selected.size) : labels.compare_empty;
-  lab.querySelector('.business-table--transpose').style.minWidth = selected.size > 2 ? (140 + selected.size * 205) + 'px' : '100%';
+  table.querySelectorAll('[data-option]').forEach(row => { row.hidden = !selected.has(row.dataset.option); });
+  workspace.querySelector('.compare-status').textContent = selected.size ? labels.compare_status.replace('{count}', selected.size) : labels.compare_empty;
+  table.hidden = !selected.size;
+  if (activeCell && !selected.has(activeCell.closest('tr').dataset.option)) {
+   activeCell.setAttribute('aria-expanded', 'false'); activeCell = null; detail.hidden = true;
+  }
  }
  choices.forEach(input => input.addEventListener('change', compare));
  compare();
