@@ -37,10 +37,10 @@
 <ol><li><strong>{{ pilot.setup_weeks | escape }}</strong> {{ pilot.setup_work | escape }}</li><li><strong>{{ pilot.test_weeks | escape }}</strong> {{ pilot.test_work | escape }}</li><li><strong>{{ pilot.review_weeks | escape }}</strong> {{ pilot.review_work | escape }}</li></ol>
 </section>
 
-<section class="pilot-block pilot-benchmarks">
-<h3>{{ pilot.benchmarks_heading | escape }}</h3>
+<details class="lab-more">
+<summary>{{ pilot.benchmarks_heading | escape }}</summary>
 <p><strong>{{ pilot.microsoft_result | escape }}</strong> {{ pilot.microsoft_context | escape }} <a href="https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2023/11/Microsoft_Work_Trend_Index_Special_Report_2023_Full_Report.pdf">{{ pilot.microsoft_source | escape }}</a>{{ pilot.microsoft_application | escape }}</p>
 <p><strong>{{ pilot.setup_estimate | escape }}</strong> {{ pilot.setup_context | escape }} <a href="https://docs.glean.com/get-started/welcome">{{ pilot.setup_source | escape }}</a>{{ pilot.connector_context | escape }} <strong>{{ pilot.connector_status | escape }}</strong> <a href="https://www.glean.com/connectors/benchling">{{ pilot.connector_source | escape }}</a>{{ pilot.connector_end | escape }}</p>
-</section>
+</details>
 
 </div>
