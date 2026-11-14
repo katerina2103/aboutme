@@ -349,13 +349,13 @@
 /* Compact route rows; original cell content remains available on selection. */
 .comparison-workspace{color:var(--navy);font:14px/1.5 var(--font-sans, sans-serif);min-width:0}
 .comparison-toolbar{display:flex;justify-content:flex-end;margin-bottom:6px}
-.comparison-expand{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:8px;background:var(--paper,#fffdf7);color:var(--navy);cursor:pointer}
+.comparison-expand{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:8px;background:var(--surface,#fffdf7);color:var(--navy);cursor:pointer}
 .comparison-expand-icon{width:18px;height:18px;display:block;background:linear-gradient(currentColor,currentColor) left top/7px 2px no-repeat,linear-gradient(currentColor,currentColor) left top/2px 7px no-repeat,linear-gradient(currentColor,currentColor) right bottom/7px 2px no-repeat,linear-gradient(currentColor,currentColor) right bottom/2px 7px no-repeat}
 .comparison-expand[aria-expanded=true] .comparison-expand-icon{transform:rotate(180deg);background:linear-gradient(currentColor,currentColor) 6px top/2px 8px no-repeat,linear-gradient(currentColor,currentColor) left 6px/8px 2px no-repeat,linear-gradient(currentColor,currentColor) right 10px/8px 2px no-repeat,linear-gradient(currentColor,currentColor) 10px bottom/2px 8px no-repeat}
 .comparison-workspace .comparison-table{min-width:850px;width:100%;table-layout:fixed;font-size:13px;line-height:1.45}
 .comparison-workspace .comparison-table th,.comparison-workspace .comparison-table td{padding:9px 8px;vertical-align:middle}
 .comparison-workspace .comparison-table th:first-child{width:160px;position:sticky;left:0;z-index:1}
-.comparison-workspace .comparison-table tbody th{background:#f0f3fa}
+.comparison-workspace .comparison-table tbody th{background:var(--tint)}
 .comparison-table tbody th a{color:var(--blue)}
 .comparison-workspace .comparison-table td{min-width:0}
 .comparison-cell{display:block;width:100%;min-height:44px;border:0;border-radius:5px;padding:5px 2px;background:transparent;text-align:left;font:inherit;color:var(--blue);cursor:pointer;overflow-wrap:break-word;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
@@ -365,7 +365,7 @@
 .comparison-cell-content>span{display:block;margin-top:8px}
 .comparison-cell-content a{color:var(--blue)}
 .comparison-cell-detail[hidden],.comparison-workspace [hidden]{display:none}
-.comparison-dialog{box-sizing:border-box;width:calc(100% - 40px);max-width:1400px;max-height:calc(100dvh - 40px);padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--paper,#fffdf7);color:var(--navy);overflow:auto}
+.comparison-dialog{box-sizing:border-box;width:calc(100% - 40px);max-width:1400px;max-height:calc(100dvh - 40px);padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--surface,#fffdf7);color:var(--navy);overflow:auto}
 .comparison-dialog::backdrop{background:#15243a99}
 .comparison-dialog .comparison-table caption{display:table-caption}
 .comparison-expand:focus-visible,.comparison-cell:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
