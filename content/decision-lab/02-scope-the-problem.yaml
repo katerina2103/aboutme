@@ -1,22 +1,19 @@
 copy:
   deadline: The budget for next financial year closes in a few weeks. My call is
-    to get a rough baseline now so I can decide what to ask for.
+    to get a rough baseline now so I can decide whether it is worth pursuing.
   quick_check: A quick check with five scientists
   tracking: I’d ask five scientists across three departments to track how long it
     takes to find and get access to the information they need during their
     normal work. I want to see where the time goes and which problems come up
     repeatedly.
-  why_here: Why I’d start here
   budget_heading: What I’d take into the budget discussion
   scale_intro: If the 5–7 hours per scientist per week holds across our 600 researchers, that’s
   scale_value: 3,000–4,200 hours a week
   scale_outro: spent finding and getting access to information. Even freeing up a fraction could give scientists more time for experiments and analysis.
-  funding_call: If the same bottleneck keeps showing up across departments, I’d
-    ask for enough funding to test a fix on that workflow and see how much time
-    we can actually give back.
-  method: For each search, jot down what you needed, how long it took to find it,
-    and any extra time spent getting access. If you couldn’t get access, note
-    what blocked you.
+  funding_call: If the same pattern keeps showing up across departments, I’d
+    ask for enough funding for a pilot to see how much time we can actually give back.
+  method: For each day note how much time was spend getting needed information, jot down what you needed, how long it took to find it,
+    and time spent getting access. Note any other blockers.
 evidence:
   copy:
     evidence: "Evidence "
