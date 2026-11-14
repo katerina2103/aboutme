@@ -243,7 +243,7 @@
  scroll.after(detail);
  const table = document.createElement('table');
  table.className = 'business-table comparison-table';
- table.append(original.querySelector('caption').cloneNode(true));
+ table.setAttribute('aria-label', original.getAttribute('aria-label'));
  const head = document.createElement('thead'), heading = document.createElement('tr');
  heading.append(original.querySelector('thead th').cloneNode(true));
  criteriaRows.forEach(row => {
