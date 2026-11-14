@@ -91,14 +91,10 @@
 .graph-dot--navy { fill: #1d2948; }
 .graph-range { fill: none; stroke: #3658b5; stroke-width: 2; }
 
-/* Match the two columns without letting long slides set the section height. */
-@media (min-width: 901px) {
-  .lab-section { align-items: stretch; }
-  .lab-section__intro { padding-top: 0; }
-  .decision-lab { align-self: stretch; display: flex; flex-direction: column; min-height: 0; }
-  .lab-ready .lab-slides { flex: 1 1 0; height: auto; min-height: 360px; }
-  .lab-controls { flex-shrink: 0; }
-}
+/* One stable slide area for the full-width lab, independent of the brief. */
+.lab-section .decision-lab { align-self: start; display: flex; flex-direction: column; min-height: 0; width: 100%; box-sizing: border-box; }
+.lab-section .lab-ready .lab-slides { flex: none; height: 540px; min-height: 0; }
+.lab-section .lab-controls { flex-shrink: 0; }
 
 .decision-lab .business-intro { font-size: 15px; margin-bottom: 16px; }
 .business-table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
@@ -375,3 +371,36 @@
 .comparison-cell-context{border-top:1px solid var(--line);margin-top:12px;padding-top:4px;font-size:13px;line-height:1.6}
 .comparison-cell-context p{margin:10px 0}
 .comparison-cell-context a{color:var(--blue)}
+
+/* Shared typography and readable proportions across all nine wide slides. */
+.lab-section .lab-slide{max-width:1100px;margin-inline:auto}
+.lab-section .decision-lab .dilemma__title{font-size:clamp(26px,2.7vw,34px);line-height:1.2;margin:0 0 18px;max-width:36ch}
+.lab-section .decision-lab .lab-step{font-size:13px;line-height:1.5;margin:0 0 10px}
+.lab-section .decision-lab .lab-slide>p:not(.lab-step){max-width:80ch}
+.lab-section .decision-lab .lab-slide>p:not(.lab-step):not(.lab-handoff):not(.lab-matrix-legend):not(.scenario-note){font-size:16px;line-height:1.65}
+.lab-section .decision-lab .lab-answers button{font-size:16px;padding:16px 18px}
+.lab-section .decision-lab .lab-feedback{font-size:16px}
+.lab-section .decision-lab .insight h3,.lab-section .decision-lab .study-stage h3{font-size:16px;line-height:1.5}
+.lab-section .decision-lab .insight>p,.lab-section .decision-lab .study-stage>p,.lab-section .decision-lab .business-verdict p,.lab-section .decision-lab .ceo-decision p,.lab-section .decision-lab .strategy-insight p{font-size:14px;line-height:1.6}
+.lab-section .decision-lab .insight-label{font-size:12px}
+.lab-section .decision-lab .line-chart{max-width:660px;margin-inline:auto}
+.lab-section .decision-lab .line-chart svg{max-width:600px;margin-inline:auto}
+.lab-section .decision-lab .lab-celebration__copy{margin-inline:auto}
+.lab-section .decision-lab .lab-celebration .dilemma__title{margin-inline:auto}
+@media(min-width:901px){
+ .lab-section .decision-lab{padding:44px 36px 28px}
+ .lab-section .evidence-compact{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+ .lab-section .evidence-signals{display:contents}
+ .lab-section .evidence-takeaway,.lab-section .evidence-details{grid-column:1/-1}
+ .lab-section .study-stage{padding:18px 20px}
+ .lab-section .funding-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+ .lab-section .funding-path li{align-items:flex-start}
+ .lab-section .lab-slide>.insight-stack{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+ .lab-section .lab-slide>.insight-stack>.insight:nth-child(n+3){grid-column:1/-1}
+}
+@media(max-width:700px){
+ .lab-section .lab-ready .lab-slides{height:500px}
+ .lab-section .decision-lab{padding:36px 20px 24px}
+ .lab-section .decision-lab .lab-answers button{font-size:15px}
+}
+@media print{.lab-section .lab-ready .lab-slides{height:auto;overflow:visible}}

@@ -177,8 +177,8 @@ p { margin: 0; }
 .impact-card__title { font-family: var(--font-serif); font-weight: 400; font-size: 24px; line-height: 1.25; }
 .impact-card__summary { color: var(--muted); font-size: 16px; flex: 1; }
 .impact-card__action { margin-top: 8px; font-size: 14px; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
-.lab-section { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1fr); gap: 32px; align-items: start; padding: 40px 24px 32px; }
-.lab-section__intro { padding-top: 32px; }
+.lab-section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; padding: 40px 24px 32px; }
+.lab-section__intro { padding-top: 0; min-width: 0; }
 .lab-section__intro .section-title { margin-bottom: 20px; }
 .lab-section__intro .muted { max-width: 44ch; margin-bottom: 24px; }
 @media (max-width: 900px) {
@@ -230,7 +230,13 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px soli
 
 /* Small paper notes bring personality back to the results. */
 .impact-card__sticker { position: absolute; right: 12px; top: -15px; max-width: calc(100% - 48px); padding: 7px 13px; background: #ffd36d; color: var(--navy); font: 700 23px/1.2 var(--font-hand); transform: rotate(var(--tilt, -3deg)); box-shadow: 2px 5px 0 #1d294814; }
-.company-brief { max-width: 46ch; }
+.company-brief { width: 100%; max-width: none; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 0 36px; }
+.company-brief > .case-brief { grid-column: 2; grid-row: 1 / 4; margin: 0; }
+.company-brief > p { grid-column: 1; }
+@media (max-width: 700px) {
+  .company-brief { display: block; }
+  .company-brief > .case-brief { margin: 20px 0; }
+}
 .company-brief p + p { margin-top: 16px; }
 .company-brief__label { font-size: 14px; font-weight: 800; color: var(--blue); }
 .company-brief__question { font: italic 28px/1.35 var(--font-serif); color: var(--blue); }
