@@ -152,3 +152,17 @@ html:not(.js) .case-overlay:target { height: auto; }
   .case-tab { padding-left: 8px; padding-right: 8px; font-size: 14px; }
 }
 
+
+.case-overlay .case-principles { gap: 0; }
+.case-overlay .case-principle-row {
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 12px;
+  padding-block: 16px;
+}
+.case-overlay .case-principle-row:first-child { padding-top: 0; }
+.case-overlay .case-principle-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.case-overlay .case-principle-row .case-principle-title { margin: 0 0 6px; }
+.case-overlay .case-principle-row p { margin: 0; }
+@media (max-width: 480px) {
+  .case-overlay .case-principle-row { gap: 10px; padding-block: 12px; }
+}
