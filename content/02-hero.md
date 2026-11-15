@@ -17,4 +17,4 @@ social_links:
     icon: substack
     link: https://substack.com/@katyashimanovskaya/notes
 ---
-I’m Katya, a polymath who walked the path through science, data analytics and data management to product leadership. I've learned to make decisions with incomplete information and put ideas to the test with limited resources. I bring people into that work: understand what matters most, make the value concrete, and help multidisciplinary teams turn uncertainty into a useful next step.
+I’m Katya, a polymath whose path to product leadership has taken me through science, data analytics, and data management. I've learned to make decisions with incomplete information and put ideas to the test with limited resources. I bring people into that work to understand what matters most, make the value concrete, and help multidisciplinary teams turn uncertainty into a useful next step.
