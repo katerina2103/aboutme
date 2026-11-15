@@ -12,7 +12,7 @@ copy:
   annual_hours_of_capacity_discrete_planning_scenarios: Annual hours of capacity · discrete planning scenarios
   annual_capacity_scenario_range: Annual capacity scenario range
   cautious_2_760_hours_working_16_560: Cautious 2,760 hours, working 16,560 hours, upside 45,264
-    hours. These are distinct planning assumptions, not a probability interval or time trend.
+    hours. These are distinct planning assumptions, not a probability interval or a time trend.
   value_3k: ~3k
   value_17k: ~17k
   value_45k: ~45k
@@ -24,19 +24,19 @@ copy:
   value_40k: 40k
   hours_year_zero_based_scale: Hours/year · zero-based scale
   adoption_40_60_80_net_time_per: "Adoption: 40 / 60 / 80%. Net time per active researcher: 0.25 / 1 /
-    2.05h per week. Scenarios, not probabilities."
-  capacity_does_not_automatically_become_financial_return: Capacity does not automatically become financial return
+    2.05h per week. These are scenarios, not probabilities."
+  capacity_does_not_automatically_become_financial_return: Capacity does not automatically become a financial return
   time_freed: Time freed
   measured_net_of_review_effort: Measured net of review effort
   label_2: →
   redeploy_it: Redeploy it
-  choose_valuable_scientific_work: Agree which research work gets the time
+  choose_valuable_scientific_work: Agree on which research work gets the time
   label_3: →
   prove_value: Prove value
   track_outcomes_and_ongoing_cost: Track outcomes and ongoing cost
   value_1_2m_gross_capacity_value_at_an: The working scenario values the capacity at about €1.2m,
-    using an assumed €70/hour. That is opportunity cost before ongoing expenses. It becomes a
-    business benefit only if we put the time to useful work. It is not a cash saving or established
+    using an assumed €70/hour. That represents an estimated opportunity cost before ongoing expenses. It becomes a
+    business benefit only if we put that time to productive use. It is not a cash saving or an established
     ROI.
   does_reuse_accelerate_the_next_product_line: Does reuse accelerate the next product line?
   value_100_scientists_separate_delivery_hypotheses: 100 researchers · separate delivery hypotheses
@@ -48,7 +48,7 @@ copy:
   with_reuse: "With reuse "
   value_10_14w: 10–14w
   evidence_workflow_16_weeks_from_scratch_versus: "Evidence workflow: 16 weeks from scratch, versus 10
-    to 14 weeks with reuse, on a zero-to-16-week scale."
+    to 14 weeks with reuse, on a scale from zero to 16 weeks."
   value_0_2: "0"
   value_16_weeks: 16 weeks
   research_milestone: Research milestone
@@ -59,12 +59,12 @@ copy:
   critical_path: "Critical path* "
   value_22_23w: 22–23w
   research_milestone_24_weeks_baseline_22_to: "Research milestone: 24-week baseline; 22 to 23 weeks
-    if preparation is on the critical path, otherwise no gain, on a zero-to-24-week scale."
+    if preparation is on the critical path, otherwise no gain, on a scale from zero to 24 weeks."
   value_0_3: "0"
   value_24_weeks: 24 weeks
   blue_ranges_assumed_outcomes_with_reuse_navy: Blue ranges = assumed outcomes with reuse; navy
     markers = baseline. Each row has its own scale. *No milestone gain if wet-lab work or approvals
-    determine delivery.
+    determine the delivery timeline.
   what_earns_the_next_investment: What earns the next investment?
   validate_sustained_adoption_and_net_time_saved: Fund a pilot to test whether the shortlisted vendor
     saves researchers time after review compared with improved search, and whether they keep using
