@@ -10,13 +10,13 @@ copy:
   value_1: "1"
   secure_the_foundations: Secure the foundations
   approved_access_a_senior_integration_engineer_and: Secure approved data access, a senior integration
-    engineer and researchers who commit time to the test.
+    engineer, and researchers who commit time to the test.
   value_2: "2"
   test_against_a_real_alternative: Test against a real alternative
   compare_an_existing_estate_vendor_with_improved: Compare an existing-estate vendor with improved search on the same scientific tasks.
   value_3: "3"
-  decide_at_week_eight: Decide at week twelve
-  use_measured_value_quality_and_ownership_costs: Review the measured value, quality and cost with the
+  decide_at_week_eight: Decide in week 12
+  use_measured_value_quality_and_ownership_costs: Review the measured value, quality, and cost with the
     people accountable for the next step. Decide whether to expand, narrow the test or stop.
   proposed_funding_gates: Proposed funding gates
   evidence_required_for_more_investment: Evidence required for more investment
@@ -36,14 +36,14 @@ copy:
     Show differences between tasks and users, including uncertainty. Inconclusive evidence calls for
     a more focused test, not an automatic rollout.
   pilot_cost_breakdown_and_team_requirements: Pilot cost breakdown and team requirements
-  proposed_team_4_5_fte_equivalent_across: "Proposed team: 4 full-time members — 1 product manager, 2 senior engineers and
-    1 junior engineer — with security, UX, evaluation expertise and researcher participation
+  proposed_team_4_5_fte_equivalent_across: "Proposed team: 4 full-time members — 1 product manager, 2 senior engineers, and
+    1 junior engineer — with security, UX, evaluation expertise, and researcher participation
     arranged as needed."
   planning_calculation_4_5_fte_equivalent_2: "Planning calculation: 4 full-time team members × 3 months ×
-    €10–14k per person-month, plus €0–10k tools = €120k–€178k. Unquoted vendor licence
+    €10–14k per person-month, plus €0–10k tools = €120k–€178k. Unquoted vendor license
     fees are excluded. Secure senior engineering capacity before starting."
   this_is_a_pilot_estimate_not_a: This is a pilot estimate, not a supplier quote or rollout budget.
-    The next investment depends on the week-twelve evidence review.
+    The next investment depends on the week-12 evidence review.
   accountability_and_ownership: Accountability and ownership
   scientists_own_usefulness_and_review_data_owners: Researchers own usefulness and review. Data owners
     own access and metadata. Engineering owns supportability. Finance challenges the capacity
@@ -82,7 +82,7 @@ sequence:
   62_5_15_of_24: "62.5% (15 of 24)"
   active_in_both_final_weeks_target: "active in both final weeks. Target: at least 60%."
   my_call_expand_glean_to_the: "My call: expand Glean to the two workflows it covered"
-  six_minutes_less_per_task_is: "Six minutes less per task is enough for me to consider expanding Glean to those two workflows, once I have the full vendor quote and have checked access for the teams joining. I’d keep the third workflow out of scope. If Glean can’t support it, I’d test the hybrid approach on the same tasks and judge it by the same criteria."
+  six_minutes_less_per_task_is: "Saving six minutes per task is enough for me to consider expanding Glean to those two workflows once I have the full vendor quote and have checked access for the teams joining. I’d keep the third workflow out of scope. If Glean can’t support it, I’d test the hybrid approach on the same tasks and judge it by the same criteria."
   what_could_this_mean_for_600: "What could this mean for 600 researchers?"
   if_60_use_glean_regularly_and: "If 60% use Glean regularly and each saves 1 hour a week after checking answers, that comes to"
   16_560_hours_over_46_weeks: "16,560 hours over 46 weeks"
