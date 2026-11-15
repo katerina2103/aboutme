@@ -3,9 +3,9 @@ copy:
   fund_learning: Value is a scenario.
   earn_the_next_commitment: What should we fund?
   proposed_initial_commitment: Proposed initial commitment
-  value_80_150k: €80–150k
-  value_8_week_pilot_30_scientists_2_approved: 8-week pilot · 30 researchers · 2 approved sources
-  value_4_5_fte_equivalent_senior_engineering_required: 4–5 FTE-equivalent · senior engineering required
+  value_80_150k: €120k–€178k
+  value_8_week_pilot_30_scientists_2_approved: 12-week pilot · 24 researchers · 2 approved sources
+  value_4_5_fte_equivalent_senior_engineering_required: 4 full-time team members · senior engineering required
   staged_investment_decision: Staged investment decision
   value_1: "1"
   secure_the_foundations: Secure the foundations
@@ -15,7 +15,7 @@ copy:
   test_against_a_real_alternative: Test against a real alternative
   compare_an_existing_estate_vendor_with_improved: Compare an existing-estate vendor with improved search on the same scientific tasks.
   value_3: "3"
-  decide_at_week_eight: Decide at week eight
+  decide_at_week_eight: Decide at week twelve
   use_measured_value_quality_and_ownership_costs: Review the measured value, quality and cost with the
     people accountable for the next step. Decide whether to expand, narrow the test or stop.
   proposed_funding_gates: Proposed funding gates
@@ -36,21 +36,21 @@ copy:
     Show differences between tasks and users, including uncertainty. Inconclusive evidence calls for
     a more focused test, not an automatic rollout.
   pilot_cost_breakdown_and_team_requirements: Pilot cost breakdown and team requirements
-  proposed_team_4_5_fte_equivalent_across: "Proposed team: 4–5 FTE-equivalent across a product/domain
-    lead, senior integration engineer, data engineer, data scientist/evaluation lead and fractional
-    security, UX and researcher time."
-  planning_calculation_4_5_fte_equivalent_2: "Planning calculation: 4–5 FTE-equivalent × 2 months ×
-    €10–14k per FTE-month, plus €0–10k tools, rounded to €80–150k. Secure senior engineering
-    capacity before starting; data science capacity does not replace software engineering."
+  proposed_team_4_5_fte_equivalent_across: "Proposed team: 4 full-time members — 1 product manager, 2 senior engineers and
+    1 junior engineer — with security, UX, evaluation expertise and researcher participation
+    arranged as needed."
+  planning_calculation_4_5_fte_equivalent_2: "Planning calculation: 4 full-time team members × 3 months ×
+    €10–14k per person-month, plus €0–10k tools = €120k–€178k. Unquoted vendor licence
+    fees are excluded. Secure senior engineering capacity before starting."
   this_is_a_pilot_estimate_not_a: This is a pilot estimate, not a supplier quote or rollout budget.
-    The next investment depends on the week-eight evidence review.
+    The next investment depends on the week-twelve evidence review.
   accountability_and_ownership: Accountability and ownership
   scientists_own_usefulness_and_review_data_owners: Researchers own usefulness and review. Data owners
     own access and metadata. Engineering owns supportability. Finance challenges the capacity
     assumptions. The CEO backs the decision process. Before starting, agree who will act on the
     findings and how participants will hear what changed.
   choose_a_hybrid_only_where_a_demonstrated: Choose a hybrid only where a demonstrated gap justifies
-    ownership. Agree the next scope and its budget after the pilot; the initial €80–150k is not a
+    ownership. Agree the next scope and its budget after the pilot; the initial €120k–€178k is not a
     full-rollout cost.
 
 sequence:
