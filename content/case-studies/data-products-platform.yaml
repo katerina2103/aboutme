@@ -2,13 +2,13 @@ title: Define once. Onboard faster. Scale across Europe
 context: Regulated B2B · Customer-facing data platform
 problem: Collecting regulated data across Europe meant meeting EU and national requirements
   alongside each data controller’s standards and formats. The question was how to accommodate
-  genuine differences in data requirements without starting from scratch when your portfolio grows vertically and horizontally at high pace.
-solution: "I led the work to standardize and modernize customer-facing data management platform, with standards built into
+  genuine differences in data requirements without starting from scratch as the portfolio rapidly expanded across products and markets.
+solution: "I led the work to standardize and modernize a customer-facing data management platform, with standards built into
   the design. We expressed data-quality rules and standards in formats that both people and software can
-  interpret. That made data requirements into something we could configure against once. My leadership principle was to “eat our own dog food”: focus on customer and their data while improving the infrastructure behind it."
+  interpret. That made data requirements into something we could configure against once. My leadership principle was to “eat our own dog food”: focus on customers and their data while improving the infrastructure behind the platform."
 impact: With data requirements prepared upfront, teams could configure up to seven ingestion
-  pipelines in one day. The platform grew to fromn 2 to 39 pipelines within one year, serving more than 200 data providers
-  across six European countries securing strategically important customers and protecting revenue.
+  pipelines in one day. The platform grew from 2 to 39 pipelines within one year, serving more than 200 data providers
+  across six European countries, securing strategically important customers, and protecting revenue.
 principles:
   - make-room-for-tomorrow
   - build-in-learning-steps
