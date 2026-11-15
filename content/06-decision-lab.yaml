@@ -8,15 +8,15 @@ next_accessible_label: Next slide
 restart_label: Start again ↺
 copy:
   curious_how_i_think: Work through a product decision with me
-  meet_our_fictional_biotech_company: Meet our fictional statistically average European biotech company
-  value_2_000_employees_600_scientists_lab_records: 2,000 employees. 600 researchers. Lab reports and knowledge scattered across teams and systems. Fast-growing, regulated and ambitious.
+  meet_our_fictional_biotech_company: Meet our fictional European biotech company
+  value_2_000_employees_600_scientists_lab_records: 2,000 employees. 600 researchers. Lab reports and knowledge scattered across teams and systems. Fast-growing, regulated, and ambitious.
   the_ceo_s_brief: The CEO’s brief
   build_an_ai_assistant_for_our_scientists: “Build our own AI solution for our researchers. We have enough
-    data scientists, although we have little software engineering expertise, and I want us to be an AI frontrunner. We might expand considerably next year”
+    data scientists, but little software engineering expertise, and I want us to be an AI frontrunner. We might expand considerably next year”
   how_much_investment_do_you_need: “When can you make this happen?”
-  there_is_no_agreed_budget_i_take: That is a sizeable ask without agreed budget. I take this seriously and want to find out
-    which processes do we need to improve and what is the actual upside to our business. In this way, we first can build confidence in the direction before a substantial investment is made. Where would you start? 🙂
-  a_fictional_case_to_illustrate_my_reasoning: This fictional scenario brings together principles I’ve developed through real platform investments, product decisions and customer-facing launches, reflected in my three impact stories. The company, budgets and outcomes are fictional; where I use real-world data, I include references.
+  there_is_no_agreed_budget_i_take: That is a sizable request without an agreed-upon budget. I take it seriously, but first want to understand
+    which processes need improvement and what value that could create for the business. That way, we can build confidence in the direction before making a substantial investment. Where would you start? 🙂
+  a_fictional_case_to_illustrate_my_reasoning: This fictional scenario brings together principles I’ve developed through real platform investments, product decisions, and customer-facing launches, reflected in my three impact stories. The company, budgets and outcomes are fictional; where I use real-world data, I include references.
 answers:
   build:
     assessment: Building could give us control over a scientific workflow that matters. But our
@@ -29,23 +29,23 @@ answers:
       senior engineers are committed, and a prototype shows enough value to justify three years of
       investment.
   buy:
-    assessment: Off-the-shelf solution could be the quickest route if the product solve the problem at hand. I would test our
-      data sources, permissions and scientific tasks, then compare full costs. Product alone will not
+    assessment: An off-the-shelf solution could be the quickest route if it solves the problem at hand. I would test our
+      data sources, permissions and scientific tasks, then compare the full costs. A product alone will not
       resolve inaccessible knowledge.
     challenge: Am I asking for more experimentation when a product already does the job? A short
       evaluation on our own tasks may be enough. Researchers should not wait while we rebuild
       something that a vendor can provide.
     change: I would move to a limited vendor rollout if the same task tests show accurate answers, correct
-      access controls and source coverage, at a lower total cost than the alternatives. The oragnization
+      access controls, and source coverage at a lower total cost than the alternatives. The organization
       must be ready to commit.
   test:
-    assessment: I would compare a focused AI pilot with improved search. Agree the participants, the
-      hypothesis and the evidence needed, then review funding after 12 weeks. We need a test that
+    assessment: I would compare a focused AI pilot with improved search. Agree on the participants, the
+      hypothesis, and the evidence needed, then review funding after 12 weeks. We need a test that
       can change the plan.
     challenge: Am I testing whether AI helps, or just funding another round of discovery? Improved search
       needs a fair comparison. Agree who will act on the evidence and when, before the pilot starts.
     change: I would stop the AI route if improved search performs just as well, review effort erases the
-      gain, or researchers will not t use it. I would choose a vendor or custom build when the task
+      gain, or researchers will not use it. I would choose a vendor or custom build when the task
       evidence and total ownership costs support it.
 choice_label: My starting choice
 challenge_label: Challenge my reasoning
