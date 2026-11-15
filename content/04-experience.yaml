@@ -1,10 +1,10 @@
 title: My impact, in three stories.
-introduction: The results, and the work behind them. Open a story to see details and my underpinning working principles.
+introduction: The results and the work behind them. Open a story to explore the details and the principles that guide my work.
 case_studies:
   - metric: 39
     metric_label: data pipelines · scaled from 2
     title: Define once. Onboard faster. Scale across Europe
-    summary: Accommodating variety, while safeguarding scalability in a regulatory context.
+    summary: Accommodating diverse needs while safeguarding scalability in a regulated environment.
     sticky_note: Built to scale
     sticky_note_rotation: -3
     action_label: Read the data platform story
@@ -12,7 +12,7 @@ case_studies:
   - metric: 4
     metric_label: squads · product line leadership
     title: Build learning into every launch
-    summary: Introducing customer pilots, user interviews and rapid prototyping to help teams simplify the experience before scaling.
+    summary: Introducing customer pilots, user interviews, and rapid prototyping to help teams simplify the experience before scaling.
     sticky_note: Learn first, build second
     sticky_note_rotation: 2
     action_label: Read the user-centricity story
@@ -20,7 +20,7 @@ case_studies:
   - metric: 2,000+
     metric_label: monthly analytics users
     title: Remove barriers to scale analytics
-    summary: Turning a siloed analytics platform into something teams use with joy.
+    summary: Turning a siloed analytics platform into something teams enjoy using.
     sticky_note: Turn frustration into impact
     sticky_note_rotation: -2
     action_label: Read the analytics platform story
