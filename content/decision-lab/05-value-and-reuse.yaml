@@ -85,7 +85,7 @@ copy:
     entities or permissions could eliminate the gain.
   a_24_week_research_milestone_could_shorten: A 24-week research milestone could shorten by 1–2 weeks
     if four weeks of evidence preparation sit on the critical path and fall by 25–50%. If wet-lab
-    work or approvals dominate, milestone gain is zero. Each reuse row has its own zero-based weeks
+    work or approvals dominate, the milestone gain is zero. Each reuse row has its own zero-based weeks
     scale. Blue ranges show assumed outcomes, not forecasts.
   validate_adoption_search_time_and_review_cost: "Validate adoption, search time and review cost in
     the pilot. Test transfer to a second team. Do not add milestone gains to annual capacity: the
@@ -97,7 +97,7 @@ sequence:
   intro: "Fictional case. I’d run a 12-week pilot with 24 researchers to find out whether Glean helps them get to a verified answer faster on the lab workflows they rely on."
   ceo_ask: "My ask to the CEO: budget and four people for one quarter"
   investment_label: "Investment: €120k–€178k."
-  investment_basis: "This planning range assumes 4 full-time team members for 3 months at €10k–€14k per person per month (€120k–€168k), plus €0–€10k for tools. It excludes unquoted Glean licence fees. I’d get the vendor quote before asking for approval of the full amount."
+  investment_basis: "This planning range assumes 4 full-time team members for 3 months at €10k–€14k per person per month (€120k–€168k), plus €0–€10k for tools. It excludes unquoted Glean license fees. I’d get the vendor quote before asking for approval of the full amount."
   capacity_label: "Capacity: four people full-time for 12 weeks."
   capacity_impact: "The tiger team would step away from its existing work for the quarter. With their managers, I’d document what would slip, who would be affected, and the revised dates. I’d ask the CEO to approve those changes alongside the budget."
   tradeoff_label: "Example trade-off."
