@@ -56,7 +56,7 @@ copy:
 sequence:
   step: "Pilot outcomes"
   title: "What would I fund after the pilot?"
-  intro: "Fictional case. These simulated results show how I’d decide what to fund after the 12-week Glean pilot."
+  intro: "We wrapped up our fictional pilot. These simulated results illustrate how I’d decide what to fund after the 12-week Glean pilot."
   simulated_results: "Simulated results"
   time_to_a_verified_answer: "Time to a verified answer"
   current_search: "Current search"
@@ -81,7 +81,7 @@ sequence:
   repeat_usage: "Repeat usage"
   62_5_15_of_24: "62.5% (15 of 24)"
   active_in_both_final_weeks_target: "active in both final weeks. Target: at least 60%."
-  my_call_expand_glean_to_the: "My call: expand Glean to the two workflows it covered"
+  my_call_expand_glean_to_the: "My call: implement vendor solution to the two workflows it covered"
   six_minutes_less_per_task_is: "Saving six minutes per task is enough for me to consider expanding Glean to those two workflows once I have the full vendor quote and have checked access for the teams joining. I’d keep the third workflow out of scope. If Glean can’t support it, I’d test the hybrid approach on the same tasks and judge it by the same criteria."
   what_could_this_mean_for_600: "What could this mean for 600 researchers?"
   if_60_use_glean_regularly_and: "If 60% use Glean regularly and each saves 1 hour a week after checking answers, that comes to"
