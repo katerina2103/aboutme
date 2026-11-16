@@ -365,7 +365,7 @@
 
 /* Shared typography and readable proportions across all nine wide slides. */
 .lab-section .decision-lab .dilemma__title{font-size:clamp(26px,2.7vw,34px);line-height:1.2;margin:0 0 18px}
-.lab-section .decision-lab .lab-step{font-size:13px;line-height:1.5;margin:0 0 10px}
+.lab-section .decision-lab .lab-slide > .lab-step{font-size:13px;line-height:1.5;font-weight:700;color:var(--accent);text-align:start;margin:0 0 10px}
 .lab-section .decision-lab .lab-slide>p:not(.lab-step):not(.lab-handoff):not(.lab-matrix-legend):not(.scenario-note){font-size:16px;line-height:1.65}
 .lab-section .decision-lab .lab-answers button{font-size:16px;padding:16px 18px}
 .lab-section .decision-lab .lab-feedback{font-size:16px}

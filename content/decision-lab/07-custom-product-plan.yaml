@@ -112,6 +112,7 @@ copy:
     This model does not establish cash payback or ROI.
 
 vendor_plan:
+  step: Vision and strategy
   value_0: "€0"
   value_100: "100"
   value_200: "200"
