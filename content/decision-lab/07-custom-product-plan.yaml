@@ -128,7 +128,7 @@ vendor_plan:
   use_the_two_covered_workflows_as: "Use the two covered workflows as the baseline for what Glean can already deliver. Measure how often scientists return, how much time they save after review, and which work that time makes possible."
   year_1: "Year 1"
   measure_the_baseline: "Measure the baseline"
-  measure_the_benefit_of_the_workflows: "Measure the benefit of the workflows Glean already covers."
+  measure_the_benefit_of_the_workflows: "Implement Glean for the two workflows it already covers and scale to all researchers."
   year_2: "Year 2"
   test_a_workaround: "Test a workaround"
   price_the_uncovered_step_and_test: "Price the uncovered step and test a cheaper workaround."
