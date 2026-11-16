@@ -207,7 +207,7 @@
    }[option];
    addParagraph(content, ...breakdown);
    const extras = {
-    copilot: 'Add US$216k a year for 600 seats at US$30 per user per month, plus qualifying M365 licences. Other unquoted supplier fees are excluded. This is not a complete total; USD and EUR have not been converted.',
+    copilot: 'Add US$216k a year for 600 seats at US$30 per user per month, plus qualifying M365 licenses. Other unquoted supplier fees are excluded. This is not a complete total; USD and EUR have not been converted.',
     glean: 'Obtain a supplier quote. No verified public list price was available in the case research; unquoted supplier fees are excluded from this estimate.',
     benchling: 'Obtain a quote for the platform, AI, usage and any migration. These costs are excluded from this estimate.'
    }[option];
